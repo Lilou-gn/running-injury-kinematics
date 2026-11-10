@@ -57,49 +57,56 @@ def blessures_debutants():
 
 
 def entonnoir_selection():
-    """De 1 832 séances à 587 coureurs (scripts/01_nettoyer_meta.py).
+    """De 1 798 personnes à 587 coureurs (scripts/01_nettoyer_meta.py).
 
-    Écrit la figure complète et une version par étape (p02_entonnoir_1 à 4),
+    Compté en personnes, pour rester cohérent avec la slide de la clinique (1 798).
+    En séances : 1 832 séances de course -> 836 (sains, PFPS, ITBS) -> 832 -> 587.
+    Écrit la figure complète et une version par étape (p02_entonnoir_1 à 3),
     pour la faire apparaître pas à pas dans la présentation.
     """
     etapes = [
-        ("Séances de course enregistrées", 1832, "1 402 coureurs"),
-        ("Sains, PFPS ou ITBS", 836, "996 séances (813 coureurs) avec une autre blessure"),
-        ("Diagnostic cohérent", 832, "2 coureurs sains une fois, blessés une autre"),
-        ("Une séance par coureur", 587, "la première ; 110 coureurs venus plusieurs fois"),
+        ("Personnes filmées", 1798, "toute la base\nde la clinique"),
+        ("Ont couru", 1402, "− 396 filmées\nen marchant seulement"),
+        ("Sains, PFPS ou ITBS", 589, "− 813 coureurs\navec une autre blessure"),
+        ("Diagnostic cohérent", 587, "− 2 diagnostics\ncontradictoires"),
     ]
     groupes = {"sain": 361, "PFPS": 128, "ITBS": 98}
-    largeur_max = etapes[0][1]
+    demi = etapes[0][1] / 2   # barres centrées sur 0 : entonnoir symétrique
+    col_gauche = -demi - 60   # colonne fixe des effectifs (alignés à droite)
+    col_droite = demi + 60    # colonne fixe des explications (alignées à gauche)
     hauteur = 0.62
 
     for nb_visibles in range(1, len(etapes) + 1):
         fig, ax = plt.subplots(figsize=TAILLE_SLIDE)
-        fig.subplots_adjust(top=0.74, bottom=0.08, left=0.03, right=0.97)
-        for i, (nom, n, detail) in enumerate(etapes[:nb_visibles]):
+        fig.subplots_adjust(top=0.74, bottom=0.08, left=0.02, right=0.98)
+        # Toutes les étapes sont dessinées à chaque fois (les suivantes en transparent) :
+        # le cadrage de l'image ne bouge pas d'une étape à l'autre pendant l'animation.
+        for i, (nom, n, detail) in enumerate(etapes):
+            a = 1.0 if i < nb_visibles else 0.0
             y = len(etapes) - 1 - i
-            x0 = (largeur_max - n) / 2
+            x0 = -n / 2
             if i < len(etapes) - 1:
-                ax.barh(y, n, left=x0, height=hauteur, color=GRILLE, edgecolor="none")
+                ax.barh(y, n, left=x0, height=hauteur, color=GRILLE, edgecolor="none", alpha=a)
             else:  # dernière étape : découpée par groupe
                 gauche = x0
                 for g, eff in groupes.items():
                     ax.barh(y, eff, left=gauche, height=hauteur, color=COULEURS_GROUPES[g],
-                            edgecolor=FOND, linewidth=1.5)
+                            edgecolor=FOND, linewidth=1.5, alpha=a)
                     ax.text(gauche + eff / 2, y, f"{eff}", ha="center", va="center",
-                            fontsize=12, fontweight="bold", color="white")
+                            fontsize=12, fontweight="bold", color="white", alpha=a)
                     gauche += eff
-            ax.text(x0 - 25, y + 0.08, f"{n:,}".replace(",", " "), ha="right", va="center",
-                    fontsize=19, fontweight="bold", color=ENCRE_TITRE)
-            ax.text(x0 - 25, y - 0.2, nom, ha="right", va="center", fontsize=11.5,
-                    color=ENCRE_TEXTE)
-            ax.text(x0 + n + 25, y, detail, ha="left", va="center", fontsize=11.5,
-                    color=ENCRE_DOUCE)
-        ax.set_xlim(-700, largeur_max + 700)
+            ax.text(col_gauche, y + 0.1, f"{n:,}".replace(",", " "), ha="right", va="center",
+                    fontsize=19, fontweight="bold", color=ENCRE_TITRE, alpha=a)
+            ax.text(col_gauche, y - 0.2, nom, ha="right", va="center", fontsize=11.5,
+                    color=ENCRE_TEXTE, alpha=a)
+            ax.text(col_droite, y, detail, ha="left", va="center", fontsize=11.5,
+                    color=ENCRE_DOUCE, alpha=a)
+        ax.set_xlim(-demi - 620, demi + 620)
         ax.set_ylim(-0.6, len(etapes) - 0.4)
         ax.axis("off")
-        titrer(fig, "De 1 832 séances à 587 coureurs comparables",
-               "La grosse perte vient des autres blessures, pas du nettoyage. "
-               "Dernière barre : 361 sains, 128 PFPS, 98 ITBS.")
+        titrer(fig, "De 1 798 personnes à 587 coureurs comparables",
+               "La grosse perte vient des autres blessures, pas du nettoyage. Dernière barre : "
+               "361 sains, 128 PFPS, 98 ITBS, une séance par coureur.")
         nom_fichier = ("p02_entonnoir_selection" if nb_visibles == len(etapes)
                        else f"p02_entonnoir_{nb_visibles}")
         sauver(fig, nom_fichier)

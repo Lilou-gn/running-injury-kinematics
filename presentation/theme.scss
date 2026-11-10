@@ -92,7 +92,8 @@ $code-color: $encre-titre;
   border-radius: 12px; padding: 0.55em 0.8em; margin-bottom: 0.6em; background: #fff;
   border-left: 10px solid $encre-douce;
   .nom { font-weight: 700; font-size: 1.1em; display: block; }
-  .detail { font-size: 0.75em; }
+  .rang { font-size: 0.75em; font-weight: 700; color: $encre-titre; display: block; margin: 0.1em 0 0.25em; }
+  .detail { font-size: 0.68em; display: block; line-height: 1.35; margin-top: 0.15em; }
   &.p { border-left-color: $jaune; .nom { color: $jaune; } }
   &.i { border-left-color: $rouge; .nom { color: $rouge; } }
 }

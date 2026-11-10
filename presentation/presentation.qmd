@@ -83,16 +83,20 @@ Selon les études, entre 1 coureur sur 5 et 4 sur 5 se blesse à la jambe dans l
 :::: {.columns}
 ::: {.column width="42%"}
 [28 %]{.chiffre}
-[des blessures du coureur, 40 % chez les coureuses]{.chiffre-legende}
+[des blessures du coureur touchent le genou, plus d'une sur quatre]{.chiffre-legende}
 :::
 ::: {.column width="58%"}
 ::: {.pastille .p}
 [PFPS · syndrome fémoro-patellaire]{.nom}
-[n° 1 : douleur autour de la rotule]{.detail}
+[n° 1 · 17 % des blessures du coureur]{.rang}
+[**Où :** devant le genou, autour et derrière la rotule.]{.detail}
+[**Quoi :** l'articulation entre la rotule et le fémur est surchargée. Aucune lésion visible : ni ligament, ni tendon, ni ménisque.]{.detail}
 :::
 ::: {.pastille .i}
 [ITBS · syndrome de la bandelette ilio-tibiale]{.nom}
-[n° 2 : douleur sur le côté externe du genou]{.detail}
+[n° 2 · touche 2 à 12 % des coureurs]{.rang}
+[**Où :** côté externe, juste au-dessus du genou.]{.detail}
+[**Quoi :** la bandelette, une bande fibreuse qui descend du bassin au tibia, comprime contre le fémur un coussinet de graisse très innervé.]{.detail}
 :::
 :::
 ::::
@@ -102,11 +106,11 @@ Selon les études, entre 1 coureur sur 5 et 4 sur 5 se blesse à la jambe dans l
 :::
 
 ::: {.source}
-Francis et al., J Sports Sci Med, 2019 · Taunton et al., Br J Sports Med, 2002
+Francis et al., J Sports Sci Med, 2019 (36 études, 10 688 blessures) · Taunton et al., Br J Sports Med, 2002 · Crossley et al., Br J Sports Med, 2016 · Fairclough et al., J Anat, 2006 · revue ITBS, Curr Phys Med Rehabil Rep, 2024
 :::
 
 ::: notes
-Ce ne sont pas des gênes passagères : jusqu'à 57 % des adultes avec un PFPS ont encore une évolution défavorable 5 à 8 ans après (IASP, 2023). Vérifié dans nos données : le genou est l'articulation la plus souvent blessée, et PFPS et ITBS sont les deux diagnostics précis les plus fréquents de la clinique.
+Pourquoi 28 % et pas 40 % : 28 % porte sur l'ensemble des coureurs (36 études, 10 688 blessures). Le chiffre de 40 % chez les femmes (31 % chez les hommes) vient d'un sous-ensemble de 8 études seulement : il ne se compare pas directement au 28 %, d'où son absence de la slide. À citer seulement si on parle d'Audrey ou des différences hommes-femmes. Les deux pourcentages des blessures n'ont pas le même dénominateur : 17 % des blessures pour le PFPS (Francis), 1,6 à 12 % des coureurs touchés pour l'ITBS (revue 2024). Classement n° 1 et n° 2 : Taunton, 2002. Anatomie, pour les questions. PFPS : douleur autour ou derrière la rotule, réveillée quand le genou plié porte le poids du corps (course, escaliers, accroupi) ; c'est l'articulation fémoro-patellaire, où la rotule glisse dans la gorge du fémur (la trochlée). Pas de lésion de structure à l'imagerie ; les tissus en cause sont discutés (os sous le cartilage, coussinet graisseux sous la rotule, capsule). ITBS : la bandelette ilio-tibiale est un épaississement du fascia lata, l'enveloppe fibreuse de la cuisse ; ce n'est ni un muscle ni un tendon au sens strict, mais deux muscles de la hanche tirent dessus (tenseur du fascia lata et grand fessier). Elle part de la crête iliaque et s'attache sur le tibia (tubercule de Gerdy). La douleur siège au-dessus de l'épicondyle latéral du fémur. On parlait de friction (la bande qui frotte en glissant d'avant en arrière) ; l'anatomie montre qu'elle est attachée au fémur et ne glisse pas : elle comprime un tissu graisseux très innervé, surtout vers 20 à 30° de flexion, juste après l'impact (Fairclough et al., J Anat, 2006). Lien avec la hanche : plus la cuisse rentre, plus la bandelette est tendue, et plus la rotule est déportée. Ce ne sont pas des gênes passagères : jusqu'à 57 % des adultes avec un PFPS ont encore une évolution défavorable 5 à 8 ans après (IASP, 2023). Vérifié dans nos données : le genou est l'articulation la plus souvent blessée, et PFPS et ITBS sont les deux diagnostics précis les plus fréquents de la clinique.
 :::
 
 ## Deux douleurs au genou, une origine à la hanche
@@ -114,37 +118,53 @@ Ce ne sont pas des gênes passagères : jusqu'à 57 % des adultes avec un PFPS o
 :::: {.columns}
 ::: {.column width="46%"}
 ```{=html}
-<svg viewBox="0 0 640 620" width="100%" role="img" aria-label="Jambe droite vue de face : quand la cuisse rentre, le genou part vers l'intérieur">
+<svg viewBox="0 0 640 620" width="100%" role="img" aria-label="Coureuse vue de face : d'un côté la jambe alignée, de l'autre la cuisse qui rentre et le genou qui part vers l'intérieur">
   <defs>
     <marker id="fl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M0 0L10 5L0 10z" fill="#14202E"/>
     </marker>
   </defs>
-  <line x1="470" y1="40" x2="470" y2="580" stroke="#B9BEC5" stroke-width="2" stroke-dasharray="8 8"/>
-  <text x="478" y="60" font-size="20" fill="#6B7580">axe du corps</text>
-  <path d="M150 120 Q300 70 470 105 L470 160 Q300 135 180 175 Z" fill="#E3E5E8" stroke="#5E6A77" stroke-width="3"/>
-  <text x="300" y="100" font-size="22" fill="#3F4A57" text-anchor="middle">bassin</text>
-  <line x1="250" y1="175" x2="250" y2="360" stroke="#B9BEC5" stroke-width="22" stroke-linecap="round" opacity="0.6"/>
-  <line x1="250" y1="360" x2="250" y2="560" stroke="#B9BEC5" stroke-width="18" stroke-linecap="round" opacity="0.6"/>
+  <!-- axe du corps, au centre -->
+  <line x1="320" y1="62" x2="320" y2="575" stroke="#B9BEC5" stroke-width="2" stroke-dasharray="8 8"/>
+  <text x="320" y="44" font-size="19" fill="#6B7580" text-anchor="middle">axe du corps</text>
+  <!-- bassin, symétrique -->
+  <path d="M165 118 Q320 84 475 118 L458 190 Q320 168 182 190 Z" fill="#E3E5E8" stroke="#5E6A77" stroke-width="3"/>
+  <text x="320" y="146" font-size="21" fill="#3F4A57" text-anchor="middle">bassin</text>
+  <!-- jambe de droite (écran) : alignée -->
+  <line x1="420" y1="196" x2="420" y2="375" stroke="#9AA3AD" stroke-width="26" stroke-linecap="round"/>
+  <line x1="420" y1="375" x2="420" y2="562" stroke="#9AA3AD" stroke-width="20" stroke-linecap="round"/>
+  <!-- jambe de gauche (écran) : alignée au départ, puis fantôme -->
+  <g class="fragment fade-out" data-fragment-index="1">
+    <line x1="220" y1="196" x2="220" y2="375" stroke="#9AA3AD" stroke-width="26" stroke-linecap="round"/>
+    <line x1="220" y1="375" x2="220" y2="562" stroke="#9AA3AD" stroke-width="20" stroke-linecap="round"/>
+  </g>
   <g class="fragment" data-fragment-index="1">
-    <line x1="250" y1="175" x2="320" y2="360" stroke="#5E6A77" stroke-width="26" stroke-linecap="round"/>
-    <line x1="320" y1="360" x2="275" y2="560" stroke="#5E6A77" stroke-width="20" stroke-linecap="round"/>
-    <path d="M262 300 Q300 290 330 300" fill="none" stroke="#14202E" stroke-width="3.5" marker-end="url(#fl)"/>
-    <text x="300" y="260" font-size="20" fill="#14202E" font-weight="700">la cuisse rentre</text>
+    <line x1="220" y1="196" x2="220" y2="375" stroke="#D5D9DE" stroke-width="26" stroke-linecap="round"/>
+    <line x1="220" y1="375" x2="220" y2="562" stroke="#D5D9DE" stroke-width="20" stroke-linecap="round"/>
+    <line x1="220" y1="196" x2="272" y2="372" stroke="#5E6A77" stroke-width="26" stroke-linecap="round"/>
+    <line x1="272" y1="372" x2="230" y2="562" stroke="#5E6A77" stroke-width="20" stroke-linecap="round"/>
+    <path d="M186 292 A100 100 0 0 0 262 290" fill="none" stroke="#14202E" stroke-width="3.5" marker-end="url(#fl)"/>
+    <text x="30" y="286" font-size="20" fill="#14202E" font-weight="700">la cuisse</text>
+    <text x="30" y="310" font-size="20" fill="#14202E" font-weight="700">rentre</text>
   </g>
-  <circle cx="250" cy="175" r="22" fill="#5E6A77"/>
+  <circle cx="220" cy="196" r="20" fill="#5E6A77"/>
+  <circle cx="420" cy="196" r="20" fill="#5E6A77"/>
+  <!-- les deux douleurs -->
   <g class="fragment" data-fragment-index="2">
-    <path d="M175 165 C205 260 260 330 292 378" fill="none" stroke="#7A1E3A" stroke-width="7" stroke-linecap="round"/>
-    <circle cx="292" cy="372" r="20" fill="#7A1E3A" fill-opacity="0.25" stroke="#7A1E3A" stroke-width="3"/>
-    <ellipse cx="326" cy="352" rx="17" ry="22" fill="#fff" stroke="#C98A1A" stroke-width="4"/>
-    <circle cx="326" cy="352" r="36" fill="#C98A1A" fill-opacity="0.18"/>
-    <text x="372" y="330" font-size="24" font-weight="700" fill="#C98A1A">PFPS</text>
-    <text x="372" y="356" font-size="20" fill="#3F4A57">autour de la rotule</text>
-    <text x="60" y="440" font-size="24" font-weight="700" fill="#7A1E3A">ITBS</text>
-    <text x="60" y="466" font-size="20" fill="#3F4A57">côté externe</text>
-    <line x1="150" y1="430" x2="272" y2="385" stroke="#7A1E3A" stroke-width="2"/>
+    <path d="M176 172 C188 255 222 335 252 392" fill="none" stroke="#7A1E3A" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="250" cy="343" r="11" fill="#7A1E3A" fill-opacity="0.35" stroke="#7A1E3A" stroke-width="3"/>
+    <text x="30" y="440" font-size="24" font-weight="700" fill="#7A1E3A">ITBS</text>
+    <text x="30" y="466" font-size="19" fill="#3F4A57">bandelette,</text>
+    <text x="30" y="490" font-size="19" fill="#3F4A57">côté externe</text>
+    <line x1="92" y1="432" x2="240" y2="352" stroke="#7A1E3A" stroke-width="2"/>
+    <circle cx="279" cy="364" r="21" fill="#C98A1A" fill-opacity="0.2"/>
+    <ellipse cx="279" cy="366" rx="12" ry="16" fill="#fff" stroke="#C98A1A" stroke-width="4"/>
+    <text x="334" y="268" font-size="24" font-weight="700" fill="#C98A1A">PFPS</text>
+    <text x="334" y="292" font-size="19" fill="#3F4A57">derrière</text>
+    <text x="334" y="314" font-size="19" fill="#3F4A57">la rotule</text>
+    <line x1="330" y1="310" x2="292" y2="352" stroke="#C98A1A" stroke-width="2"/>
   </g>
-  <text x="300" y="605" font-size="18" fill="#6B7580" text-anchor="middle">Jambe droite vue de face. Gris clair : alignement neutre.</text>
+  <text x="320" y="608" font-size="18" fill="#6B7580" text-anchor="middle">Coureuse vue de face. Gris clair : position alignée.</text>
 </svg>
 ```
 :::
@@ -162,13 +182,13 @@ Noehren et al., Clin Biomech, 2007 · Noehren et al., Med Sci Sports Exerc, 2013
 :::
 
 ::: notes
-Trois clics : la jambe neutre ; la cuisse rentre (adduction de hanche) ; les deux douleurs apparaissent ; la phrase à retenir. PFPS : 400 coureuses suivies, 15 cas, plus d'adduction de hanche avant la blessure. ITBS : 18 cas, plus d'adduction de hanche et de rotation interne du genou. Les deux partagent un signe, l'ITBS y ajoute une rotation : elles se ressemblent dans la foulée sans être identiques. Mécanisme ITBS actuel : compression d'un coussinet graisseux très innervé quand le genou dépasse environ 30° de flexion, juste après l'impact.
+Trois clics. Au départ, les deux jambes sont alignées de part et d'autre de l'axe du corps. Clic 1 : d'un côté la cuisse rentre (adduction de hanche) ; les deux douleurs apparaissent ; la phrase à retenir. PFPS : 400 coureuses suivies, 15 cas, plus d'adduction de hanche avant la blessure. ITBS : 18 cas, plus d'adduction de hanche et de rotation interne du genou. Les deux partagent un signe, l'ITBS y ajoute une rotation : elles se ressemblent dans la foulée sans être identiques. Mécanisme ITBS actuel : compression d'un coussinet graisseux très innervé quand le genou dépasse environ 30° de flexion, juste après l'impact.
 :::
 
 ## Aucun examen ne tranche : la foulée peut-elle aider ?
 
 ```{=html}
-<svg viewBox="0 0 1400 230" width="100%" role="img" aria-label="Parcours diagnostique : douleur au genou, examen à l'arrêt, on écarte les autres causes, diagnostic incertain">
+<svg viewBox="0 0 1390 230" width="100%" role="img" aria-label="Parcours diagnostique : douleur au genou, examen à l'arrêt, on écarte les autres causes, diagnostic incertain">
   <defs>
     <marker id="fd" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
       <path d="M0 0L10 5L0 10z" fill="#6B7580"/>
@@ -184,16 +204,17 @@ Trois clics : la jambe neutre ; la cuisse rentre (adduction de hanche) ; les deu
     <rect x="730" y="40" width="290" height="120" rx="16" fill="#fff" stroke="#E3E5E8" stroke-width="3"/>
     <text x="875" y="92" font-weight="700" fill="#14202E">On écarte</text>
     <text x="875" y="126" fill="#3F4A57">les autres causes</text>
-    <rect x="1090" y="40" width="300" height="120" rx="16" fill="#F6E7C8" stroke="#C98A1A" stroke-width="4"/>
-    <text x="1240" y="94" font-weight="700" fill="#14202E"><tspan fill="#C98A1A">PFPS</tspan> ? <tspan fill="#7A1E3A">ITBS</tspan> ?</text>
-    <text x="1240" y="128" fill="#3F4A57">sans test de référence</text>
+    <rect x="1090" y="40" width="290" height="120" rx="16" fill="#F6E7C8" stroke="#C98A1A" stroke-width="4"/>
+    <text x="1235" y="92" font-weight="700" fill="#14202E"><tspan fill="#C98A1A">PFPS</tspan> ? <tspan fill="#7A1E3A">ITBS</tspan> ?</text>
+    <text x="1235" y="126" fill="#3F4A57">sans test de référence</text>
   </g>
   <g stroke="#6B7580" stroke-width="3">
     <line x1="305" y1="100" x2="362" y2="100" marker-end="url(#fd)"/>
     <line x1="665" y1="100" x2="722" y2="100" marker-end="url(#fd)"/>
     <line x1="1025" y1="100" x2="1082" y2="100" marker-end="url(#fd)"/>
   </g>
-  <text x="515" y="205" font-size="22" fill="#7A1E3A" text-anchor="middle" font-weight="700">or la blessure se joue en courant</text>
+  <line x1="515" y1="160" x2="515" y2="180" stroke="#7A1E3A" stroke-width="2.5"/>
+  <text x="515" y="210" font-size="22" fill="#7A1E3A" text-anchor="middle" font-weight="700">or la blessure se joue en courant</text>
 </svg>
 ```
 
@@ -219,20 +240,20 @@ PFPS : pas de test clinique définitif, pas besoin d'imagerie ; on le retient qu
 
 # Les données {.partie background-color="#7A1E3A"}
 
-## Une clinique a filmé près de 1 800 coureurs
+## Une clinique a filmé près de 1 800 personnes
 
 :::: {.columns}
 ::: {.column width="58%"}
 ```{=html}
 <svg viewBox="0 0 760 560" width="100%" role="img" aria-label="Coureur sur tapis filmé par des caméras infrarouges, marqueurs sur sept segments">
   <g fill="#14202E">
-    <rect x="40" y="40" width="64" height="40" rx="6"/><circle cx="110" cy="60" r="12"/>
-    <rect x="640" y="40" width="64" height="40" rx="6"/><circle cx="634" cy="60" r="12"/>
+    <rect x="60" y="40" width="64" height="40" rx="6"/><circle cx="130" cy="60" r="12"/>
+    <rect x="646" y="40" width="64" height="40" rx="6"/><circle cx="640" cy="60" r="12"/>
   </g>
   <g stroke="#B9BEC5" stroke-width="2" stroke-dasharray="6 8">
-    <line x1="120" y1="68" x2="330" y2="300"/><line x1="624" y1="68" x2="420" y2="300"/>
+    <line x1="140" y1="68" x2="368" y2="245"/><line x1="630" y1="68" x2="402" y2="245"/>
   </g>
-  <text x="40" y="112" font-size="20" fill="#3F4A57">caméras infrarouges</text>
+  <text x="385" y="66" font-size="20" fill="#3F4A57" text-anchor="middle">caméras infrarouges</text>
   <rect x="150" y="470" width="470" height="26" rx="13" fill="#5E6A77"/>
   <circle cx="170" cy="483" r="9" fill="#E3E5E8"/><circle cx="600" cy="483" r="9" fill="#E3E5E8"/>
   <text x="385" y="530" font-size="20" fill="#3F4A57" text-anchor="middle">tapis de course, vitesse choisie par le coureur</text>
@@ -264,20 +285,20 @@ PFPS : pas de test clinique définitif, pas besoin d'imagerie ; on le retient qu
     <circle cx="372" cy="246" r="3.5"/><circle cx="385" cy="246" r="3.5"/><circle cx="398" cy="246" r="3.5"/>
   </g>
   <g font-size="20" fill="#3F4A57">
-    <text x="470" y="250">bassin</text><line x1="412" y1="252" x2="465" y2="245" stroke="#3F4A57" stroke-width="1.5"/>
-    <text x="470" y="312">cuisse</text><line x1="421" y1="306" x2="465" y2="306" stroke="#3F4A57" stroke-width="1.5"/>
-    <text x="470" y="412">jambe</text><line x1="424" y1="409" x2="465" y2="406" stroke="#3F4A57" stroke-width="1.5"/>
-    <text x="470" y="462">pied</text><line x1="452" y1="463" x2="465" y2="457" stroke="#3F4A57" stroke-width="1.5"/>
+    <text x="540" y="260">bassin</text><line x1="412" y1="253" x2="530" y2="253" stroke="#3F4A57" stroke-width="1.5"/>
+    <text x="540" y="312">cuisse</text><line x1="422" y1="305" x2="530" y2="305" stroke="#3F4A57" stroke-width="1.5"/>
+    <text x="540" y="416">jambe</text><line x1="424" y1="409" x2="530" y2="409" stroke="#3F4A57" stroke-width="1.5"/>
+    <text x="540" y="463">pied</text><line x1="456" y1="456" x2="530" y2="456" stroke="#3F4A57" stroke-width="1.5"/>
   </g>
-  <text x="40" y="300" font-size="20" fill="#7A1E3A" font-weight="700">marqueurs</text>
-  <text x="40" y="324" font-size="18" fill="#3F4A57">3-4 par plaque</text>
-  <line x1="150" y1="310" x2="280" y2="362" stroke="#7A1E3A" stroke-width="1.5"/>
+  <text x="60" y="360" font-size="20" fill="#7A1E3A" font-weight="700">marqueurs</text>
+  <text x="60" y="384" font-size="18" fill="#3F4A57">3-4 par plaque</text>
+  <line x1="172" y1="365" x2="282" y2="365" stroke="#7A1E3A" stroke-width="1.5"/>
 </svg>
 ```
 :::
 ::: {.column width="42%"}
 - Calgary, **2009 à 2017**
-- **1 798** personnes
+- **1 798** personnes, dont **1 402** ont couru
 - **7 segments** suivis, du bassin aux pieds
 
 ::: {.encadre}
@@ -298,7 +319,7 @@ Ferber et al., Scientific Data, 2024 · Running Injury Clinic Kinematic Dataset,
 Running Injury Clinic, Université de Calgary. Environ 60 secondes de course sur tapis à vitesse libre ; caméras infrarouges Vicon, environ 200 images par seconde ; marqueurs sur le bassin, les deux cuisses, les deux jambes et les deux pieds. Le diagnostic de chaque blessé a été posé par la clinique. Données ouvertes publiées en 2024. Détail pour les questions : le fichier complet fait 22,7 Go ; on n'a lu que les morceaux utiles (environ 6 Go), directement sur le serveur.
 :::
 
-## De 1 832 séances à 587 coureurs {.figure-seule}
+## De 1 798 personnes à 587 coureurs {.figure-seule}
 
 ::: {.r-stack .figure-pleine}
 ![](figures/p02_entonnoir_1.png){.fragment .fade-out fragment-index=1}
@@ -311,7 +332,7 @@ Running Injury Clinic, Université de Calgary. Environ 60 secondes de course sur
 :::
 
 ::: notes
-Une étape par clic. Insister : la grosse perte vient des coureurs qui ont une autre blessure (environ 813), pas du nettoyage, qui ne retire que 2 coureurs. 1) On garde les sains, les PFPS et les ITBS. 2) On retire 2 coureurs déclarés sains une fois et blessés une autre. 3) Une seule séance par coureur : sinon le même coureur pourrait se retrouver à la fois dans les données d'entraînement et de test, et le modèle le reconnaîtrait au lieu de reconnaître la blessure. À retenir : 361 sains, 128 PFPS, 98 ITBS.
+Une étape par clic, comptée en personnes pour suivre la slide précédente. 1 798 personnes filmées ; 1 402 ont couru (les autres n'ont été filmées qu'en marchant) ; 589 sont saines, PFPS ou ITBS : la grosse perte, 813 coureurs, vient des autres blessures, pas du nettoyage ; 587 après avoir retiré 2 coureurs déclarés sains une fois et blessés une autre. On garde une seule séance par coureur (la première) : sinon le même coureur pourrait se retrouver à la fois dans les données d'entraînement et de test. En séances, pour les questions : 1 832 séances de course, 836 sains/PFPS/ITBS, 832, puis 587. À retenir : 361 sains, 128 PFPS, 98 ITBS.
 :::
 
 ## 40 mesures par jambe, du bassin au pied
