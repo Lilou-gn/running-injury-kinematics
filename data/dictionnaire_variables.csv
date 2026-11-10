@@ -1,0 +1,101 @@
+variable,role,famille,cote,description,unite,ligne_gait_steps
+sub_id,identifiant,,,Identifiant du coureur (une ligne par coureur),,
+filename,identifiant,,,Fichier JSON de la séance retenue (ric_data.zip),,
+datestring,identifiant,,,Date et heure de la séance,,
+label,cible,,,"Diagnostic : sain, PFPS ou ITBS",,
+blesse,cible,,,"1 = PFPS ou ITBS, 0 = sain",,
+speed_r,controle,,,Vitesse de course sur tapis (= longueur x cadence / 60),m/s,
+age,controle,,,Âge,ans,
+Height,controle,,,Taille,cm,
+Weight,controle,,,Poids,kg,
+IMC,controle,,,Indice de masse corporelle,kg/m²,
+Gender,controle,,,Sexe (Female / Male),,
+DominantLeg,controle,,,Jambe dominante (Left / Right),,
+annee,confusion,,,"Année d'enregistrement : très liée au label, à ne pas donner au modèle",,
+hz_r,confusion,,,"Fréquence d'acquisition (200 Hz, 4 coureurs à 120 Hz)",Hz,
+InjSide,info_blessure,,,Côté blessé (vide chez les sains) : NE PAS utiliser comme variable,,
+InjDuration,info_blessure,,,Durée de la blessure (vide chez les sains) : NE PAS utiliser comme variable,jours,
+blessure_secondaire,info_blessure,,,Diagnostic secondaire déclaré (texte libre) : NE PAS utiliser comme variable,,
+antecedent_autre_blessure,qualite,,,1 = une séance antérieure avec une autre blessure,,
+gabarit_impute,qualite,,,1 = taille ou poids imputé (médiane par sexe),,
+jambe_dominante_imputee,qualite,,,"1 = jambe dominante manquante, mise à Right",,
+qualite_suspecte,qualite,,,1 = angles physiquement impossibles (échec probable du calcul),,
+STEP_WIDTH,cinematique,foulée,les deux,Largeur de pas (écart latéral entre les talons),m,2
+L_STRIDE_RATE,cinematique,foulée,gauche,Cadence,foulées/min,3
+L_STRIDE_LENGTH,cinematique,foulée,gauche,Longueur de foulée,m,4
+L_SWING_TIME,cinematique,foulée,gauche,Temps d'oscillation (pied en l'air),s,5
+L_STANCE_TIME,cinematique,foulée,gauche,Temps d'appui,s,6
+L_PELVIS_PEAK_DROP_ANGLE,cinematique,bassin,gauche,"Pic de chute du bassin (signe inversé à droite, convention des auteurs)",°,7
+L_PELVIS_DROP_EXCURSION,cinematique,bassin,gauche,"Amplitude de chute du bassin, du contact au pic (signe inversé à droite)",°,8
+L_ANKLE_DF_PEAK_ANGLE,cinematique,cheville,gauche,Pic de dorsiflexion,°,9
+L_ANKLE_EVE_PEAK_ANGLE,cinematique,cheville,gauche,Pic d'éversion (pronation),°,10
+L_ANKLE_EVE_percent_STANCE,cinematique,cheville,gauche,Moment du pic d'éversion,fraction de l'appui (0-1),11
+L_ANKLE_EVE_EXCURSION,cinematique,cheville,gauche,"Amplitude d'éversion, du contact au pic",°,12
+L_ANKLE_ROT_PEAK_ANGLE,cinematique,cheville,gauche,Pic de rotation du pied par rapport au tibia,°,13
+L_ANKLE_ROT_EXCURSION,cinematique,cheville,gauche,Amplitude de rotation du pied,°,14
+L_KNEE_FLEX_PEAK_ANGLE,cinematique,genou,gauche,Pic de flexion du genou (valeur négative = flexion),°,15
+L_KNEE_ADD_PEAK_ANGLE,cinematique,genou,gauche,Pic d'adduction du genou (varus),°,16
+L_KNEE_ADD_EXCURSION,cinematique,genou,gauche,Amplitude d'adduction du genou,°,17
+L_KNEE_ABD_PEAK_ANGLE,cinematique,genou,gauche,Pic d'abduction du genou (valgus),°,18
+L_KNEE_ABD_EXCURSION,cinematique,genou,gauche,Amplitude d'abduction du genou,°,19
+L_KNEE_ROT_PEAK_ANGLE,cinematique,genou,gauche,Pic de rotation du tibia sous le fémur,°,20
+L_KNEE_ROT_EXCURSION,cinematique,genou,gauche,Amplitude de rotation du tibia,°,21
+L_HIP_EXT_PEAK_ANGLE,cinematique,hanche,gauche,Pic d'extension de hanche,°,22
+L_HIP_ADD_PEAK_ANGLE,cinematique,hanche,gauche,Pic d'adduction de hanche,°,23
+L_HIP_ADD_EXCURSION,cinematique,hanche,gauche,Amplitude d'adduction de hanche,°,24
+L_HIP_ROT_PEAK_ANGLE,cinematique,hanche,gauche,Pic de rotation de hanche,°,25
+L_HIP_ROT_EXCURSION,cinematique,hanche,gauche,Amplitude de rotation de hanche (souvent 0 : distribution très asymétrique),°,26
+L_FOOT_PROG_ANGLE,cinematique,pied,gauche,Angle de progression du pied (moyenne 20-50 % de l'appui),°,27
+L_FOOT_ANG_at_HS,cinematique,pied,gauche,Angle du pied au contact (type d'attaque),°,28
+L_MHW_EXC_FROM_TO,cinematique,pied,gauche,Medial heel whip : rotation du talon après le décollement,°,29
+L_ANKLE_EVE_PEAK_VEL,cinematique,cheville,gauche,Vitesse maximale d'éversion,°/s,30
+L_ANKLE_ROT_PEAK_VEL,cinematique,cheville,gauche,Vitesse maximale de rotation du pied,°/s,31
+L_KNEE_ABD_PEAK_VEL,cinematique,genou,gauche,Vitesse maximale d'abduction du genou,°/s,32
+L_KNEE_ADD_PEAK_VEL,cinematique,genou,gauche,Vitesse maximale d'adduction du genou,°/s,33
+L_HIP_ABD_PEAK_VEL,cinematique,hanche,gauche,Vitesse maximale d'abduction de hanche,°/s,34
+L_KNEE_ROT_PEAK_VEL,cinematique,genou,gauche,Vitesse maximale de rotation du genou,°/s,35
+L_HIP_ROT_PEAK_VEL,cinematique,hanche,gauche,Vitesse maximale de rotation de hanche,°/s,36
+L_PRONATION_ONSET,cinematique,cheville,gauche,Début de pronation (entrée à 20 % du pic d'éversion),% de l'appui,37
+L_PRONATION_OFFSET,cinematique,cheville,gauche,Fin de pronation (sortie des 20 % du pic d'éversion),% de l'appui,38
+L_PEAK_HIP_ADD_VELOCITY,cinematique,hanche,gauche,Vitesse maximale d'adduction de hanche,°/s,39
+L_PEAK_PELVIC_DROP_VELOCITY,cinematique,bassin,gauche,Vitesse maximale de chute du bassin,°/s,40
+L_VERTICAL_OSCILLATION,cinematique,foulée,gauche,Oscillation verticale du bassin,mm,41
+R_STRIDE_RATE,cinematique,foulée,droite,Cadence,foulées/min,3
+R_STRIDE_LENGTH,cinematique,foulée,droite,Longueur de foulée,m,4
+R_SWING_TIME,cinematique,foulée,droite,Temps d'oscillation (pied en l'air),s,5
+R_STANCE_TIME,cinematique,foulée,droite,Temps d'appui,s,6
+R_PELVIS_PEAK_DROP_ANGLE,cinematique,bassin,droite,"Pic de chute du bassin (signe inversé à droite, convention des auteurs)",°,7
+R_PELVIS_DROP_EXCURSION,cinematique,bassin,droite,"Amplitude de chute du bassin, du contact au pic (signe inversé à droite)",°,8
+R_ANKLE_DF_PEAK_ANGLE,cinematique,cheville,droite,Pic de dorsiflexion,°,9
+R_ANKLE_EVE_PEAK_ANGLE,cinematique,cheville,droite,Pic d'éversion (pronation),°,10
+R_ANKLE_EVE_percent_STANCE,cinematique,cheville,droite,Moment du pic d'éversion,fraction de l'appui (0-1),11
+R_ANKLE_EVE_EXCURSION,cinematique,cheville,droite,"Amplitude d'éversion, du contact au pic",°,12
+R_ANKLE_ROT_PEAK_ANGLE,cinematique,cheville,droite,Pic de rotation du pied par rapport au tibia,°,13
+R_ANKLE_ROT_EXCURSION,cinematique,cheville,droite,Amplitude de rotation du pied,°,14
+R_KNEE_FLEX_PEAK_ANGLE,cinematique,genou,droite,Pic de flexion du genou (valeur négative = flexion),°,15
+R_KNEE_ADD_PEAK_ANGLE,cinematique,genou,droite,Pic d'adduction du genou (varus),°,16
+R_KNEE_ADD_EXCURSION,cinematique,genou,droite,Amplitude d'adduction du genou,°,17
+R_KNEE_ABD_PEAK_ANGLE,cinematique,genou,droite,Pic d'abduction du genou (valgus),°,18
+R_KNEE_ABD_EXCURSION,cinematique,genou,droite,Amplitude d'abduction du genou,°,19
+R_KNEE_ROT_PEAK_ANGLE,cinematique,genou,droite,Pic de rotation du tibia sous le fémur,°,20
+R_KNEE_ROT_EXCURSION,cinematique,genou,droite,Amplitude de rotation du tibia,°,21
+R_HIP_EXT_PEAK_ANGLE,cinematique,hanche,droite,Pic d'extension de hanche,°,22
+R_HIP_ADD_PEAK_ANGLE,cinematique,hanche,droite,Pic d'adduction de hanche,°,23
+R_HIP_ADD_EXCURSION,cinematique,hanche,droite,Amplitude d'adduction de hanche,°,24
+R_HIP_ROT_PEAK_ANGLE,cinematique,hanche,droite,Pic de rotation de hanche,°,25
+R_HIP_ROT_EXCURSION,cinematique,hanche,droite,Amplitude de rotation de hanche (souvent 0 : distribution très asymétrique),°,26
+R_FOOT_PROG_ANGLE,cinematique,pied,droite,Angle de progression du pied (moyenne 20-50 % de l'appui),°,27
+R_FOOT_ANG_at_HS,cinematique,pied,droite,Angle du pied au contact (type d'attaque),°,28
+R_MHW_EXC_FROM_TO,cinematique,pied,droite,Medial heel whip : rotation du talon après le décollement,°,29
+R_ANKLE_EVE_PEAK_VEL,cinematique,cheville,droite,Vitesse maximale d'éversion,°/s,30
+R_ANKLE_ROT_PEAK_VEL,cinematique,cheville,droite,Vitesse maximale de rotation du pied,°/s,31
+R_KNEE_ABD_PEAK_VEL,cinematique,genou,droite,Vitesse maximale d'abduction du genou,°/s,32
+R_KNEE_ADD_PEAK_VEL,cinematique,genou,droite,Vitesse maximale d'adduction du genou,°/s,33
+R_HIP_ABD_PEAK_VEL,cinematique,hanche,droite,Vitesse maximale d'abduction de hanche,°/s,34
+R_KNEE_ROT_PEAK_VEL,cinematique,genou,droite,Vitesse maximale de rotation du genou,°/s,35
+R_HIP_ROT_PEAK_VEL,cinematique,hanche,droite,Vitesse maximale de rotation de hanche,°/s,36
+R_PRONATION_ONSET,cinematique,cheville,droite,Début de pronation (entrée à 20 % du pic d'éversion),% de l'appui,37
+R_PRONATION_OFFSET,cinematique,cheville,droite,Fin de pronation (sortie des 20 % du pic d'éversion),% de l'appui,38
+R_PEAK_HIP_ADD_VELOCITY,cinematique,hanche,droite,Vitesse maximale d'adduction de hanche,°/s,39
+R_PEAK_PELVIC_DROP_VELOCITY,cinematique,bassin,droite,Vitesse maximale de chute du bassin,°/s,40
+R_VERTICAL_OSCILLATION,cinematique,foulée,droite,Oscillation verticale du bassin,mm,41

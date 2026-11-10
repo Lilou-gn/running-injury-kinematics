@@ -1,0 +1,24 @@
+# Données volumineuses (téléchargées par les scripts, jamais versionnées)
+*.zip
+*.mat
+data/json/
+
+# Python
+__pycache__/
+.venv/
+venv/
+.ipynb_checkpoints/
+*.pt
+*.pth
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+.Ruserdata
+
+# Divers
+*.tmp
+.DS_Store
+Thumbs.db
+.vscode/
