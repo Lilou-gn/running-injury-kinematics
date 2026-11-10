@@ -92,6 +92,54 @@ python scripts/03_construire_coureurs.py  # -> coureurs.csv, plis.csv, dictionna
 
 **Courbes d'angles pour le CNN :** elles ne sont pas stockées dans les JSON. Il faut les recalculer avec le code MATLAB des auteurs (`gait_kinematics.m`, `gait_steps.m`, dans `Supplemental_materials.zip` sur Figshare), ou le porter en Python.
 
+## Charte graphique (commune à tout le groupe)
+
+Pour que la présentation soit cohérente, **tous les graphes utilisent la même charte**, en R comme en Python. Elle suit le cours de data visualisation (R. Mahmoud) et les conseils de Cara Thompson ([« Créer un beau graphique »](https://cararthompson.github.io/rencontresR/slides/beau-graphique.html)).
+
+**Couleurs des groupes : palette « Douleur ».** Les couleurs chaudes signalent la blessure (la douleur), le gris-bleu froid signale les coureurs sains, qui servent de référence.
+
+| Groupe | Couleur | Code | Forme de point |
+|---|---|---|---|
+| Sain | gris-bleu | `#5E6A77` | rond |
+| PFPS | ambre | `#C98A1A` | carré |
+| ITBS | lie-de-vin | `#7A1E3A` | triangle |
+
+La palette a été testée par simulation de daltonisme (deutéranopie, protanopie, tritanopie) : les trois couleurs restent distinctes, y compris en noir et blanc. Toujours dans l'ordre sain, PFPS, ITBS.
+
+**Autres éléments :** fond `#F8F8F8`, titres `#14202E`, texte `#3F4A57`. Police [Atkinson Hyperlegible](https://fonts.google.com/specimen/Atkinson+Hyperlegible), conçue pour la lisibilité (amphi, vidéoprojecteur). Pour mettre en évidence autre chose qu'un groupe, on utilise le bleu nuit `#14202E` et on grise le reste.
+
+**Règles pour chaque graphe :**
+- un seul message, écrit en phrase dans le titre ; le sous-titre dit ce qu'on regarde ;
+- source et définitions en bas du graphe (légende de figure) ;
+- les noms de groupes colorés dans le sous-titre plutôt qu'une légende séparée ;
+- barres qui partent de 0, pas de camembert, pas de 3D ;
+- pourcentages à la française (« 35 % ») ;
+- deux exports : `figures/exploration/` (notebook) et `figures/slides/` (16:9, pour la présentation).
+
+**En R (ggplot2) :**
+
+```r
+source("R/theme_projet.R")
+p <- ggplot(coureurs, aes(label, speed_r, fill = label)) +
+  geom_boxplot() +
+  scale_fill_manual(values = couleurs_groupes) +
+  labs(title = "Titre-message", subtitle = "Ce qu'on regarde", caption = source_donnees) +
+  theme_projet()
+sauver_figure(p, "05_mon_graphe")
+```
+
+**En Python (matplotlib) :**
+
+```python
+from charte_graphique import appliquer_charte, COULEURS_GROUPES, titrer, sauver_figure
+appliquer_charte()
+# ... tracer avec color=COULEURS_GROUPES[groupe] ...
+titrer(fig, "Titre-message", "Ce qu'on regarde")
+sauver_figure(fig, "05_mon_graphe")
+```
+
+Les fichiers de la charte sont [R/theme_projet.R](R/theme_projet.R) et [python/charte_graphique.py](python/charte_graphique.py). Si on change une couleur, on la change dans les deux.
+
 ## Organisation du dépôt
 
 ```
@@ -100,6 +148,8 @@ data/
   intermediaire/                 sorties des scripts 01 et 02
   coureurs.csv  plis.csv  dictionnaire_variables.csv
 scripts/                         pipeline de préparation (01 -> 03)
+R/theme_projet.R                 charte graphique ggplot2
+python/charte_graphique.py       charte graphique matplotlib
 ```
 
 **Branches :** `main` contient le socle commun ci-dessus. Chacun travaille sur sa branche, créée depuis `main` :
