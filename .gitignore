@@ -27,3 +27,7 @@ Thumbs.db
 exploration/*.html
 exploration/*_files/
 Rplots.pdf
+
+# Rendus de la présentation (régénérables)
+presentation/*.html
+presentation/*_files/

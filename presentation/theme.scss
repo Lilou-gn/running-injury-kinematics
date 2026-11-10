@@ -1,0 +1,166 @@
+/*-- scss:defaults --*/
+// Charte commune du projet (python/charte_graphique.py, R/theme_projet.R).
+// Couleurs principales des slides : le rouge (bordeaux) et le jaune (ocre) de la palette « Douleur ».
+$rouge: #7A1E3A;        // = couleur ITBS dans les graphes
+$jaune: #C98A1A;        // = couleur PFPS dans les graphes
+$jaune-clair: #F6E7C8;  // fond des encadrés
+$jaune-pale: #F2C46B;   // texte jaune sur fond rouge (contraste suffisant)
+$sain: #5E6A77;
+$encre-titre: #14202E;
+$encre-texte: #3F4A57;
+$encre-douce: #6B7580;
+$fond: #F8F8F8;
+$grille: #E3E5E8;
+
+$body-bg: $fond;
+$body-color: $encre-texte;
+$link-color: $rouge;
+$presentation-heading-color: $encre-titre;
+$presentation-heading-font: "Atkinson Hyperlegible", sans-serif;
+$font-family-sans-serif: "Atkinson Hyperlegible", sans-serif;
+$presentation-font-size-root: 36px;
+$presentation-heading-font-weight: 700;
+$presentation-h2-font-size: 1.3em;
+$presentation-line-height: 1.4;
+$code-color: $encre-titre;
+
+/*-- scss:rules --*/
+
+.reveal {
+  .slides section { text-align: left; }
+  strong { color: $encre-titre; }
+  ul, ol { margin-left: 1em; }
+  li { margin-bottom: 0.45em; }
+  li::marker { color: $jaune; }
+  .slide-number { color: $encre-douce; background: transparent; font-size: 16px; }
+  .footer { font-size: 16px; color: $encre-douce; }
+
+  // Titre de slide : la phrase-message, soulignée d'un trait jaune
+  h2 {
+    text-align: left; line-height: 1.15; margin-bottom: 0.9em;
+    &::after {
+      content: ""; display: block; width: 110px; height: 7px; border-radius: 4px;
+      background: $jaune; margin-top: 0.3em;
+    }
+  }
+}
+
+// Page de titre et titres de partie : fond rouge, texte blanc, accents jaunes
+#title-slide {
+  .title { color: #fff; font-size: 1.9em; line-height: 1.15; }
+  .subtitle { color: $jaune-pale; font-size: 0.8em; margin-top: 0.6em; }
+  .quarto-title-authors, .quarto-title-author-name, .date, .institute { color: #fff; }
+  .institute { font-size: 0.6em; opacity: 0.85; }
+}
+.reveal section.partie {
+  h1 { color: #fff; font-size: 2.3em; }
+  h1::after {
+    content: ""; display: block; width: 140px; height: 9px; border-radius: 5px;
+    background: $jaune; margin-top: 0.35em;
+  }
+  p { color: $jaune-pale; font-size: 0.85em; font-weight: 700; }
+}
+
+// Couleurs de groupes dans le texte
+.sain { color: $sain; font-weight: 700; }
+.pfps { color: $jaune; font-weight: 700; }
+.itbs { color: $rouge; font-weight: 700; }
+
+// Grands chiffres
+.chiffre {
+  font-size: 3em; font-weight: 700; color: $rouge; line-height: 1;
+  margin: 0.1em 0 0.15em 0; display: block;
+}
+.chiffre.jaune { color: $jaune; }
+.chiffre-legende { font-size: 0.8em; color: $encre-texte; display: block; max-width: 15em; }
+
+// Encadré : la phrase à retenir de la slide
+.encadre {
+  background: $jaune-clair; border-left: 10px solid $jaune; border-radius: 8px;
+  padding: 0.5em 0.8em; margin-top: 0.8em; font-weight: 700; color: $encre-titre;
+}
+
+// Questions de recherche
+.question {
+  font-size: 1.05em; font-weight: 700; color: $encre-titre; line-height: 1.3;
+  border-left: 10px solid $rouge; background: #fff; border-radius: 8px;
+  padding: 0.45em 0.8em; margin: 0.45em 0;
+}
+
+// Étiquettes PFPS / ITBS
+.pastille {
+  border-radius: 12px; padding: 0.55em 0.8em; margin-bottom: 0.6em; background: #fff;
+  border-left: 10px solid $encre-douce;
+  .nom { font-weight: 700; font-size: 1.1em; display: block; }
+  .detail { font-size: 0.75em; }
+  &.p { border-left-color: $jaune; .nom { color: $jaune; } }
+  &.i { border-left-color: $rouge; .nom { color: $rouge; } }
+}
+
+// Source en bas de slide
+.source {
+  position: absolute; bottom: 0.3em; left: 0; right: 0;
+  font-size: 0.42em; color: $encre-douce;
+}
+
+// Partie que B ou C doit remplir : bien visible, pour ne pas l'oublier
+.a-completer {
+  border: 4px dashed $jaune; border-radius: 14px; padding: 0.7em 1em;
+  background: #FFFBF3; color: $encre-texte; font-size: 0.7em;
+  strong { color: $rouge; }
+}
+
+// Cartes des familles de variables
+.cartes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6em; }
+.carte {
+  background: #fff; border: 2px solid $grille; border-radius: 14px; padding: 0.55em 0.7em;
+  font-size: 0.66em; line-height: 1.35;
+  .nb { font-size: 2em; font-weight: 700; color: $encre-titre; line-height: 1; display: block; }
+  .fam { font-weight: 700; color: $encre-titre; font-size: 1.15em; display: block; margin-bottom: 0.2em; }
+  &.cle { border-color: $rouge; .nb { color: $rouge; } }
+}
+.marque-cle { color: $rouge; font-weight: 700; }
+
+.reveal table { font-size: 0.85em; }
+.reveal table th { color: $encre-titre; border-bottom: 3px solid $jaune; }
+.petit { font-size: 0.7em; }
+.tres-petit { font-size: 0.5em; color: $encre-douce; }
+.centre { text-align: center !important; }
+
+// Slides-figures : la figure porte déjà son titre-message, on cache le titre de slide
+// (il reste dans le menu et la navigation).
+.figure-pleine img { max-height: 780px; display: block; margin: 0 auto; }
+.reveal section.figure-seule > h2 { position: absolute; left: -9999px; }
+.reveal section.figure-seule .figure-pleine img { max-height: 850px; }
+
+// Slide de fin
+.reveal section.merci {
+  h2 { color: #fff; font-size: 2.6em; margin-top: 1.2em; }
+  p { color: $jaune-pale; font-size: 1.1em; }
+  .tres-petit { color: #E9C9D2; font-size: 0.5em; }
+}
+
+// Trois messages à retenir
+.retenir {
+  display: flex; align-items: center; gap: 0.6em; margin: 0.35em 0;
+  background: #fff; border-radius: 14px; padding: 0.45em 0.8em;
+  font-size: 1.05em; font-weight: 700; color: $encre-titre;
+  .num {
+    flex: none; width: 1.6em; height: 1.6em; border-radius: 50%;
+    background: $rouge; color: #fff; display: inline-flex; align-items: center; justify-content: center;
+  }
+}
+// Passage à trancher quand les résultats de B et C seront connus
+.a-trancher { color: $jaune; border-bottom: 3px dashed $jaune; }
+
+// Audrey, le personnage qui traverse la présentation
+.audrey {
+  display: flex; align-items: center; gap: 0.5em; margin-top: 0.7em;
+  font-size: 0.75em; font-style: italic; color: $encre-texte;
+  .avatar {
+    flex: none; font-style: normal; font-weight: 700; color: #fff; background: $rouge;
+    width: 1.8em; height: 1.8em; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 0 4px $jaune-clair;
+  }
+}
