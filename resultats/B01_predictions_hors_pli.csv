@@ -1,0 +1,2349 @@
+modele,pli,sub_id,classe,.pred_class,.pred_blesse
+Logistique,rep1_pli1,100015,blesse,blesse,0.5270425979477842
+Logistique,rep1_pli1,100033,blesse,sain,0.23511462813489992
+Logistique,rep1_pli1,100049,blesse,blesse,0.8639841727240836
+Logistique,rep1_pli1,100058,sain,sain,0.3196577772156821
+Logistique,rep1_pli1,100063,blesse,sain,0.3960215576877426
+Logistique,rep1_pli1,100074,blesse,blesse,0.5589894288786403
+Logistique,rep1_pli1,100075,blesse,blesse,0.5587669532825177
+Logistique,rep1_pli1,100136,blesse,blesse,0.6524103742111047
+Logistique,rep1_pli1,100173,sain,blesse,0.6097649035559075
+Logistique,rep1_pli1,100194,blesse,blesse,0.5012759249885923
+Logistique,rep1_pli1,100195,blesse,blesse,0.5891581064931648
+Logistique,rep1_pli1,100200,blesse,blesse,0.753142872247196
+Logistique,rep1_pli1,100209,blesse,sain,0.0877298238979678
+Logistique,rep1_pli1,100221,blesse,blesse,0.7004881475933701
+Logistique,rep1_pli1,100234,sain,blesse,0.5050411440978266
+Logistique,rep1_pli1,100241,blesse,blesse,0.6192337431064621
+Logistique,rep1_pli1,100246,sain,sain,0.3388257878655563
+Logistique,rep1_pli1,100256,sain,blesse,0.7569766485153545
+Logistique,rep1_pli1,100266,sain,sain,0.35390815846438306
+Logistique,rep1_pli1,100267,blesse,blesse,0.510414536381603
+Logistique,rep1_pli1,100268,blesse,sain,0.3032272039658497
+Logistique,rep1_pli1,100304,blesse,sain,0.2958947652492052
+Logistique,rep1_pli1,100310,blesse,blesse,0.766295563609429
+Logistique,rep1_pli1,100312,blesse,blesse,0.6213375011259357
+Logistique,rep1_pli1,100314,blesse,blesse,0.6817333362054978
+Logistique,rep1_pli1,100315,blesse,blesse,0.8860734810864868
+Logistique,rep1_pli1,100317,blesse,blesse,0.6130299594176711
+Logistique,rep1_pli1,100319,blesse,sain,0.4317107082409689
+Logistique,rep1_pli1,100321,blesse,blesse,0.9475481955924231
+Logistique,rep1_pli1,100326,blesse,blesse,0.8632655710107127
+Logistique,rep1_pli1,100328,blesse,sain,0.38366647866979564
+Logistique,rep1_pli1,100343,sain,blesse,0.6486500306423169
+Logistique,rep1_pli1,100368,blesse,sain,0.47199492167023716
+Logistique,rep1_pli1,100429,sain,sain,0.3544927234129759
+Logistique,rep1_pli1,100508,sain,blesse,0.5963783679032721
+Logistique,rep1_pli1,100516,sain,sain,0.19360583358608263
+Logistique,rep1_pli1,100541,sain,sain,0.1536355534616194
+Logistique,rep1_pli1,100560,sain,blesse,0.9621733239622713
+Logistique,rep1_pli1,100575,blesse,sain,0.24028018058132328
+Logistique,rep1_pli1,100593,blesse,blesse,0.5759275648703415
+Logistique,rep1_pli1,100680,sain,sain,0.1897276507348835
+Logistique,rep1_pli1,100685,sain,sain,0.3919667827294153
+Logistique,rep1_pli1,100686,sain,sain,0.2625710843362056
+Logistique,rep1_pli1,100690,sain,sain,0.26023812849340666
+Logistique,rep1_pli1,100691,sain,blesse,0.7267678132041395
+Logistique,rep1_pli1,100705,sain,sain,0.10673859526220641
+Logistique,rep1_pli1,100717,sain,sain,0.4030735475360039
+Logistique,rep1_pli1,100718,sain,sain,0.158917733257381
+Logistique,rep1_pli1,100721,sain,sain,0.267604841834035
+Logistique,rep1_pli1,100722,sain,sain,0.10986910623593182
+Logistique,rep1_pli1,100723,sain,sain,0.264035521444251
+Logistique,rep1_pli1,100744,sain,sain,0.4508652248589694
+Logistique,rep1_pli1,100757,sain,sain,0.20245348278442776
+Logistique,rep1_pli1,100775,sain,blesse,0.600094003644837
+Logistique,rep1_pli1,100777,sain,sain,0.34283214989400346
+Logistique,rep1_pli1,100783,sain,sain,0.12689511354140337
+Logistique,rep1_pli1,100784,sain,sain,0.24474257291048607
+Logistique,rep1_pli1,100793,sain,sain,0.35094673325190884
+Logistique,rep1_pli1,100797,sain,sain,0.13629150259065648
+Logistique,rep1_pli1,100800,sain,sain,0.06028751421511558
+Logistique,rep1_pli1,100844,sain,sain,0.09071962612063877
+Logistique,rep1_pli1,100873,sain,blesse,0.8407442437778755
+Logistique,rep1_pli1,100877,sain,sain,0.17990312870891423
+Logistique,rep1_pli1,100949,blesse,sain,0.30570201869909
+Logistique,rep1_pli1,100998,sain,sain,0.3382295838373883
+Logistique,rep1_pli1,101055,sain,blesse,0.6944587120984602
+Logistique,rep1_pli1,101087,sain,blesse,0.8305723490694512
+Logistique,rep1_pli1,101095,sain,sain,0.3363888839438268
+Logistique,rep1_pli1,101120,sain,sain,0.4866578574117343
+Logistique,rep1_pli1,101135,blesse,blesse,0.8141396469154589
+Logistique,rep1_pli1,101143,blesse,blesse,0.6036514456776847
+Logistique,rep1_pli1,101265,blesse,sain,0.034686677368286234
+Logistique,rep1_pli1,101342,sain,sain,0.08006798360720413
+Logistique,rep1_pli1,101344,sain,blesse,0.5610192340577671
+Logistique,rep1_pli1,101345,sain,sain,0.11120033382517769
+Logistique,rep1_pli1,101352,sain,sain,0.42584830732334034
+Logistique,rep1_pli1,101364,blesse,blesse,0.6083713837524656
+Logistique,rep1_pli1,101372,sain,sain,0.34173569066357634
+Logistique,rep1_pli1,101373,blesse,blesse,0.8164002572275214
+Logistique,rep1_pli1,101375,blesse,sain,0.15400918959841237
+Logistique,rep1_pli1,101386,sain,sain,0.035098219098423034
+Logistique,rep1_pli1,101395,sain,sain,0.08812237057831973
+Logistique,rep1_pli1,101413,blesse,sain,0.4085099901451116
+Logistique,rep1_pli1,101419,sain,sain,0.1698408879536193
+Logistique,rep1_pli1,101429,sain,sain,0.15578704782252284
+Logistique,rep1_pli1,101436,sain,sain,0.07289586754051403
+Logistique,rep1_pli1,101437,sain,sain,0.08164855116445136
+Logistique,rep1_pli1,101498,sain,sain,0.11706012206074656
+Logistique,rep1_pli1,101501,sain,sain,0.0928883132044177
+Logistique,rep1_pli1,101514,sain,blesse,0.7659280742481208
+Logistique,rep1_pli1,101542,blesse,blesse,0.7690403376020303
+Logistique,rep1_pli1,101576,sain,blesse,0.7310077220696278
+Logistique,rep1_pli1,101593,sain,blesse,0.5533433301357353
+Logistique,rep1_pli1,101594,blesse,blesse,0.5299499888233911
+Logistique,rep1_pli1,101625,sain,blesse,0.9557795251731895
+Logistique,rep1_pli1,101638,blesse,blesse,0.646459273466351
+Logistique,rep1_pli1,101660,blesse,sain,0.07460049852081718
+Logistique,rep1_pli1,101691,sain,sain,0.13957164875471695
+Logistique,rep1_pli1,101692,sain,sain,0.3283527509284644
+Logistique,rep1_pli1,101698,sain,sain,0.21372710270372297
+Logistique,rep1_pli1,101703,blesse,blesse,0.8444277244160941
+Logistique,rep1_pli1,101709,blesse,blesse,0.7028874171491637
+Logistique,rep1_pli1,101720,blesse,blesse,0.7503846851817596
+Logistique,rep1_pli1,101725,blesse,sain,0.27157810878454625
+Logistique,rep1_pli1,101809,sain,sain,0.15587773901049373
+Logistique,rep1_pli1,102010,sain,sain,0.058998197015553866
+Logistique,rep1_pli1,102012,sain,sain,0.1133868993090601
+Logistique,rep1_pli1,200030,sain,sain,0.20361693072064324
+Logistique,rep1_pli1,200032,sain,sain,0.3036351996282356
+Logistique,rep1_pli1,200355,blesse,sain,0.08737780189680122
+Logistique,rep1_pli1,200361,sain,sain,0.2749855818849545
+Logistique,rep1_pli1,200365,blesse,blesse,0.5377714970438295
+Logistique,rep1_pli1,200379,sain,blesse,0.5366259859559539
+Logistique,rep1_pli1,200982,sain,sain,0.03994807603963768
+Logistique,rep1_pli1,200983,sain,sain,0.16766878892049308
+Logistique,rep1_pli1,201080,sain,sain,0.395334086283041
+Logistique,rep1_pli1,201091,sain,blesse,0.9999268146131459
+Logistique,rep1_pli1,201223,sain,blesse,0.7846426960814719
+Logistique,rep1_pli2,100002,blesse,blesse,0.5538635884061633
+Logistique,rep1_pli2,100004,sain,sain,0.021454873811360575
+Logistique,rep1_pli2,100044,blesse,sain,0.11873484497657416
+Logistique,rep1_pli2,100093,blesse,sain,0.23444904077573625
+Logistique,rep1_pli2,100100,sain,blesse,0.5701930006799643
+Logistique,rep1_pli2,100133,blesse,blesse,0.6370601117868067
+Logistique,rep1_pli2,100197,blesse,blesse,0.5908599497462603
+Logistique,rep1_pli2,100204,blesse,blesse,0.7533149396028685
+Logistique,rep1_pli2,100211,blesse,blesse,0.7783183329936908
+Logistique,rep1_pli2,100217,blesse,sain,0.2740755416053773
+Logistique,rep1_pli2,100224,blesse,sain,0.35071552166640985
+Logistique,rep1_pli2,100226,blesse,blesse,0.9801635952504273
+Logistique,rep1_pli2,100239,sain,blesse,0.7145852729686644
+Logistique,rep1_pli2,100249,sain,blesse,0.6917409890791792
+Logistique,rep1_pli2,100257,sain,sain,0.24833746285506586
+Logistique,rep1_pli2,100258,blesse,sain,0.3768866820338652
+Logistique,rep1_pli2,100259,sain,blesse,0.545033492767252
+Logistique,rep1_pli2,100274,blesse,sain,0.33984731390974454
+Logistique,rep1_pli2,100275,blesse,blesse,0.7015558847966405
+Logistique,rep1_pli2,100277,blesse,blesse,0.9204038941682322
+Logistique,rep1_pli2,100283,sain,sain,0.12510056078434695
+Logistique,rep1_pli2,100284,blesse,blesse,0.5680321661958057
+Logistique,rep1_pli2,100306,blesse,sain,0.47817475181783853
+Logistique,rep1_pli2,100308,blesse,blesse,0.5522812611997456
+Logistique,rep1_pli2,100311,blesse,sain,0.42586068652141085
+Logistique,rep1_pli2,100323,blesse,sain,0.28391808204239233
+Logistique,rep1_pli2,100325,blesse,blesse,0.7280223764484248
+Logistique,rep1_pli2,100327,blesse,blesse,0.6125632653722963
+Logistique,rep1_pli2,100363,blesse,sain,0.2512712085127813
+Logistique,rep1_pli2,100413,sain,sain,0.3307827268822937
+Logistique,rep1_pli2,100415,sain,sain,0.27757789310263603
+Logistique,rep1_pli2,100417,blesse,sain,0.25256794358169654
+Logistique,rep1_pli2,100505,sain,blesse,0.9734430389172561
+Logistique,rep1_pli2,100513,sain,sain,0.3690035980638895
+Logistique,rep1_pli2,100520,sain,blesse,0.9892788945651492
+Logistique,rep1_pli2,100534,sain,blesse,0.5320876794880889
+Logistique,rep1_pli2,100574,blesse,blesse,0.5967069329152181
+Logistique,rep1_pli2,100594,blesse,sain,0.34247035499209155
+Logistique,rep1_pli2,100658,sain,sain,0.3258916797064455
+Logistique,rep1_pli2,100684,sain,blesse,0.567338961322599
+Logistique,rep1_pli2,100687,sain,sain,0.20196174594799654
+Logistique,rep1_pli2,100688,sain,blesse,0.5797360108004648
+Logistique,rep1_pli2,100692,sain,sain,0.31635190321683293
+Logistique,rep1_pli2,100695,sain,sain,0.22263817775429262
+Logistique,rep1_pli2,100709,blesse,sain,0.4458143688273096
+Logistique,rep1_pli2,100711,sain,sain,0.277154142883835
+Logistique,rep1_pli2,100730,sain,blesse,0.755081098442686
+Logistique,rep1_pli2,100738,sain,blesse,0.5694564769839151
+Logistique,rep1_pli2,100740,sain,sain,0.21298424336408894
+Logistique,rep1_pli2,100756,sain,sain,0.09074198060778382
+Logistique,rep1_pli2,100758,sain,sain,0.04341415089571732
+Logistique,rep1_pli2,100767,sain,sain,0.18383699198939651
+Logistique,rep1_pli2,100774,sain,sain,0.1439638912043072
+Logistique,rep1_pli2,100780,sain,sain,0.18460981263068899
+Logistique,rep1_pli2,100782,sain,blesse,0.5576643661912308
+Logistique,rep1_pli2,100798,sain,sain,0.21474373144619463
+Logistique,rep1_pli2,100810,sain,sain,0.08276083538377799
+Logistique,rep1_pli2,100813,blesse,sain,0.4039441213953091
+Logistique,rep1_pli2,100818,sain,sain,0.023487358409595482
+Logistique,rep1_pli2,100832,sain,sain,0.21619504352330365
+Logistique,rep1_pli2,100847,sain,sain,0.24776610650760778
+Logistique,rep1_pli2,100850,sain,sain,0.3605519356144661
+Logistique,rep1_pli2,100863,sain,sain,0.27653783357426187
+Logistique,rep1_pli2,100874,sain,blesse,0.6612719371219355
+Logistique,rep1_pli2,100883,blesse,sain,0.29501725657102507
+Logistique,rep1_pli2,100886,sain,sain,0.059169646917312746
+Logistique,rep1_pli2,100990,blesse,sain,0.0942738920899745
+Logistique,rep1_pli2,101054,sain,sain,0.2711319615979323
+Logistique,rep1_pli2,101061,blesse,sain,0.1475272187865445
+Logistique,rep1_pli2,101083,blesse,sain,0.2767000013311588
+Logistique,rep1_pli2,101098,sain,sain,0.18992583730650325
+Logistique,rep1_pli2,101099,blesse,sain,0.13669422213867333
+Logistique,rep1_pli2,101107,blesse,sain,0.4915855246472475
+Logistique,rep1_pli2,101110,blesse,blesse,0.6546733008564306
+Logistique,rep1_pli2,101141,sain,sain,0.2815485193660694
+Logistique,rep1_pli2,101238,sain,sain,0.39894437012709216
+Logistique,rep1_pli2,101271,sain,blesse,0.6622354168362128
+Logistique,rep1_pli2,101302,sain,sain,0.08420759776581488
+Logistique,rep1_pli2,101339,sain,sain,0.39868738121523306
+Logistique,rep1_pli2,101393,sain,sain,0.07251419141890514
+Logistique,rep1_pli2,101397,sain,sain,0.011733222967872603
+Logistique,rep1_pli2,101399,sain,sain,0.0384672122526617
+Logistique,rep1_pli2,101403,sain,sain,0.04791425821417894
+Logistique,rep1_pli2,101404,sain,sain,0.007010686359447127
+Logistique,rep1_pli2,101410,blesse,sain,0.24590915418684967
+Logistique,rep1_pli2,101416,blesse,blesse,0.7858450774556522
+Logistique,rep1_pli2,101428,blesse,blesse,0.8113047446008943
+Logistique,rep1_pli2,101499,sain,sain,0.040607290754252734
+Logistique,rep1_pli2,101534,sain,blesse,0.6859456068390812
+Logistique,rep1_pli2,101538,blesse,sain,0.34677569919878226
+Logistique,rep1_pli2,101581,sain,blesse,0.744991565829253
+Logistique,rep1_pli2,101590,sain,sain,0.26668928204671616
+Logistique,rep1_pli2,101607,blesse,blesse,0.8631904669329918
+Logistique,rep1_pli2,101612,sain,sain,0.06096010255121331
+Logistique,rep1_pli2,101613,sain,sain,0.2960204288291317
+Logistique,rep1_pli2,101624,sain,sain,0.38172212417099216
+Logistique,rep1_pli2,101654,blesse,blesse,0.5884585643289082
+Logistique,rep1_pli2,101700,blesse,sain,0.012635629463099152
+Logistique,rep1_pli2,101730,blesse,blesse,0.7068751855169217
+Logistique,rep1_pli2,101747,blesse,blesse,0.626591789672957
+Logistique,rep1_pli2,101758,sain,sain,0.3690132501298241
+Logistique,rep1_pli2,101764,blesse,blesse,0.655974865180134
+Logistique,rep1_pli2,101777,blesse,sain,0.2416569286820467
+Logistique,rep1_pli2,102000,sain,sain,0.029173048950725478
+Logistique,rep1_pli2,102008,sain,sain,0.234370017383973
+Logistique,rep1_pli2,200028,sain,sain,0.37073432311348375
+Logistique,rep1_pli2,200029,sain,sain,0.029930381409849716
+Logistique,rep1_pli2,200290,sain,blesse,0.8014735500537143
+Logistique,rep1_pli2,200340,sain,blesse,0.5484077409238006
+Logistique,rep1_pli2,200348,sain,sain,0.314762734979242
+Logistique,rep1_pli2,200363,sain,blesse,0.8342608458682954
+Logistique,rep1_pli2,200374,sain,sain,0.28800869636922755
+Logistique,rep1_pli2,200975,sain,sain,0.12356949868065503
+Logistique,rep1_pli2,200986,sain,sain,0.2971120153687351
+Logistique,rep1_pli2,200988,sain,sain,0.07161830576600581
+Logistique,rep1_pli2,200989,sain,sain,0.009619619098399257
+Logistique,rep1_pli2,201073,blesse,sain,0.14310725047085437
+Logistique,rep1_pli2,201076,sain,sain,0.18625121500541364
+Logistique,rep1_pli3,100023,blesse,sain,0.4834521261496749
+Logistique,rep1_pli3,100109,blesse,sain,0.2252302495902505
+Logistique,rep1_pli3,100119,blesse,sain,0.35518460128359197
+Logistique,rep1_pli3,100121,sain,sain,0.2992711052709459
+Logistique,rep1_pli3,100122,blesse,blesse,0.6514858391654051
+Logistique,rep1_pli3,100151,blesse,blesse,0.6218210096249512
+Logistique,rep1_pli3,100201,blesse,sain,0.3791311226672214
+Logistique,rep1_pli3,100202,blesse,blesse,0.7708071671936282
+Logistique,rep1_pli3,100205,blesse,sain,0.3820882974198506
+Logistique,rep1_pli3,100207,blesse,sain,0.43258538272045033
+Logistique,rep1_pli3,100220,blesse,blesse,0.6552452994732785
+Logistique,rep1_pli3,100228,sain,blesse,0.639893019522946
+Logistique,rep1_pli3,100232,sain,blesse,0.5629492715379406
+Logistique,rep1_pli3,100235,sain,sain,0.4163936996602252
+Logistique,rep1_pli3,100243,blesse,blesse,0.813114667347755
+Logistique,rep1_pli3,100244,sain,blesse,0.5237820196134082
+Logistique,rep1_pli3,100247,sain,sain,0.3726176923336453
+Logistique,rep1_pli3,100248,sain,sain,0.4755685242367028
+Logistique,rep1_pli3,100250,sain,blesse,0.6411704262190197
+Logistique,rep1_pli3,100252,sain,sain,0.4078614703715029
+Logistique,rep1_pli3,100261,sain,sain,0.2659461684564496
+Logistique,rep1_pli3,100262,sain,sain,0.42685013270875694
+Logistique,rep1_pli3,100265,sain,blesse,0.6607830133406263
+Logistique,rep1_pli3,100273,blesse,sain,0.12977611285190427
+Logistique,rep1_pli3,100276,blesse,blesse,0.8278721177827999
+Logistique,rep1_pli3,100280,blesse,sain,0.3762714754323613
+Logistique,rep1_pli3,100281,sain,sain,0.29967181443051105
+Logistique,rep1_pli3,100282,sain,blesse,0.663722969799326
+Logistique,rep1_pli3,100285,blesse,sain,0.32578361228907327
+Logistique,rep1_pli3,100287,sain,blesse,0.7695806989992835
+Logistique,rep1_pli3,100290,blesse,sain,0.39659689605986626
+Logistique,rep1_pli3,100300,sain,blesse,0.5638036270814462
+Logistique,rep1_pli3,100305,blesse,blesse,0.6681963599645251
+Logistique,rep1_pli3,100316,blesse,sain,0.3523058162843956
+Logistique,rep1_pli3,100370,blesse,sain,0.05194904946707135
+Logistique,rep1_pli3,100376,blesse,blesse,0.8141832386470478
+Logistique,rep1_pli3,100390,sain,sain,0.46862284971948975
+Logistique,rep1_pli3,100430,sain,sain,0.22973357263480232
+Logistique,rep1_pli3,100503,sain,sain,0.15206553310959214
+Logistique,rep1_pli3,100512,sain,sain,0.4215913666985339
+Logistique,rep1_pli3,100514,sain,sain,0.18794004044816226
+Logistique,rep1_pli3,100515,sain,blesse,0.7353057620707191
+Logistique,rep1_pli3,100517,sain,sain,0.047236354978442474
+Logistique,rep1_pli3,100518,sain,sain,0.3290129513213931
+Logistique,rep1_pli3,100545,sain,blesse,0.920741055587005
+Logistique,rep1_pli3,100565,sain,sain,0.17142491408573934
+Logistique,rep1_pli3,100580,sain,sain,0.48430207635753664
+Logistique,rep1_pli3,100598,blesse,sain,0.3522324650908284
+Logistique,rep1_pli3,100599,sain,sain,0.31898205414782344
+Logistique,rep1_pli3,100634,blesse,sain,0.33035746435727653
+Logistique,rep1_pli3,100646,blesse,blesse,0.6542625887296616
+Logistique,rep1_pli3,100654,blesse,sain,0.19767213664227123
+Logistique,rep1_pli3,100665,blesse,sain,0.33976969694716674
+Logistique,rep1_pli3,100706,sain,sain,0.1441810028425572
+Logistique,rep1_pli3,100714,blesse,blesse,0.744503067463476
+Logistique,rep1_pli3,100724,sain,sain,0.10872989461049831
+Logistique,rep1_pli3,100726,sain,sain,0.1657345476071279
+Logistique,rep1_pli3,100732,sain,sain,0.15166829936753923
+Logistique,rep1_pli3,100759,sain,sain,0.09845460690854235
+Logistique,rep1_pli3,100781,sain,sain,0.25431873099836533
+Logistique,rep1_pli3,100785,sain,sain,0.2581673446942738
+Logistique,rep1_pli3,100792,sain,sain,0.008322415895870794
+Logistique,rep1_pli3,100794,sain,sain,0.08858536436328812
+Logistique,rep1_pli3,100811,blesse,sain,0.382413577791453
+Logistique,rep1_pli3,100819,sain,blesse,0.5649619731431998
+Logistique,rep1_pli3,100820,sain,blesse,0.647567731844406
+Logistique,rep1_pli3,100821,sain,sain,0.007277733707932499
+Logistique,rep1_pli3,100829,blesse,blesse,0.8959740084130178
+Logistique,rep1_pli3,100857,sain,blesse,0.8071997087076765
+Logistique,rep1_pli3,100899,sain,sain,0.3372154092384334
+Logistique,rep1_pli3,101086,sain,blesse,0.5298906351220547
+Logistique,rep1_pli3,101124,sain,sain,0.24624853005168634
+Logistique,rep1_pli3,101255,blesse,sain,0.36159028548500927
+Logistique,rep1_pli3,101261,blesse,sain,0.33732461986846485
+Logistique,rep1_pli3,101264,sain,sain,0.17319347536221041
+Logistique,rep1_pli3,101270,sain,sain,0.25339065565744345
+Logistique,rep1_pli3,101272,sain,sain,0.47351598421459373
+Logistique,rep1_pli3,101355,blesse,blesse,0.6535973522094383
+Logistique,rep1_pli3,101362,sain,sain,0.29492494616243214
+Logistique,rep1_pli3,101381,sain,sain,0.1190938294540499
+Logistique,rep1_pli3,101392,sain,sain,0.16024640594132322
+Logistique,rep1_pli3,101396,sain,sain,0.040653956506210065
+Logistique,rep1_pli3,101406,sain,blesse,0.5006362408628605
+Logistique,rep1_pli3,101407,sain,sain,0.269104147863651
+Logistique,rep1_pli3,101409,sain,sain,0.4551147211248503
+Logistique,rep1_pli3,101427,blesse,blesse,0.6474910500461364
+Logistique,rep1_pli3,101481,sain,sain,0.33873755876450995
+Logistique,rep1_pli3,101497,sain,sain,0.26676206595312457
+Logistique,rep1_pli3,101504,sain,sain,0.4403752829468147
+Logistique,rep1_pli3,101505,sain,sain,0.3362068970703095
+Logistique,rep1_pli3,101506,sain,sain,0.08084530239424692
+Logistique,rep1_pli3,101509,sain,sain,0.4301288948872204
+Logistique,rep1_pli3,101517,blesse,sain,0.2750182464261255
+Logistique,rep1_pli3,101543,blesse,sain,0.1412547395109648
+Logistique,rep1_pli3,101606,blesse,sain,0.0785828531723024
+Logistique,rep1_pli3,101616,blesse,sain,0.40311746353157263
+Logistique,rep1_pli3,101680,blesse,sain,0.44143315735576316
+Logistique,rep1_pli3,101684,blesse,sain,0.14261696650357159
+Logistique,rep1_pli3,101704,blesse,sain,0.20347197212319856
+Logistique,rep1_pli3,101711,blesse,sain,0.31316109323619945
+Logistique,rep1_pli3,101727,blesse,blesse,0.6090137664650408
+Logistique,rep1_pli3,101772,blesse,sain,0.29601697323470144
+Logistique,rep1_pli3,101807,sain,sain,0.21349969322222906
+Logistique,rep1_pli3,102005,sain,sain,0.033899401153193454
+Logistique,rep1_pli3,102006,sain,blesse,0.6568388113537005
+Logistique,rep1_pli3,102013,sain,sain,0.028811766552004126
+Logistique,rep1_pli3,200031,blesse,sain,0.12146382779117859
+Logistique,rep1_pli3,200253,sain,blesse,0.6304641792823836
+Logistique,rep1_pli3,200264,sain,sain,0.024618152227611545
+Logistique,rep1_pli3,200269,sain,sain,0.4565847849903183
+Logistique,rep1_pli3,200321,blesse,sain,0.0632230774363507
+Logistique,rep1_pli3,200336,sain,blesse,0.7362391142756041
+Logistique,rep1_pli3,200368,sain,sain,0.3264537397350783
+Logistique,rep1_pli3,200372,sain,sain,0.15698025022728745
+Logistique,rep1_pli3,200974,sain,sain,0.2527170471060026
+Logistique,rep1_pli3,200984,sain,sain,0.27104602149743484
+Logistique,rep1_pli3,201090,blesse,sain,0.008221418757969001
+Logistique,rep1_pli4,100003,blesse,sain,0.14194990358162007
+Logistique,rep1_pli4,100010,blesse,sain,0.41848894521022617
+Logistique,rep1_pli4,100031,blesse,blesse,0.8819426036626884
+Logistique,rep1_pli4,100035,sain,blesse,0.7192545251879816
+Logistique,rep1_pli4,100036,blesse,blesse,0.8453607525706355
+Logistique,rep1_pli4,100065,blesse,sain,0.29911447115526313
+Logistique,rep1_pli4,100086,blesse,sain,0.15091849676565838
+Logistique,rep1_pli4,100091,blesse,blesse,0.7428016765095671
+Logistique,rep1_pli4,100186,blesse,sain,0.2582525655506067
+Logistique,rep1_pli4,100203,blesse,sain,0.34872122941863015
+Logistique,rep1_pli4,100213,blesse,sain,0.42426721210146445
+Logistique,rep1_pli4,100219,blesse,blesse,0.8920154810568182
+Logistique,rep1_pli4,100236,blesse,sain,0.12339457612427551
+Logistique,rep1_pli4,100237,sain,blesse,0.6222199928277944
+Logistique,rep1_pli4,100240,sain,sain,0.4780094433466866
+Logistique,rep1_pli4,100242,sain,sain,0.38248360098290046
+Logistique,rep1_pli4,100253,sain,blesse,0.5010312004352753
+Logistique,rep1_pli4,100254,blesse,blesse,0.6532633019131773
+Logistique,rep1_pli4,100255,blesse,sain,0.3251271162002328
+Logistique,rep1_pli4,100279,sain,blesse,0.8160319367928575
+Logistique,rep1_pli4,100296,blesse,blesse,0.8063026806972189
+Logistique,rep1_pli4,100303,blesse,sain,0.3937179715477285
+Logistique,rep1_pli4,100322,blesse,blesse,0.6696741591670392
+Logistique,rep1_pli4,100329,blesse,blesse,0.8860386668470163
+Logistique,rep1_pli4,100330,blesse,blesse,0.8278531398020199
+Logistique,rep1_pli4,100340,sain,sain,0.4299008995302226
+Logistique,rep1_pli4,100359,sain,sain,0.2515707082284885
+Logistique,rep1_pli4,100362,blesse,sain,0.4474998955117121
+Logistique,rep1_pli4,100374,blesse,sain,0.1680922097719958
+Logistique,rep1_pli4,100397,sain,sain,0.37470477792103807
+Logistique,rep1_pli4,100427,sain,blesse,0.8296127206546479
+Logistique,rep1_pli4,100510,sain,sain,0.07509271752403424
+Logistique,rep1_pli4,100525,blesse,sain,0.08299310785019132
+Logistique,rep1_pli4,100540,sain,sain,7.066551788170727e-10
+Logistique,rep1_pli4,100543,sain,sain,0.06396720254724741
+Logistique,rep1_pli4,100571,sain,sain,0.20132209338559348
+Logistique,rep1_pli4,100642,sain,sain,0.1315414265276209
+Logistique,rep1_pli4,100677,blesse,sain,0.007159238321776673
+Logistique,rep1_pli4,100683,sain,sain,0.12363311605004246
+Logistique,rep1_pli4,100689,sain,sain,0.3568521145011533
+Logistique,rep1_pli4,100693,sain,blesse,0.5702046396999761
+Logistique,rep1_pli4,100720,sain,sain,0.07222279092613426
+Logistique,rep1_pli4,100727,sain,sain,0.4032267699037232
+Logistique,rep1_pli4,100728,sain,blesse,0.7307034715871014
+Logistique,rep1_pli4,100731,sain,sain,0.013532954444193668
+Logistique,rep1_pli4,100739,sain,sain,0.055427924508226534
+Logistique,rep1_pli4,100760,sain,sain,0.23122354432679226
+Logistique,rep1_pli4,100786,sain,sain,0.2996317889989687
+Logistique,rep1_pli4,100787,sain,sain,0.07195882894186723
+Logistique,rep1_pli4,100791,sain,sain,0.09256847396986123
+Logistique,rep1_pli4,100801,sain,sain,0.25867751171927067
+Logistique,rep1_pli4,100830,sain,sain,0.19983651881597198
+Logistique,rep1_pli4,100848,sain,sain,0.05915687497203348
+Logistique,rep1_pli4,100853,sain,sain,0.13208548744849735
+Logistique,rep1_pli4,100861,sain,blesse,0.8183575440450529
+Logistique,rep1_pli4,101013,sain,sain,0.2996793337913507
+Logistique,rep1_pli4,101049,blesse,sain,0.14744655478720015
+Logistique,rep1_pli4,101058,sain,blesse,0.7382465857288993
+Logistique,rep1_pli4,101060,sain,sain,0.23044816047902061
+Logistique,rep1_pli4,101137,sain,sain,0.3256485349275241
+Logistique,rep1_pli4,101149,blesse,blesse,0.6595149300045235
+Logistique,rep1_pli4,101165,blesse,blesse,0.7661044675124932
+Logistique,rep1_pli4,101248,blesse,sain,0.21156475146715248
+Logistique,rep1_pli4,101249,blesse,blesse,0.7400766982950873
+Logistique,rep1_pli4,101262,sain,blesse,0.7179017879708551
+Logistique,rep1_pli4,101263,sain,sain,0.4868593387056428
+Logistique,rep1_pli4,101334,blesse,sain,0.361154884224703
+Logistique,rep1_pli4,101341,sain,sain,0.36675767528941683
+Logistique,rep1_pli4,101353,sain,blesse,0.6695864794790658
+Logistique,rep1_pli4,101361,sain,sain,0.2217263660043297
+Logistique,rep1_pli4,101365,sain,blesse,0.7834433331121102
+Logistique,rep1_pli4,101366,sain,blesse,0.9614463391128714
+Logistique,rep1_pli4,101374,blesse,sain,0.05711947841281506
+Logistique,rep1_pli4,101401,sain,sain,0.05923382980843883
+Logistique,rep1_pli4,101405,sain,sain,0.44819994521691797
+Logistique,rep1_pli4,101440,sain,sain,0.3211682668038851
+Logistique,rep1_pli4,101500,sain,sain,0.38360357457083905
+Logistique,rep1_pli4,101502,sain,sain,0.05026699961977499
+Logistique,rep1_pli4,101508,sain,sain,0.022150680556660807
+Logistique,rep1_pli4,101511,sain,sain,0.18555898001428328
+Logistique,rep1_pli4,101527,sain,blesse,0.5129861422948612
+Logistique,rep1_pli4,101562,blesse,blesse,0.8891143436388305
+Logistique,rep1_pli4,101564,blesse,sain,0.12752049128213405
+Logistique,rep1_pli4,101577,sain,blesse,0.7462348352710295
+Logistique,rep1_pli4,101588,blesse,blesse,0.7105522622238725
+Logistique,rep1_pli4,101603,blesse,sain,0.39532244451912446
+Logistique,rep1_pli4,101629,sain,blesse,0.8418184773896997
+Logistique,rep1_pli4,101634,sain,blesse,0.7583154205975002
+Logistique,rep1_pli4,101641,blesse,sain,0.47555942145164665
+Logistique,rep1_pli4,101650,blesse,blesse,0.7629200581514431
+Logistique,rep1_pli4,101651,sain,blesse,0.6111667522945179
+Logistique,rep1_pli4,101696,blesse,sain,0.28034832493093065
+Logistique,rep1_pli4,101728,blesse,blesse,0.5168274735456522
+Logistique,rep1_pli4,101746,sain,sain,0.04751295733473937
+Logistique,rep1_pli4,101769,sain,sain,0.2822076479680232
+Logistique,rep1_pli4,101770,blesse,sain,0.03489957973924951
+Logistique,rep1_pli4,101999,sain,sain,0.3666925405971194
+Logistique,rep1_pli4,102001,sain,sain,0.11916308005235365
+Logistique,rep1_pli4,102002,sain,sain,0.14586727921162035
+Logistique,rep1_pli4,102003,sain,sain,0.09273737059669118
+Logistique,rep1_pli4,102004,sain,sain,0.33165934534391783
+Logistique,rep1_pli4,102007,sain,sain,0.1572540696499899
+Logistique,rep1_pli4,200244,sain,sain,0.38141401323232516
+Logistique,rep1_pli4,200250,sain,sain,0.22777569231361128
+Logistique,rep1_pli4,200276,sain,sain,0.25385413664642675
+Logistique,rep1_pli4,200285,sain,blesse,0.5944403201266872
+Logistique,rep1_pli4,200294,blesse,sain,0.009555404562953784
+Logistique,rep1_pli4,200295,sain,sain,0.10216246292945341
+Logistique,rep1_pli4,200302,sain,sain,0.42783006762228426
+Logistique,rep1_pli4,200350,blesse,blesse,0.9244167086795352
+Logistique,rep1_pli4,200354,blesse,sain,0.40640446225114957
+Logistique,rep1_pli4,200358,sain,sain,0.2537052996347381
+Logistique,rep1_pli4,200376,sain,sain,0.4564961347452633
+Logistique,rep1_pli4,200980,blesse,sain,0.09462258882944985
+Logistique,rep1_pli4,201077,sain,sain,0.1641037614291304
+Logistique,rep1_pli4,201224,blesse,sain,0.42692844519525575
+Logistique,rep1_pli5,100005,blesse,sain,0.29752097373520714
+Logistique,rep1_pli5,100021,blesse,blesse,0.7518347452798547
+Logistique,rep1_pli5,100057,blesse,sain,0.06856641502820215
+Logistique,rep1_pli5,100080,blesse,blesse,0.5625912200416512
+Logistique,rep1_pli5,100088,blesse,sain,0.4354838457469058
+Logistique,rep1_pli5,100156,blesse,sain,0.4568463229894235
+Logistique,rep1_pli5,100164,sain,sain,0.05802633348367359
+Logistique,rep1_pli5,100178,blesse,blesse,0.5302222843518954
+Logistique,rep1_pli5,100182,sain,sain,0.17065022056586931
+Logistique,rep1_pli5,100199,blesse,blesse,0.6557441306999809
+Logistique,rep1_pli5,100206,blesse,sain,0.3947090046183328
+Logistique,rep1_pli5,100223,blesse,blesse,0.7735372461453343
+Logistique,rep1_pli5,100225,blesse,blesse,0.7656527856679816
+Logistique,rep1_pli5,100238,blesse,blesse,0.6948777999195719
+Logistique,rep1_pli5,100245,blesse,sain,0.33904305655514877
+Logistique,rep1_pli5,100260,sain,blesse,0.5231603510138984
+Logistique,rep1_pli5,100263,sain,sain,0.36946497087110197
+Logistique,rep1_pli5,100269,sain,sain,0.23020730210313467
+Logistique,rep1_pli5,100271,blesse,blesse,0.8546190037278881
+Logistique,rep1_pli5,100286,blesse,sain,0.42360975233173204
+Logistique,rep1_pli5,100288,sain,blesse,0.6659150851435831
+Logistique,rep1_pli5,100289,blesse,blesse,0.5210863092038868
+Logistique,rep1_pli5,100307,blesse,blesse,0.661387095168047
+Logistique,rep1_pli5,100309,blesse,blesse,0.8062311388739006
+Logistique,rep1_pli5,100318,blesse,blesse,0.7497767215348926
+Logistique,rep1_pli5,100324,blesse,sain,0.07444539109984516
+Logistique,rep1_pli5,100332,blesse,blesse,0.8739380088138577
+Logistique,rep1_pli5,100377,blesse,blesse,0.6879326253330245
+Logistique,rep1_pli5,100401,sain,sain,0.396857171960176
+Logistique,rep1_pli5,100414,blesse,sain,0.41908034992423626
+Logistique,rep1_pli5,100422,sain,sain,0.19096429185343877
+Logistique,rep1_pli5,100423,sain,sain,0.41132104301130856
+Logistique,rep1_pli5,100424,sain,sain,0.21162084389312052
+Logistique,rep1_pli5,100425,sain,blesse,0.5970228657217542
+Logistique,rep1_pli5,100504,sain,blesse,0.6647216324407745
+Logistique,rep1_pli5,100506,sain,sain,0.013184014553804135
+Logistique,rep1_pli5,100509,sain,blesse,0.7612847946835427
+Logistique,rep1_pli5,100511,sain,blesse,0.8275428369754015
+Logistique,rep1_pli5,100532,sain,sain,0.3888381151004463
+Logistique,rep1_pli5,100535,sain,blesse,0.5634300236751826
+Logistique,rep1_pli5,100536,sain,sain,0.09689911237645255
+Logistique,rep1_pli5,100538,sain,sain,0.21881194359499967
+Logistique,rep1_pli5,100570,blesse,blesse,0.8318158622927502
+Logistique,rep1_pli5,100573,blesse,sain,0.3263037746931283
+Logistique,rep1_pli5,100581,blesse,sain,0.4771432421702685
+Logistique,rep1_pli5,100587,sain,blesse,0.5363484108444376
+Logistique,rep1_pli5,100605,blesse,blesse,0.7572700729631354
+Logistique,rep1_pli5,100618,sain,blesse,0.5882703203343997
+Logistique,rep1_pli5,100682,sain,blesse,0.500323265946852
+Logistique,rep1_pli5,100712,sain,sain,0.40713128338173443
+Logistique,rep1_pli5,100715,sain,sain,0.31685032729843743
+Logistique,rep1_pli5,100716,sain,sain,0.33731023441688146
+Logistique,rep1_pli5,100719,sain,sain,0.11795754553951343
+Logistique,rep1_pli5,100725,sain,sain,0.4613999409956385
+Logistique,rep1_pli5,100742,sain,sain,0.022599702028441526
+Logistique,rep1_pli5,100745,sain,blesse,0.5140316917227163
+Logistique,rep1_pli5,100755,sain,sain,0.18947072710395063
+Logistique,rep1_pli5,100765,sain,sain,0.1051733949097734
+Logistique,rep1_pli5,100766,sain,sain,0.0974188114866309
+Logistique,rep1_pli5,100771,blesse,sain,0.4579243978341293
+Logistique,rep1_pli5,100788,sain,sain,0.2388709695151482
+Logistique,rep1_pli5,100817,sain,sain,0.25948682554277935
+Logistique,rep1_pli5,100826,blesse,sain,0.4873297515929327
+Logistique,rep1_pli5,100842,sain,blesse,0.7444686432788697
+Logistique,rep1_pli5,100851,sain,sain,0.15323161112077277
+Logistique,rep1_pli5,100852,sain,sain,0.18318007188992125
+Logistique,rep1_pli5,100898,blesse,sain,0.4958025875901514
+Logistique,rep1_pli5,100945,blesse,sain,0.39007795052021743
+Logistique,rep1_pli5,100991,sain,blesse,0.5754502922044852
+Logistique,rep1_pli5,100994,blesse,sain,0.06170073434864898
+Logistique,rep1_pli5,101048,blesse,sain,0.04460132473428269
+Logistique,rep1_pli5,101067,sain,blesse,0.6507890341430931
+Logistique,rep1_pli5,101108,blesse,sain,0.281762753090094
+Logistique,rep1_pli5,101111,sain,sain,0.23183332561865688
+Logistique,rep1_pli5,101115,sain,sain,0.32533160829770424
+Logistique,rep1_pli5,101126,sain,sain,0.1399515504916572
+Logistique,rep1_pli5,101133,blesse,blesse,0.5611461734610739
+Logistique,rep1_pli5,101142,sain,sain,0.42655628922675837
+Logistique,rep1_pli5,101169,sain,blesse,0.5977371546603257
+Logistique,rep1_pli5,101175,blesse,blesse,0.8461076454358665
+Logistique,rep1_pli5,101250,blesse,sain,0.3110478090190544
+Logistique,rep1_pli5,101312,sain,sain,0.30571410079301875
+Logistique,rep1_pli5,101337,sain,sain,0.33611796563068197
+Logistique,rep1_pli5,101343,sain,sain,0.12954289770262162
+Logistique,rep1_pli5,101360,sain,blesse,0.8235615322542998
+Logistique,rep1_pli5,101394,sain,sain,0.006287139390768637
+Logistique,rep1_pli5,101398,sain,sain,0.0741779121326247
+Logistique,rep1_pli5,101400,sain,sain,0.12466726589262311
+Logistique,rep1_pli5,101402,sain,blesse,0.6515067986969588
+Logistique,rep1_pli5,101408,sain,sain,0.3105182699038025
+Logistique,rep1_pli5,101418,sain,sain,0.10305698515730877
+Logistique,rep1_pli5,101420,sain,sain,0.007448740476760474
+Logistique,rep1_pli5,101432,blesse,sain,0.4383279056259757
+Logistique,rep1_pli5,101503,sain,sain,0.11577405006032171
+Logistique,rep1_pli5,101507,sain,sain,0.08886751249780045
+Logistique,rep1_pli5,101592,blesse,blesse,0.8656368990192983
+Logistique,rep1_pli5,101596,sain,sain,0.07190949481177011
+Logistique,rep1_pli5,101643,blesse,blesse,0.6511857916454717
+Logistique,rep1_pli5,101663,sain,blesse,0.6135449505803074
+Logistique,rep1_pli5,101716,sain,sain,0.04788576219351892
+Logistique,rep1_pli5,101763,sain,blesse,0.7790235008078603
+Logistique,rep1_pli5,101944,sain,sain,0.02466487104431303
+Logistique,rep1_pli5,102009,sain,sain,0.48840137261059424
+Logistique,rep1_pli5,102014,sain,sain,0.014633163943303495
+Logistique,rep1_pli5,200267,sain,sain,0.2925763149817421
+Logistique,rep1_pli5,200270,blesse,sain,0.41125779183107614
+Logistique,rep1_pli5,200273,blesse,sain,0.0030225799382102014
+Logistique,rep1_pli5,200280,blesse,sain,0.20440992232082966
+Logistique,rep1_pli5,200288,sain,sain,0.2418394798903848
+Logistique,rep1_pli5,200292,sain,sain,0.29374778557885417
+Logistique,rep1_pli5,200301,sain,sain,0.12572297831177504
+Logistique,rep1_pli5,200308,blesse,sain,0.25114625773772115
+Logistique,rep1_pli5,200324,blesse,sain,0.08053765644998623
+Logistique,rep1_pli5,200335,sain,sain,0.14021411547348017
+Logistique,rep1_pli5,200981,sain,sain,0.18700982259189802
+Logistique,rep1_pli5,200985,sain,sain,0.2639707380103521
+Logistique,rep1_pli5,201089,sain,sain,0.0028994612697050837
+Logistique,rep1_pli5,201101,sain,sain,0.17087875957074894
+Logistique rééquilibrée,rep1_pli1,100015,blesse,blesse,0.6284953851293096
+Logistique rééquilibrée,rep1_pli1,100033,blesse,sain,0.23316479009028201
+Logistique rééquilibrée,rep1_pli1,100049,blesse,blesse,0.8970962309792223
+Logistique rééquilibrée,rep1_pli1,100058,sain,blesse,0.5112552421200409
+Logistique rééquilibrée,rep1_pli1,100063,blesse,sain,0.47305725930501996
+Logistique rééquilibrée,rep1_pli1,100074,blesse,blesse,0.6613025290387741
+Logistique rééquilibrée,rep1_pli1,100075,blesse,blesse,0.5604570875233174
+Logistique rééquilibrée,rep1_pli1,100136,blesse,blesse,0.7287026230978719
+Logistique rééquilibrée,rep1_pli1,100173,sain,blesse,0.5547881081528718
+Logistique rééquilibrée,rep1_pli1,100194,blesse,sain,0.4558290044376119
+Logistique rééquilibrée,rep1_pli1,100195,blesse,blesse,0.5003412955962312
+Logistique rééquilibrée,rep1_pli1,100200,blesse,blesse,0.6817525376643718
+Logistique rééquilibrée,rep1_pli1,100209,blesse,sain,0.15752412671795546
+Logistique rééquilibrée,rep1_pli1,100221,blesse,blesse,0.5995510243711785
+Logistique rééquilibrée,rep1_pli1,100234,sain,blesse,0.7278314799020835
+Logistique rééquilibrée,rep1_pli1,100241,blesse,blesse,0.7499034635188744
+Logistique rééquilibrée,rep1_pli1,100246,sain,blesse,0.5373007215372778
+Logistique rééquilibrée,rep1_pli1,100256,sain,blesse,0.8194315967894726
+Logistique rééquilibrée,rep1_pli1,100266,sain,sain,0.3661102996613954
+Logistique rééquilibrée,rep1_pli1,100267,blesse,blesse,0.664019407452267
+Logistique rééquilibrée,rep1_pli1,100268,blesse,sain,0.3517355068099164
+Logistique rééquilibrée,rep1_pli1,100304,blesse,sain,0.3727831951921291
+Logistique rééquilibrée,rep1_pli1,100310,blesse,blesse,0.8029387344856442
+Logistique rééquilibrée,rep1_pli1,100312,blesse,blesse,0.7225065151828771
+Logistique rééquilibrée,rep1_pli1,100314,blesse,blesse,0.8085935613314019
+Logistique rééquilibrée,rep1_pli1,100315,blesse,blesse,0.9605741885204031
+Logistique rééquilibrée,rep1_pli1,100317,blesse,blesse,0.5403126594243507
+Logistique rééquilibrée,rep1_pli1,100319,blesse,sain,0.3997551335729145
+Logistique rééquilibrée,rep1_pli1,100321,blesse,blesse,0.9373507306744444
+Logistique rééquilibrée,rep1_pli1,100326,blesse,blesse,0.7339376564973591
+Logistique rééquilibrée,rep1_pli1,100328,blesse,blesse,0.5256215005171131
+Logistique rééquilibrée,rep1_pli1,100343,sain,blesse,0.6964894110938483
+Logistique rééquilibrée,rep1_pli1,100368,blesse,blesse,0.646938351425666
+Logistique rééquilibrée,rep1_pli1,100429,sain,sain,0.4613191661522066
+Logistique rééquilibrée,rep1_pli1,100508,sain,blesse,0.520469746452006
+Logistique rééquilibrée,rep1_pli1,100516,sain,sain,0.38426418272507634
+Logistique rééquilibrée,rep1_pli1,100541,sain,sain,0.16566699407952057
+Logistique rééquilibrée,rep1_pli1,100560,sain,blesse,0.928975776696359
+Logistique rééquilibrée,rep1_pli1,100575,blesse,sain,0.16010489037821407
+Logistique rééquilibrée,rep1_pli1,100593,blesse,blesse,0.6350213547513258
+Logistique rééquilibrée,rep1_pli1,100680,sain,sain,0.41089809555674983
+Logistique rééquilibrée,rep1_pli1,100685,sain,blesse,0.5348296749409539
+Logistique rééquilibrée,rep1_pli1,100686,sain,sain,0.4311168088505949
+Logistique rééquilibrée,rep1_pli1,100690,sain,sain,0.29644372544295916
+Logistique rééquilibrée,rep1_pli1,100691,sain,blesse,0.8217128166004579
+Logistique rééquilibrée,rep1_pli1,100705,sain,sain,0.13560298777348379
+Logistique rééquilibrée,rep1_pli1,100717,sain,blesse,0.5419715017135714
+Logistique rééquilibrée,rep1_pli1,100718,sain,sain,0.24816655470030546
+Logistique rééquilibrée,rep1_pli1,100721,sain,sain,0.3927420010695144
+Logistique rééquilibrée,rep1_pli1,100722,sain,sain,0.16415950607822916
+Logistique rééquilibrée,rep1_pli1,100723,sain,sain,0.3970943112100934
+Logistique rééquilibrée,rep1_pli1,100744,sain,blesse,0.7179265197758063
+Logistique rééquilibrée,rep1_pli1,100757,sain,sain,0.178247421737738
+Logistique rééquilibrée,rep1_pli1,100775,sain,blesse,0.7584357100518824
+Logistique rééquilibrée,rep1_pli1,100777,sain,sain,0.47605353844520726
+Logistique rééquilibrée,rep1_pli1,100783,sain,sain,0.19678407861728475
+Logistique rééquilibrée,rep1_pli1,100784,sain,sain,0.17182813914787676
+Logistique rééquilibrée,rep1_pli1,100793,sain,sain,0.35696385516403406
+Logistique rééquilibrée,rep1_pli1,100797,sain,sain,0.16133862430033852
+Logistique rééquilibrée,rep1_pli1,100800,sain,sain,0.05558684851834239
+Logistique rééquilibrée,rep1_pli1,100844,sain,sain,0.2637385739298662
+Logistique rééquilibrée,rep1_pli1,100873,sain,blesse,0.8841814795156073
+Logistique rééquilibrée,rep1_pli1,100877,sain,sain,0.33374427406695206
+Logistique rééquilibrée,rep1_pli1,100949,blesse,sain,0.3719286532840572
+Logistique rééquilibrée,rep1_pli1,100998,sain,blesse,0.5383093689071676
+Logistique rééquilibrée,rep1_pli1,101055,sain,blesse,0.8107341024848889
+Logistique rééquilibrée,rep1_pli1,101087,sain,blesse,0.8172648908970646
+Logistique rééquilibrée,rep1_pli1,101095,sain,sain,0.35828887406723264
+Logistique rééquilibrée,rep1_pli1,101120,sain,blesse,0.6815159925043335
+Logistique rééquilibrée,rep1_pli1,101135,blesse,blesse,0.9090575888505225
+Logistique rééquilibrée,rep1_pli1,101143,blesse,blesse,0.7469006756106471
+Logistique rééquilibrée,rep1_pli1,101265,blesse,sain,0.046236579326649485
+Logistique rééquilibrée,rep1_pli1,101342,sain,sain,0.08109785857251506
+Logistique rééquilibrée,rep1_pli1,101344,sain,blesse,0.7521670495451337
+Logistique rééquilibrée,rep1_pli1,101345,sain,sain,0.08285086818902254
+Logistique rééquilibrée,rep1_pli1,101352,sain,blesse,0.5744081703607571
+Logistique rééquilibrée,rep1_pli1,101364,blesse,blesse,0.7281660864251547
+Logistique rééquilibrée,rep1_pli1,101372,sain,sain,0.27432179403364
+Logistique rééquilibrée,rep1_pli1,101373,blesse,blesse,0.9563523541994248
+Logistique rééquilibrée,rep1_pli1,101375,blesse,sain,0.2102096075348272
+Logistique rééquilibrée,rep1_pli1,101386,sain,sain,0.08915033944127304
+Logistique rééquilibrée,rep1_pli1,101395,sain,sain,0.32339695214845265
+Logistique rééquilibrée,rep1_pli1,101413,blesse,sain,0.46299045265662486
+Logistique rééquilibrée,rep1_pli1,101419,sain,sain,0.21439869303485437
+Logistique rééquilibrée,rep1_pli1,101429,sain,sain,0.19743172234935924
+Logistique rééquilibrée,rep1_pli1,101436,sain,sain,0.09388502547345035
+Logistique rééquilibrée,rep1_pli1,101437,sain,sain,0.2268267526152603
+Logistique rééquilibrée,rep1_pli1,101498,sain,sain,0.2483501268100421
+Logistique rééquilibrée,rep1_pli1,101501,sain,sain,0.14677504892406834
+Logistique rééquilibrée,rep1_pli1,101514,sain,blesse,0.920638696024304
+Logistique rééquilibrée,rep1_pli1,101542,blesse,blesse,0.7952801168865737
+Logistique rééquilibrée,rep1_pli1,101576,sain,blesse,0.8205045747573763
+Logistique rééquilibrée,rep1_pli1,101593,sain,blesse,0.7304004939739923
+Logistique rééquilibrée,rep1_pli1,101594,blesse,blesse,0.5942921418269451
+Logistique rééquilibrée,rep1_pli1,101625,sain,blesse,0.9651960224559923
+Logistique rééquilibrée,rep1_pli1,101638,blesse,blesse,0.6645781856851829
+Logistique rééquilibrée,rep1_pli1,101660,blesse,sain,0.1181259582405414
+Logistique rééquilibrée,rep1_pli1,101691,sain,sain,0.2790087058164815
+Logistique rééquilibrée,rep1_pli1,101692,sain,sain,0.36400925850929955
+Logistique rééquilibrée,rep1_pli1,101698,sain,sain,0.36816321972105226
+Logistique rééquilibrée,rep1_pli1,101703,blesse,blesse,0.9402184227858671
+Logistique rééquilibrée,rep1_pli1,101709,blesse,blesse,0.6814322865867124
+Logistique rééquilibrée,rep1_pli1,101720,blesse,blesse,0.9095136416622652
+Logistique rééquilibrée,rep1_pli1,101725,blesse,sain,0.46692306690413343
+Logistique rééquilibrée,rep1_pli1,101809,sain,sain,0.2676967395134612
+Logistique rééquilibrée,rep1_pli1,102010,sain,sain,0.2132621331052693
+Logistique rééquilibrée,rep1_pli1,102012,sain,sain,0.11634001409702432
+Logistique rééquilibrée,rep1_pli1,200030,sain,sain,0.27502074585468383
+Logistique rééquilibrée,rep1_pli1,200032,sain,sain,0.44774719327672374
+Logistique rééquilibrée,rep1_pli1,200355,blesse,sain,0.13818605250726146
+Logistique rééquilibrée,rep1_pli1,200361,sain,sain,0.38972905374964295
+Logistique rééquilibrée,rep1_pli1,200365,blesse,blesse,0.7356716568771711
+Logistique rééquilibrée,rep1_pli1,200379,sain,blesse,0.5567927533098773
+Logistique rééquilibrée,rep1_pli1,200982,sain,sain,0.06747263165412432
+Logistique rééquilibrée,rep1_pli1,200983,sain,sain,0.2615075912001039
+Logistique rééquilibrée,rep1_pli1,201080,sain,sain,0.4562713150694728
+Logistique rééquilibrée,rep1_pli1,201091,sain,blesse,0.9982083633626705
+Logistique rééquilibrée,rep1_pli1,201223,sain,blesse,0.7731281984888656
+Logistique rééquilibrée,rep1_pli2,100002,blesse,blesse,0.6712008953876161
+Logistique rééquilibrée,rep1_pli2,100004,sain,sain,0.035726043503985006
+Logistique rééquilibrée,rep1_pli2,100044,blesse,sain,0.20392145268460315
+Logistique rééquilibrée,rep1_pli2,100093,blesse,sain,0.27261202285822106
+Logistique rééquilibrée,rep1_pli2,100100,sain,sain,0.49831656168410254
+Logistique rééquilibrée,rep1_pli2,100133,blesse,blesse,0.5838842572439722
+Logistique rééquilibrée,rep1_pli2,100197,blesse,blesse,0.5975316127874605
+Logistique rééquilibrée,rep1_pli2,100204,blesse,blesse,0.8624208805018381
+Logistique rééquilibrée,rep1_pli2,100211,blesse,blesse,0.8513337793210363
+Logistique rééquilibrée,rep1_pli2,100217,blesse,sain,0.4595581751849763
+Logistique rééquilibrée,rep1_pli2,100224,blesse,sain,0.4998274205559592
+Logistique rééquilibrée,rep1_pli2,100226,blesse,blesse,0.9863629479077815
+Logistique rééquilibrée,rep1_pli2,100239,sain,blesse,0.7826667752818391
+Logistique rééquilibrée,rep1_pli2,100249,sain,blesse,0.7259243063794345
+Logistique rééquilibrée,rep1_pli2,100257,sain,sain,0.28575161645099134
+Logistique rééquilibrée,rep1_pli2,100258,blesse,sain,0.32896910287384895
+Logistique rééquilibrée,rep1_pli2,100259,sain,blesse,0.5332161297130418
+Logistique rééquilibrée,rep1_pli2,100274,blesse,sain,0.4516311144837838
+Logistique rééquilibrée,rep1_pli2,100275,blesse,blesse,0.823605948410827
+Logistique rééquilibrée,rep1_pli2,100277,blesse,blesse,0.9636582115082858
+Logistique rééquilibrée,rep1_pli2,100283,sain,sain,0.19263608586956005
+Logistique rééquilibrée,rep1_pli2,100284,blesse,blesse,0.742904590651038
+Logistique rééquilibrée,rep1_pli2,100306,blesse,blesse,0.5212617705453004
+Logistique rééquilibrée,rep1_pli2,100308,blesse,blesse,0.5259836532891146
+Logistique rééquilibrée,rep1_pli2,100311,blesse,sain,0.40486846569473334
+Logistique rééquilibrée,rep1_pli2,100323,blesse,sain,0.2970184472681583
+Logistique rééquilibrée,rep1_pli2,100325,blesse,blesse,0.8498107412409959
+Logistique rééquilibrée,rep1_pli2,100327,blesse,blesse,0.6883229000423283
+Logistique rééquilibrée,rep1_pli2,100363,blesse,sain,0.2803187255362434
+Logistique rééquilibrée,rep1_pli2,100413,sain,sain,0.308953542747997
+Logistique rééquilibrée,rep1_pli2,100415,sain,sain,0.2827603263765547
+Logistique rééquilibrée,rep1_pli2,100417,blesse,sain,0.39282867245107944
+Logistique rééquilibrée,rep1_pli2,100505,sain,blesse,0.9963118269001425
+Logistique rééquilibrée,rep1_pli2,100513,sain,blesse,0.536025106085753
+Logistique rééquilibrée,rep1_pli2,100520,sain,blesse,0.9941542567950395
+Logistique rééquilibrée,rep1_pli2,100534,sain,blesse,0.5850444800895098
+Logistique rééquilibrée,rep1_pli2,100574,blesse,blesse,0.6245412761820962
+Logistique rééquilibrée,rep1_pli2,100594,blesse,blesse,0.5870571516137572
+Logistique rééquilibrée,rep1_pli2,100658,sain,sain,0.36003869887957896
+Logistique rééquilibrée,rep1_pli2,100684,sain,blesse,0.731966385097117
+Logistique rééquilibrée,rep1_pli2,100687,sain,sain,0.2613907102835875
+Logistique rééquilibrée,rep1_pli2,100688,sain,blesse,0.6709395804284402
+Logistique rééquilibrée,rep1_pli2,100692,sain,sain,0.42269955264062187
+Logistique rééquilibrée,rep1_pli2,100695,sain,sain,0.14339296038056903
+Logistique rééquilibrée,rep1_pli2,100709,blesse,blesse,0.63991835301348
+Logistique rééquilibrée,rep1_pli2,100711,sain,sain,0.383452927058361
+Logistique rééquilibrée,rep1_pli2,100730,sain,blesse,0.8337245940478273
+Logistique rééquilibrée,rep1_pli2,100738,sain,blesse,0.6355705831684131
+Logistique rééquilibrée,rep1_pli2,100740,sain,sain,0.37187655690047516
+Logistique rééquilibrée,rep1_pli2,100756,sain,sain,0.1611771292542845
+Logistique rééquilibrée,rep1_pli2,100758,sain,sain,0.0958426438349187
+Logistique rééquilibrée,rep1_pli2,100767,sain,sain,0.25658222990003776
+Logistique rééquilibrée,rep1_pli2,100774,sain,sain,0.1959160797802184
+Logistique rééquilibrée,rep1_pli2,100780,sain,sain,0.3262880994287968
+Logistique rééquilibrée,rep1_pli2,100782,sain,sain,0.40536526358781266
+Logistique rééquilibrée,rep1_pli2,100798,sain,blesse,0.6267729801660435
+Logistique rééquilibrée,rep1_pli2,100810,sain,sain,0.08724400855114345
+Logistique rééquilibrée,rep1_pli2,100813,blesse,blesse,0.5481677377244784
+Logistique rééquilibrée,rep1_pli2,100818,sain,sain,0.022380254547947898
+Logistique rééquilibrée,rep1_pli2,100832,sain,sain,0.3863834611839767
+Logistique rééquilibrée,rep1_pli2,100847,sain,sain,0.2998006596352145
+Logistique rééquilibrée,rep1_pli2,100850,sain,sain,0.3955809869889204
+Logistique rééquilibrée,rep1_pli2,100863,sain,sain,0.3628196044480634
+Logistique rééquilibrée,rep1_pli2,100874,sain,blesse,0.7583457245110949
+Logistique rééquilibrée,rep1_pli2,100883,blesse,blesse,0.5461417134723714
+Logistique rééquilibrée,rep1_pli2,100886,sain,sain,0.05434310579937507
+Logistique rééquilibrée,rep1_pli2,100990,blesse,sain,0.1164184508175583
+Logistique rééquilibrée,rep1_pli2,101054,sain,sain,0.48985470456966507
+Logistique rééquilibrée,rep1_pli2,101061,blesse,sain,0.1593958782499335
+Logistique rééquilibrée,rep1_pli2,101083,blesse,sain,0.3295577246419086
+Logistique rééquilibrée,rep1_pli2,101098,sain,sain,0.17313254881276652
+Logistique rééquilibrée,rep1_pli2,101099,blesse,sain,0.2957869996470597
+Logistique rééquilibrée,rep1_pli2,101107,blesse,blesse,0.6808603077286939
+Logistique rééquilibrée,rep1_pli2,101110,blesse,blesse,0.6674092461213508
+Logistique rééquilibrée,rep1_pli2,101141,sain,sain,0.44500070701299677
+Logistique rééquilibrée,rep1_pli2,101238,sain,sain,0.43845417653496077
+Logistique rééquilibrée,rep1_pli2,101271,sain,blesse,0.8554259396700497
+Logistique rééquilibrée,rep1_pli2,101302,sain,sain,0.10858739629047987
+Logistique rééquilibrée,rep1_pli2,101339,sain,sain,0.41556692962565844
+Logistique rééquilibrée,rep1_pli2,101393,sain,sain,0.13988689762222395
+Logistique rééquilibrée,rep1_pli2,101397,sain,sain,0.022560335689292388
+Logistique rééquilibrée,rep1_pli2,101399,sain,sain,0.06353706209594268
+Logistique rééquilibrée,rep1_pli2,101403,sain,sain,0.08028066193355032
+Logistique rééquilibrée,rep1_pli2,101404,sain,sain,0.010329399630197189
+Logistique rééquilibrée,rep1_pli2,101410,blesse,sain,0.2449937715731988
+Logistique rééquilibrée,rep1_pli2,101416,blesse,blesse,0.9167346447029986
+Logistique rééquilibrée,rep1_pli2,101428,blesse,blesse,0.8607009828686749
+Logistique rééquilibrée,rep1_pli2,101499,sain,sain,0.06343184172482763
+Logistique rééquilibrée,rep1_pli2,101534,sain,blesse,0.7830454856546933
+Logistique rééquilibrée,rep1_pli2,101538,blesse,sain,0.39523649028352803
+Logistique rééquilibrée,rep1_pli2,101581,sain,blesse,0.8073179878730828
+Logistique rééquilibrée,rep1_pli2,101590,sain,sain,0.3154216406934425
+Logistique rééquilibrée,rep1_pli2,101607,blesse,blesse,0.9563964663937207
+Logistique rééquilibrée,rep1_pli2,101612,sain,sain,0.12867843152405678
+Logistique rééquilibrée,rep1_pli2,101613,sain,sain,0.31492835442570055
+Logistique rééquilibrée,rep1_pli2,101624,sain,blesse,0.5599274585441456
+Logistique rééquilibrée,rep1_pli2,101654,blesse,blesse,0.7807201282622942
+Logistique rééquilibrée,rep1_pli2,101700,blesse,sain,0.01282411417249385
+Logistique rééquilibrée,rep1_pli2,101730,blesse,blesse,0.682084643629286
+Logistique rééquilibrée,rep1_pli2,101747,blesse,blesse,0.7904224301072607
+Logistique rééquilibrée,rep1_pli2,101758,sain,sain,0.3729862715814515
+Logistique rééquilibrée,rep1_pli2,101764,blesse,blesse,0.7856455421108386
+Logistique rééquilibrée,rep1_pli2,101777,blesse,sain,0.3260263653235008
+Logistique rééquilibrée,rep1_pli2,102000,sain,sain,0.10345500230435944
+Logistique rééquilibrée,rep1_pli2,102008,sain,sain,0.36905616745029945
+Logistique rééquilibrée,rep1_pli2,200028,sain,sain,0.4420524939408492
+Logistique rééquilibrée,rep1_pli2,200029,sain,sain,0.045824137401588194
+Logistique rééquilibrée,rep1_pli2,200290,sain,blesse,0.8621339523340865
+Logistique rééquilibrée,rep1_pli2,200340,sain,blesse,0.6011765167302339
+Logistique rééquilibrée,rep1_pli2,200348,sain,sain,0.4365146034623473
+Logistique rééquilibrée,rep1_pli2,200363,sain,blesse,0.9239440587735541
+Logistique rééquilibrée,rep1_pli2,200374,sain,sain,0.2957770961127565
+Logistique rééquilibrée,rep1_pli2,200975,sain,sain,0.11888966638148757
+Logistique rééquilibrée,rep1_pli2,200986,sain,sain,0.3894514957605958
+Logistique rééquilibrée,rep1_pli2,200988,sain,sain,0.07517217115804609
+Logistique rééquilibrée,rep1_pli2,200989,sain,sain,0.01676429276261404
+Logistique rééquilibrée,rep1_pli2,201073,blesse,sain,0.1736523046920645
+Logistique rééquilibrée,rep1_pli2,201076,sain,sain,0.230804032237385
+Logistique rééquilibrée,rep1_pli3,100023,blesse,sain,0.4191556698705108
+Logistique rééquilibrée,rep1_pli3,100109,blesse,sain,0.28986169023313946
+Logistique rééquilibrée,rep1_pli3,100119,blesse,blesse,0.6209494763954126
+Logistique rééquilibrée,rep1_pli3,100121,sain,blesse,0.5119444543082623
+Logistique rééquilibrée,rep1_pli3,100122,blesse,blesse,0.7282843577755217
+Logistique rééquilibrée,rep1_pli3,100151,blesse,blesse,0.7752878266236372
+Logistique rééquilibrée,rep1_pli3,100201,blesse,sain,0.49921616579809835
+Logistique rééquilibrée,rep1_pli3,100202,blesse,blesse,0.8452545537955343
+Logistique rééquilibrée,rep1_pli3,100205,blesse,blesse,0.6191277628516869
+Logistique rééquilibrée,rep1_pli3,100207,blesse,blesse,0.5136967710041914
+Logistique rééquilibrée,rep1_pli3,100220,blesse,blesse,0.6898672990728149
+Logistique rééquilibrée,rep1_pli3,100228,sain,blesse,0.7809025346103109
+Logistique rééquilibrée,rep1_pli3,100232,sain,blesse,0.6518749050145803
+Logistique rééquilibrée,rep1_pli3,100235,sain,blesse,0.5966486829132616
+Logistique rééquilibrée,rep1_pli3,100243,blesse,blesse,0.8849980388471455
+Logistique rééquilibrée,rep1_pli3,100244,sain,blesse,0.6532522863411662
+Logistique rééquilibrée,rep1_pli3,100247,sain,sain,0.2961218480762846
+Logistique rééquilibrée,rep1_pli3,100248,sain,sain,0.43568369100378335
+Logistique rééquilibrée,rep1_pli3,100250,sain,blesse,0.7371133032176908
+Logistique rééquilibrée,rep1_pli3,100252,sain,sain,0.4751868748194287
+Logistique rééquilibrée,rep1_pli3,100261,sain,blesse,0.5053993956230296
+Logistique rééquilibrée,rep1_pli3,100262,sain,sain,0.3810257757174166
+Logistique rééquilibrée,rep1_pli3,100265,sain,blesse,0.7223794666179879
+Logistique rééquilibrée,rep1_pli3,100273,blesse,sain,0.22284215918761574
+Logistique rééquilibrée,rep1_pli3,100276,blesse,blesse,0.8731760761746474
+Logistique rééquilibrée,rep1_pli3,100280,blesse,sain,0.32978767283400046
+Logistique rééquilibrée,rep1_pli3,100281,sain,sain,0.3421960309447821
+Logistique rééquilibrée,rep1_pli3,100282,sain,blesse,0.6196380157484043
+Logistique rééquilibrée,rep1_pli3,100285,blesse,sain,0.41023645587397695
+Logistique rééquilibrée,rep1_pli3,100287,sain,blesse,0.8986823063876345
+Logistique rééquilibrée,rep1_pli3,100290,blesse,blesse,0.5393632201893337
+Logistique rééquilibrée,rep1_pli3,100300,sain,blesse,0.7021964318811389
+Logistique rééquilibrée,rep1_pli3,100305,blesse,blesse,0.7302977147177816
+Logistique rééquilibrée,rep1_pli3,100316,blesse,blesse,0.5132760887086523
+Logistique rééquilibrée,rep1_pli3,100370,blesse,sain,0.1582455998632487
+Logistique rééquilibrée,rep1_pli3,100376,blesse,blesse,0.8358335193949826
+Logistique rééquilibrée,rep1_pli3,100390,sain,sain,0.476729347963607
+Logistique rééquilibrée,rep1_pli3,100430,sain,sain,0.37436506009158876
+Logistique rééquilibrée,rep1_pli3,100503,sain,sain,0.21385285439893076
+Logistique rééquilibrée,rep1_pli3,100512,sain,blesse,0.5526711084289828
+Logistique rééquilibrée,rep1_pli3,100514,sain,sain,0.22039269510751924
+Logistique rééquilibrée,rep1_pli3,100515,sain,blesse,0.8564990244529957
+Logistique rééquilibrée,rep1_pli3,100517,sain,sain,0.08094521342655858
+Logistique rééquilibrée,rep1_pli3,100518,sain,sain,0.3617377071276102
+Logistique rééquilibrée,rep1_pli3,100545,sain,blesse,0.804757298412835
+Logistique rééquilibrée,rep1_pli3,100565,sain,sain,0.22999668227207137
+Logistique rééquilibrée,rep1_pli3,100580,sain,blesse,0.6284751526173471
+Logistique rééquilibrée,rep1_pli3,100598,blesse,blesse,0.5373671859419764
+Logistique rééquilibrée,rep1_pli3,100599,sain,sain,0.26902204015686404
+Logistique rééquilibrée,rep1_pli3,100634,blesse,sain,0.36987900334997525
+Logistique rééquilibrée,rep1_pli3,100646,blesse,blesse,0.611365178059619
+Logistique rééquilibrée,rep1_pli3,100654,blesse,sain,0.2188508128532114
+Logistique rééquilibrée,rep1_pli3,100665,blesse,sain,0.44870065330787856
+Logistique rééquilibrée,rep1_pli3,100706,sain,sain,0.194227897631851
+Logistique rééquilibrée,rep1_pli3,100714,blesse,blesse,0.8791337573966123
+Logistique rééquilibrée,rep1_pli3,100724,sain,sain,0.35690436052249896
+Logistique rééquilibrée,rep1_pli3,100726,sain,sain,0.1641738139788964
+Logistique rééquilibrée,rep1_pli3,100732,sain,sain,0.15011477340702828
+Logistique rééquilibrée,rep1_pli3,100759,sain,sain,0.13089076833569901
+Logistique rééquilibrée,rep1_pli3,100781,sain,sain,0.3001699995234389
+Logistique rééquilibrée,rep1_pli3,100785,sain,sain,0.3692004372643346
+Logistique rééquilibrée,rep1_pli3,100792,sain,sain,0.009769940454100401
+Logistique rééquilibrée,rep1_pli3,100794,sain,sain,0.10296661903924476
+Logistique rééquilibrée,rep1_pli3,100811,blesse,blesse,0.585811981777338
+Logistique rééquilibrée,rep1_pli3,100819,sain,blesse,0.6796884236992647
+Logistique rééquilibrée,rep1_pli3,100820,sain,blesse,0.6959224585805188
+Logistique rééquilibrée,rep1_pli3,100821,sain,sain,0.020951490943250883
+Logistique rééquilibrée,rep1_pli3,100829,blesse,blesse,0.946644978231527
+Logistique rééquilibrée,rep1_pli3,100857,sain,blesse,0.8709628489966637
+Logistique rééquilibrée,rep1_pli3,100899,sain,sain,0.29654285411299786
+Logistique rééquilibrée,rep1_pli3,101086,sain,blesse,0.6286730555410909
+Logistique rééquilibrée,rep1_pli3,101124,sain,sain,0.43481757967946455
+Logistique rééquilibrée,rep1_pli3,101255,blesse,sain,0.2977233693654344
+Logistique rééquilibrée,rep1_pli3,101261,blesse,sain,0.2633313750337303
+Logistique rééquilibrée,rep1_pli3,101264,sain,sain,0.396660085887407
+Logistique rééquilibrée,rep1_pli3,101270,sain,sain,0.14784489412033242
+Logistique rééquilibrée,rep1_pli3,101272,sain,sain,0.2740957331370417
+Logistique rééquilibrée,rep1_pli3,101355,blesse,blesse,0.6772158870788835
+Logistique rééquilibrée,rep1_pli3,101362,sain,sain,0.4338858946903852
+Logistique rééquilibrée,rep1_pli3,101381,sain,sain,0.19755507473379008
+Logistique rééquilibrée,rep1_pli3,101392,sain,sain,0.19684340887579355
+Logistique rééquilibrée,rep1_pli3,101396,sain,sain,0.05945066225879747
+Logistique rééquilibrée,rep1_pli3,101406,sain,blesse,0.5886742061544616
+Logistique rééquilibrée,rep1_pli3,101407,sain,sain,0.30205996428324955
+Logistique rééquilibrée,rep1_pli3,101409,sain,blesse,0.506138989058958
+Logistique rééquilibrée,rep1_pli3,101427,blesse,blesse,0.833346769857425
+Logistique rééquilibrée,rep1_pli3,101481,sain,sain,0.3518387248525078
+Logistique rééquilibrée,rep1_pli3,101497,sain,sain,0.28078064954473747
+Logistique rééquilibrée,rep1_pli3,101504,sain,blesse,0.5582256159957197
+Logistique rééquilibrée,rep1_pli3,101505,sain,sain,0.3788263865689445
+Logistique rééquilibrée,rep1_pli3,101506,sain,sain,0.11609723108202641
+Logistique rééquilibrée,rep1_pli3,101509,sain,blesse,0.5704979187800441
+Logistique rééquilibrée,rep1_pli3,101517,blesse,sain,0.37671684853717013
+Logistique rééquilibrée,rep1_pli3,101543,blesse,sain,0.16163299551898647
+Logistique rééquilibrée,rep1_pli3,101606,blesse,sain,0.11875726804537567
+Logistique rééquilibrée,rep1_pli3,101616,blesse,sain,0.497702341797548
+Logistique rééquilibrée,rep1_pli3,101680,blesse,blesse,0.5871932039194357
+Logistique rééquilibrée,rep1_pli3,101684,blesse,sain,0.16703350299322994
+Logistique rééquilibrée,rep1_pli3,101704,blesse,sain,0.28530622698579644
+Logistique rééquilibrée,rep1_pli3,101711,blesse,sain,0.3159908732759683
+Logistique rééquilibrée,rep1_pli3,101727,blesse,blesse,0.7351506212976067
+Logistique rééquilibrée,rep1_pli3,101772,blesse,sain,0.30985917550748654
+Logistique rééquilibrée,rep1_pli3,101807,sain,sain,0.258101676028472
+Logistique rééquilibrée,rep1_pli3,102005,sain,sain,0.02415159539467271
+Logistique rééquilibrée,rep1_pli3,102006,sain,blesse,0.8451566695195422
+Logistique rééquilibrée,rep1_pli3,102013,sain,sain,0.010965083004430665
+Logistique rééquilibrée,rep1_pli3,200031,blesse,sain,0.1314109946080514
+Logistique rééquilibrée,rep1_pli3,200253,sain,blesse,0.7558084776893497
+Logistique rééquilibrée,rep1_pli3,200264,sain,sain,0.05580360810547491
+Logistique rééquilibrée,rep1_pli3,200269,sain,sain,0.4795791602659917
+Logistique rééquilibrée,rep1_pli3,200321,blesse,sain,0.04833257762604026
+Logistique rééquilibrée,rep1_pli3,200336,sain,blesse,0.8495611635271785
+Logistique rééquilibrée,rep1_pli3,200368,sain,sain,0.2514897722198326
+Logistique rééquilibrée,rep1_pli3,200372,sain,sain,0.2697382854935797
+Logistique rééquilibrée,rep1_pli3,200974,sain,sain,0.3400988878055393
+Logistique rééquilibrée,rep1_pli3,200984,sain,blesse,0.6106519578004597
+Logistique rééquilibrée,rep1_pli3,201090,blesse,sain,0.036491803892202856
+Logistique rééquilibrée,rep1_pli4,100003,blesse,sain,0.2609110190153735
+Logistique rééquilibrée,rep1_pli4,100010,blesse,sain,0.39431430066418083
+Logistique rééquilibrée,rep1_pli4,100031,blesse,blesse,0.9336561576551211
+Logistique rééquilibrée,rep1_pli4,100035,sain,blesse,0.5864474880154176
+Logistique rééquilibrée,rep1_pli4,100036,blesse,blesse,0.9220057530015933
+Logistique rééquilibrée,rep1_pli4,100065,blesse,blesse,0.5414252393047582
+Logistique rééquilibrée,rep1_pli4,100086,blesse,sain,0.263185679744126
+Logistique rééquilibrée,rep1_pli4,100091,blesse,blesse,0.7274890106121517
+Logistique rééquilibrée,rep1_pli4,100186,blesse,sain,0.3763329029471023
+Logistique rééquilibrée,rep1_pli4,100203,blesse,sain,0.3437570602797906
+Logistique rééquilibrée,rep1_pli4,100213,blesse,sain,0.4690668225974832
+Logistique rééquilibrée,rep1_pli4,100219,blesse,blesse,0.9423727656311746
+Logistique rééquilibrée,rep1_pli4,100236,blesse,sain,0.12933829552721898
+Logistique rééquilibrée,rep1_pli4,100237,sain,blesse,0.7265930637525754
+Logistique rééquilibrée,rep1_pli4,100240,sain,blesse,0.6476078562464205
+Logistique rééquilibrée,rep1_pli4,100242,sain,sain,0.4954902518137849
+Logistique rééquilibrée,rep1_pli4,100253,sain,sain,0.4755559611857185
+Logistique rééquilibrée,rep1_pli4,100254,blesse,blesse,0.8084944032817007
+Logistique rééquilibrée,rep1_pli4,100255,blesse,sain,0.2796220293866516
+Logistique rééquilibrée,rep1_pli4,100279,sain,blesse,0.9497723212940823
+Logistique rééquilibrée,rep1_pli4,100296,blesse,blesse,0.8560994218916689
+Logistique rééquilibrée,rep1_pli4,100303,blesse,blesse,0.719349900334388
+Logistique rééquilibrée,rep1_pli4,100322,blesse,blesse,0.7398025926043625
+Logistique rééquilibrée,rep1_pli4,100329,blesse,blesse,0.9221788291412544
+Logistique rééquilibrée,rep1_pli4,100330,blesse,blesse,0.8881211835808102
+Logistique rééquilibrée,rep1_pli4,100340,sain,blesse,0.5822453459328538
+Logistique rééquilibrée,rep1_pli4,100359,sain,sain,0.37476576460688094
+Logistique rééquilibrée,rep1_pli4,100362,blesse,sain,0.4589937111984833
+Logistique rééquilibrée,rep1_pli4,100374,blesse,sain,0.19323014584612397
+Logistique rééquilibrée,rep1_pli4,100397,sain,sain,0.3102464355951734
+Logistique rééquilibrée,rep1_pli4,100427,sain,blesse,0.8960887964551434
+Logistique rééquilibrée,rep1_pli4,100510,sain,sain,0.11439628207912034
+Logistique rééquilibrée,rep1_pli4,100525,blesse,sain,0.04076973175984833
+Logistique rééquilibrée,rep1_pli4,100540,sain,sain,1.1764520113644039e-7
+Logistique rééquilibrée,rep1_pli4,100543,sain,sain,0.04229561070502674
+Logistique rééquilibrée,rep1_pli4,100571,sain,sain,0.15721522695323498
+Logistique rééquilibrée,rep1_pli4,100642,sain,sain,0.2544416959829551
+Logistique rééquilibrée,rep1_pli4,100677,blesse,sain,0.00544163945600995
+Logistique rééquilibrée,rep1_pli4,100683,sain,sain,0.15180875182370934
+Logistique rééquilibrée,rep1_pli4,100689,sain,blesse,0.5203861739525024
+Logistique rééquilibrée,rep1_pli4,100693,sain,blesse,0.8105005650214161
+Logistique rééquilibrée,rep1_pli4,100720,sain,sain,0.06155277746622456
+Logistique rééquilibrée,rep1_pli4,100727,sain,sain,0.3082886853528497
+Logistique rééquilibrée,rep1_pli4,100728,sain,blesse,0.8445767183644515
+Logistique rééquilibrée,rep1_pli4,100731,sain,sain,0.0075344564825844396
+Logistique rééquilibrée,rep1_pli4,100739,sain,sain,0.07667892013000854
+Logistique rééquilibrée,rep1_pli4,100760,sain,sain,0.26737063670569006
+Logistique rééquilibrée,rep1_pli4,100786,sain,blesse,0.673315517075438
+Logistique rééquilibrée,rep1_pli4,100787,sain,sain,0.0901386856219124
+Logistique rééquilibrée,rep1_pli4,100791,sain,sain,0.18638891276207992
+Logistique rééquilibrée,rep1_pli4,100801,sain,blesse,0.5065427734775079
+Logistique rééquilibrée,rep1_pli4,100830,sain,sain,0.3646716660845589
+Logistique rééquilibrée,rep1_pli4,100848,sain,sain,0.07239765834942569
+Logistique rééquilibrée,rep1_pli4,100853,sain,sain,0.08026365017965853
+Logistique rééquilibrée,rep1_pli4,100861,sain,blesse,0.8887681249799432
+Logistique rééquilibrée,rep1_pli4,101013,sain,sain,0.4911495165241395
+Logistique rééquilibrée,rep1_pli4,101049,blesse,sain,0.1702754277458186
+Logistique rééquilibrée,rep1_pli4,101058,sain,blesse,0.7881737722927151
+Logistique rééquilibrée,rep1_pli4,101060,sain,sain,0.22399209958236554
+Logistique rééquilibrée,rep1_pli4,101137,sain,blesse,0.5175728322576334
+Logistique rééquilibrée,rep1_pli4,101149,blesse,blesse,0.6471454170410678
+Logistique rééquilibrée,rep1_pli4,101165,blesse,blesse,0.8623276055803548
+Logistique rééquilibrée,rep1_pli4,101248,blesse,sain,0.22308711706842044
+Logistique rééquilibrée,rep1_pli4,101249,blesse,blesse,0.92090880714568
+Logistique rééquilibrée,rep1_pli4,101262,sain,blesse,0.6877006380846553
+Logistique rééquilibrée,rep1_pli4,101263,sain,blesse,0.5199893193604075
+Logistique rééquilibrée,rep1_pli4,101334,blesse,blesse,0.5744252359057462
+Logistique rééquilibrée,rep1_pli4,101341,sain,blesse,0.534690322573475
+Logistique rééquilibrée,rep1_pli4,101353,sain,blesse,0.8233571161959181
+Logistique rééquilibrée,rep1_pli4,101361,sain,sain,0.29263591969266134
+Logistique rééquilibrée,rep1_pli4,101365,sain,blesse,0.8094649354372492
+Logistique rééquilibrée,rep1_pli4,101366,sain,blesse,0.9920739991714069
+Logistique rééquilibrée,rep1_pli4,101374,blesse,sain,0.0985487111011315
+Logistique rééquilibrée,rep1_pli4,101401,sain,sain,0.01321078905355022
+Logistique rééquilibrée,rep1_pli4,101405,sain,blesse,0.7574069970442436
+Logistique rééquilibrée,rep1_pli4,101440,sain,sain,0.46463741364468003
+Logistique rééquilibrée,rep1_pli4,101500,sain,blesse,0.581955492963927
+Logistique rééquilibrée,rep1_pli4,101502,sain,sain,0.0667651200975583
+Logistique rééquilibrée,rep1_pli4,101508,sain,sain,0.02126527491518415
+Logistique rééquilibrée,rep1_pli4,101511,sain,sain,0.22386568243416372
+Logistique rééquilibrée,rep1_pli4,101527,sain,blesse,0.7266705506303517
+Logistique rééquilibrée,rep1_pli4,101562,blesse,blesse,0.982113834409735
+Logistique rééquilibrée,rep1_pli4,101564,blesse,sain,0.09547029781980876
+Logistique rééquilibrée,rep1_pli4,101577,sain,blesse,0.8987469449384435
+Logistique rééquilibrée,rep1_pli4,101588,blesse,blesse,0.8690809837684075
+Logistique rééquilibrée,rep1_pli4,101603,blesse,sain,0.3337879358478688
+Logistique rééquilibrée,rep1_pli4,101629,sain,blesse,0.829818011256265
+Logistique rééquilibrée,rep1_pli4,101634,sain,blesse,0.7366545890813816
+Logistique rééquilibrée,rep1_pli4,101641,blesse,blesse,0.5945801353113886
+Logistique rééquilibrée,rep1_pli4,101650,blesse,blesse,0.7926766429171247
+Logistique rééquilibrée,rep1_pli4,101651,sain,blesse,0.731272843307662
+Logistique rééquilibrée,rep1_pli4,101696,blesse,sain,0.2244174618514917
+Logistique rééquilibrée,rep1_pli4,101728,blesse,blesse,0.7489658678019404
+Logistique rééquilibrée,rep1_pli4,101746,sain,sain,0.038847970333226955
+Logistique rééquilibrée,rep1_pli4,101769,sain,sain,0.3950936622320097
+Logistique rééquilibrée,rep1_pli4,101770,blesse,sain,0.0377077681089768
+Logistique rééquilibrée,rep1_pli4,101999,sain,blesse,0.5437778919702542
+Logistique rééquilibrée,rep1_pli4,102001,sain,sain,0.09422960874689312
+Logistique rééquilibrée,rep1_pli4,102002,sain,sain,0.15949168105668654
+Logistique rééquilibrée,rep1_pli4,102003,sain,sain,0.13358076756153892
+Logistique rééquilibrée,rep1_pli4,102004,sain,sain,0.42305880117168104
+Logistique rééquilibrée,rep1_pli4,102007,sain,sain,0.2465842635247485
+Logistique rééquilibrée,rep1_pli4,200244,sain,blesse,0.5312743473817223
+Logistique rééquilibrée,rep1_pli4,200250,sain,sain,0.26731856749772676
+Logistique rééquilibrée,rep1_pli4,200276,sain,sain,0.36480346430058586
+Logistique rééquilibrée,rep1_pli4,200285,sain,blesse,0.6492396593792595
+Logistique rééquilibrée,rep1_pli4,200294,blesse,sain,0.00804822597639765
+Logistique rééquilibrée,rep1_pli4,200295,sain,sain,0.11999326688874867
+Logistique rééquilibrée,rep1_pli4,200302,sain,blesse,0.5609072473631156
+Logistique rééquilibrée,rep1_pli4,200350,blesse,blesse,0.941621035803771
+Logistique rééquilibrée,rep1_pli4,200354,blesse,blesse,0.6015793007374473
+Logistique rééquilibrée,rep1_pli4,200358,sain,sain,0.1594736492441441
+Logistique rééquilibrée,rep1_pli4,200376,sain,sain,0.41621332794524113
+Logistique rééquilibrée,rep1_pli4,200980,blesse,sain,0.16786206235022538
+Logistique rééquilibrée,rep1_pli4,201077,sain,sain,0.38753673707774294
+Logistique rééquilibrée,rep1_pli4,201224,blesse,sain,0.3355008065374573
+Logistique rééquilibrée,rep1_pli5,100005,blesse,sain,0.4368731261742942
+Logistique rééquilibrée,rep1_pli5,100021,blesse,blesse,0.7726306438483528
+Logistique rééquilibrée,rep1_pli5,100057,blesse,sain,0.08221892351275606
+Logistique rééquilibrée,rep1_pli5,100080,blesse,blesse,0.7555953025780442
+Logistique rééquilibrée,rep1_pli5,100088,blesse,blesse,0.6787281666120619
+Logistique rééquilibrée,rep1_pli5,100156,blesse,sain,0.490153026466274
+Logistique rééquilibrée,rep1_pli5,100164,sain,sain,0.1857797549311403
+Logistique rééquilibrée,rep1_pli5,100178,blesse,blesse,0.7247016986285537
+Logistique rééquilibrée,rep1_pli5,100182,sain,sain,0.23533656664132085
+Logistique rééquilibrée,rep1_pli5,100199,blesse,blesse,0.7602460637471049
+Logistique rééquilibrée,rep1_pli5,100206,blesse,sain,0.3269742254539181
+Logistique rééquilibrée,rep1_pli5,100223,blesse,blesse,0.7332479382383129
+Logistique rééquilibrée,rep1_pli5,100225,blesse,blesse,0.7855551641096179
+Logistique rééquilibrée,rep1_pli5,100238,blesse,blesse,0.6923015450843742
+Logistique rééquilibrée,rep1_pli5,100245,blesse,sain,0.19246332173754044
+Logistique rééquilibrée,rep1_pli5,100260,sain,blesse,0.5026325400392719
+Logistique rééquilibrée,rep1_pli5,100263,sain,sain,0.46260576219899896
+Logistique rééquilibrée,rep1_pli5,100269,sain,sain,0.43316008194350397
+Logistique rééquilibrée,rep1_pli5,100271,blesse,blesse,0.8776117190189594
+Logistique rééquilibrée,rep1_pli5,100286,blesse,blesse,0.5240369382344534
+Logistique rééquilibrée,rep1_pli5,100288,sain,blesse,0.7149355995145007
+Logistique rééquilibrée,rep1_pli5,100289,blesse,blesse,0.609775527907481
+Logistique rééquilibrée,rep1_pli5,100307,blesse,blesse,0.7491949987838518
+Logistique rééquilibrée,rep1_pli5,100309,blesse,blesse,0.8300406307335519
+Logistique rééquilibrée,rep1_pli5,100318,blesse,blesse,0.7076675226116945
+Logistique rééquilibrée,rep1_pli5,100324,blesse,sain,0.12496686805374169
+Logistique rééquilibrée,rep1_pli5,100332,blesse,blesse,0.8768471162149942
+Logistique rééquilibrée,rep1_pli5,100377,blesse,blesse,0.746845368365149
+Logistique rééquilibrée,rep1_pli5,100401,sain,blesse,0.527739570042117
+Logistique rééquilibrée,rep1_pli5,100414,blesse,blesse,0.5464432449562647
+Logistique rééquilibrée,rep1_pli5,100422,sain,sain,0.16403011695588854
+Logistique rééquilibrée,rep1_pli5,100423,sain,sain,0.4701943689155583
+Logistique rééquilibrée,rep1_pli5,100424,sain,sain,0.3665883846736768
+Logistique rééquilibrée,rep1_pli5,100425,sain,blesse,0.7331289372625568
+Logistique rééquilibrée,rep1_pli5,100504,sain,blesse,0.7651089166618067
+Logistique rééquilibrée,rep1_pli5,100506,sain,sain,0.04324224701045831
+Logistique rééquilibrée,rep1_pli5,100509,sain,blesse,0.8601786911193892
+Logistique rééquilibrée,rep1_pli5,100511,sain,blesse,0.7715105649113431
+Logistique rééquilibrée,rep1_pli5,100532,sain,blesse,0.6897534405272858
+Logistique rééquilibrée,rep1_pli5,100535,sain,blesse,0.7269433921997119
+Logistique rééquilibrée,rep1_pli5,100536,sain,sain,0.21366154906670187
+Logistique rééquilibrée,rep1_pli5,100538,sain,sain,0.23303932000426053
+Logistique rééquilibrée,rep1_pli5,100570,blesse,blesse,0.8270133146130081
+Logistique rééquilibrée,rep1_pli5,100573,blesse,sain,0.48672720348396314
+Logistique rééquilibrée,rep1_pli5,100581,blesse,sain,0.46175815001429565
+Logistique rééquilibrée,rep1_pli5,100587,sain,blesse,0.6883141153965758
+Logistique rééquilibrée,rep1_pli5,100605,blesse,blesse,0.8120676556953342
+Logistique rééquilibrée,rep1_pli5,100618,sain,blesse,0.8569089894133832
+Logistique rééquilibrée,rep1_pli5,100682,sain,blesse,0.782175121547338
+Logistique rééquilibrée,rep1_pli5,100712,sain,blesse,0.6261682403108806
+Logistique rééquilibrée,rep1_pli5,100715,sain,sain,0.435397633067814
+Logistique rééquilibrée,rep1_pli5,100716,sain,blesse,0.6337032559878245
+Logistique rééquilibrée,rep1_pli5,100719,sain,sain,0.21673756527593002
+Logistique rééquilibrée,rep1_pli5,100725,sain,blesse,0.579731884682452
+Logistique rééquilibrée,rep1_pli5,100742,sain,sain,0.036392763296053454
+Logistique rééquilibrée,rep1_pli5,100745,sain,blesse,0.718382495738126
+Logistique rééquilibrée,rep1_pli5,100755,sain,sain,0.2845115343766721
+Logistique rééquilibrée,rep1_pli5,100765,sain,sain,0.21698787017744814
+Logistique rééquilibrée,rep1_pli5,100766,sain,sain,0.11371454767418654
+Logistique rééquilibrée,rep1_pli5,100771,blesse,sain,0.49247519867845235
+Logistique rééquilibrée,rep1_pli5,100788,sain,sain,0.3562565019873615
+Logistique rééquilibrée,rep1_pli5,100817,sain,sain,0.28155321129738986
+Logistique rééquilibrée,rep1_pli5,100826,blesse,blesse,0.5901684791900668
+Logistique rééquilibrée,rep1_pli5,100842,sain,blesse,0.7505110889304176
+Logistique rééquilibrée,rep1_pli5,100851,sain,sain,0.23978058296440197
+Logistique rééquilibrée,rep1_pli5,100852,sain,sain,0.2756899214313434
+Logistique rééquilibrée,rep1_pli5,100898,blesse,blesse,0.5722562206977225
+Logistique rééquilibrée,rep1_pli5,100945,blesse,sain,0.4385284765611308
+Logistique rééquilibrée,rep1_pli5,100991,sain,blesse,0.732509915010643
+Logistique rééquilibrée,rep1_pli5,100994,blesse,sain,0.10345468305441319
+Logistique rééquilibrée,rep1_pli5,101048,blesse,sain,0.16527987223132623
+Logistique rééquilibrée,rep1_pli5,101067,sain,blesse,0.8429593100183149
+Logistique rééquilibrée,rep1_pli5,101108,blesse,sain,0.4748176158891906
+Logistique rééquilibrée,rep1_pli5,101111,sain,blesse,0.5147552259945163
+Logistique rééquilibrée,rep1_pli5,101115,sain,sain,0.4413084581872365
+Logistique rééquilibrée,rep1_pli5,101126,sain,sain,0.33836516342030176
+Logistique rééquilibrée,rep1_pli5,101133,blesse,blesse,0.7060554353544582
+Logistique rééquilibrée,rep1_pli5,101142,sain,blesse,0.5615175789939665
+Logistique rééquilibrée,rep1_pli5,101169,sain,blesse,0.6785811473877839
+Logistique rééquilibrée,rep1_pli5,101175,blesse,blesse,0.8193669163002106
+Logistique rééquilibrée,rep1_pli5,101250,blesse,blesse,0.5070448959851379
+Logistique rééquilibrée,rep1_pli5,101312,sain,blesse,0.5511060454735741
+Logistique rééquilibrée,rep1_pli5,101337,sain,sain,0.3516478092522709
+Logistique rééquilibrée,rep1_pli5,101343,sain,sain,0.25318091593249836
+Logistique rééquilibrée,rep1_pli5,101360,sain,blesse,0.7851752277721054
+Logistique rééquilibrée,rep1_pli5,101394,sain,sain,0.0062817319186326825
+Logistique rééquilibrée,rep1_pli5,101398,sain,sain,0.1602717529048212
+Logistique rééquilibrée,rep1_pli5,101400,sain,sain,0.12882350737775683
+Logistique rééquilibrée,rep1_pli5,101402,sain,blesse,0.6276852540532849
+Logistique rééquilibrée,rep1_pli5,101408,sain,sain,0.44263296422701426
+Logistique rééquilibrée,rep1_pli5,101418,sain,sain,0.12148097621314313
+Logistique rééquilibrée,rep1_pli5,101420,sain,sain,0.028998616334769856
+Logistique rééquilibrée,rep1_pli5,101432,blesse,sain,0.44559910169329797
+Logistique rééquilibrée,rep1_pli5,101503,sain,sain,0.38826298445539476
+Logistique rééquilibrée,rep1_pli5,101507,sain,sain,0.12134341887884503
+Logistique rééquilibrée,rep1_pli5,101592,blesse,blesse,0.8381014598041092
+Logistique rééquilibrée,rep1_pli5,101596,sain,sain,0.1388109793629141
+Logistique rééquilibrée,rep1_pli5,101643,blesse,blesse,0.7143109229748592
+Logistique rééquilibrée,rep1_pli5,101663,sain,blesse,0.7624417654372795
+Logistique rééquilibrée,rep1_pli5,101716,sain,sain,0.09448575762427736
+Logistique rééquilibrée,rep1_pli5,101763,sain,blesse,0.8473746275987075
+Logistique rééquilibrée,rep1_pli5,101944,sain,sain,0.05640225726450376
+Logistique rééquilibrée,rep1_pli5,102009,sain,blesse,0.6388442126145517
+Logistique rééquilibrée,rep1_pli5,102014,sain,sain,0.03681802331194961
+Logistique rééquilibrée,rep1_pli5,200267,sain,blesse,0.5463904735138854
+Logistique rééquilibrée,rep1_pli5,200270,blesse,sain,0.23359656245469207
+Logistique rééquilibrée,rep1_pli5,200273,blesse,sain,0.01308066452736778
+Logistique rééquilibrée,rep1_pli5,200280,blesse,sain,0.3218139860157092
+Logistique rééquilibrée,rep1_pli5,200288,sain,blesse,0.5354262496385611
+Logistique rééquilibrée,rep1_pli5,200292,sain,sain,0.3381574899878188
+Logistique rééquilibrée,rep1_pli5,200301,sain,sain,0.15401005347354735
+Logistique rééquilibrée,rep1_pli5,200308,blesse,sain,0.34343736766081534
+Logistique rééquilibrée,rep1_pli5,200324,blesse,sain,0.0894131653916157
+Logistique rééquilibrée,rep1_pli5,200335,sain,sain,0.2515253605313983
+Logistique rééquilibrée,rep1_pli5,200981,sain,sain,0.2668044262293634
+Logistique rééquilibrée,rep1_pli5,200985,sain,sain,0.2940350402342824
+Logistique rééquilibrée,rep1_pli5,201089,sain,sain,0.03000075412731651
+Logistique rééquilibrée,rep1_pli5,201101,sain,sain,0.45663520936466195
+Forêt aléatoire,rep1_pli1,100015,blesse,blesse,0.63345
+Forêt aléatoire,rep1_pli1,100033,blesse,sain,0.3186865079365078
+Forêt aléatoire,rep1_pli1,100049,blesse,blesse,0.5294476190476193
+Forêt aléatoire,rep1_pli1,100058,sain,sain,0.42041349206349204
+Forêt aléatoire,rep1_pli1,100063,blesse,blesse,0.5003539682539683
+Forêt aléatoire,rep1_pli1,100074,blesse,sain,0.43217698412698413
+Forêt aléatoire,rep1_pli1,100075,blesse,sain,0.4276150793650792
+Forêt aléatoire,rep1_pli1,100136,blesse,blesse,0.5376690476190475
+Forêt aléatoire,rep1_pli1,100173,sain,sain,0.39343809523809503
+Forêt aléatoire,rep1_pli1,100194,blesse,sain,0.4990753968253969
+Forêt aléatoire,rep1_pli1,100195,blesse,sain,0.44158412698412697
+Forêt aléatoire,rep1_pli1,100200,blesse,blesse,0.6362452380952383
+Forêt aléatoire,rep1_pli1,100209,blesse,sain,0.37889841269841257
+Forêt aléatoire,rep1_pli1,100221,blesse,sain,0.4235063492063493
+Forêt aléatoire,rep1_pli1,100234,sain,sain,0.3834634920634921
+Forêt aléatoire,rep1_pli1,100241,blesse,sain,0.49264285714285744
+Forêt aléatoire,rep1_pli1,100246,sain,sain,0.4779714285714287
+Forêt aléatoire,rep1_pli1,100256,sain,blesse,0.5702793650793654
+Forêt aléatoire,rep1_pli1,100266,sain,blesse,0.5164444444444444
+Forêt aléatoire,rep1_pli1,100267,blesse,blesse,0.5038515873015872
+Forêt aléatoire,rep1_pli1,100268,blesse,sain,0.36965476190476176
+Forêt aléatoire,rep1_pli1,100304,blesse,sain,0.4162087301587301
+Forêt aléatoire,rep1_pli1,100310,blesse,blesse,0.5208793650793653
+Forêt aléatoire,rep1_pli1,100312,blesse,sain,0.488829365079365
+Forêt aléatoire,rep1_pli1,100314,blesse,blesse,0.5256468253968254
+Forêt aléatoire,rep1_pli1,100315,blesse,blesse,0.5996238095238094
+Forêt aléatoire,rep1_pli1,100317,blesse,sain,0.4824722222222224
+Forêt aléatoire,rep1_pli1,100319,blesse,sain,0.3510928571428571
+Forêt aléatoire,rep1_pli1,100321,blesse,sain,0.418256349206349
+Forêt aléatoire,rep1_pli1,100326,blesse,sain,0.3704658730158728
+Forêt aléatoire,rep1_pli1,100328,blesse,blesse,0.5296349206349208
+Forêt aléatoire,rep1_pli1,100343,sain,sain,0.4174404761904762
+Forêt aléatoire,rep1_pli1,100368,blesse,sain,0.42495793650793645
+Forêt aléatoire,rep1_pli1,100429,sain,sain,0.3585277777777776
+Forêt aléatoire,rep1_pli1,100508,sain,sain,0.4259214285714287
+Forêt aléatoire,rep1_pli1,100516,sain,sain,0.37278015873015863
+Forêt aléatoire,rep1_pli1,100541,sain,sain,0.4049515873015873
+Forêt aléatoire,rep1_pli1,100560,sain,blesse,0.5710452380952381
+Forêt aléatoire,rep1_pli1,100575,blesse,sain,0.4167333333333335
+Forêt aléatoire,rep1_pli1,100593,blesse,sain,0.4418309523809522
+Forêt aléatoire,rep1_pli1,100680,sain,sain,0.3404515873015873
+Forêt aléatoire,rep1_pli1,100685,sain,sain,0.29231507936507933
+Forêt aléatoire,rep1_pli1,100686,sain,sain,0.36879523809523806
+Forêt aléatoire,rep1_pli1,100690,sain,sain,0.33975952380952373
+Forêt aléatoire,rep1_pli1,100691,sain,sain,0.4869952380952382
+Forêt aléatoire,rep1_pli1,100705,sain,sain,0.38372063492063496
+Forêt aléatoire,rep1_pli1,100717,sain,sain,0.4762039682539684
+Forêt aléatoire,rep1_pli1,100718,sain,sain,0.49243015873015894
+Forêt aléatoire,rep1_pli1,100721,sain,sain,0.4328849206349207
+Forêt aléatoire,rep1_pli1,100722,sain,sain,0.305306349206349
+Forêt aléatoire,rep1_pli1,100723,sain,sain,0.23555555555555555
+Forêt aléatoire,rep1_pli1,100744,sain,sain,0.4447158730158729
+Forêt aléatoire,rep1_pli1,100757,sain,sain,0.21139126984126985
+Forêt aléatoire,rep1_pli1,100775,sain,sain,0.3791825396825397
+Forêt aléatoire,rep1_pli1,100777,sain,sain,0.2627222222222222
+Forêt aléatoire,rep1_pli1,100783,sain,sain,0.42609285714285716
+Forêt aléatoire,rep1_pli1,100784,sain,sain,0.31767698412698403
+Forêt aléatoire,rep1_pli1,100793,sain,sain,0.3260071428571428
+Forêt aléatoire,rep1_pli1,100797,sain,sain,0.3277309523809523
+Forêt aléatoire,rep1_pli1,100800,sain,sain,0.3873841269841266
+Forêt aléatoire,rep1_pli1,100844,sain,sain,0.21204126984126995
+Forêt aléatoire,rep1_pli1,100873,sain,sain,0.4374285714285715
+Forêt aléatoire,rep1_pli1,100877,sain,blesse,0.5924452380952383
+Forêt aléatoire,rep1_pli1,100949,blesse,sain,0.4855984126984129
+Forêt aléatoire,rep1_pli1,100998,sain,sain,0.43008095238095245
+Forêt aléatoire,rep1_pli1,101055,sain,sain,0.37034920634920643
+Forêt aléatoire,rep1_pli1,101087,sain,sain,0.4880333333333332
+Forêt aléatoire,rep1_pli1,101095,sain,sain,0.48442142857142856
+Forêt aléatoire,rep1_pli1,101120,sain,sain,0.34984126984126984
+Forêt aléatoire,rep1_pli1,101135,blesse,sain,0.4295531746031745
+Forêt aléatoire,rep1_pli1,101143,blesse,sain,0.4878373015873019
+Forêt aléatoire,rep1_pli1,101265,blesse,sain,0.3810309523809522
+Forêt aléatoire,rep1_pli1,101342,sain,sain,0.3037753968253968
+Forêt aléatoire,rep1_pli1,101344,sain,sain,0.3471206349206347
+Forêt aléatoire,rep1_pli1,101345,sain,sain,0.2856761904761904
+Forêt aléatoire,rep1_pli1,101352,sain,sain,0.42061111111111116
+Forêt aléatoire,rep1_pli1,101364,blesse,blesse,0.5126666666666667
+Forêt aléatoire,rep1_pli1,101372,sain,sain,0.474654761904762
+Forêt aléatoire,rep1_pli1,101373,blesse,sain,0.4678825396825397
+Forêt aléatoire,rep1_pli1,101375,blesse,sain,0.2650277777777777
+Forêt aléatoire,rep1_pli1,101386,sain,sain,0.18384761904761904
+Forêt aléatoire,rep1_pli1,101395,sain,sain,0.15714523809523812
+Forêt aléatoire,rep1_pli1,101413,blesse,sain,0.3590293650793651
+Forêt aléatoire,rep1_pli1,101419,sain,sain,0.2648761904761906
+Forêt aléatoire,rep1_pli1,101429,sain,sain,0.24720000000000006
+Forêt aléatoire,rep1_pli1,101436,sain,sain,0.1754198412698413
+Forêt aléatoire,rep1_pli1,101437,sain,sain,0.20467063492063492
+Forêt aléatoire,rep1_pli1,101498,sain,sain,0.11826349206349207
+Forêt aléatoire,rep1_pli1,101501,sain,sain,0.09583571428571429
+Forêt aléatoire,rep1_pli1,101514,sain,blesse,0.5388817460317462
+Forêt aléatoire,rep1_pli1,101542,blesse,sain,0.4177007936507935
+Forêt aléatoire,rep1_pli1,101576,sain,blesse,0.5031341269841272
+Forêt aléatoire,rep1_pli1,101593,sain,sain,0.31799365079365083
+Forêt aléatoire,rep1_pli1,101594,blesse,sain,0.29465873015873023
+Forêt aléatoire,rep1_pli1,101625,sain,blesse,0.5017246031746031
+Forêt aléatoire,rep1_pli1,101638,blesse,sain,0.4562746031746033
+Forêt aléatoire,rep1_pli1,101660,blesse,sain,0.2120547619047619
+Forêt aléatoire,rep1_pli1,101691,sain,sain,0.34069603174603175
+Forêt aléatoire,rep1_pli1,101692,sain,sain,0.4239611111111109
+Forêt aléatoire,rep1_pli1,101698,sain,sain,0.31853968253968257
+Forêt aléatoire,rep1_pli1,101703,blesse,blesse,0.5086650793650794
+Forêt aléatoire,rep1_pli1,101709,blesse,sain,0.35832777777777775
+Forêt aléatoire,rep1_pli1,101720,blesse,blesse,0.5323674603174601
+Forêt aléatoire,rep1_pli1,101725,blesse,sain,0.28309126984126987
+Forêt aléatoire,rep1_pli1,101809,sain,sain,0.15218809523809526
+Forêt aléatoire,rep1_pli1,102010,sain,sain,0.18064682539682536
+Forêt aléatoire,rep1_pli1,102012,sain,sain,0.23471349206349207
+Forêt aléatoire,rep1_pli1,200030,sain,sain,0.37046904761904753
+Forêt aléatoire,rep1_pli1,200032,sain,sain,0.3546047619047617
+Forêt aléatoire,rep1_pli1,200355,blesse,sain,0.2933873015873016
+Forêt aléatoire,rep1_pli1,200361,sain,sain,0.38729126984126977
+Forêt aléatoire,rep1_pli1,200365,blesse,sain,0.35252619047619055
+Forêt aléatoire,rep1_pli1,200379,sain,sain,0.3630682539682538
+Forêt aléatoire,rep1_pli1,200982,sain,sain,0.3958857142857143
+Forêt aléatoire,rep1_pli1,200983,sain,sain,0.30240873015873015
+Forêt aléatoire,rep1_pli1,201080,sain,sain,0.3190190476190477
+Forêt aléatoire,rep1_pli1,201091,sain,sain,0.34184841269841276
+Forêt aléatoire,rep1_pli1,201223,sain,sain,0.4839174603174602
+Forêt aléatoire,rep1_pli2,100002,blesse,sain,0.41224126984126985
+Forêt aléatoire,rep1_pli2,100004,sain,sain,0.2505611111111111
+Forêt aléatoire,rep1_pli2,100044,blesse,sain,0.39016984126984117
+Forêt aléatoire,rep1_pli2,100093,blesse,sain,0.3130611111111109
+Forêt aléatoire,rep1_pli2,100100,sain,sain,0.41471349206349195
+Forêt aléatoire,rep1_pli2,100133,blesse,sain,0.3729928571428571
+Forêt aléatoire,rep1_pli2,100197,blesse,blesse,0.6176182539682541
+Forêt aléatoire,rep1_pli2,100204,blesse,blesse,0.5145579365079368
+Forêt aléatoire,rep1_pli2,100211,blesse,blesse,0.5750126984126981
+Forêt aléatoire,rep1_pli2,100217,blesse,sain,0.43311984126984115
+Forêt aléatoire,rep1_pli2,100224,blesse,blesse,0.5323698412698412
+Forêt aléatoire,rep1_pli2,100226,blesse,blesse,0.511374603174603
+Forêt aléatoire,rep1_pli2,100239,sain,sain,0.4194714285714288
+Forêt aléatoire,rep1_pli2,100249,sain,sain,0.45493888888888884
+Forêt aléatoire,rep1_pli2,100257,sain,sain,0.3261079365079365
+Forêt aléatoire,rep1_pli2,100258,blesse,sain,0.4247444444444445
+Forêt aléatoire,rep1_pli2,100259,sain,sain,0.47228174603174594
+Forêt aléatoire,rep1_pli2,100274,blesse,sain,0.47917936507936515
+Forêt aléatoire,rep1_pli2,100275,blesse,blesse,0.5022849206349207
+Forêt aléatoire,rep1_pli2,100277,blesse,blesse,0.5341301587301588
+Forêt aléatoire,rep1_pli2,100283,sain,sain,0.18590873015873022
+Forêt aléatoire,rep1_pli2,100284,blesse,sain,0.46140238095238084
+Forêt aléatoire,rep1_pli2,100306,blesse,sain,0.3796357142857142
+Forêt aléatoire,rep1_pli2,100308,blesse,blesse,0.5165301587301587
+Forêt aléatoire,rep1_pli2,100311,blesse,sain,0.35226349206349195
+Forêt aléatoire,rep1_pli2,100323,blesse,sain,0.4966317460317461
+Forêt aléatoire,rep1_pli2,100325,blesse,sain,0.3725960317460318
+Forêt aléatoire,rep1_pli2,100327,blesse,sain,0.43625476190476214
+Forêt aléatoire,rep1_pli2,100363,blesse,sain,0.4803642857142858
+Forêt aléatoire,rep1_pli2,100413,sain,sain,0.2790230158730159
+Forêt aléatoire,rep1_pli2,100415,sain,sain,0.45798650793650786
+Forêt aléatoire,rep1_pli2,100417,blesse,sain,0.41546587301587296
+Forêt aléatoire,rep1_pli2,100505,sain,sain,0.40577619047619046
+Forêt aléatoire,rep1_pli2,100513,sain,sain,0.4428000000000001
+Forêt aléatoire,rep1_pli2,100520,sain,sain,0.45079841269841275
+Forêt aléatoire,rep1_pli2,100534,sain,sain,0.38658095238095247
+Forêt aléatoire,rep1_pli2,100574,blesse,sain,0.4387373015873014
+Forêt aléatoire,rep1_pli2,100594,blesse,sain,0.4149603174603174
+Forêt aléatoire,rep1_pli2,100658,sain,sain,0.42949920634920635
+Forêt aléatoire,rep1_pli2,100684,sain,sain,0.36813015873015864
+Forêt aléatoire,rep1_pli2,100687,sain,sain,0.43384603174603154
+Forêt aléatoire,rep1_pli2,100688,sain,blesse,0.5301301587301587
+Forêt aléatoire,rep1_pli2,100692,sain,sain,0.3883523809523809
+Forêt aléatoire,rep1_pli2,100695,sain,sain,0.3930849206349207
+Forêt aléatoire,rep1_pli2,100709,blesse,sain,0.36835158730158707
+Forêt aléatoire,rep1_pli2,100711,sain,sain,0.26387142857142865
+Forêt aléatoire,rep1_pli2,100730,sain,sain,0.48209920634920633
+Forêt aléatoire,rep1_pli2,100738,sain,sain,0.4247301587301587
+Forêt aléatoire,rep1_pli2,100740,sain,sain,0.45563650793650806
+Forêt aléatoire,rep1_pli2,100756,sain,sain,0.34967460317460314
+Forêt aléatoire,rep1_pli2,100758,sain,sain,0.3551690476190478
+Forêt aléatoire,rep1_pli2,100767,sain,sain,0.21722301587301598
+Forêt aléatoire,rep1_pli2,100774,sain,sain,0.31361666666666665
+Forêt aléatoire,rep1_pli2,100780,sain,sain,0.39604603174603176
+Forêt aléatoire,rep1_pli2,100782,sain,blesse,0.569447619047619
+Forêt aléatoire,rep1_pli2,100798,sain,sain,0.38506349206349194
+Forêt aléatoire,rep1_pli2,100810,sain,sain,0.32377222222222224
+Forêt aléatoire,rep1_pli2,100813,blesse,sain,0.39291825396825386
+Forêt aléatoire,rep1_pli2,100818,sain,sain,0.18998095238095233
+Forêt aléatoire,rep1_pli2,100832,sain,sain,0.3990055555555556
+Forêt aléatoire,rep1_pli2,100847,sain,sain,0.1864944444444445
+Forêt aléatoire,rep1_pli2,100850,sain,sain,0.4201484126984125
+Forêt aléatoire,rep1_pli2,100863,sain,sain,0.34247936507936505
+Forêt aléatoire,rep1_pli2,100874,sain,sain,0.4008055555555554
+Forêt aléatoire,rep1_pli2,100883,blesse,sain,0.444436507936508
+Forêt aléatoire,rep1_pli2,100886,sain,sain,0.3384134920634921
+Forêt aléatoire,rep1_pli2,100990,blesse,sain,0.34215555555555555
+Forêt aléatoire,rep1_pli2,101054,sain,sain,0.18188174603174606
+Forêt aléatoire,rep1_pli2,101061,blesse,sain,0.47168730158730143
+Forêt aléatoire,rep1_pli2,101083,blesse,sain,0.3027666666666667
+Forêt aléatoire,rep1_pli2,101098,sain,sain,0.37931349206349185
+Forêt aléatoire,rep1_pli2,101099,blesse,sain,0.22250079365079364
+Forêt aléatoire,rep1_pli2,101107,blesse,blesse,0.6101682539682544
+Forêt aléatoire,rep1_pli2,101110,blesse,blesse,0.557768253968254
+Forêt aléatoire,rep1_pli2,101141,sain,sain,0.36519603174603166
+Forêt aléatoire,rep1_pli2,101238,sain,sain,0.3905873015873016
+Forêt aléatoire,rep1_pli2,101271,sain,blesse,0.5124817460317458
+Forêt aléatoire,rep1_pli2,101302,sain,sain,0.21805634920634923
+Forêt aléatoire,rep1_pli2,101339,sain,sain,0.2685071428571429
+Forêt aléatoire,rep1_pli2,101393,sain,sain,0.17221746031746032
+Forêt aléatoire,rep1_pli2,101397,sain,sain,0.22495714285714288
+Forêt aléatoire,rep1_pli2,101399,sain,sain,0.26826666666666665
+Forêt aléatoire,rep1_pli2,101403,sain,sain,0.13489761904761907
+Forêt aléatoire,rep1_pli2,101404,sain,sain,0.21313968253968257
+Forêt aléatoire,rep1_pli2,101410,blesse,sain,0.31988571428571416
+Forêt aléatoire,rep1_pli2,101416,blesse,sain,0.47774841269841267
+Forêt aléatoire,rep1_pli2,101428,blesse,blesse,0.5787230158730159
+Forêt aléatoire,rep1_pli2,101499,sain,sain,0.1163039682539682
+Forêt aléatoire,rep1_pli2,101534,sain,sain,0.43609365079365053
+Forêt aléatoire,rep1_pli2,101538,blesse,sain,0.3512460317460317
+Forêt aléatoire,rep1_pli2,101581,sain,blesse,0.5196420634920634
+Forêt aléatoire,rep1_pli2,101590,sain,sain,0.2946976190476191
+Forêt aléatoire,rep1_pli2,101607,blesse,sain,0.4449984126984127
+Forêt aléatoire,rep1_pli2,101612,sain,sain,0.17368015873015874
+Forêt aléatoire,rep1_pli2,101613,sain,sain,0.46024761904761863
+Forêt aléatoire,rep1_pli2,101624,sain,sain,0.3186365079365079
+Forêt aléatoire,rep1_pli2,101654,blesse,sain,0.39797857142857135
+Forêt aléatoire,rep1_pli2,101700,blesse,sain,0.31565793650793655
+Forêt aléatoire,rep1_pli2,101730,blesse,sain,0.48380079365079365
+Forêt aléatoire,rep1_pli2,101747,blesse,blesse,0.5181166666666667
+Forêt aléatoire,rep1_pli2,101758,sain,sain,0.3384373015873014
+Forêt aléatoire,rep1_pli2,101764,blesse,blesse,0.5410293650793652
+Forêt aléatoire,rep1_pli2,101777,blesse,sain,0.47918333333333324
+Forêt aléatoire,rep1_pli2,102000,sain,sain,0.2919190476190478
+Forêt aléatoire,rep1_pli2,102008,sain,sain,0.23179841269841275
+Forêt aléatoire,rep1_pli2,200028,sain,sain,0.38463253968253963
+Forêt aléatoire,rep1_pli2,200029,sain,sain,0.3782301587301588
+Forêt aléatoire,rep1_pli2,200290,sain,sain,0.40243809523809504
+Forêt aléatoire,rep1_pli2,200340,sain,sain,0.3587190476190475
+Forêt aléatoire,rep1_pli2,200348,sain,sain,0.337220634920635
+Forêt aléatoire,rep1_pli2,200363,sain,blesse,0.5163261904761907
+Forêt aléatoire,rep1_pli2,200374,sain,sain,0.27702301587301587
+Forêt aléatoire,rep1_pli2,200975,sain,sain,0.3328833333333335
+Forêt aléatoire,rep1_pli2,200986,sain,sain,0.39867857142857144
+Forêt aléatoire,rep1_pli2,200988,sain,sain,0.3374706349206348
+Forêt aléatoire,rep1_pli2,200989,sain,sain,0.2757698412698413
+Forêt aléatoire,rep1_pli2,201073,blesse,sain,0.21133333333333337
+Forêt aléatoire,rep1_pli2,201076,sain,sain,0.3377611111111111
+Forêt aléatoire,rep1_pli3,100023,blesse,sain,0.4423182539682539
+Forêt aléatoire,rep1_pli3,100109,blesse,sain,0.46578492063492083
+Forêt aléatoire,rep1_pli3,100119,blesse,sain,0.35825079365079365
+Forêt aléatoire,rep1_pli3,100121,sain,blesse,0.5199341269841268
+Forêt aléatoire,rep1_pli3,100122,blesse,sain,0.4360301587301587
+Forêt aléatoire,rep1_pli3,100151,blesse,sain,0.43764999999999993
+Forêt aléatoire,rep1_pli3,100201,blesse,sain,0.4961888888888888
+Forêt aléatoire,rep1_pli3,100202,blesse,sain,0.4840420634920634
+Forêt aléatoire,rep1_pli3,100205,blesse,sain,0.4019285714285714
+Forêt aléatoire,rep1_pli3,100207,blesse,sain,0.37587301587301586
+Forêt aléatoire,rep1_pli3,100220,blesse,sain,0.4817206349206347
+Forêt aléatoire,rep1_pli3,100228,sain,sain,0.4330960317460318
+Forêt aléatoire,rep1_pli3,100232,sain,blesse,0.5000857142857144
+Forêt aléatoire,rep1_pli3,100235,sain,sain,0.36680714285714267
+Forêt aléatoire,rep1_pli3,100243,blesse,blesse,0.513577777777778
+Forêt aléatoire,rep1_pli3,100244,sain,blesse,0.553546031746032
+Forêt aléatoire,rep1_pli3,100247,sain,sain,0.30482380952380966
+Forêt aléatoire,rep1_pli3,100248,sain,sain,0.43642619047619063
+Forêt aléatoire,rep1_pli3,100250,sain,sain,0.45458253968253975
+Forêt aléatoire,rep1_pli3,100252,sain,sain,0.475107142857143
+Forêt aléatoire,rep1_pli3,100261,sain,sain,0.3068976190476191
+Forêt aléatoire,rep1_pli3,100262,sain,blesse,0.5109912698412699
+Forêt aléatoire,rep1_pli3,100265,sain,blesse,0.516703968253968
+Forêt aléatoire,rep1_pli3,100273,blesse,sain,0.4744603174603175
+Forêt aléatoire,rep1_pli3,100276,blesse,blesse,0.5793380952380951
+Forêt aléatoire,rep1_pli3,100280,blesse,sain,0.4458007936507936
+Forêt aléatoire,rep1_pli3,100281,sain,sain,0.4885190476190475
+Forêt aléatoire,rep1_pli3,100282,sain,blesse,0.5707174603174601
+Forêt aléatoire,rep1_pli3,100285,blesse,blesse,0.5010912698412698
+Forêt aléatoire,rep1_pli3,100287,sain,blesse,0.5770333333333335
+Forêt aléatoire,rep1_pli3,100290,blesse,sain,0.39607063492063493
+Forêt aléatoire,rep1_pli3,100300,sain,sain,0.4766690476190476
+Forêt aléatoire,rep1_pli3,100305,blesse,blesse,0.593413492063492
+Forêt aléatoire,rep1_pli3,100316,blesse,sain,0.354888888888889
+Forêt aléatoire,rep1_pli3,100370,blesse,sain,0.4922150793650795
+Forêt aléatoire,rep1_pli3,100376,blesse,blesse,0.7208126984126981
+Forêt aléatoire,rep1_pli3,100390,sain,blesse,0.5436976190476192
+Forêt aléatoire,rep1_pli3,100430,sain,sain,0.4095547619047619
+Forêt aléatoire,rep1_pli3,100503,sain,sain,0.39095238095238083
+Forêt aléatoire,rep1_pli3,100512,sain,sain,0.3912047619047619
+Forêt aléatoire,rep1_pli3,100514,sain,sain,0.41654920634920656
+Forêt aléatoire,rep1_pli3,100515,sain,sain,0.4035238095238094
+Forêt aléatoire,rep1_pli3,100517,sain,sain,0.35505714285714274
+Forêt aléatoire,rep1_pli3,100518,sain,sain,0.4363111111111111
+Forêt aléatoire,rep1_pli3,100545,sain,blesse,0.5705785714285716
+Forêt aléatoire,rep1_pli3,100565,sain,sain,0.40903650793650803
+Forêt aléatoire,rep1_pli3,100580,sain,sain,0.2802428571428572
+Forêt aléatoire,rep1_pli3,100598,blesse,sain,0.36387698412698427
+Forêt aléatoire,rep1_pli3,100599,sain,sain,0.3123714285714287
+Forêt aléatoire,rep1_pli3,100634,blesse,sain,0.42657380952380947
+Forêt aléatoire,rep1_pli3,100646,blesse,sain,0.4509706349206347
+Forêt aléatoire,rep1_pli3,100654,blesse,sain,0.30577777777777776
+Forêt aléatoire,rep1_pli3,100665,blesse,sain,0.4916047619047618
+Forêt aléatoire,rep1_pli3,100706,sain,sain,0.20830634920634922
+Forêt aléatoire,rep1_pli3,100714,blesse,sain,0.3519420634920634
+Forêt aléatoire,rep1_pli3,100724,sain,sain,0.3482936507936507
+Forêt aléatoire,rep1_pli3,100726,sain,sain,0.3253984126984127
+Forêt aléatoire,rep1_pli3,100732,sain,sain,0.3679126984126984
+Forêt aléatoire,rep1_pli3,100759,sain,sain,0.3542746031746033
+Forêt aléatoire,rep1_pli3,100781,sain,sain,0.4095301587301588
+Forêt aléatoire,rep1_pli3,100785,sain,sain,0.48020793650793653
+Forêt aléatoire,rep1_pli3,100792,sain,sain,0.26008095238095247
+Forêt aléatoire,rep1_pli3,100794,sain,sain,0.2060746031746032
+Forêt aléatoire,rep1_pli3,100811,blesse,sain,0.4293642857142857
+Forêt aléatoire,rep1_pli3,100819,sain,sain,0.4023190476190477
+Forêt aléatoire,rep1_pli3,100820,sain,blesse,0.5110499999999999
+Forêt aléatoire,rep1_pli3,100821,sain,sain,0.3127452380952379
+Forêt aléatoire,rep1_pli3,100829,blesse,blesse,0.5094619047619047
+Forêt aléatoire,rep1_pli3,100857,sain,blesse,0.681054761904762
+Forêt aléatoire,rep1_pli3,100899,sain,sain,0.462723015873016
+Forêt aléatoire,rep1_pli3,101086,sain,blesse,0.5745698412698413
+Forêt aléatoire,rep1_pli3,101124,sain,sain,0.367034126984127
+Forêt aléatoire,rep1_pli3,101255,blesse,sain,0.40431507936507927
+Forêt aléatoire,rep1_pli3,101261,blesse,blesse,0.5098214285714286
+Forêt aléatoire,rep1_pli3,101264,sain,sain,0.2537626984126985
+Forêt aléatoire,rep1_pli3,101270,sain,sain,0.2112539682539682
+Forêt aléatoire,rep1_pli3,101272,sain,sain,0.48631349206349206
+Forêt aléatoire,rep1_pli3,101355,blesse,sain,0.4387333333333334
+Forêt aléatoire,rep1_pli3,101362,sain,sain,0.23892619047619046
+Forêt aléatoire,rep1_pli3,101381,sain,sain,0.32001984126984134
+Forêt aléatoire,rep1_pli3,101392,sain,sain,0.1456730158730159
+Forêt aléatoire,rep1_pli3,101396,sain,sain,0.11444761904761906
+Forêt aléatoire,rep1_pli3,101406,sain,sain,0.4331015873015874
+Forêt aléatoire,rep1_pli3,101407,sain,sain,0.40220634920634923
+Forêt aléatoire,rep1_pli3,101409,sain,sain,0.44497222222222216
+Forêt aléatoire,rep1_pli3,101427,blesse,sain,0.4714539682539681
+Forêt aléatoire,rep1_pli3,101481,sain,sain,0.4761412698412698
+Forêt aléatoire,rep1_pli3,101497,sain,sain,0.14690079365079367
+Forêt aléatoire,rep1_pli3,101504,sain,sain,0.22169365079365078
+Forêt aléatoire,rep1_pli3,101505,sain,sain,0.17799206349206356
+Forêt aléatoire,rep1_pli3,101506,sain,sain,0.09065396825396825
+Forêt aléatoire,rep1_pli3,101509,sain,sain,0.40115476190476174
+Forêt aléatoire,rep1_pli3,101517,blesse,sain,0.25651428571428575
+Forêt aléatoire,rep1_pli3,101543,blesse,sain,0.44173492063492065
+Forêt aléatoire,rep1_pli3,101606,blesse,sain,0.40190555555555574
+Forêt aléatoire,rep1_pli3,101616,blesse,sain,0.46197539682539684
+Forêt aléatoire,rep1_pli3,101680,blesse,sain,0.4345015873015873
+Forêt aléatoire,rep1_pli3,101684,blesse,sain,0.24287222222222224
+Forêt aléatoire,rep1_pli3,101704,blesse,sain,0.4226968253968253
+Forêt aléatoire,rep1_pli3,101711,blesse,blesse,0.5317865079365078
+Forêt aléatoire,rep1_pli3,101727,blesse,blesse,0.5439650793650793
+Forêt aléatoire,rep1_pli3,101772,blesse,sain,0.36980396825396816
+Forêt aléatoire,rep1_pli3,101807,sain,sain,0.1802301587301588
+Forêt aléatoire,rep1_pli3,102005,sain,sain,0.2849396825396825
+Forêt aléatoire,rep1_pli3,102006,sain,sain,0.48379206349206366
+Forêt aléatoire,rep1_pli3,102013,sain,sain,0.20549841269841265
+Forêt aléatoire,rep1_pli3,200031,blesse,sain,0.2436880952380952
+Forêt aléatoire,rep1_pli3,200253,sain,sain,0.4953404761904762
+Forêt aléatoire,rep1_pli3,200264,sain,sain,0.2778468253968254
+Forêt aléatoire,rep1_pli3,200269,sain,sain,0.35181825396825417
+Forêt aléatoire,rep1_pli3,200321,blesse,sain,0.24226031746031745
+Forêt aléatoire,rep1_pli3,200336,sain,sain,0.3869492063492064
+Forêt aléatoire,rep1_pli3,200368,sain,sain,0.3485801587301588
+Forêt aléatoire,rep1_pli3,200372,sain,sain,0.19438015873015865
+Forêt aléatoire,rep1_pli3,200974,sain,sain,0.46154206349206356
+Forêt aléatoire,rep1_pli3,200984,sain,sain,0.2784015873015872
+Forêt aléatoire,rep1_pli3,201090,blesse,sain,0.26234523809523824
+Forêt aléatoire,rep1_pli4,100003,blesse,sain,0.3661261904761904
+Forêt aléatoire,rep1_pli4,100010,blesse,blesse,0.529374603174603
+Forêt aléatoire,rep1_pli4,100031,blesse,blesse,0.546754761904762
+Forêt aléatoire,rep1_pli4,100035,sain,blesse,0.5122523809523809
+Forêt aléatoire,rep1_pli4,100036,blesse,blesse,0.6196484126984129
+Forêt aléatoire,rep1_pli4,100065,blesse,sain,0.44849841269841273
+Forêt aléatoire,rep1_pli4,100086,blesse,sain,0.2275380952380952
+Forêt aléatoire,rep1_pli4,100091,blesse,sain,0.38321190476190464
+Forêt aléatoire,rep1_pli4,100186,blesse,sain,0.27094365079365074
+Forêt aléatoire,rep1_pli4,100203,blesse,sain,0.4418095238095237
+Forêt aléatoire,rep1_pli4,100213,blesse,blesse,0.5353444444444444
+Forêt aléatoire,rep1_pli4,100219,blesse,sain,0.482792857142857
+Forêt aléatoire,rep1_pli4,100236,blesse,sain,0.32795952380952387
+Forêt aléatoire,rep1_pli4,100237,sain,sain,0.36614603174603166
+Forêt aléatoire,rep1_pli4,100240,sain,sain,0.42146111111111095
+Forêt aléatoire,rep1_pli4,100242,sain,sain,0.43515000000000015
+Forêt aléatoire,rep1_pli4,100253,sain,blesse,0.5502023809523808
+Forêt aléatoire,rep1_pli4,100254,blesse,blesse,0.5497222222222221
+Forêt aléatoire,rep1_pli4,100255,blesse,sain,0.4326626984126984
+Forêt aléatoire,rep1_pli4,100279,sain,blesse,0.5657634920634921
+Forêt aléatoire,rep1_pli4,100296,blesse,sain,0.48144206349206353
+Forêt aléatoire,rep1_pli4,100303,blesse,sain,0.47370238095238093
+Forêt aléatoire,rep1_pli4,100322,blesse,sain,0.4915896825396825
+Forêt aléatoire,rep1_pli4,100329,blesse,sain,0.49746269841269836
+Forêt aléatoire,rep1_pli4,100330,blesse,blesse,0.5225420634920636
+Forêt aléatoire,rep1_pli4,100340,sain,sain,0.3788373015873015
+Forêt aléatoire,rep1_pli4,100359,sain,sain,0.44893492063492063
+Forêt aléatoire,rep1_pli4,100362,blesse,sain,0.4472650793650792
+Forêt aléatoire,rep1_pli4,100374,blesse,sain,0.46269365079365066
+Forêt aléatoire,rep1_pli4,100397,sain,sain,0.4759706349206348
+Forêt aléatoire,rep1_pli4,100427,sain,sain,0.4525912698412698
+Forêt aléatoire,rep1_pli4,100510,sain,blesse,0.5512126984126986
+Forêt aléatoire,rep1_pli4,100525,blesse,sain,0.24827698412698418
+Forêt aléatoire,rep1_pli4,100540,sain,sain,0.4657476190476191
+Forêt aléatoire,rep1_pli4,100543,sain,sain,0.2696722222222222
+Forêt aléatoire,rep1_pli4,100571,sain,sain,0.2916904761904763
+Forêt aléatoire,rep1_pli4,100642,sain,blesse,0.551965873015873
+Forêt aléatoire,rep1_pli4,100677,blesse,sain,0.3071404761904762
+Forêt aléatoire,rep1_pli4,100683,sain,sain,0.25679920634920644
+Forêt aléatoire,rep1_pli4,100689,sain,blesse,0.5554460317460317
+Forêt aléatoire,rep1_pli4,100693,sain,sain,0.3185936507936507
+Forêt aléatoire,rep1_pli4,100720,sain,sain,0.2513317460317461
+Forêt aléatoire,rep1_pli4,100727,sain,blesse,0.515443650793651
+Forêt aléatoire,rep1_pli4,100728,sain,blesse,0.6631301587301588
+Forêt aléatoire,rep1_pli4,100731,sain,sain,0.2917484126984127
+Forêt aléatoire,rep1_pli4,100739,sain,sain,0.35805079365079356
+Forêt aléatoire,rep1_pli4,100760,sain,sain,0.38185158730158725
+Forêt aléatoire,rep1_pli4,100786,sain,sain,0.4286817460317461
+Forêt aléatoire,rep1_pli4,100787,sain,sain,0.2762611111111112
+Forêt aléatoire,rep1_pli4,100791,sain,sain,0.3433333333333332
+Forêt aléatoire,rep1_pli4,100801,sain,sain,0.4725801587301588
+Forêt aléatoire,rep1_pli4,100830,sain,sain,0.25747936507936503
+Forêt aléatoire,rep1_pli4,100848,sain,sain,0.18602142857142853
+Forêt aléatoire,rep1_pli4,100853,sain,sain,0.19089523809523806
+Forêt aléatoire,rep1_pli4,100861,sain,blesse,0.5934309523809524
+Forêt aléatoire,rep1_pli4,101013,sain,sain,0.3003031746031744
+Forêt aléatoire,rep1_pli4,101049,blesse,blesse,0.5590674603174605
+Forêt aléatoire,rep1_pli4,101058,sain,blesse,0.604263492063492
+Forêt aléatoire,rep1_pli4,101060,sain,sain,0.4635031746031747
+Forêt aléatoire,rep1_pli4,101137,sain,blesse,0.5211793650793651
+Forêt aléatoire,rep1_pli4,101149,blesse,sain,0.4877698412698416
+Forêt aléatoire,rep1_pli4,101165,blesse,sain,0.11920873015873015
+Forêt aléatoire,rep1_pli4,101248,blesse,blesse,0.5080777777777777
+Forêt aléatoire,rep1_pli4,101249,blesse,blesse,0.5837634920634922
+Forêt aléatoire,rep1_pli4,101262,sain,sain,0.44105317460317456
+Forêt aléatoire,rep1_pli4,101263,sain,sain,0.19558015873015888
+Forêt aléatoire,rep1_pli4,101334,blesse,sain,0.4908960317460318
+Forêt aléatoire,rep1_pli4,101341,sain,sain,0.36744761904761897
+Forêt aléatoire,rep1_pli4,101353,sain,sain,0.4329380952380952
+Forêt aléatoire,rep1_pli4,101361,sain,sain,0.2789349206349205
+Forêt aléatoire,rep1_pli4,101365,sain,sain,0.46925317460317445
+Forêt aléatoire,rep1_pli4,101366,sain,sain,0.44240714285714267
+Forêt aléatoire,rep1_pli4,101374,blesse,sain,0.48076190476190467
+Forêt aléatoire,rep1_pli4,101401,sain,sain,0.20938968253968251
+Forêt aléatoire,rep1_pli4,101405,sain,sain,0.42052063492063485
+Forêt aléatoire,rep1_pli4,101440,sain,sain,0.47665952380952387
+Forêt aléatoire,rep1_pli4,101500,sain,sain,0.13456031746031744
+Forêt aléatoire,rep1_pli4,101502,sain,sain,0.10268333333333335
+Forêt aléatoire,rep1_pli4,101508,sain,sain,0.06450714285714286
+Forêt aléatoire,rep1_pli4,101511,sain,sain,0.36540317460317473
+Forêt aléatoire,rep1_pli4,101527,sain,sain,0.34062301587301597
+Forêt aléatoire,rep1_pli4,101562,blesse,blesse,0.5132325396825395
+Forêt aléatoire,rep1_pli4,101564,blesse,sain,0.22392301587301586
+Forêt aléatoire,rep1_pli4,101577,sain,sain,0.3874436507936509
+Forêt aléatoire,rep1_pli4,101588,blesse,sain,0.4928063492063493
+Forêt aléatoire,rep1_pli4,101603,blesse,sain,0.43412777777777756
+Forêt aléatoire,rep1_pli4,101629,sain,sain,0.29198174603174615
+Forêt aléatoire,rep1_pli4,101634,sain,sain,0.4444888888888889
+Forêt aléatoire,rep1_pli4,101641,blesse,sain,0.38368571428571413
+Forêt aléatoire,rep1_pli4,101650,blesse,sain,0.45325952380952367
+Forêt aléatoire,rep1_pli4,101651,sain,sain,0.47258809523809525
+Forêt aléatoire,rep1_pli4,101696,blesse,sain,0.3341865079365076
+Forêt aléatoire,rep1_pli4,101728,blesse,blesse,0.5088484126984126
+Forêt aléatoire,rep1_pli4,101746,sain,sain,0.3207896825396824
+Forêt aléatoire,rep1_pli4,101769,sain,blesse,0.6012111111111111
+Forêt aléatoire,rep1_pli4,101770,blesse,sain,0.45685158730158715
+Forêt aléatoire,rep1_pli4,101999,sain,sain,0.19086190476190482
+Forêt aléatoire,rep1_pli4,102001,sain,sain,0.32838571428571417
+Forêt aléatoire,rep1_pli4,102002,sain,sain,0.42386507936507933
+Forêt aléatoire,rep1_pli4,102003,sain,sain,0.31013571428571424
+Forêt aléatoire,rep1_pli4,102004,sain,sain,0.42251111111111106
+Forêt aléatoire,rep1_pli4,102007,sain,sain,0.3590174603174604
+Forêt aléatoire,rep1_pli4,200244,sain,sain,0.37823888888888874
+Forêt aléatoire,rep1_pli4,200250,sain,sain,0.30835238095238093
+Forêt aléatoire,rep1_pli4,200276,sain,sain,0.42854285714285695
+Forêt aléatoire,rep1_pli4,200285,sain,sain,0.4903206349206351
+Forêt aléatoire,rep1_pli4,200294,blesse,sain,0.21075634920634917
+Forêt aléatoire,rep1_pli4,200295,sain,sain,0.27785317460317455
+Forêt aléatoire,rep1_pli4,200302,sain,sain,0.4273499999999998
+Forêt aléatoire,rep1_pli4,200350,blesse,sain,0.2931039682539682
+Forêt aléatoire,rep1_pli4,200354,blesse,sain,0.2752007936507936
+Forêt aléatoire,rep1_pli4,200358,sain,sain,0.3066444444444444
+Forêt aléatoire,rep1_pli4,200376,sain,sain,0.25254682539682544
+Forêt aléatoire,rep1_pli4,200980,blesse,sain,0.2780325396825396
+Forêt aléatoire,rep1_pli4,201077,sain,sain,0.31543253968253965
+Forêt aléatoire,rep1_pli4,201224,blesse,sain,0.2959142857142857
+Forêt aléatoire,rep1_pli5,100005,blesse,sain,0.3418777777777778
+Forêt aléatoire,rep1_pli5,100021,blesse,sain,0.4726063492063491
+Forêt aléatoire,rep1_pli5,100057,blesse,sain,0.26732142857142865
+Forêt aléatoire,rep1_pli5,100080,blesse,sain,0.45820079365079386
+Forêt aléatoire,rep1_pli5,100088,blesse,sain,0.45562142857142846
+Forêt aléatoire,rep1_pli5,100156,blesse,sain,0.47653809523809515
+Forêt aléatoire,rep1_pli5,100164,sain,sain,0.4850222222222222
+Forêt aléatoire,rep1_pli5,100178,blesse,blesse,0.5514166666666666
+Forêt aléatoire,rep1_pli5,100182,sain,sain,0.4886809523809524
+Forêt aléatoire,rep1_pli5,100199,blesse,sain,0.4986912698412698
+Forêt aléatoire,rep1_pli5,100206,blesse,sain,0.3968904761904762
+Forêt aléatoire,rep1_pli5,100223,blesse,sain,0.4095301587301588
+Forêt aléatoire,rep1_pli5,100225,blesse,blesse,0.5639079365079367
+Forêt aléatoire,rep1_pli5,100238,blesse,sain,0.4530555555555556
+Forêt aléatoire,rep1_pli5,100245,blesse,sain,0.34097301587301593
+Forêt aléatoire,rep1_pli5,100260,sain,sain,0.31565714285714275
+Forêt aléatoire,rep1_pli5,100263,sain,sain,0.3083674603174602
+Forêt aléatoire,rep1_pli5,100269,sain,sain,0.3982507936507934
+Forêt aléatoire,rep1_pli5,100271,blesse,sain,0.4556134920634921
+Forêt aléatoire,rep1_pli5,100286,blesse,blesse,0.5219761904761904
+Forêt aléatoire,rep1_pli5,100288,sain,sain,0.37965317460317466
+Forêt aléatoire,rep1_pli5,100289,blesse,blesse,0.5255841269841269
+Forêt aléatoire,rep1_pli5,100307,blesse,blesse,0.524638095238095
+Forêt aléatoire,rep1_pli5,100309,blesse,blesse,0.6427222222222225
+Forêt aléatoire,rep1_pli5,100318,blesse,blesse,0.5178436507936505
+Forêt aléatoire,rep1_pli5,100324,blesse,sain,0.40350079365079344
+Forêt aléatoire,rep1_pli5,100332,blesse,sain,0.36043333333333327
+Forêt aléatoire,rep1_pli5,100377,blesse,sain,0.3579222222222222
+Forêt aléatoire,rep1_pli5,100401,sain,blesse,0.5184650793650796
+Forêt aléatoire,rep1_pli5,100414,blesse,blesse,0.5286142857142854
+Forêt aléatoire,rep1_pli5,100422,sain,blesse,0.5010317460317459
+Forêt aléatoire,rep1_pli5,100423,sain,blesse,0.5480373015873015
+Forêt aléatoire,rep1_pli5,100424,sain,sain,0.4706230158730159
+Forêt aléatoire,rep1_pli5,100425,sain,blesse,0.590918253968254
+Forêt aléatoire,rep1_pli5,100504,sain,sain,0.4270642857142856
+Forêt aléatoire,rep1_pli5,100506,sain,sain,0.39456507936507934
+Forêt aléatoire,rep1_pli5,100509,sain,sain,0.485211111111111
+Forêt aléatoire,rep1_pli5,100511,sain,sain,0.437334126984127
+Forêt aléatoire,rep1_pli5,100532,sain,sain,0.33559444444444453
+Forêt aléatoire,rep1_pli5,100535,sain,sain,0.3317253968253968
+Forêt aléatoire,rep1_pli5,100536,sain,sain,0.2331412698412699
+Forêt aléatoire,rep1_pli5,100538,sain,sain,0.2661539682539682
+Forêt aléatoire,rep1_pli5,100570,blesse,blesse,0.5411007936507938
+Forêt aléatoire,rep1_pli5,100573,blesse,sain,0.48042857142857137
+Forêt aléatoire,rep1_pli5,100581,blesse,sain,0.33237698412698413
+Forêt aléatoire,rep1_pli5,100587,sain,sain,0.3869992063492064
+Forêt aléatoire,rep1_pli5,100605,blesse,blesse,0.5265436507936508
+Forêt aléatoire,rep1_pli5,100618,sain,blesse,0.5365452380952381
+Forêt aléatoire,rep1_pli5,100682,sain,sain,0.3234611111111111
+Forêt aléatoire,rep1_pli5,100712,sain,sain,0.2874984126984127
+Forêt aléatoire,rep1_pli5,100715,sain,sain,0.4049190476190478
+Forêt aléatoire,rep1_pli5,100716,sain,blesse,0.5331857142857142
+Forêt aléatoire,rep1_pli5,100719,sain,sain,0.37409285714285706
+Forêt aléatoire,rep1_pli5,100725,sain,sain,0.4263333333333331
+Forêt aléatoire,rep1_pli5,100742,sain,sain,0.25860158730158733
+Forêt aléatoire,rep1_pli5,100745,sain,sain,0.48289603174603185
+Forêt aléatoire,rep1_pli5,100755,sain,sain,0.21050634920634922
+Forêt aléatoire,rep1_pli5,100765,sain,sain,0.3305960317460317
+Forêt aléatoire,rep1_pli5,100766,sain,sain,0.3126825396825397
+Forêt aléatoire,rep1_pli5,100771,blesse,blesse,0.5151500000000001
+Forêt aléatoire,rep1_pli5,100788,sain,sain,0.37473095238095255
+Forêt aléatoire,rep1_pli5,100817,sain,blesse,0.5153198412698413
+Forêt aléatoire,rep1_pli5,100826,blesse,blesse,0.6130468253968254
+Forêt aléatoire,rep1_pli5,100842,sain,sain,0.37432619047619037
+Forêt aléatoire,rep1_pli5,100851,sain,sain,0.370736507936508
+Forêt aléatoire,rep1_pli5,100852,sain,sain,0.39754206349206356
+Forêt aléatoire,rep1_pli5,100898,blesse,sain,0.3955293650793651
+Forêt aléatoire,rep1_pli5,100945,blesse,sain,0.3195484126984128
+Forêt aléatoire,rep1_pli5,100991,sain,sain,0.49900714285714287
+Forêt aléatoire,rep1_pli5,100994,blesse,sain,0.21886984126984135
+Forêt aléatoire,rep1_pli5,101048,blesse,sain,0.48368968253968253
+Forêt aléatoire,rep1_pli5,101067,sain,blesse,0.5017793650793652
+Forêt aléatoire,rep1_pli5,101108,blesse,sain,0.40871984126984134
+Forêt aléatoire,rep1_pli5,101111,sain,sain,0.26849761904761904
+Forêt aléatoire,rep1_pli5,101115,sain,sain,0.17505476190476185
+Forêt aléatoire,rep1_pli5,101126,sain,sain,0.24263888888888885
+Forêt aléatoire,rep1_pli5,101133,blesse,sain,0.4242253968253968
+Forêt aléatoire,rep1_pli5,101142,sain,sain,0.3258444444444445
+Forêt aléatoire,rep1_pli5,101169,sain,blesse,0.6090373015873018
+Forêt aléatoire,rep1_pli5,101175,blesse,blesse,0.5081222222222221
+Forêt aléatoire,rep1_pli5,101250,blesse,sain,0.3210738095238094
+Forêt aléatoire,rep1_pli5,101312,sain,sain,0.2831634920634922
+Forêt aléatoire,rep1_pli5,101337,sain,sain,0.2882047619047621
+Forêt aléatoire,rep1_pli5,101343,sain,sain,0.15295793650793651
+Forêt aléatoire,rep1_pli5,101360,sain,blesse,0.5061388888888888
+Forêt aléatoire,rep1_pli5,101394,sain,sain,0.14991825396825395
+Forêt aléatoire,rep1_pli5,101398,sain,sain,0.17649523809523815
+Forêt aléatoire,rep1_pli5,101400,sain,sain,0.2346587301587302
+Forêt aléatoire,rep1_pli5,101402,sain,sain,0.38035793650793653
+Forêt aléatoire,rep1_pli5,101408,sain,sain,0.28632619047619057
+Forêt aléatoire,rep1_pli5,101418,sain,sain,0.25948730158730166
+Forêt aléatoire,rep1_pli5,101420,sain,sain,0.3215944444444444
+Forêt aléatoire,rep1_pli5,101432,blesse,blesse,0.5380333333333333
+Forêt aléatoire,rep1_pli5,101503,sain,sain,0.1036095238095238
+Forêt aléatoire,rep1_pli5,101507,sain,sain,0.12203412698412698
+Forêt aléatoire,rep1_pli5,101592,blesse,sain,0.4847515873015874
+Forêt aléatoire,rep1_pli5,101596,sain,sain,0.22626825396825395
+Forêt aléatoire,rep1_pli5,101643,blesse,sain,0.4044690476190477
+Forêt aléatoire,rep1_pli5,101663,sain,sain,0.452011111111111
+Forêt aléatoire,rep1_pli5,101716,sain,sain,0.24829841269841277
+Forêt aléatoire,rep1_pli5,101763,sain,blesse,0.5738849206349205
+Forêt aléatoire,rep1_pli5,101944,sain,sain,0.2554000000000001
+Forêt aléatoire,rep1_pli5,102009,sain,sain,0.42130555555555543
+Forêt aléatoire,rep1_pli5,102014,sain,sain,0.3812992063492064
+Forêt aléatoire,rep1_pli5,200267,sain,sain,0.3457246031746032
+Forêt aléatoire,rep1_pli5,200270,blesse,sain,0.3754746031746031
+Forêt aléatoire,rep1_pli5,200273,blesse,sain,0.31843253968253954
+Forêt aléatoire,rep1_pli5,200280,blesse,sain,0.3512579365079365
+Forêt aléatoire,rep1_pli5,200288,sain,sain,0.11544047619047618
+Forêt aléatoire,rep1_pli5,200292,sain,sain,0.3329849206349205
+Forêt aléatoire,rep1_pli5,200301,sain,sain,0.23043968253968258
+Forêt aléatoire,rep1_pli5,200308,blesse,sain,0.19768412698412705
+Forêt aléatoire,rep1_pli5,200324,blesse,sain,0.2323476190476191
+Forêt aléatoire,rep1_pli5,200335,sain,sain,0.23356746031746026
+Forêt aléatoire,rep1_pli5,200981,sain,sain,0.3545142857142857
+Forêt aléatoire,rep1_pli5,200985,sain,sain,0.4534515873015872
+Forêt aléatoire,rep1_pli5,201089,sain,sain,0.3638166666666667
+Forêt aléatoire,rep1_pli5,201101,sain,sain,0.2598238095238095
+Forêt rééquilibrée,rep1_pli1,100015,blesse,blesse,0.5792658730158731
+Forêt rééquilibrée,rep1_pli1,100033,blesse,sain,0.2904571428571429
+Forêt rééquilibrée,rep1_pli1,100049,blesse,blesse,0.6050682539682539
+Forêt rééquilibrée,rep1_pli1,100058,sain,sain,0.49290555555555543
+Forêt rééquilibrée,rep1_pli1,100063,blesse,blesse,0.5427650793650795
+Forêt rééquilibrée,rep1_pli1,100074,blesse,sain,0.4664373015873016
+Forêt rééquilibrée,rep1_pli1,100075,blesse,sain,0.4783809523809524
+Forêt rééquilibrée,rep1_pli1,100136,blesse,blesse,0.621638888888889
+Forêt rééquilibrée,rep1_pli1,100173,sain,sain,0.4362047619047617
+Forêt rééquilibrée,rep1_pli1,100194,blesse,blesse,0.5032634920634922
+Forêt rééquilibrée,rep1_pli1,100195,blesse,sain,0.4318880952380953
+Forêt rééquilibrée,rep1_pli1,100200,blesse,blesse,0.6488682539682542
+Forêt rééquilibrée,rep1_pli1,100209,blesse,sain,0.4332404761904763
+Forêt rééquilibrée,rep1_pli1,100221,blesse,sain,0.4707158730158729
+Forêt rééquilibrée,rep1_pli1,100234,sain,sain,0.3737555555555556
+Forêt rééquilibrée,rep1_pli1,100241,blesse,blesse,0.5495253968253969
+Forêt rééquilibrée,rep1_pli1,100246,sain,blesse,0.5433055555555556
+Forêt rééquilibrée,rep1_pli1,100256,sain,blesse,0.6271023809523807
+Forêt rééquilibrée,rep1_pli1,100266,sain,blesse,0.5743309523809524
+Forêt rééquilibrée,rep1_pli1,100267,blesse,blesse,0.515515873015873
+Forêt rééquilibrée,rep1_pli1,100268,blesse,sain,0.437568253968254
+Forêt rééquilibrée,rep1_pli1,100304,blesse,sain,0.39698015873015874
+Forêt rééquilibrée,rep1_pli1,100310,blesse,blesse,0.5281730158730159
+Forêt rééquilibrée,rep1_pli1,100312,blesse,sain,0.4997753968253968
+Forêt rééquilibrée,rep1_pli1,100314,blesse,blesse,0.5171277777777777
+Forêt rééquilibrée,rep1_pli1,100315,blesse,blesse,0.6841166666666666
+Forêt rééquilibrée,rep1_pli1,100317,blesse,sain,0.480631746031746
+Forêt rééquilibrée,rep1_pli1,100319,blesse,sain,0.38219523809523803
+Forêt rééquilibrée,rep1_pli1,100321,blesse,sain,0.39034761904761917
+Forêt rééquilibrée,rep1_pli1,100326,blesse,sain,0.33491587301587306
+Forêt rééquilibrée,rep1_pli1,100328,blesse,blesse,0.5144579365079367
+Forêt rééquilibrée,rep1_pli1,100343,sain,sain,0.4625055555555556
+Forêt rééquilibrée,rep1_pli1,100368,blesse,sain,0.498302380952381
+Forêt rééquilibrée,rep1_pli1,100429,sain,sain,0.33255793650793636
+Forêt rééquilibrée,rep1_pli1,100508,sain,sain,0.43349206349206365
+Forêt rééquilibrée,rep1_pli1,100516,sain,sain,0.3775007936507936
+Forêt rééquilibrée,rep1_pli1,100541,sain,blesse,0.5155309523809521
+Forêt rééquilibrée,rep1_pli1,100560,sain,blesse,0.6085460317460317
+Forêt rééquilibrée,rep1_pli1,100575,blesse,sain,0.48279285714285713
+Forêt rééquilibrée,rep1_pli1,100593,blesse,sain,0.4954873015873018
+Forêt rééquilibrée,rep1_pli1,100680,sain,sain,0.45547777777777787
+Forêt rééquilibrée,rep1_pli1,100685,sain,sain,0.3558380952380952
+Forêt rééquilibrée,rep1_pli1,100686,sain,sain,0.4710960317460316
+Forêt rééquilibrée,rep1_pli1,100690,sain,sain,0.3860785714285715
+Forêt rééquilibrée,rep1_pli1,100691,sain,blesse,0.5438579365079366
+Forêt rééquilibrée,rep1_pli1,100705,sain,sain,0.4147444444444446
+Forêt rééquilibrée,rep1_pli1,100717,sain,blesse,0.5016452380952383
+Forêt rééquilibrée,rep1_pli1,100718,sain,sain,0.4536984126984127
+Forêt rééquilibrée,rep1_pli1,100721,sain,blesse,0.5060976190476191
+Forêt rééquilibrée,rep1_pli1,100722,sain,sain,0.29305873015873024
+Forêt rééquilibrée,rep1_pli1,100723,sain,sain,0.3047238095238096
+Forêt rééquilibrée,rep1_pli1,100744,sain,sain,0.4472190476190478
+Forêt rééquilibrée,rep1_pli1,100757,sain,sain,0.27492619047619055
+Forêt rééquilibrée,rep1_pli1,100775,sain,sain,0.41515158730158747
+Forêt rééquilibrée,rep1_pli1,100777,sain,sain,0.32114523809523815
+Forêt rééquilibrée,rep1_pli1,100783,sain,sain,0.4619357142857144
+Forêt rééquilibrée,rep1_pli1,100784,sain,sain,0.3574515873015872
+Forêt rééquilibrée,rep1_pli1,100793,sain,sain,0.34538492063492066
+Forêt rééquilibrée,rep1_pli1,100797,sain,sain,0.3817238095238097
+Forêt rééquilibrée,rep1_pli1,100800,sain,sain,0.33194285714285704
+Forêt rééquilibrée,rep1_pli1,100844,sain,sain,0.21877222222222228
+Forêt rééquilibrée,rep1_pli1,100873,sain,sain,0.49200000000000005
+Forêt rééquilibrée,rep1_pli1,100877,sain,blesse,0.6538380952380954
+Forêt rééquilibrée,rep1_pli1,100949,blesse,blesse,0.5686992063492065
+Forêt rééquilibrée,rep1_pli1,100998,sain,sain,0.48098809523809516
+Forêt rééquilibrée,rep1_pli1,101055,sain,sain,0.4511476190476191
+Forêt rééquilibrée,rep1_pli1,101087,sain,sain,0.48284841269841255
+Forêt rééquilibrée,rep1_pli1,101095,sain,sain,0.4943738095238096
+Forêt rééquilibrée,rep1_pli1,101120,sain,sain,0.35712460317460304
+Forêt rééquilibrée,rep1_pli1,101135,blesse,sain,0.43084206349206344
+Forêt rééquilibrée,rep1_pli1,101143,blesse,sain,0.4928230158730159
+Forêt rééquilibrée,rep1_pli1,101265,blesse,sain,0.36328333333333335
+Forêt rééquilibrée,rep1_pli1,101342,sain,sain,0.37592698412698405
+Forêt rééquilibrée,rep1_pli1,101344,sain,sain,0.4197230158730159
+Forêt rééquilibrée,rep1_pli1,101345,sain,sain,0.3807031746031744
+Forêt rééquilibrée,rep1_pli1,101352,sain,sain,0.45474444444444456
+Forêt rééquilibrée,rep1_pli1,101364,blesse,blesse,0.5337531746031746
+Forêt rééquilibrée,rep1_pli1,101372,sain,blesse,0.5191269841269843
+Forêt rééquilibrée,rep1_pli1,101373,blesse,sain,0.4507984126984127
+Forêt rééquilibrée,rep1_pli1,101375,blesse,sain,0.29873809523809525
+Forêt rééquilibrée,rep1_pli1,101386,sain,sain,0.20104126984126983
+Forêt rééquilibrée,rep1_pli1,101395,sain,sain,0.2038936507936508
+Forêt rééquilibrée,rep1_pli1,101413,blesse,sain,0.38801190476190484
+Forêt rééquilibrée,rep1_pli1,101419,sain,sain,0.27282777777777784
+Forêt rééquilibrée,rep1_pli1,101429,sain,sain,0.26929444444444456
+Forêt rééquilibrée,rep1_pli1,101436,sain,sain,0.23170396825396822
+Forêt rééquilibrée,rep1_pli1,101437,sain,sain,0.24132222222222213
+Forêt rééquilibrée,rep1_pli1,101498,sain,sain,0.14320555555555556
+Forêt rééquilibrée,rep1_pli1,101501,sain,sain,0.11851746031746033
+Forêt rééquilibrée,rep1_pli1,101514,sain,blesse,0.5629293650793654
+Forêt rééquilibrée,rep1_pli1,101542,blesse,sain,0.4551960317460319
+Forêt rééquilibrée,rep1_pli1,101576,sain,blesse,0.5435095238095237
+Forêt rééquilibrée,rep1_pli1,101593,sain,sain,0.3914095238095239
+Forêt rééquilibrée,rep1_pli1,101594,blesse,sain,0.36583650793650796
+Forêt rééquilibrée,rep1_pli1,101625,sain,blesse,0.5564666666666667
+Forêt rééquilibrée,rep1_pli1,101638,blesse,blesse,0.5765888888888889
+Forêt rééquilibrée,rep1_pli1,101660,blesse,sain,0.24381031746031742
+Forêt rééquilibrée,rep1_pli1,101691,sain,sain,0.3514888888888889
+Forêt rééquilibrée,rep1_pli1,101692,sain,sain,0.4939063492063492
+Forêt rééquilibrée,rep1_pli1,101698,sain,sain,0.3756619047619048
+Forêt rééquilibrée,rep1_pli1,101703,blesse,blesse,0.5323150793650794
+Forêt rééquilibrée,rep1_pli1,101709,blesse,sain,0.3932809523809524
+Forêt rééquilibrée,rep1_pli1,101720,blesse,sain,0.4962563492063492
+Forêt rééquilibrée,rep1_pli1,101725,blesse,sain,0.25978253968253967
+Forêt rééquilibrée,rep1_pli1,101809,sain,sain,0.14556428571428573
+Forêt rééquilibrée,rep1_pli1,102010,sain,sain,0.19491190476190484
+Forêt rééquilibrée,rep1_pli1,102012,sain,sain,0.28504603174603177
+Forêt rééquilibrée,rep1_pli1,200030,sain,sain,0.4428142857142858
+Forêt rééquilibrée,rep1_pli1,200032,sain,sain,0.3593126984126984
+Forêt rééquilibrée,rep1_pli1,200355,blesse,sain,0.2912563492063492
+Forêt rééquilibrée,rep1_pli1,200361,sain,sain,0.41219920634920637
+Forêt rééquilibrée,rep1_pli1,200365,blesse,sain,0.3787992063492063
+Forêt rééquilibrée,rep1_pli1,200379,sain,sain,0.3333984126984125
+Forêt rééquilibrée,rep1_pli1,200982,sain,sain,0.3703039682539683
+Forêt rééquilibrée,rep1_pli1,200983,sain,sain,0.3002896825396826
+Forêt rééquilibrée,rep1_pli1,201080,sain,sain,0.3667
+Forêt rééquilibrée,rep1_pli1,201091,sain,sain,0.3368182539682539
+Forêt rééquilibrée,rep1_pli1,201223,sain,sain,0.43138095238095253
+Forêt rééquilibrée,rep1_pli2,100002,blesse,sain,0.3805690476190476
+Forêt rééquilibrée,rep1_pli2,100004,sain,sain,0.27598492063492075
+Forêt rééquilibrée,rep1_pli2,100044,blesse,sain,0.38559920634920625
+Forêt rééquilibrée,rep1_pli2,100093,blesse,sain,0.36334523809523805
+Forêt rééquilibrée,rep1_pli2,100100,sain,sain,0.3935023809523809
+Forêt rééquilibrée,rep1_pli2,100133,blesse,sain,0.382145238095238
+Forêt rééquilibrée,rep1_pli2,100197,blesse,blesse,0.6426777777777778
+Forêt rééquilibrée,rep1_pli2,100204,blesse,blesse,0.5575182539682539
+Forêt rééquilibrée,rep1_pli2,100211,blesse,blesse,0.6342134920634921
+Forêt rééquilibrée,rep1_pli2,100217,blesse,sain,0.35024126984126974
+Forêt rééquilibrée,rep1_pli2,100224,blesse,blesse,0.5612285714285714
+Forêt rééquilibrée,rep1_pli2,100226,blesse,blesse,0.5111507936507935
+Forêt rééquilibrée,rep1_pli2,100239,sain,sain,0.43166269841269833
+Forêt rééquilibrée,rep1_pli2,100249,sain,blesse,0.5252952380952383
+Forêt rééquilibrée,rep1_pli2,100257,sain,sain,0.38021031746031747
+Forêt rééquilibrée,rep1_pli2,100258,blesse,sain,0.4799857142857142
+Forêt rééquilibrée,rep1_pli2,100259,sain,blesse,0.5350944444444444
+Forêt rééquilibrée,rep1_pli2,100274,blesse,sain,0.45501031746031745
+Forêt rééquilibrée,rep1_pli2,100275,blesse,blesse,0.5027650793650795
+Forêt rééquilibrée,rep1_pli2,100277,blesse,blesse,0.5309865079365079
+Forêt rééquilibrée,rep1_pli2,100283,sain,sain,0.26375634920634916
+Forêt rééquilibrée,rep1_pli2,100284,blesse,blesse,0.553188888888889
+Forêt rééquilibrée,rep1_pli2,100306,blesse,sain,0.44286984126984125
+Forêt rééquilibrée,rep1_pli2,100308,blesse,blesse,0.5592206349206348
+Forêt rééquilibrée,rep1_pli2,100311,blesse,sain,0.4177404761904761
+Forêt rééquilibrée,rep1_pli2,100323,blesse,blesse,0.5190547619047619
+Forêt rééquilibrée,rep1_pli2,100325,blesse,sain,0.4510500000000001
+Forêt rééquilibrée,rep1_pli2,100327,blesse,blesse,0.5264174603174605
+Forêt rééquilibrée,rep1_pli2,100363,blesse,blesse,0.5145992063492065
+Forêt rééquilibrée,rep1_pli2,100413,sain,sain,0.3491246031746032
+Forêt rééquilibrée,rep1_pli2,100415,sain,sain,0.48244841269841277
+Forêt rééquilibrée,rep1_pli2,100417,blesse,sain,0.46619523809523805
+Forêt rééquilibrée,rep1_pli2,100505,sain,sain,0.4034531746031746
+Forêt rééquilibrée,rep1_pli2,100513,sain,blesse,0.5124468253968254
+Forêt rééquilibrée,rep1_pli2,100520,sain,sain,0.41586825396825394
+Forêt rééquilibrée,rep1_pli2,100534,sain,sain,0.4733642857142857
+Forêt rééquilibrée,rep1_pli2,100574,blesse,blesse,0.5129103174603175
+Forêt rééquilibrée,rep1_pli2,100594,blesse,sain,0.43038968253968257
+Forêt rééquilibrée,rep1_pli2,100658,sain,blesse,0.5340555555555553
+Forêt rééquilibrée,rep1_pli2,100684,sain,sain,0.4494444444444443
+Forêt rééquilibrée,rep1_pli2,100687,sain,blesse,0.5234968253968255
+Forêt rééquilibrée,rep1_pli2,100688,sain,blesse,0.6034682539682539
+Forêt rééquilibrée,rep1_pli2,100692,sain,sain,0.3882166666666667
+Forêt rééquilibrée,rep1_pli2,100695,sain,sain,0.4392150793650794
+Forêt rééquilibrée,rep1_pli2,100709,blesse,sain,0.37787857142857145
+Forêt rééquilibrée,rep1_pli2,100711,sain,sain,0.2977460317460318
+Forêt rééquilibrée,rep1_pli2,100730,sain,blesse,0.5782214285714283
+Forêt rééquilibrée,rep1_pli2,100738,sain,blesse,0.5422476190476191
+Forêt rééquilibrée,rep1_pli2,100740,sain,blesse,0.572334126984127
+Forêt rééquilibrée,rep1_pli2,100756,sain,sain,0.430561111111111
+Forêt rééquilibrée,rep1_pli2,100758,sain,sain,0.341157142857143
+Forêt rééquilibrée,rep1_pli2,100767,sain,sain,0.25001507936507933
+Forêt rééquilibrée,rep1_pli2,100774,sain,sain,0.4659412698412698
+Forêt rééquilibrée,rep1_pli2,100780,sain,blesse,0.5143658730158731
+Forêt rééquilibrée,rep1_pli2,100782,sain,blesse,0.5860222222222222
+Forêt rééquilibrée,rep1_pli2,100798,sain,sain,0.4286984126984126
+Forêt rééquilibrée,rep1_pli2,100810,sain,sain,0.38754365079365066
+Forêt rééquilibrée,rep1_pli2,100813,blesse,sain,0.47156428571428566
+Forêt rééquilibrée,rep1_pli2,100818,sain,sain,0.256647619047619
+Forêt rééquilibrée,rep1_pli2,100832,sain,sain,0.42461111111111116
+Forêt rééquilibrée,rep1_pli2,100847,sain,sain,0.2582166666666667
+Forêt rééquilibrée,rep1_pli2,100850,sain,sain,0.4312230158730159
+Forêt rééquilibrée,rep1_pli2,100863,sain,sain,0.4498682539682539
+Forêt rééquilibrée,rep1_pli2,100874,sain,sain,0.3640809523809524
+Forêt rééquilibrée,rep1_pli2,100883,blesse,sain,0.47052301587301576
+Forêt rééquilibrée,rep1_pli2,100886,sain,sain,0.35341111111111106
+Forêt rééquilibrée,rep1_pli2,100990,blesse,sain,0.38558730158730165
+Forêt rééquilibrée,rep1_pli2,101054,sain,sain,0.27794206349206346
+Forêt rééquilibrée,rep1_pli2,101061,blesse,blesse,0.5487214285714285
+Forêt rééquilibrée,rep1_pli2,101083,blesse,sain,0.3769531746031747
+Forêt rééquilibrée,rep1_pli2,101098,sain,sain,0.3280857142857142
+Forêt rééquilibrée,rep1_pli2,101099,blesse,sain,0.33347380952380956
+Forêt rééquilibrée,rep1_pli2,101107,blesse,blesse,0.653903174603175
+Forêt rééquilibrée,rep1_pli2,101110,blesse,blesse,0.580003968253968
+Forêt rééquilibrée,rep1_pli2,101141,sain,sain,0.3403563492063491
+Forêt rééquilibrée,rep1_pli2,101238,sain,sain,0.36037063492063487
+Forêt rééquilibrée,rep1_pli2,101271,sain,blesse,0.599040476190476
+Forêt rééquilibrée,rep1_pli2,101302,sain,sain,0.25871587301587307
+Forêt rééquilibrée,rep1_pli2,101339,sain,sain,0.29404285714285716
+Forêt rééquilibrée,rep1_pli2,101393,sain,sain,0.21721190476190477
+Forêt rééquilibrée,rep1_pli2,101397,sain,sain,0.23721825396825386
+Forêt rééquilibrée,rep1_pli2,101399,sain,sain,0.27734920634920646
+Forêt rééquilibrée,rep1_pli2,101403,sain,sain,0.1813761904761905
+Forêt rééquilibrée,rep1_pli2,101404,sain,sain,0.24015317460317454
+Forêt rééquilibrée,rep1_pli2,101410,blesse,sain,0.3645595238095238
+Forêt rééquilibrée,rep1_pli2,101416,blesse,blesse,0.6106365079365077
+Forêt rééquilibrée,rep1_pli2,101428,blesse,blesse,0.6499301587301588
+Forêt rééquilibrée,rep1_pli2,101499,sain,sain,0.15018809523809523
+Forêt rééquilibrée,rep1_pli2,101534,sain,sain,0.46064761904761914
+Forêt rééquilibrée,rep1_pli2,101538,blesse,sain,0.39535634920634916
+Forêt rééquilibrée,rep1_pli2,101581,sain,blesse,0.5752730158730157
+Forêt rééquilibrée,rep1_pli2,101590,sain,sain,0.3430325396825395
+Forêt rééquilibrée,rep1_pli2,101607,blesse,blesse,0.5709142857142857
+Forêt rééquilibrée,rep1_pli2,101612,sain,sain,0.21771666666666667
+Forêt rééquilibrée,rep1_pli2,101613,sain,sain,0.4792277777777776
+Forêt rééquilibrée,rep1_pli2,101624,sain,sain,0.36867380952380946
+Forêt rééquilibrée,rep1_pli2,101654,blesse,sain,0.4512539682539682
+Forêt rééquilibrée,rep1_pli2,101700,blesse,sain,0.3055769841269843
+Forêt rééquilibrée,rep1_pli2,101730,blesse,sain,0.4797531746031747
+Forêt rééquilibrée,rep1_pli2,101747,blesse,blesse,0.560369841269841
+Forêt rééquilibrée,rep1_pli2,101758,sain,sain,0.35477301587301596
+Forêt rééquilibrée,rep1_pli2,101764,blesse,blesse,0.5586174603174605
+Forêt rééquilibrée,rep1_pli2,101777,blesse,sain,0.4687809523809523
+Forêt rééquilibrée,rep1_pli2,102000,sain,sain,0.35850793650793644
+Forêt rééquilibrée,rep1_pli2,102008,sain,sain,0.2487373015873016
+Forêt rééquilibrée,rep1_pli2,200028,sain,sain,0.4236523809523809
+Forêt rééquilibrée,rep1_pli2,200029,sain,sain,0.40962539682539684
+Forêt rééquilibrée,rep1_pli2,200290,sain,sain,0.36078174603174595
+Forêt rééquilibrée,rep1_pli2,200340,sain,sain,0.3924182539682539
+Forêt rééquilibrée,rep1_pli2,200348,sain,sain,0.3767746031746031
+Forêt rééquilibrée,rep1_pli2,200363,sain,sain,0.45285555555555557
+Forêt rééquilibrée,rep1_pli2,200374,sain,sain,0.3200595238095234
+Forêt rééquilibrée,rep1_pli2,200975,sain,sain,0.3817238095238093
+Forêt rééquilibrée,rep1_pli2,200986,sain,sain,0.429170634920635
+Forêt rééquilibrée,rep1_pli2,200988,sain,sain,0.3672150793650794
+Forêt rééquilibrée,rep1_pli2,200989,sain,sain,0.3223634920634921
+Forêt rééquilibrée,rep1_pli2,201073,blesse,sain,0.2418920634920636
+Forêt rééquilibrée,rep1_pli2,201076,sain,sain,0.3850507936507937
+Forêt rééquilibrée,rep1_pli3,100023,blesse,sain,0.44895317460317463
+Forêt rééquilibrée,rep1_pli3,100109,blesse,sain,0.4257039682539682
+Forêt rééquilibrée,rep1_pli3,100119,blesse,sain,0.38425634920634927
+Forêt rééquilibrée,rep1_pli3,100121,sain,blesse,0.5566801587301587
+Forêt rééquilibrée,rep1_pli3,100122,blesse,sain,0.46674047619047637
+Forêt rééquilibrée,rep1_pli3,100151,blesse,sain,0.47092222222222224
+Forêt rééquilibrée,rep1_pli3,100201,blesse,blesse,0.5552666666666666
+Forêt rééquilibrée,rep1_pli3,100202,blesse,blesse,0.5329857142857146
+Forêt rééquilibrée,rep1_pli3,100205,blesse,sain,0.42266031746031735
+Forêt rééquilibrée,rep1_pli3,100207,blesse,sain,0.38506190476190477
+Forêt rééquilibrée,rep1_pli3,100220,blesse,blesse,0.5102714285714286
+Forêt rééquilibrée,rep1_pli3,100228,sain,sain,0.45732063492063485
+Forêt rééquilibrée,rep1_pli3,100232,sain,sain,0.4849373015873015
+Forêt rééquilibrée,rep1_pli3,100235,sain,sain,0.39545793650793654
+Forêt rééquilibrée,rep1_pli3,100243,blesse,blesse,0.5325634920634923
+Forêt rééquilibrée,rep1_pli3,100244,sain,blesse,0.6320595238095239
+Forêt rééquilibrée,rep1_pli3,100247,sain,sain,0.3245373015873016
+Forêt rééquilibrée,rep1_pli3,100248,sain,sain,0.4080428571428572
+Forêt rééquilibrée,rep1_pli3,100250,sain,sain,0.49222619047619054
+Forêt rééquilibrée,rep1_pli3,100252,sain,sain,0.49753730158730186
+Forêt rééquilibrée,rep1_pli3,100261,sain,sain,0.41886746031746025
+Forêt rééquilibrée,rep1_pli3,100262,sain,blesse,0.5560468253968253
+Forêt rééquilibrée,rep1_pli3,100265,sain,blesse,0.5388380952380952
+Forêt rééquilibrée,rep1_pli3,100273,blesse,blesse,0.5220539682539679
+Forêt rééquilibrée,rep1_pli3,100276,blesse,blesse,0.5356809523809526
+Forêt rééquilibrée,rep1_pli3,100280,blesse,sain,0.42260555555555557
+Forêt rééquilibrée,rep1_pli3,100281,sain,sain,0.4974642857142856
+Forêt rééquilibrée,rep1_pli3,100282,sain,blesse,0.5981087301587305
+Forêt rééquilibrée,rep1_pli3,100285,blesse,blesse,0.5186896825396827
+Forêt rééquilibrée,rep1_pli3,100287,sain,blesse,0.628976984126984
+Forêt rééquilibrée,rep1_pli3,100290,blesse,sain,0.44401984126984134
+Forêt rééquilibrée,rep1_pli3,100300,sain,sain,0.44558412698412697
+Forêt rééquilibrée,rep1_pli3,100305,blesse,blesse,0.5851388888888889
+Forêt rééquilibrée,rep1_pli3,100316,blesse,sain,0.39311269841269836
+Forêt rééquilibrée,rep1_pli3,100370,blesse,sain,0.44326984126984126
+Forêt rééquilibrée,rep1_pli3,100376,blesse,blesse,0.6504603174603174
+Forêt rééquilibrée,rep1_pli3,100390,sain,blesse,0.5470984126984126
+Forêt rééquilibrée,rep1_pli3,100430,sain,sain,0.45615555555555554
+Forêt rééquilibrée,rep1_pli3,100503,sain,sain,0.47598730158730135
+Forêt rééquilibrée,rep1_pli3,100512,sain,blesse,0.5214484126984127
+Forêt rééquilibrée,rep1_pli3,100514,sain,sain,0.4373936507936508
+Forêt rééquilibrée,rep1_pli3,100515,sain,sain,0.4834515873015873
+Forêt rééquilibrée,rep1_pli3,100517,sain,sain,0.4240484126984127
+Forêt rééquilibrée,rep1_pli3,100518,sain,sain,0.4930277777777778
+Forêt rééquilibrée,rep1_pli3,100545,sain,blesse,0.608379365079365
+Forêt rééquilibrée,rep1_pli3,100565,sain,sain,0.4688142857142858
+Forêt rééquilibrée,rep1_pli3,100580,sain,sain,0.37204047619047614
+Forêt rééquilibrée,rep1_pli3,100598,blesse,sain,0.38899682539682545
+Forêt rééquilibrée,rep1_pli3,100599,sain,sain,0.3793492063492063
+Forêt rééquilibrée,rep1_pli3,100634,blesse,sain,0.38055238095238086
+Forêt rééquilibrée,rep1_pli3,100646,blesse,blesse,0.540392857142857
+Forêt rééquilibrée,rep1_pli3,100654,blesse,sain,0.35586587301587297
+Forêt rééquilibrée,rep1_pli3,100665,blesse,blesse,0.570381746031746
+Forêt rééquilibrée,rep1_pli3,100706,sain,sain,0.3002126984126984
+Forêt rééquilibrée,rep1_pli3,100714,blesse,sain,0.3833801587301585
+Forêt rééquilibrée,rep1_pli3,100724,sain,sain,0.37439126984126986
+Forêt rééquilibrée,rep1_pli3,100726,sain,sain,0.3387658730158731
+Forêt rééquilibrée,rep1_pli3,100732,sain,sain,0.4333412698412698
+Forêt rééquilibrée,rep1_pli3,100759,sain,sain,0.4117912698412697
+Forêt rééquilibrée,rep1_pli3,100781,sain,sain,0.4453301587301588
+Forêt rééquilibrée,rep1_pli3,100785,sain,blesse,0.5361388888888888
+Forêt rééquilibrée,rep1_pli3,100792,sain,sain,0.24552142857142858
+Forêt rééquilibrée,rep1_pli3,100794,sain,sain,0.26185793650793643
+Forêt rééquilibrée,rep1_pli3,100811,blesse,sain,0.4981793650793651
+Forêt rééquilibrée,rep1_pli3,100819,sain,sain,0.438098412698413
+Forêt rééquilibrée,rep1_pli3,100820,sain,sain,0.4404428571428571
+Forêt rééquilibrée,rep1_pli3,100821,sain,sain,0.33826666666666666
+Forêt rééquilibrée,rep1_pli3,100829,blesse,blesse,0.5412928571428571
+Forêt rééquilibrée,rep1_pli3,100857,sain,blesse,0.713542857142857
+Forêt rééquilibrée,rep1_pli3,100899,sain,sain,0.47430714285714265
+Forêt rééquilibrée,rep1_pli3,101086,sain,blesse,0.5598896825396826
+Forêt rééquilibrée,rep1_pli3,101124,sain,sain,0.4174896825396823
+Forêt rééquilibrée,rep1_pli3,101255,blesse,sain,0.4090095238095237
+Forêt rééquilibrée,rep1_pli3,101261,blesse,sain,0.4977063492063491
+Forêt rééquilibrée,rep1_pli3,101264,sain,sain,0.280597619047619
+Forêt rééquilibrée,rep1_pli3,101270,sain,sain,0.22950158730158737
+Forêt rééquilibrée,rep1_pli3,101272,sain,sain,0.4623650793650794
+Forêt rééquilibrée,rep1_pli3,101355,blesse,sain,0.48833015873015867
+Forêt rééquilibrée,rep1_pli3,101362,sain,sain,0.2515246031746032
+Forêt rééquilibrée,rep1_pli3,101381,sain,sain,0.32445238095238094
+Forêt rééquilibrée,rep1_pli3,101392,sain,sain,0.17997936507936513
+Forêt rééquilibrée,rep1_pli3,101396,sain,sain,0.1653539682539683
+Forêt rééquilibrée,rep1_pli3,101406,sain,sain,0.4289722222222225
+Forêt rééquilibrée,rep1_pli3,101407,sain,sain,0.49675000000000014
+Forêt rééquilibrée,rep1_pli3,101409,sain,blesse,0.5236555555555555
+Forêt rééquilibrée,rep1_pli3,101427,blesse,blesse,0.5148682539682542
+Forêt rééquilibrée,rep1_pli3,101481,sain,blesse,0.5084769841269843
+Forêt rééquilibrée,rep1_pli3,101497,sain,sain,0.16013492063492066
+Forêt rééquilibrée,rep1_pli3,101504,sain,sain,0.1964452380952381
+Forêt rééquilibrée,rep1_pli3,101505,sain,sain,0.1946007936507937
+Forêt rééquilibrée,rep1_pli3,101506,sain,sain,0.10239444444444444
+Forêt rééquilibrée,rep1_pli3,101509,sain,sain,0.4771436507936507
+Forêt rééquilibrée,rep1_pli3,101517,blesse,sain,0.35442619047619045
+Forêt rééquilibrée,rep1_pli3,101543,blesse,blesse,0.5490007936507938
+Forêt rééquilibrée,rep1_pli3,101606,blesse,sain,0.41507698412698396
+Forêt rééquilibrée,rep1_pli3,101616,blesse,blesse,0.5251460317460316
+Forêt rééquilibrée,rep1_pli3,101680,blesse,sain,0.49077460317460325
+Forêt rééquilibrée,rep1_pli3,101684,blesse,sain,0.3012063492063491
+Forêt rééquilibrée,rep1_pli3,101704,blesse,sain,0.3960396825396826
+Forêt rééquilibrée,rep1_pli3,101711,blesse,blesse,0.5796277777777776
+Forêt rééquilibrée,rep1_pli3,101727,blesse,blesse,0.5448111111111111
+Forêt rééquilibrée,rep1_pli3,101772,blesse,sain,0.46209920634920615
+Forêt rééquilibrée,rep1_pli3,101807,sain,sain,0.14989841269841273
+Forêt rééquilibrée,rep1_pli3,102005,sain,sain,0.3355833333333335
+Forêt rééquilibrée,rep1_pli3,102006,sain,blesse,0.5323103174603175
+Forêt rééquilibrée,rep1_pli3,102013,sain,sain,0.18629444444444448
+Forêt rééquilibrée,rep1_pli3,200031,blesse,sain,0.2313698412698412
+Forêt rééquilibrée,rep1_pli3,200253,sain,sain,0.4613634920634919
+Forêt rééquilibrée,rep1_pli3,200264,sain,sain,0.2839761904761905
+Forêt rééquilibrée,rep1_pli3,200269,sain,sain,0.4972174603174603
+Forêt rééquilibrée,rep1_pli3,200321,blesse,sain,0.2746277777777778
+Forêt rééquilibrée,rep1_pli3,200336,sain,sain,0.4353730158730159
+Forêt rééquilibrée,rep1_pli3,200368,sain,sain,0.33427936507936507
+Forêt rééquilibrée,rep1_pli3,200372,sain,sain,0.30415634920634915
+Forêt rééquilibrée,rep1_pli3,200974,sain,sain,0.42789920634920653
+Forêt rééquilibrée,rep1_pli3,200984,sain,sain,0.34521666666666684
+Forêt rééquilibrée,rep1_pli3,201090,blesse,sain,0.2685753968253969
+Forêt rééquilibrée,rep1_pli4,100003,blesse,sain,0.40099920634920644
+Forêt rééquilibrée,rep1_pli4,100010,blesse,blesse,0.5184190476190477
+Forêt rééquilibrée,rep1_pli4,100031,blesse,blesse,0.5693000000000001
+Forêt rééquilibrée,rep1_pli4,100035,sain,blesse,0.57291904761904755
+Forêt rééquilibrée,rep1_pli4,100036,blesse,blesse,0.62218015873015875
+Forêt rééquilibrée,rep1_pli4,100065,blesse,sain,0.45055
+Forêt rééquilibrée,rep1_pli4,100086,blesse,sain,0.24781746031746027
+Forêt rééquilibrée,rep1_pli4,100091,blesse,sain,0.4483396825396826
+Forêt rééquilibrée,rep1_pli4,100186,blesse,sain,0.29956269841269845
+Forêt rééquilibrée,rep1_pli4,100203,blesse,sain,0.4727936507936509
+Forêt rééquilibrée,rep1_pli4,100213,blesse,blesse,0.6153206349206353
+Forêt rééquilibrée,rep1_pli4,100219,blesse,blesse,0.5179539682539683
+Forêt rééquilibrée,rep1_pli4,100236,blesse,sain,0.3919055555555555
+Forêt rééquilibrée,rep1_pli4,100237,sain,sain,0.4331285714285714
+Forêt rééquilibrée,rep1_pli4,100240,sain,blesse,0.5747357142857145
+Forêt rééquilibrée,rep1_pli4,100242,sain,sain,0.48005238095238095
+Forêt rééquilibrée,rep1_pli4,100253,sain,blesse,0.6163452380952382
+Forêt rééquilibrée,rep1_pli4,100254,blesse,blesse,0.5768492063492063
+Forêt rééquilibrée,rep1_pli4,100255,blesse,sain,0.4162698412698412
+Forêt rééquilibrée,rep1_pli4,100279,sain,blesse,0.5918182539682542
+Forêt rééquilibrée,rep1_pli4,100296,blesse,blesse,0.5451658730158727
+Forêt rééquilibrée,rep1_pli4,100303,blesse,blesse,0.562761111111111
+Forêt rééquilibrée,rep1_pli4,100322,blesse,blesse,0.5853849206349208
+Forêt rééquilibrée,rep1_pli4,100329,blesse,sain,0.4526547619047619
+Forêt rééquilibrée,rep1_pli4,100330,blesse,sain,0.4683349206349208
+Forêt rééquilibrée,rep1_pli4,100340,sain,sain,0.4717087301587303
+Forêt rééquilibrée,rep1_pli4,100359,sain,sain,0.4648793650793651
+Forêt rééquilibrée,rep1_pli4,100362,blesse,sain,0.4795365079365079
+Forêt rééquilibrée,rep1_pli4,100374,blesse,sain,0.48970714285714273
+Forêt rééquilibrée,rep1_pli4,100397,sain,sain,0.4901833333333333
+Forêt rééquilibrée,rep1_pli4,100427,sain,blesse,0.5010690476190475
+Forêt rééquilibrée,rep1_pli4,100510,sain,blesse,0.5980380952380954
+Forêt rééquilibrée,rep1_pli4,100525,blesse,sain,0.30699047619047615
+Forêt rééquilibrée,rep1_pli4,100540,sain,sain,0.452115873015873
+Forêt rééquilibrée,rep1_pli4,100543,sain,sain,0.3275960317460317
+Forêt rééquilibrée,rep1_pli4,100571,sain,sain,0.362386507936508
+Forêt rééquilibrée,rep1_pli4,100642,sain,blesse,0.5945555555555556
+Forêt rééquilibrée,rep1_pli4,100677,blesse,sain,0.3883269841269843
+Forêt rééquilibrée,rep1_pli4,100683,sain,sain,0.3728896825396827
+Forêt rééquilibrée,rep1_pli4,100689,sain,blesse,0.5777690476190475
+Forêt rééquilibrée,rep1_pli4,100693,sain,sain,0.3603539682539682
+Forêt rééquilibrée,rep1_pli4,100720,sain,sain,0.26814603174603174
+Forêt rééquilibrée,rep1_pli4,100727,sain,blesse,0.5579349206349209
+Forêt rééquilibrée,rep1_pli4,100728,sain,blesse,0.7113103174603177
+Forêt rééquilibrée,rep1_pli4,100731,sain,sain,0.3015341269841271
+Forêt rééquilibrée,rep1_pli4,100739,sain,sain,0.43132936507936515
+Forêt rééquilibrée,rep1_pli4,100760,sain,sain,0.3498761904761904
+Forêt rééquilibrée,rep1_pli4,100786,sain,sain,0.44732777777777755
+Forêt rééquilibrée,rep1_pli4,100787,sain,sain,0.33919285714285724
+Forêt rééquilibrée,rep1_pli4,100791,sain,sain,0.33658015873015884
+Forêt rééquilibrée,rep1_pli4,100801,sain,blesse,0.5595722222222224
+Forêt rééquilibrée,rep1_pli4,100830,sain,sain,0.3529087301587301
+Forêt rééquilibrée,rep1_pli4,100848,sain,sain,0.21868968253968255
+Forêt rééquilibrée,rep1_pli4,100853,sain,sain,0.19701111111111108
+Forêt rééquilibrée,rep1_pli4,100861,sain,blesse,0.6246547619047618
+Forêt rééquilibrée,rep1_pli4,101013,sain,sain,0.3002888888888889
+Forêt rééquilibrée,rep1_pli4,101049,blesse,blesse,0.5870944444444445
+Forêt rééquilibrée,rep1_pli4,101058,sain,blesse,0.6355412698412698
+Forêt rééquilibrée,rep1_pli4,101060,sain,sain,0.4764674603174604
+Forêt rééquilibrée,rep1_pli4,101137,sain,blesse,0.5983142857142859
+Forêt rééquilibrée,rep1_pli4,101149,blesse,blesse,0.5285103174603176
+Forêt rééquilibrée,rep1_pli4,101165,blesse,sain,0.18410079365079357
+Forêt rééquilibrée,rep1_pli4,101248,blesse,blesse,0.5164761904761906
+Forêt rééquilibrée,rep1_pli4,101249,blesse,blesse,0.6580904761904764
+Forêt rééquilibrée,rep1_pli4,101262,sain,blesse,0.5317841269841269
+Forêt rééquilibrée,rep1_pli4,101263,sain,sain,0.2437555555555555
+Forêt rééquilibrée,rep1_pli4,101334,blesse,blesse,0.525718253968254
+Forêt rééquilibrée,rep1_pli4,101341,sain,sain,0.44236031746031745
+Forêt rééquilibrée,rep1_pli4,101353,sain,blesse,0.5638396825396826
+Forêt rééquilibrée,rep1_pli4,101361,sain,sain,0.22954603174603175
+Forêt rééquilibrée,rep1_pli4,101365,sain,sain,0.46794841269841275
+Forêt rééquilibrée,rep1_pli4,101366,sain,sain,0.44693095238095243
+Forêt rééquilibrée,rep1_pli4,101374,blesse,sain,0.4982246031746032
+Forêt rééquilibrée,rep1_pli4,101401,sain,sain,0.21795555555555554
+Forêt rééquilibrée,rep1_pli4,101405,sain,sain,0.38934285714285727
+Forêt rééquilibrée,rep1_pli4,101440,sain,blesse,0.5014865079365081
+Forêt rééquilibrée,rep1_pli4,101500,sain,sain,0.13092380952380953
+Forêt rééquilibrée,rep1_pli4,101502,sain,sain,0.14695000000000003
+Forêt rééquilibrée,rep1_pli4,101508,sain,sain,0.09007539682539682
+Forêt rééquilibrée,rep1_pli4,101511,sain,sain,0.31860793650793623
+Forêt rééquilibrée,rep1_pli4,101527,sain,sain,0.37459365079365076
+Forêt rééquilibrée,rep1_pli4,101562,blesse,blesse,0.5153357142857142
+Forêt rééquilibrée,rep1_pli4,101564,blesse,sain,0.273134126984127
+Forêt rééquilibrée,rep1_pli4,101577,sain,sain,0.40727698412698404
+Forêt rééquilibrée,rep1_pli4,101588,blesse,blesse,0.5670119047619047
+Forêt rééquilibrée,rep1_pli4,101603,blesse,sain,0.4483849206349207
+Forêt rééquilibrée,rep1_pli4,101629,sain,sain,0.3134579365079365
+Forêt rééquilibrée,rep1_pli4,101634,sain,sain,0.49849603174603174
+Forêt rééquilibrée,rep1_pli4,101641,blesse,sain,0.4527539682539683
+Forêt rééquilibrée,rep1_pli4,101650,blesse,blesse,0.5227698412698412
+Forêt rééquilibrée,rep1_pli4,101651,sain,sain,0.46786984126984127
+Forêt rééquilibrée,rep1_pli4,101696,blesse,sain,0.3549952380952382
+Forêt rééquilibrée,rep1_pli4,101728,blesse,blesse,0.5435650793650791
+Forêt rééquilibrée,rep1_pli4,101746,sain,sain,0.3829857142857141
+Forêt rééquilibrée,rep1_pli4,101769,sain,blesse,0.6701928571428573
+Forêt rééquilibrée,rep1_pli4,101770,blesse,blesse,0.5250817460317461
+Forêt rééquilibrée,rep1_pli4,101999,sain,sain,0.21826190476190477
+Forêt rééquilibrée,rep1_pli4,102001,sain,sain,0.3345206349206347
+Forêt rééquilibrée,rep1_pli4,102002,sain,sain,0.402070634920635
+Forêt rééquilibrée,rep1_pli4,102003,sain,sain,0.32908492063492056
+Forêt rééquilibrée,rep1_pli4,102004,sain,sain,0.4711182539682539
+Forêt rééquilibrée,rep1_pli4,102007,sain,sain,0.33488253968253934
+Forêt rééquilibrée,rep1_pli4,200244,sain,sain,0.36129444444444436
+Forêt rééquilibrée,rep1_pli4,200250,sain,sain,0.34421904761904765
+Forêt rééquilibrée,rep1_pli4,200276,sain,sain,0.37723571428571423
+Forêt rééquilibrée,rep1_pli4,200285,sain,sain,0.4515777777777778
+Forêt rééquilibrée,rep1_pli4,200294,blesse,sain,0.263581746031746
+Forêt rééquilibrée,rep1_pli4,200295,sain,sain,0.2896595238095238
+Forêt rééquilibrée,rep1_pli4,200302,sain,sain,0.43593968253968235
+Forêt rééquilibrée,rep1_pli4,200350,blesse,sain,0.3095714285714286
+Forêt rééquilibrée,rep1_pli4,200354,blesse,sain,0.3238873015873015
+Forêt rééquilibrée,rep1_pli4,200358,sain,sain,0.3504730158730157
+Forêt rééquilibrée,rep1_pli4,200376,sain,sain,0.2373777777777778
+Forêt rééquilibrée,rep1_pli4,200980,blesse,sain,0.24879126984126984
+Forêt rééquilibrée,rep1_pli4,201077,sain,sain,0.2830047619047619
+Forêt rééquilibrée,rep1_pli4,201224,blesse,sain,0.28642380952380947
+Forêt rééquilibrée,rep1_pli5,100005,blesse,sain,0.3394246031746032
+Forêt rééquilibrée,rep1_pli5,100021,blesse,blesse,0.5225412698412697
+Forêt rééquilibrée,rep1_pli5,100057,blesse,sain,0.29284682539682544
+Forêt rééquilibrée,rep1_pli5,100080,blesse,blesse,0.5420769841269842
+Forêt rééquilibrée,rep1_pli5,100088,blesse,sain,0.48088809523809545
+Forêt rééquilibrée,rep1_pli5,100156,blesse,blesse,0.5600896825396824
+Forêt rééquilibrée,rep1_pli5,100164,sain,sain,0.42567222222222223
+Forêt rééquilibrée,rep1_pli5,100178,blesse,blesse,0.5673936507936509
+Forêt rééquilibrée,rep1_pli5,100182,sain,sain,0.48415873015873007
+Forêt rééquilibrée,rep1_pli5,100199,blesse,sain,0.4934841269841268
+Forêt rééquilibrée,rep1_pli5,100206,blesse,sain,0.4332658730158731
+Forêt rééquilibrée,rep1_pli5,100223,blesse,sain,0.4291928571428571
+Forêt rééquilibrée,rep1_pli5,100225,blesse,blesse,0.5609690476190476
+Forêt rééquilibrée,rep1_pli5,100238,blesse,blesse,0.5395579365079364
+Forêt rééquilibrée,rep1_pli5,100245,blesse,sain,0.3709793650793651
+Forêt rééquilibrée,rep1_pli5,100260,sain,sain,0.3101531746031747
+Forêt rééquilibrée,rep1_pli5,100263,sain,sain,0.35606349206349197
+Forêt rééquilibrée,rep1_pli5,100269,sain,sain,0.4288500000000001
+Forêt rééquilibrée,rep1_pli5,100271,blesse,sain,0.4950753968253969
+Forêt rééquilibrée,rep1_pli5,100286,blesse,blesse,0.6089658730158727
+Forêt rééquilibrée,rep1_pli5,100288,sain,sain,0.35444523809523815
+Forêt rééquilibrée,rep1_pli5,100289,blesse,blesse,0.6415896825396825
+Forêt rééquilibrée,rep1_pli5,100307,blesse,sain,0.47249126984127
+Forêt rééquilibrée,rep1_pli5,100309,blesse,blesse,0.72774126984127
+Forêt rééquilibrée,rep1_pli5,100318,blesse,sain,0.48446031746031754
+Forêt rééquilibrée,rep1_pli5,100324,blesse,sain,0.42519603174603177
+Forêt rééquilibrée,rep1_pli5,100332,blesse,sain,0.3839865079365079
+Forêt rééquilibrée,rep1_pli5,100377,blesse,sain,0.38109206349206354
+Forêt rééquilibrée,rep1_pli5,100401,sain,blesse,0.5350158730158731
+Forêt rééquilibrée,rep1_pli5,100414,blesse,blesse,0.5565888888888887
+Forêt rééquilibrée,rep1_pli5,100422,sain,blesse,0.5167706349206349
+Forêt rééquilibrée,rep1_pli5,100423,sain,blesse,0.5353150793650789
+Forêt rééquilibrée,rep1_pli5,100424,sain,sain,0.4859936507936509
+Forêt rééquilibrée,rep1_pli5,100425,sain,blesse,0.5501730158730155
+Forêt rééquilibrée,rep1_pli5,100504,sain,sain,0.4010476190476191
+Forêt rééquilibrée,rep1_pli5,100506,sain,sain,0.3668611111111112
+Forêt rééquilibrée,rep1_pli5,100509,sain,sain,0.4809079365079365
+Forêt rééquilibrée,rep1_pli5,100511,sain,sain,0.39264285714285707
+Forêt rééquilibrée,rep1_pli5,100532,sain,sain,0.39248333333333335
+Forêt rééquilibrée,rep1_pli5,100535,sain,sain,0.3474523809523812
+Forêt rééquilibrée,rep1_pli5,100536,sain,sain,0.2746960317460318
+Forêt rééquilibrée,rep1_pli5,100538,sain,sain,0.33709047619047616
+Forêt rééquilibrée,rep1_pli5,100570,blesse,blesse,0.5332873015873015
+Forêt rééquilibrée,rep1_pli5,100573,blesse,blesse,0.5847587301587298
+Forêt rééquilibrée,rep1_pli5,100581,blesse,sain,0.352486507936508
+Forêt rééquilibrée,rep1_pli5,100587,sain,sain,0.46360317460317463
+Forêt rééquilibrée,rep1_pli5,100605,blesse,sain,0.46532460317460306
+Forêt rééquilibrée,rep1_pli5,100618,sain,blesse,0.6132912698412696
+Forêt rééquilibrée,rep1_pli5,100682,sain,sain,0.3588682539682539
+Forêt rééquilibrée,rep1_pli5,100712,sain,sain,0.2731349206349206
+Forêt rééquilibrée,rep1_pli5,100715,sain,sain,0.37649444444444446
+Forêt rééquilibrée,rep1_pli5,100716,sain,blesse,0.5086142857142858
+Forêt rééquilibrée,rep1_pli5,100719,sain,sain,0.4236309523809522
+Forêt rééquilibrée,rep1_pli5,100725,sain,blesse,0.5153039682539685
+Forêt rééquilibrée,rep1_pli5,100742,sain,sain,0.3084531746031747
+Forêt rééquilibrée,rep1_pli5,100745,sain,sain,0.46452857142857146
+Forêt rééquilibrée,rep1_pli5,100755,sain,sain,0.2859444444444445
+Forêt rééquilibrée,rep1_pli5,100765,sain,sain,0.36527380952380945
+Forêt rééquilibrée,rep1_pli5,100766,sain,sain,0.36469285714285704
+Forêt rééquilibrée,rep1_pli5,100771,blesse,sain,0.4648071428571428
+Forêt rééquilibrée,rep1_pli5,100788,sain,sain,0.4219468253968255
+Forêt rééquilibrée,rep1_pli5,100817,sain,blesse,0.5919396825396825
+Forêt rééquilibrée,rep1_pli5,100826,blesse,blesse,0.6849063492063491
+Forêt rééquilibrée,rep1_pli5,100842,sain,sain,0.43475396825396834
+Forêt rééquilibrée,rep1_pli5,100851,sain,sain,0.43058492063492065
+Forêt rééquilibrée,rep1_pli5,100852,sain,sain,0.4323111111111112
+Forêt rééquilibrée,rep1_pli5,100898,blesse,sain,0.3275007936507937
+Forêt rééquilibrée,rep1_pli5,100945,blesse,sain,0.333715873015873
+Forêt rééquilibrée,rep1_pli5,100991,sain,blesse,0.608602380952381
+Forêt rééquilibrée,rep1_pli5,100994,blesse,sain,0.25950238095238104
+Forêt rééquilibrée,rep1_pli5,101048,blesse,blesse,0.5398214285714286
+Forêt rééquilibrée,rep1_pli5,101067,sain,blesse,0.6074373015873018
+Forêt rééquilibrée,rep1_pli5,101108,blesse,sain,0.4715142857142859
+Forêt rééquilibrée,rep1_pli5,101111,sain,sain,0.3637444444444444
+Forêt rééquilibrée,rep1_pli5,101115,sain,sain,0.2798087301587302
+Forêt rééquilibrée,rep1_pli5,101126,sain,sain,0.3313563492063491
+Forêt rééquilibrée,rep1_pli5,101133,blesse,sain,0.4495349206349205
+Forêt rééquilibrée,rep1_pli5,101142,sain,sain,0.38325555555555557
+Forêt rééquilibrée,rep1_pli5,101169,sain,blesse,0.6065412698412695
+Forêt rééquilibrée,rep1_pli5,101175,blesse,blesse,0.5440912698412698
+Forêt rééquilibrée,rep1_pli5,101250,blesse,sain,0.40027777777777784
+Forêt rééquilibrée,rep1_pli5,101312,sain,sain,0.2758166666666666
+Forêt rééquilibrée,rep1_pli5,101337,sain,sain,0.33015714285714287
+Forêt rééquilibrée,rep1_pli5,101343,sain,sain,0.15420079365079364
+Forêt rééquilibrée,rep1_pli5,101360,sain,sain,0.4665349206349207
+Forêt rééquilibrée,rep1_pli5,101394,sain,sain,0.17544047619047617
+Forêt rééquilibrée,rep1_pli5,101398,sain,sain,0.18308174603174604
+Forêt rééquilibrée,rep1_pli5,101400,sain,sain,0.25100555555555554
+Forêt rééquilibrée,rep1_pli5,101402,sain,sain,0.4232849206349206
+Forêt rééquilibrée,rep1_pli5,101408,sain,sain,0.4138476190476191
+Forêt rééquilibrée,rep1_pli5,101418,sain,sain,0.27560634920634924
+Forêt rééquilibrée,rep1_pli5,101420,sain,sain,0.31993650793650785
+Forêt rééquilibrée,rep1_pli5,101432,blesse,sain,0.4895873015873015
+Forêt rééquilibrée,rep1_pli5,101503,sain,sain,0.12167619047619047
+Forêt rééquilibrée,rep1_pli5,101507,sain,sain,0.14935317460317465
+Forêt rééquilibrée,rep1_pli5,101592,blesse,sain,0.48093650793650783
+Forêt rééquilibrée,rep1_pli5,101596,sain,sain,0.24287380952380952
+Forêt rééquilibrée,rep1_pli5,101643,blesse,sain,0.4446095238095238
+Forêt rééquilibrée,rep1_pli5,101663,sain,sain,0.4805928571428573
+Forêt rééquilibrée,rep1_pli5,101716,sain,sain,0.2716698412698413
+Forêt rééquilibrée,rep1_pli5,101763,sain,blesse,0.5916960317460316
+Forêt rééquilibrée,rep1_pli5,101944,sain,sain,0.27199999999999985
+Forêt rééquilibrée,rep1_pli5,102009,sain,sain,0.43982460317460326
+Forêt rééquilibrée,rep1_pli5,102014,sain,sain,0.3491150793650794
+Forêt rééquilibrée,rep1_pli5,200267,sain,sain,0.37273492063492053
+Forêt rééquilibrée,rep1_pli5,200270,blesse,sain,0.34149126984126976
+Forêt rééquilibrée,rep1_pli5,200273,blesse,sain,0.34765873015873017
+Forêt rééquilibrée,rep1_pli5,200280,blesse,sain,0.3312722222222223
+Forêt rééquilibrée,rep1_pli5,200288,sain,sain,0.1398968253968254
+Forêt rééquilibrée,rep1_pli5,200292,sain,sain,0.35594444444444445
+Forêt rééquilibrée,rep1_pli5,200301,sain,sain,0.30919920634920633
+Forêt rééquilibrée,rep1_pli5,200308,blesse,sain,0.2272095238095239
+Forêt rééquilibrée,rep1_pli5,200324,blesse,sain,0.2752190476190477
+Forêt rééquilibrée,rep1_pli5,200335,sain,sain,0.34556269841269843
+Forêt rééquilibrée,rep1_pli5,200981,sain,sain,0.37202460317460323
+Forêt rééquilibrée,rep1_pli5,200985,sain,sain,0.47093095238095245
+Forêt rééquilibrée,rep1_pli5,201089,sain,sain,0.36283095238095237
+Forêt rééquilibrée,rep1_pli5,201101,sain,sain,0.3496904761904761

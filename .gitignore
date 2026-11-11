@@ -27,3 +27,6 @@ Thumbs.db
 exploration/*.html
 exploration/*_files/
 Rplots.pdf
+
+modeles/*.html
+modeles/*_files/
