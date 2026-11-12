@@ -1,0 +1,801 @@
+id,.metric,.estimator,.estimate,.config,modele,scenario
+rep1_pli1,bal_accuracy,binary,0.6959541062801933,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep1_pli1,sens,binary,0.7391304347826086,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep1_pli1,spec,binary,0.6527777777777778,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep1_pli1,roc_auc,binary,0.7198067632850241,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep1_pli2,bal_accuracy,binary,0.6654589371980677,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep1_pli2,sens,binary,0.6086956521739131,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep1_pli2,spec,binary,0.7222222222222222,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep1_pli2,roc_auc,binary,0.7077294685990339,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep1_pli3,bal_accuracy,binary,0.5194444444444444,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep1_pli3,sens,binary,0.4,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep1_pli3,spec,binary,0.6388888888888888,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep1_pli3,roc_auc,binary,0.5712962962962963,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep1_pli4,bal_accuracy,binary,0.5580808080808081,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep1_pli4,sens,binary,0.4772727272727273,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep1_pli4,spec,binary,0.6388888888888888,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep1_pli4,roc_auc,binary,0.5868055555555556,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep1_pli5,bal_accuracy,binary,0.6150684931506849,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep1_pli5,sens,binary,0.6,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep1_pli5,spec,binary,0.6301369863013698,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep1_pli5,roc_auc,binary,0.684627092846271,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep2_pli1,bal_accuracy,binary,0.6724033816425121,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep2_pli1,sens,binary,0.6086956521739131,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep2_pli1,spec,binary,0.7361111111111112,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep2_pli1,roc_auc,binary,0.6935386473429952,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep2_pli2,bal_accuracy,binary,0.525,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep2_pli2,sens,binary,0.4666666666666667,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep2_pli2,spec,binary,0.5833333333333334,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep2_pli2,roc_auc,binary,0.5419753086419753,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep2_pli3,bal_accuracy,binary,0.5625778331257784,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep2_pli3,sens,binary,0.5909090909090909,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep2_pli3,spec,binary,0.5342465753424658,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep2_pli3,roc_auc,binary,0.5476338729763387,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep2_pli4,bal_accuracy,binary,0.5805555555555555,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep2_pli4,sens,binary,0.4666666666666667,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep2_pli4,spec,binary,0.6944444444444444,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep2_pli4,roc_auc,binary,0.6222222222222222,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep2_pli5,bal_accuracy,binary,0.581219806763285,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep2_pli5,sens,binary,0.5652173913043478,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep2_pli5,spec,binary,0.5972222222222222,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep2_pli5,roc_auc,binary,0.6243961352657005,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep3_pli1,bal_accuracy,binary,0.5951086956521738,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep3_pli1,sens,binary,0.5652173913043478,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep3_pli1,spec,binary,0.625,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep3_pli1,roc_auc,binary,0.6352657004830918,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep3_pli2,bal_accuracy,binary,0.5555555555555556,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep3_pli2,sens,binary,0.6666666666666666,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep3_pli2,spec,binary,0.4444444444444444,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep3_pli2,roc_auc,binary,0.5925925925925926,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep3_pli3,bal_accuracy,binary,0.6334059775840598,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep3_pli3,sens,binary,0.5681818181818182,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep3_pli3,spec,binary,0.6986301369863014,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep3_pli3,roc_auc,binary,0.6232876712328768,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep3_pli4,bal_accuracy,binary,0.6708333333333334,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep3_pli4,sens,binary,0.6888888888888889,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep3_pli4,spec,binary,0.6527777777777778,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep3_pli4,roc_auc,binary,0.7074074074074074,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep3_pli5,bal_accuracy,binary,0.5172101449275363,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep3_pli5,sens,binary,0.32608695652173914,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep3_pli5,spec,binary,0.7083333333333334,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep3_pli5,roc_auc,binary,0.5594806763285024,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep4_pli1,bal_accuracy,binary,0.5843226788432268,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep4_pli1,sens,binary,0.5111111111111111,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep4_pli1,spec,binary,0.6575342465753424,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep4_pli1,roc_auc,binary,0.6356164383561643,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep4_pli2,bal_accuracy,binary,0.5929951690821256,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep4_pli2,sens,binary,0.6304347826086957,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep4_pli2,spec,binary,0.5555555555555556,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep4_pli2,roc_auc,binary,0.6228864734299517,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep4_pli3,bal_accuracy,binary,0.538888888888889,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep4_pli3,sens,binary,0.4666666666666667,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep4_pli3,spec,binary,0.6111111111111112,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep4_pli3,roc_auc,binary,0.5799382716049383,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep4_pli4,bal_accuracy,binary,0.6736111111111112,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep4_pli4,sens,binary,0.6666666666666666,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep4_pli4,spec,binary,0.6805555555555556,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep4_pli4,roc_auc,binary,0.6537037037037037,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep4_pli5,bal_accuracy,binary,0.6194444444444445,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep4_pli5,sens,binary,0.6,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep4_pli5,spec,binary,0.6388888888888888,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep4_pli5,roc_auc,binary,0.6311728395061729,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep5_pli1,bal_accuracy,binary,0.6513888888888889,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep5_pli1,sens,binary,0.6222222222222222,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep5_pli1,spec,binary,0.6805555555555556,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep5_pli1,roc_auc,binary,0.6635802469135803,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep5_pli2,bal_accuracy,binary,0.6364734299516908,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep5_pli2,sens,binary,0.717391304347826,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep5_pli2,spec,binary,0.5555555555555556,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep5_pli2,roc_auc,binary,0.6678743961352657,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep5_pli3,bal_accuracy,binary,0.5791476407914764,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep5_pli3,sens,binary,0.5555555555555556,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep5_pli3,spec,binary,0.6027397260273972,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep5_pli3,roc_auc,binary,0.6112633181126331,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep5_pli4,bal_accuracy,binary,0.6194444444444445,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep5_pli4,sens,binary,0.6,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep5_pli4,spec,binary,0.6388888888888888,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep5_pli4,roc_auc,binary,0.6561728395061729,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep5_pli5,bal_accuracy,binary,0.5847222222222223,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep5_pli5,sens,binary,0.4888888888888889,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep5_pli5,spec,binary,0.6805555555555556,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep5_pli5,roc_auc,binary,0.6521604938271605,pre0_mod0_post0,Logistique rééquilibrée,Toutes les variables
+rep1_pli1,bal_accuracy,binary,0.6705917874396135,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep1_pli1,sens,binary,0.5217391304347826,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep1_pli1,spec,binary,0.8194444444444444,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep1_pli1,roc_auc,binary,0.6914251207729468,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep1_pli2,bal_accuracy,binary,0.677536231884058,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep1_pli2,sens,binary,0.5217391304347826,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep1_pli2,spec,binary,0.8333333333333334,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep1_pli2,roc_auc,binary,0.7493961352657005,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep1_pli3,bal_accuracy,binary,0.5597222222222222,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep1_pli3,sens,binary,0.35555555555555557,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep1_pli3,spec,binary,0.7638888888888888,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep1_pli3,roc_auc,binary,0.6123456790123457,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep1_pli4,bal_accuracy,binary,0.5839646464646465,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep1_pli4,sens,binary,0.4318181818181818,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep1_pli4,spec,binary,0.7361111111111112,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep1_pli4,roc_auc,binary,0.601010101010101,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep1_pli5,bal_accuracy,binary,0.615220700152207,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep1_pli5,sens,binary,0.4222222222222222,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep1_pli5,spec,binary,0.8082191780821918,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep1_pli5,roc_auc,binary,0.6745814307458143,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep2_pli1,bal_accuracy,binary,0.606280193236715,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep2_pli1,sens,binary,0.43478260869565216,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep2_pli1,spec,binary,0.7777777777777778,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep2_pli1,roc_auc,binary,0.6853864734299517,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep2_pli2,bal_accuracy,binary,0.548611111111111,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep2_pli2,sens,binary,0.3333333333333333,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep2_pli2,spec,binary,0.7638888888888888,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep2_pli2,roc_auc,binary,0.6225308641975309,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep2_pli3,bal_accuracy,binary,0.615348692403487,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep2_pli3,sens,binary,0.4772727272727273,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep2_pli3,spec,binary,0.7534246575342466,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep2_pli3,roc_auc,binary,0.6749688667496887,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep2_pli4,bal_accuracy,binary,0.6222222222222222,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep2_pli4,sens,binary,0.35555555555555557,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep2_pli4,spec,binary,0.8888888888888888,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep2_pli4,roc_auc,binary,0.6932098765432099,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep2_pli5,bal_accuracy,binary,0.5893719806763285,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep2_pli5,sens,binary,0.45652173913043476,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep2_pli5,spec,binary,0.7222222222222222,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep2_pli5,roc_auc,binary,0.6539855072463768,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep3_pli1,bal_accuracy,binary,0.6044685990338164,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep3_pli1,sens,binary,0.34782608695652173,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep3_pli1,spec,binary,0.8611111111111112,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep3_pli1,roc_auc,binary,0.6971618357487923,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep3_pli2,bal_accuracy,binary,0.6111111111111112,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep3_pli2,sens,binary,0.4444444444444444,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep3_pli2,spec,binary,0.7777777777777778,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep3_pli2,roc_auc,binary,0.6608024691358024,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep3_pli3,bal_accuracy,binary,0.5698941469489415,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep3_pli3,sens,binary,0.38636363636363635,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep3_pli3,spec,binary,0.7534246575342466,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep3_pli3,roc_auc,binary,0.613013698630137,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep3_pli4,bal_accuracy,binary,0.6236111111111111,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep3_pli4,sens,binary,0.5111111111111111,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep3_pli4,spec,binary,0.7361111111111112,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep3_pli4,roc_auc,binary,0.7182098765432099,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep3_pli5,bal_accuracy,binary,0.5410628019323671,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep3_pli5,sens,binary,0.30434782608695654,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep3_pli5,spec,binary,0.7777777777777778,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep3_pli5,roc_auc,binary,0.5628019323671498,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep4_pli1,bal_accuracy,binary,0.6665144596651446,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep4_pli1,sens,binary,0.5111111111111111,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep4_pli1,spec,binary,0.821917808219178,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep4_pli1,roc_auc,binary,0.7357686453576865,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep4_pli2,bal_accuracy,binary,0.5597826086956521,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep4_pli2,sens,binary,0.3695652173913043,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep4_pli2,spec,binary,0.75,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep4_pli2,roc_auc,binary,0.6539855072463768,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep4_pli3,bal_accuracy,binary,0.6513888888888888,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep4_pli3,sens,binary,0.5111111111111111,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep4_pli3,spec,binary,0.7916666666666666,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep4_pli3,roc_auc,binary,0.667283950617284,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep4_pli4,bal_accuracy,binary,0.6097222222222223,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep4_pli4,sens,binary,0.4,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep4_pli4,spec,binary,0.8194444444444444,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep4_pli4,roc_auc,binary,0.7145061728395062,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep4_pli5,bal_accuracy,binary,0.5875,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep4_pli5,sens,binary,0.35555555555555557,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep4_pli5,spec,binary,0.8194444444444444,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep4_pli5,roc_auc,binary,0.6299382716049383,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep5_pli1,bal_accuracy,binary,0.6055555555555555,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep5_pli1,sens,binary,0.4888888888888889,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep5_pli1,spec,binary,0.7222222222222222,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep5_pli1,roc_auc,binary,0.6419753086419753,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep5_pli2,bal_accuracy,binary,0.586352657004831,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep5_pli2,sens,binary,0.4782608695652174,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep5_pli2,spec,binary,0.6944444444444444,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep5_pli2,roc_auc,binary,0.6340579710144928,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep5_pli3,bal_accuracy,binary,0.6733637747336377,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep5_pli3,sens,binary,0.5111111111111111,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep5_pli3,spec,binary,0.8356164383561644,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep5_pli3,roc_auc,binary,0.7211567732115677,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep5_pli4,bal_accuracy,binary,0.6208333333333333,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep5_pli4,sens,binary,0.4222222222222222,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep5_pli4,spec,binary,0.8194444444444444,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep5_pli4,roc_auc,binary,0.7435185185185186,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep5_pli5,bal_accuracy,binary,0.5597222222222222,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep5_pli5,sens,binary,0.35555555555555557,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep5_pli5,spec,binary,0.7638888888888888,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep5_pli5,roc_auc,binary,0.6370370370370371,pre0_mod0_post0,Forêt rééquilibrée,Toutes les variables
+rep1_pli1,bal_accuracy,binary,0.6633454106280193,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli1,sens,binary,0.6739130434782609,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli1,spec,binary,0.6527777777777778,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli1,roc_auc,binary,0.7116545893719807,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli2,bal_accuracy,binary,0.6298309178743962,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli2,sens,binary,0.5652173913043478,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli2,spec,binary,0.6944444444444444,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli2,roc_auc,binary,0.7025966183574879,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli3,bal_accuracy,binary,0.5472222222222223,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli3,sens,binary,0.5111111111111111,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli3,spec,binary,0.5833333333333334,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli3,roc_auc,binary,0.570679012345679,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli4,bal_accuracy,binary,0.5580808080808081,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli4,sens,binary,0.4772727272727273,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli4,spec,binary,0.6388888888888888,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli4,roc_auc,binary,0.5814393939393939,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli5,bal_accuracy,binary,0.6526636225266362,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli5,sens,binary,0.6888888888888889,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli5,spec,binary,0.6164383561643836,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli5,roc_auc,binary,0.6742770167427702,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli1,bal_accuracy,binary,0.6663647342995169,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli1,sens,binary,0.6521739130434783,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli1,spec,binary,0.6805555555555556,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli1,roc_auc,binary,0.6941425120772947,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli2,bal_accuracy,binary,0.5166666666666667,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli2,sens,binary,0.4222222222222222,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli2,spec,binary,0.6111111111111112,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli2,roc_auc,binary,0.5314814814814814,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli3,bal_accuracy,binary,0.5670921544209215,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli3,sens,binary,0.6136363636363636,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli3,spec,binary,0.5205479452054794,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli3,roc_auc,binary,0.5675591531755916,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli4,bal_accuracy,binary,0.6027777777777777,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli4,sens,binary,0.5111111111111111,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli4,spec,binary,0.6944444444444444,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli4,roc_auc,binary,0.6256172839506173,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli5,bal_accuracy,binary,0.581219806763285,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli5,sens,binary,0.5652173913043478,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli5,spec,binary,0.5972222222222222,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli5,roc_auc,binary,0.6292270531400966,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli1,bal_accuracy,binary,0.6020531400966183,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli1,sens,binary,0.5652173913043478,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli1,spec,binary,0.6388888888888888,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli1,roc_auc,binary,0.6298309178743962,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli2,bal_accuracy,binary,0.5361111111111111,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli2,sens,binary,0.6,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli2,spec,binary,0.4722222222222222,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli2,roc_auc,binary,0.5777777777777778,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli3,bal_accuracy,binary,0.6060087173100872,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli3,sens,binary,0.5681818181818182,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli3,spec,binary,0.6438356164383562,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli3,roc_auc,binary,0.6127023661270237,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli4,bal_accuracy,binary,0.6527777777777777,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli4,sens,binary,0.6666666666666666,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli4,spec,binary,0.6388888888888888,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli4,roc_auc,binary,0.703395061728395,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli5,bal_accuracy,binary,0.5676328502415459,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli5,sens,binary,0.41304347826086957,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli5,spec,binary,0.7222222222222222,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli5,roc_auc,binary,0.5576690821256038,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli1,bal_accuracy,binary,0.6048706240487063,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli1,sens,binary,0.5111111111111111,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli1,spec,binary,0.6986301369863014,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli1,roc_auc,binary,0.6377473363774734,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli2,bal_accuracy,binary,0.59993961352657,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli2,sens,binary,0.6304347826086957,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli2,spec,binary,0.5694444444444444,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli2,roc_auc,binary,0.6126207729468599,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli3,bal_accuracy,binary,0.5819444444444444,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli3,sens,binary,0.5111111111111111,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli3,spec,binary,0.6527777777777778,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli3,roc_auc,binary,0.5978395061728395,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli4,bal_accuracy,binary,0.6527777777777777,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli4,sens,binary,0.6666666666666666,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli4,spec,binary,0.6388888888888888,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli4,roc_auc,binary,0.6648148148148149,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli5,bal_accuracy,binary,0.6375,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli5,sens,binary,0.6222222222222222,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli5,spec,binary,0.6527777777777778,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli5,roc_auc,binary,0.6237654320987654,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli1,bal_accuracy,binary,0.6111111111111112,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli1,sens,binary,0.5555555555555556,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli1,spec,binary,0.6666666666666666,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli1,roc_auc,binary,0.6651234567901235,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli2,bal_accuracy,binary,0.6355676328502415,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli2,sens,binary,0.6739130434782609,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli2,spec,binary,0.5972222222222222,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli2,roc_auc,binary,0.6642512077294686,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli3,bal_accuracy,binary,0.5971080669710807,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli3,sens,binary,0.5777777777777777,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli3,spec,binary,0.6164383561643836,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli3,roc_auc,binary,0.6091324200913242,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli4,bal_accuracy,binary,0.5833333333333334,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli4,sens,binary,0.5555555555555556,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli4,spec,binary,0.6111111111111112,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli4,roc_auc,binary,0.6623456790123456,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli5,bal_accuracy,binary,0.6069444444444445,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli5,sens,binary,0.5333333333333333,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli5,spec,binary,0.6805555555555556,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli5,roc_auc,binary,0.6422839506172839,pre0_mod0_post0,Logistique rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli1,bal_accuracy,binary,0.6053743961352657,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli1,sens,binary,0.391304347826087,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli1,spec,binary,0.8194444444444444,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli1,roc_auc,binary,0.6814613526570048,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli2,bal_accuracy,binary,0.6292270531400965,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli2,sens,binary,0.3695652173913043,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli2,spec,binary,0.8888888888888888,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli2,roc_auc,binary,0.7358091787439613,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli3,bal_accuracy,binary,0.5263888888888888,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli3,sens,binary,0.28888888888888886,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli3,spec,binary,0.7638888888888888,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli3,roc_auc,binary,0.595679012345679,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli4,bal_accuracy,binary,0.529040404040404,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli4,sens,binary,0.36363636363636365,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli4,spec,binary,0.6944444444444444,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli4,roc_auc,binary,0.5893308080808081,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli5,bal_accuracy,binary,0.6331811263318112,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli5,sens,binary,0.4444444444444444,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli5,spec,binary,0.821917808219178,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli5,roc_auc,binary,0.6627092846270929,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli1,bal_accuracy,binary,0.5945048309178744,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli1,sens,binary,0.3695652173913043,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli1,spec,binary,0.8194444444444444,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli1,roc_auc,binary,0.6811594202898551,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli2,bal_accuracy,binary,0.5833333333333334,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli2,sens,binary,0.3333333333333333,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli2,spec,binary,0.8333333333333334,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli2,roc_auc,binary,0.6123456790123457,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli3,bal_accuracy,binary,0.6200186799501868,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli3,sens,binary,0.4318181818181818,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli3,spec,binary,0.8082191780821918,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli3,roc_auc,binary,0.6397882938978829,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli4,bal_accuracy,binary,0.5638888888888889,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli4,sens,binary,0.26666666666666666,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli4,spec,binary,0.8611111111111112,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli4,roc_auc,binary,0.6854938271604938,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli5,bal_accuracy,binary,0.5745772946859904,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli5,sens,binary,0.41304347826086957,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli5,spec,binary,0.7361111111111112,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep2_pli5,roc_auc,binary,0.615036231884058,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli1,bal_accuracy,binary,0.6083937198067633,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli1,sens,binary,0.3695652173913043,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli1,spec,binary,0.8472222222222222,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli1,roc_auc,binary,0.6850845410628019,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli2,bal_accuracy,binary,0.5805555555555556,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli2,sens,binary,0.35555555555555557,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli2,spec,binary,0.8055555555555556,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli2,roc_auc,binary,0.6589506172839507,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli3,bal_accuracy,binary,0.5675591531755916,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli3,sens,binary,0.4090909090909091,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli3,spec,binary,0.726027397260274,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli3,roc_auc,binary,0.5905977584059776,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli4,bal_accuracy,binary,0.5833333333333333,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli4,sens,binary,0.4444444444444444,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli4,spec,binary,0.7222222222222222,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli4,roc_auc,binary,0.683641975308642,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli5,bal_accuracy,binary,0.4867149758454106,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli5,sens,binary,0.1956521739130435,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli5,spec,binary,0.7777777777777778,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep3_pli5,roc_auc,binary,0.5310990338164251,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli1,bal_accuracy,binary,0.6400304414003044,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli1,sens,binary,0.4444444444444444,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli1,spec,binary,0.8356164383561644,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli1,roc_auc,binary,0.7202435312024353,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli2,bal_accuracy,binary,0.544987922705314,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli2,sens,binary,0.32608695652173914,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli2,spec,binary,0.7638888888888888,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli2,roc_auc,binary,0.6156400966183575,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli3,bal_accuracy,binary,0.6472222222222223,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli3,sens,binary,0.4888888888888889,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli3,spec,binary,0.8055555555555556,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli3,roc_auc,binary,0.667283950617284,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli4,bal_accuracy,binary,0.5944444444444444,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli4,sens,binary,0.35555555555555557,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli4,spec,binary,0.8333333333333334,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli4,roc_auc,binary,0.6962962962962963,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli5,bal_accuracy,binary,0.5791666666666666,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli5,sens,binary,0.3111111111111111,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli5,spec,binary,0.8472222222222222,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep4_pli5,roc_auc,binary,0.6324074074074074,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli1,bal_accuracy,binary,0.5972222222222222,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli1,sens,binary,0.4444444444444444,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli1,spec,binary,0.75,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli1,roc_auc,binary,0.6259259259259259,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli2,bal_accuracy,binary,0.5389492753623188,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli2,sens,binary,0.3695652173913043,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli2,spec,binary,0.7083333333333334,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli2,roc_auc,binary,0.6280193236714976,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli3,bal_accuracy,binary,0.6220700152207002,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli3,sens,binary,0.4222222222222222,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli3,spec,binary,0.821917808219178,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli3,roc_auc,binary,0.6907153729071538,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli4,bal_accuracy,binary,0.5986111111111111,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli4,sens,binary,0.37777777777777777,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli4,spec,binary,0.8194444444444444,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli4,roc_auc,binary,0.7061728395061728,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli5,bal_accuracy,binary,0.5444444444444445,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli5,sens,binary,0.3111111111111111,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli5,spec,binary,0.7777777777777778,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep5_pli5,roc_auc,binary,0.6194444444444445,pre0_mod0_post0,Forêt rééquilibrée,Sans vitesse ni jambe dominante
+rep1_pli1,bal_accuracy,binary,0.6503623188405797,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep1_pli1,sens,binary,0.717391304347826,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep1_pli1,spec,binary,0.5833333333333334,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep1_pli1,roc_auc,binary,0.6868961352657005,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep1_pli2,bal_accuracy,binary,0.5942028985507246,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep1_pli2,sens,binary,0.5217391304347826,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep1_pli2,spec,binary,0.6666666666666666,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep1_pli2,roc_auc,binary,0.6739130434782609,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep1_pli3,bal_accuracy,binary,0.575,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep1_pli3,sens,binary,0.5111111111111111,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep1_pli3,spec,binary,0.6388888888888888,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep1_pli3,roc_auc,binary,0.5882716049382716,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep1_pli4,bal_accuracy,binary,0.5669191919191919,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep1_pli4,sens,binary,0.5227272727272727,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep1_pli4,spec,binary,0.6111111111111112,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep1_pli4,roc_auc,binary,0.5738636363636364,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep1_pli5,bal_accuracy,binary,0.634703196347032,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep1_pli5,sens,binary,0.6666666666666666,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep1_pli5,spec,binary,0.6027397260273972,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep1_pli5,roc_auc,binary,0.6602739726027398,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep2_pli1,bal_accuracy,binary,0.6832729468599035,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep2_pli1,sens,binary,0.6304347826086957,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep2_pli1,spec,binary,0.7361111111111112,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep2_pli1,roc_auc,binary,0.6781400966183575,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep2_pli2,bal_accuracy,binary,0.5541666666666667,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep2_pli2,sens,binary,0.5111111111111111,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep2_pli2,spec,binary,0.5972222222222222,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep2_pli2,roc_auc,binary,0.5648148148148149,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep2_pli3,bal_accuracy,binary,0.5990037359900373,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep2_pli3,sens,binary,0.6363636363636364,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep2_pli3,spec,binary,0.5616438356164384,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep2_pli3,roc_auc,binary,0.5983810709838107,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep2_pli4,bal_accuracy,binary,0.5708333333333333,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep2_pli4,sens,binary,0.4888888888888889,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep2_pli4,spec,binary,0.6527777777777778,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep2_pli4,roc_auc,binary,0.5993827160493828,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep2_pli5,bal_accuracy,binary,0.5477053140096618,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep2_pli5,sens,binary,0.45652173913043476,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep2_pli5,spec,binary,0.6388888888888888,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep2_pli5,roc_auc,binary,0.6186594202898551,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep3_pli1,bal_accuracy,binary,0.591183574879227,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep3_pli1,sens,binary,0.5434782608695652,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep3_pli1,spec,binary,0.6388888888888888,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep3_pli1,roc_auc,binary,0.6243961352657005,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep3_pli2,bal_accuracy,binary,0.5263888888888889,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep3_pli2,sens,binary,0.6222222222222222,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep3_pli2,spec,binary,0.4305555555555556,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep3_pli2,roc_auc,binary,0.5496913580246914,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep3_pli3,bal_accuracy,binary,0.6083437110834371,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep3_pli3,sens,binary,0.5454545454545454,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep3_pli3,spec,binary,0.6712328767123288,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep3_pli3,roc_auc,binary,0.6092777085927771,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep3_pli4,bal_accuracy,binary,0.6638888888888889,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep3_pli4,sens,binary,0.6888888888888889,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep3_pli4,spec,binary,0.6388888888888888,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep3_pli4,roc_auc,binary,0.6990740740740741,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep3_pli5,bal_accuracy,binary,0.5507246376811594,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep3_pli5,sens,binary,0.43478260869565216,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep3_pli5,spec,binary,0.6666666666666666,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep3_pli5,roc_auc,binary,0.5467995169082126,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep4_pli1,bal_accuracy,binary,0.6407914764079148,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep4_pli1,sens,binary,0.5555555555555556,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep4_pli1,spec,binary,0.726027397260274,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep4_pli1,roc_auc,binary,0.6404870624048706,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep4_pli2,bal_accuracy,binary,0.5742753623188406,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep4_pli2,sens,binary,0.5652173913043478,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep4_pli2,spec,binary,0.5833333333333334,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep4_pli2,roc_auc,binary,0.5908816425120773,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep4_pli3,bal_accuracy,binary,0.5833333333333334,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep4_pli3,sens,binary,0.5555555555555556,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep4_pli3,spec,binary,0.6111111111111112,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep4_pli3,roc_auc,binary,0.6006172839506173,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep4_pli4,bal_accuracy,binary,0.6666666666666666,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep4_pli4,sens,binary,0.6666666666666666,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep4_pli4,spec,binary,0.6666666666666666,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep4_pli4,roc_auc,binary,0.6932098765432099,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep4_pli5,bal_accuracy,binary,0.6055555555555556,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep4_pli5,sens,binary,0.6,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep4_pli5,spec,binary,0.6111111111111112,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep4_pli5,roc_auc,binary,0.6151234567901235,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep5_pli1,bal_accuracy,binary,0.5986111111111111,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep5_pli1,sens,binary,0.6,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep5_pli1,spec,binary,0.5972222222222222,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep5_pli1,roc_auc,binary,0.6364197530864197,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep5_pli2,bal_accuracy,binary,0.5821256038647343,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep5_pli2,sens,binary,0.6086956521739131,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep5_pli2,spec,binary,0.5555555555555556,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep5_pli2,roc_auc,binary,0.6153381642512077,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep5_pli3,bal_accuracy,binary,0.6245053272450533,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep5_pli3,sens,binary,0.5777777777777777,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep5_pli3,spec,binary,0.6712328767123288,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep5_pli3,roc_auc,binary,0.6109589041095891,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep5_pli4,bal_accuracy,binary,0.586111111111111,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep5_pli4,sens,binary,0.5333333333333333,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep5_pli4,spec,binary,0.6388888888888888,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep5_pli4,roc_auc,binary,0.6558641975308642,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep5_pli5,bal_accuracy,binary,0.5805555555555555,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep5_pli5,sens,binary,0.4666666666666667,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep5_pli5,spec,binary,0.6944444444444444,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep5_pli5,roc_auc,binary,0.6256172839506173,pre0_mod0_post0,Logistique rééquilibrée,Cinématique seule
+rep1_pli1,bal_accuracy,binary,0.6231884057971014,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep1_pli1,sens,binary,0.41304347826086957,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep1_pli1,spec,binary,0.8333333333333334,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep1_pli1,roc_auc,binary,0.7041062801932367,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep1_pli2,bal_accuracy,binary,0.6192632850241546,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep1_pli2,sens,binary,0.391304347826087,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep1_pli2,spec,binary,0.8472222222222222,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep1_pli2,roc_auc,binary,0.7478864734299517,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep1_pli3,bal_accuracy,binary,0.5333333333333333,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep1_pli3,sens,binary,0.28888888888888886,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep1_pli3,spec,binary,0.7777777777777778,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep1_pli3,roc_auc,binary,0.6058641975308642,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep1_pli4,bal_accuracy,binary,0.5220959595959596,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep1_pli4,sens,binary,0.36363636363636365,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep1_pli4,spec,binary,0.6805555555555556,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep1_pli4,roc_auc,binary,0.5681818181818182,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep1_pli5,bal_accuracy,binary,0.6126331811263318,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep1_pli5,sens,binary,0.4444444444444444,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep1_pli5,spec,binary,0.7808219178082192,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep1_pli5,roc_auc,binary,0.6410958904109589,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep2_pli1,bal_accuracy,binary,0.5371376811594203,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep2_pli1,sens,binary,0.2826086956521739,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep2_pli1,spec,binary,0.7916666666666666,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep2_pli1,roc_auc,binary,0.6533816425120773,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep2_pli2,bal_accuracy,binary,0.5402777777777777,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep2_pli2,sens,binary,0.28888888888888886,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep2_pli2,spec,binary,0.7916666666666666,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep2_pli2,roc_auc,binary,0.587037037037037,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep2_pli3,bal_accuracy,binary,0.5971357409713574,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep2_pli3,sens,binary,0.45454545454545453,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep2_pli3,spec,binary,0.7397260273972602,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep2_pli3,roc_auc,binary,0.652241594022416,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep2_pli4,bal_accuracy,binary,0.5680555555555555,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep2_pli4,sens,binary,0.28888888888888886,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep2_pli4,spec,binary,0.8472222222222222,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep2_pli4,roc_auc,binary,0.6938271604938272,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep2_pli5,bal_accuracy,binary,0.5458937198067633,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep2_pli5,sens,binary,0.3695652173913043,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep2_pli5,spec,binary,0.7222222222222222,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep2_pli5,roc_auc,binary,0.5954106280193237,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep3_pli1,bal_accuracy,binary,0.5935990338164252,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep3_pli1,sens,binary,0.32608695652173914,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep3_pli1,spec,binary,0.8611111111111112,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep3_pli1,roc_auc,binary,0.6811594202898551,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep3_pli2,bal_accuracy,binary,0.5819444444444444,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep3_pli2,sens,binary,0.4,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep3_pli2,spec,binary,0.7638888888888888,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep3_pli2,roc_auc,binary,0.638888888888889,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep3_pli3,bal_accuracy,binary,0.5516811955168119,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep3_pli3,sens,binary,0.36363636363636365,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep3_pli3,spec,binary,0.7397260273972602,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep3_pli3,roc_auc,binary,0.5927770859277709,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep3_pli4,bal_accuracy,binary,0.5833333333333333,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep3_pli4,sens,binary,0.4444444444444444,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep3_pli4,spec,binary,0.7222222222222222,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep3_pli4,roc_auc,binary,0.6697530864197531,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep3_pli5,bal_accuracy,binary,0.4945652173913043,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep3_pli5,sens,binary,0.2391304347826087,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep3_pli5,spec,binary,0.75,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep3_pli5,roc_auc,binary,0.5320048309178744,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep4_pli1,bal_accuracy,binary,0.6622526636225267,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep4_pli1,sens,binary,0.4888888888888889,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep4_pli1,spec,binary,0.8356164383561644,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep4_pli1,roc_auc,binary,0.715372907153729,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep4_pli2,bal_accuracy,binary,0.5232487922705313,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep4_pli2,sens,binary,0.2826086956521739,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep4_pli2,spec,binary,0.7638888888888888,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep4_pli2,roc_auc,binary,0.6207729468599034,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep4_pli3,bal_accuracy,binary,0.6625,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep4_pli3,sens,binary,0.5333333333333333,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep4_pli3,spec,binary,0.7916666666666666,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep4_pli3,roc_auc,binary,0.6527777777777778,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep4_pli4,bal_accuracy,binary,0.6125,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep4_pli4,sens,binary,0.37777777777777777,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep4_pli4,spec,binary,0.8472222222222222,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep4_pli4,roc_auc,binary,0.675,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep4_pli5,bal_accuracy,binary,0.5138888888888888,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep4_pli5,sens,binary,0.2222222222222222,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep4_pli5,spec,binary,0.8055555555555556,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep4_pli5,roc_auc,binary,0.5750000000000001,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep5_pli1,bal_accuracy,binary,0.5958333333333333,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep5_pli1,sens,binary,0.4,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep5_pli1,spec,binary,0.7916666666666666,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep5_pli1,roc_auc,binary,0.6185185185185186,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep5_pli2,bal_accuracy,binary,0.5715579710144928,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep5_pli2,sens,binary,0.43478260869565216,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep5_pli2,spec,binary,0.7083333333333334,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep5_pli2,roc_auc,binary,0.6047705314009661,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep5_pli3,bal_accuracy,binary,0.6289193302891933,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep5_pli3,sens,binary,0.4222222222222222,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep5_pli3,spec,binary,0.8356164383561644,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep5_pli3,roc_auc,binary,0.6776255707762557,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep5_pli4,bal_accuracy,binary,0.6291666666666667,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep5_pli4,sens,binary,0.4666666666666667,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep5_pli4,spec,binary,0.7916666666666666,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep5_pli4,roc_auc,binary,0.6941358024691359,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep5_pli5,bal_accuracy,binary,0.5736111111111111,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep5_pli5,sens,binary,0.35555555555555557,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep5_pli5,spec,binary,0.7916666666666666,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep5_pli5,roc_auc,binary,0.620679012345679,pre0_mod0_post0,Forêt rééquilibrée,Cinématique seule
+rep1_pli1,bal_accuracy,binary,0.6428571428571428,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep1_pli1,sens,binary,0.6190476190476191,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep1_pli1,spec,binary,0.6666666666666666,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep1_pli1,roc_auc,binary,0.6327561327561327,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep1_pli2,bal_accuracy,binary,0.625,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep1_pli2,sens,binary,0.5833333333333334,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep1_pli2,spec,binary,0.6666666666666666,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep1_pli2,roc_auc,binary,0.6268939393939393,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep1_pli3,bal_accuracy,binary,0.5034340659340659,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep1_pli3,sens,binary,0.34615384615384615,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep1_pli3,spec,binary,0.6607142857142857,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep1_pli3,roc_auc,binary,0.514423076923077,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep1_pli4,bal_accuracy,binary,0.5494791666666666,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep1_pli4,sens,binary,0.4583333333333333,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep1_pli4,spec,binary,0.640625,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep1_pli4,roc_auc,binary,0.5345052083333334,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep1_pli5,bal_accuracy,binary,0.491106719367589,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep1_pli5,sens,binary,0.391304347826087,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep1_pli5,spec,binary,0.5909090909090909,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep1_pli5,roc_auc,binary,0.5237154150197628,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep2_pli1,bal_accuracy,binary,0.6147157190635452,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep2_pli1,sens,binary,0.5217391304347826,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep2_pli1,spec,binary,0.7076923076923077,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep2_pli1,roc_auc,binary,0.6026755852842809,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep2_pli2,bal_accuracy,binary,0.5269097222222222,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep2_pli2,sens,binary,0.4444444444444444,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep2_pli2,spec,binary,0.609375,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep2_pli2,roc_auc,binary,0.5052083333333334,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep2_pli3,bal_accuracy,binary,0.6046057767369243,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep2_pli3,sens,binary,0.6190476190476191,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep2_pli3,spec,binary,0.5901639344262295,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep2_pli3,roc_auc,binary,0.56128024980484,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep2_pli4,bal_accuracy,binary,0.5071618037135279,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep2_pli4,sens,binary,0.27586206896551724,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep2_pli4,spec,binary,0.7384615384615385,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep2_pli4,roc_auc,binary,0.5665782493368701,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep2_pli5,bal_accuracy,binary,0.5,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep2_pli5,sens,binary,0.4444444444444444,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep2_pli5,spec,binary,0.5555555555555556,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep2_pli5,roc_auc,binary,0.5061728395061729,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep3_pli1,bal_accuracy,binary,0.4603125,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep3_pli1,sens,binary,0.28,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep3_pli1,spec,binary,0.640625,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep3_pli1,roc_auc,binary,0.4775,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep3_pli2,bal_accuracy,binary,0.5692307692307692,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep3_pli2,sens,binary,0.6,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep3_pli2,spec,binary,0.5384615384615384,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep3_pli2,roc_auc,binary,0.5907692307692308,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep3_pli3,bal_accuracy,binary,0.554515050167224,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep3_pli3,sens,binary,0.4782608695652174,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep3_pli3,spec,binary,0.6307692307692307,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep3_pli3,roc_auc,binary,0.554515050167224,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep3_pli4,bal_accuracy,binary,0.5733801717408276,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep3_pli4,sens,binary,0.5238095238095238,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep3_pli4,spec,binary,0.6229508196721312,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep3_pli4,roc_auc,binary,0.6213895394223263,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep3_pli5,bal_accuracy,binary,0.5826491516146689,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep3_pli5,sens,binary,0.4827586206896552,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep3_pli5,spec,binary,0.6825396825396826,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep3_pli5,roc_auc,binary,0.5807334428024084,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep4_pli1,bal_accuracy,binary,0.5734265734265734,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep4_pli1,sens,binary,0.45454545454545453,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep4_pli1,spec,binary,0.6923076923076923,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep4_pli1,roc_auc,binary,0.5692307692307692,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep4_pli2,bal_accuracy,binary,0.4988839285714286,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep4_pli2,sens,binary,0.35714285714285715,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep4_pli2,spec,binary,0.640625,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep4_pli2,roc_auc,binary,0.46595982142857145,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep4_pli3,bal_accuracy,binary,0.5487012987012987,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep4_pli3,sens,binary,0.47619047619047616,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep4_pli3,spec,binary,0.6212121212121212,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep4_pli3,roc_auc,binary,0.49567099567099565,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep4_pli4,bal_accuracy,binary,0.5907407407407407,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep4_pli4,sens,binary,0.48148148148148145,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep4_pli4,spec,binary,0.7,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep4_pli4,roc_auc,binary,0.5864197530864197,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep4_pli5,bal_accuracy,binary,0.5753968253968254,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep4_pli5,sens,binary,0.5,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep4_pli5,spec,binary,0.6507936507936508,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep4_pli5,roc_auc,binary,0.6150793650793651,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep5_pli1,bal_accuracy,binary,0.6199596774193548,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep5_pli1,sens,binary,0.5625,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep5_pli1,spec,binary,0.6774193548387096,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep5_pli1,roc_auc,binary,0.655241935483871,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep5_pli2,bal_accuracy,binary,0.6025641025641025,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep5_pli2,sens,binary,0.5384615384615384,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep5_pli2,spec,binary,0.6666666666666666,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep5_pli2,roc_auc,binary,0.6343101343101343,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep5_pli3,bal_accuracy,binary,0.4696969696969697,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep5_pli3,sens,binary,0.3333333333333333,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep5_pli3,spec,binary,0.6060606060606061,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep5_pli3,roc_auc,binary,0.526374859708193,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep5_pli4,bal_accuracy,binary,0.5706521739130435,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep5_pli4,sens,binary,0.391304347826087,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep5_pli4,spec,binary,0.75,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep5_pli4,roc_auc,binary,0.6338315217391305,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep5_pli5,bal_accuracy,binary,0.4826007326007326,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep5_pli5,sens,binary,0.34615384615384615,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep5_pli5,spec,binary,0.6190476190476191,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep5_pli5,roc_auc,binary,0.5665445665445665,pre0_mod0_post0,Logistique rééquilibrée,Coureurs 2012-2017
+rep1_pli1,bal_accuracy,binary,0.5335497835497836,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep1_pli1,sens,binary,0.14285714285714285,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep1_pli1,spec,binary,0.9242424242424242,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep1_pli1,roc_auc,binary,0.6154401154401153,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep1_pli2,bal_accuracy,binary,0.6231060606060607,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep1_pli2,sens,binary,0.2916666666666667,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep1_pli2,spec,binary,0.9545454545454546,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep1_pli2,roc_auc,binary,0.7133838383838385,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep1_pli3,bal_accuracy,binary,0.5206043956043956,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep1_pli3,sens,binary,0.07692307692307693,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep1_pli3,spec,binary,0.9642857142857143,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep1_pli3,roc_auc,binary,0.548076923076923,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep1_pli4,bal_accuracy,binary,0.5651041666666666,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep1_pli4,sens,binary,0.20833333333333334,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep1_pli4,spec,binary,0.921875,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep1_pli4,roc_auc,binary,0.5852864583333334,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep1_pli5,bal_accuracy,binary,0.5359025032938076,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep1_pli5,sens,binary,0.08695652173913043,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep1_pli5,spec,binary,0.9848484848484849,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep1_pli5,roc_auc,binary,0.58300395256917,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep2_pli1,bal_accuracy,binary,0.571571906354515,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep2_pli1,sens,binary,0.17391304347826086,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep2_pli1,spec,binary,0.9692307692307692,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep2_pli1,roc_auc,binary,0.6501672240802675,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep2_pli2,bal_accuracy,binary,0.5428240740740741,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep2_pli2,sens,binary,0.14814814814814814,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep2_pli2,spec,binary,0.9375,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep2_pli2,roc_auc,binary,0.6064814814814815,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep2_pli3,bal_accuracy,binary,0.5468384074941451,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep2_pli3,sens,binary,0.14285714285714285,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep2_pli3,spec,binary,0.9508196721311475,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep2_pli3,roc_auc,binary,0.60967993754879,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep2_pli4,bal_accuracy,binary,0.5976127320954907,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep2_pli4,sens,binary,0.2413793103448276,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep2_pli4,spec,binary,0.9538461538461539,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep2_pli4,roc_auc,binary,0.6424403183023872,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep2_pli5,bal_accuracy,binary,0.5714285714285714,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep2_pli5,sens,binary,0.2222222222222222,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep2_pli5,spec,binary,0.9206349206349206,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep2_pli5,roc_auc,binary,0.6278659611992945,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep3_pli1,bal_accuracy,binary,0.5721875,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep3_pli1,sens,binary,0.16,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep3_pli1,spec,binary,0.984375,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep3_pli1,roc_auc,binary,0.726875,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep3_pli2,bal_accuracy,binary,0.5538461538461539,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep3_pli2,sens,binary,0.2,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep3_pli2,spec,binary,0.9076923076923077,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep3_pli2,roc_auc,binary,0.6130769230769231,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep3_pli3,bal_accuracy,binary,0.571571906354515,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep3_pli3,sens,binary,0.17391304347826086,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep3_pli3,spec,binary,0.9692307692307692,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep3_pli3,roc_auc,binary,0.551170568561873,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep3_pli4,bal_accuracy,binary,0.49102263856362216,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep3_pli4,sens,binary,0.047619047619047616,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep3_pli4,spec,binary,0.9344262295081968,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep3_pli4,roc_auc,binary,0.7056986729117877,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep3_pli5,bal_accuracy,binary,0.5451559934318555,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep3_pli5,sens,binary,0.13793103448275862,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep3_pli5,spec,binary,0.9523809523809523,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep3_pli5,roc_auc,binary,0.5374931581828134,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep4_pli1,bal_accuracy,binary,0.6360139860139861,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep4_pli1,sens,binary,0.3181818181818182,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep4_pli1,spec,binary,0.9538461538461539,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep4_pli1,roc_auc,binary,0.7118881118881119,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep4_pli2,bal_accuracy,binary,0.5245535714285714,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep4_pli2,sens,binary,0.14285714285714285,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep4_pli2,spec,binary,0.90625,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep4_pli2,roc_auc,binary,0.5998883928571429,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep4_pli3,bal_accuracy,binary,0.604978354978355,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep4_pli3,sens,binary,0.2857142857142857,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep4_pli3,spec,binary,0.9242424242424242,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep4_pli3,roc_auc,binary,0.6363636363636364,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep4_pli4,bal_accuracy,binary,0.5287037037037037,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep4_pli4,sens,binary,0.07407407407407407,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep4_pli4,spec,binary,0.9833333333333333,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep4_pli4,roc_auc,binary,0.6722222222222222,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep4_pli5,bal_accuracy,binary,0.5194444444444444,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep4_pli5,sens,binary,0.15,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep4_pli5,spec,binary,0.8888888888888888,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep4_pli5,roc_auc,binary,0.5865079365079365,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep5_pli1,bal_accuracy,binary,0.530241935483871,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep5_pli1,sens,binary,0.125,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep5_pli1,spec,binary,0.9354838709677419,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep5_pli1,roc_auc,binary,0.720766129032258,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep5_pli2,bal_accuracy,binary,0.579059829059829,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep5_pli2,sens,binary,0.2692307692307692,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep5_pli2,spec,binary,0.8888888888888888,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep5_pli2,roc_auc,binary,0.6526251526251526,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep5_pli3,bal_accuracy,binary,0.4957912457912458,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep5_pli3,sens,binary,0.037037037037037035,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep5_pli3,spec,binary,0.9545454545454546,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep5_pli3,roc_auc,binary,0.6088664421997755,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep5_pli4,bal_accuracy,binary,0.5791440217391304,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep5_pli4,sens,binary,0.17391304347826086,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep5_pli4,spec,binary,0.984375,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep5_pli4,roc_auc,binary,0.7302989130434783,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep5_pli5,bal_accuracy,binary,0.5531135531135531,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep5_pli5,sens,binary,0.15384615384615385,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep5_pli5,spec,binary,0.9523809523809523,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017
+rep5_pli5,roc_auc,binary,0.6117216117216118,pre0_mod0_post0,Forêt rééquilibrée,Coureurs 2012-2017

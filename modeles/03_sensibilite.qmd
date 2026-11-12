@@ -1,0 +1,245 @@
+---
+title: "Modèles 3 : la foulée reconnaît-elle les blessés sans la vitesse ?"
+subtitle: "Analyse de sensibilité des modèles de référence"
+lang: fr
+format:
+  html:
+    toc: true
+    code-fold: true
+    code-summary: "Voir le code"
+    embed-resources: true
+    fig-width: 9
+    fig-height: 5.5
+    fig-dpi: 300
+execute:
+  warning: false
+  message: false
+---
+
+À l'étape 2, la **vitesse de course** est apparue comme la variable la plus utilisée par les modèles, loin devant les autres. Or elle n'est probablement pas un mécanisme de blessure : elle dépend de l'époque d'enregistrement (vitesse imposée avant 2012, période où 7 coureurs sur 10 étaient blessés), et les coureurs blessés ont pu courir moins vite à cause de la douleur. La **jambe dominante** pose un problème proche : son codage change avec l'époque.
+
+Ce notebook vérifie donc si les performances de l'étape 1 tiennent sans ces variables. On compare quatre scénarios, avec les deux modèles rééquilibrés de l'étape 1 :
+
+1. **Toutes les variables** : le modèle de l'étape 1, comme référence.
+2. **Sans vitesse ni jambe dominante** : on retire les deux variables liées à l'époque.
+3. **Cinématique seule** : on retire toutes les variables de contrôle (vitesse, âge, taille, poids, IMC, sexe, jambe dominante). Il ne reste que la foulée et les angles.
+4. **Coureurs enregistrés de 2012 à 2017**, avec toutes les variables : la vitesse y était libre, et l'époque ne peut plus servir de raccourci.
+
+Si les performances tiennent dans les scénarios 2 et 3, le modèle s'appuie vraiment sur la façon de courir.
+
+## Données et plis
+
+On utilise cette fois **les 5 répétitions** de `data/plis.csv`, soit 25 découpages au lieu de 5 à l'étape 1. Avec seulement 5 plis, l'accuracy équilibrée varie d'environ 0,05 d'un pli à l'autre : trop pour comparer des scénarios qui diffèrent de quelques centièmes. Les scénarios sont évalués sur exactement les mêmes plis, ce qui permet de les comparer pli par pli.
+
+```{r}
+#| label: setup
+library(tidymodels)
+library(themis)   # rééquilibrage des classes (TD1)
+source("../R/theme_projet.R")
+
+coureurs_brut <- readr::read_csv("../data/coureurs.csv", show_col_types = FALSE)
+plis_communs  <- readr::read_csv("../data/plis.csv", show_col_types = FALSE)
+dictionnaire  <- readr::read_csv("../data/dictionnaire_variables.csv", show_col_types = FALSE)
+
+predicteurs <- dictionnaire |> filter(role %in% c("cinematique", "controle")) |> pull(variable)
+cinematique <- dictionnaire |> filter(role == "cinematique") |> pull(variable)
+
+coureurs <- coureurs_brut |>
+  mutate(classe = factor(if_else(blesse == 1, "blesse", "sain"), levels = c("blesse", "sain"))) |>
+  select(sub_id, classe, all_of(predicteurs)) |>
+  mutate(across(where(is.character), as.factor))
+
+stopifnot(identical(plis_communs$sub_id, coureurs$sub_id))
+
+repetitions <- paste0("rep", 1:5)
+
+# Plis communs -> objet rsample (même fonction qu'à l'étape 1)
+construire_plis <- function(donnees, plis, repetitions) {
+  splits <- list()
+  ids <- character()
+  for (r in repetitions) {
+    for (k in sort(unique(plis[[r]]))) {
+      test <- which(plis[[r]] == k)
+      app  <- setdiff(seq_len(nrow(donnees)), test)
+      splits[[length(splits) + 1]] <- make_splits(list(analysis = app, assessment = test),
+                                                  data = donnees)
+      ids <- c(ids, sprintf("%s_pli%d", r, k))
+    }
+  }
+  manual_rset(splits, ids)
+}
+```
+
+## Les quatre scénarios
+
+```{r}
+#| label: scenarios
+tous <- rep(TRUE, nrow(coureurs))
+scenarios <- list(
+  "Toutes les variables" =
+    list(variables = predicteurs, garder = tous),
+  "Sans vitesse ni jambe dominante" =
+    list(variables = setdiff(predicteurs, c("speed_r", "DominantLeg")), garder = tous),
+  "Cinématique seule" =
+    list(variables = cinematique, garder = tous),
+  "Coureurs 2012-2017" =
+    list(variables = predicteurs, garder = coureurs_brut$annee >= 2012)
+)
+
+# Effectifs de chaque scénario
+imap_dfr(scenarios, \(sc, nom) tibble(
+  Scénario = nom,
+  `Variables` = length(sc$variables),
+  Coureurs = sum(sc$garder),
+  Blessés = sum(coureurs$classe[sc$garder] == "blesse")
+)) |> knitr::kable()
+```
+
+Dans le scénario 2012-2017, il ne reste que 436 coureurs, dont 118 blessés (27 %, contre 39 % sur l'ensemble). Les plis sont les mêmes, simplement restreints à ces coureurs.
+
+## Évaluation
+
+Les recettes et les modèles sont exactement ceux de l'étape 1 : imputation par la médiane, indicatrices, variables centrées-réduites, rééquilibrage par suréchantillonnage, et filtre des variables corrélées à plus de 0,9 pour la logistique.
+
+L'évaluation des 4 scénarios × 2 modèles × 25 plis prend quelques minutes.
+
+```{r}
+#| label: evaluation
+metriques <- metric_set(bal_accuracy, sens, spec, roc_auc)
+
+lr_mod <- logistic_reg() |> set_engine("glm") |> set_mode("classification")
+rf_mod <- rand_forest(trees = 500) |>
+  set_engine("ranger", seed = 2026) |>
+  set_mode("classification")
+
+evaluer_scenario <- function(variables, garder) {
+  donnees <- coureurs |> filter(garder) |> select(sub_id, classe, all_of(variables))
+  plis <- construire_plis(donnees, plis_communs[garder, ], repetitions)
+
+  rec_base_up <- recipe(classe ~ ., data = donnees) |>
+    update_role(sub_id, new_role = "id") |>
+    step_impute_median(all_numeric_predictors()) |>
+    step_dummy(all_nominal_predictors()) |>
+    step_zv(all_predictors()) |>
+    step_normalize(all_numeric_predictors()) |>
+    step_upsample(classe, over_ratio = 1, seed = 2026)
+  rec_lr_up <- rec_base_up |> step_corr(all_numeric_predictors(), threshold = 0.9)
+
+  list("Logistique rééquilibrée" = workflow(rec_lr_up, lr_mod),
+       "Forêt rééquilibrée"      = workflow(rec_base_up, rf_mod)) |>
+    imap_dfr(\(wf, nom_modele)
+      fit_resamples(wf, resamples = plis, metrics = metriques) |>
+        collect_metrics(summarize = FALSE) |>
+        mutate(modele = nom_modele))
+}
+
+set.seed(2026)
+scores_plis <- imap_dfr(scenarios, \(sc, nom)
+  evaluer_scenario(sc$variables, sc$garder) |> mutate(scenario = nom)) |>
+  mutate(scenario = factor(scenario, levels = names(scenarios)))
+
+dir.create("../resultats", showWarnings = FALSE)
+readr::write_csv(scores_plis, "../resultats/B03_scores_sensibilite.csv")
+```
+
+## Résultats
+
+Moyenne sur les 25 plis (écart-type entre plis entre parenthèses).
+
+```{r}
+#| label: tableau
+scores <- scores_plis |>
+  group_by(scenario, modele, .metric) |>
+  summarise(moyenne = mean(.estimate), ecart_type = sd(.estimate), .groups = "drop")
+
+scores |>
+  mutate(valeur = sprintf("%.2f (%.2f)", moyenne, ecart_type)) |>
+  select(scenario, modele, .metric, valeur) |>
+  pivot_wider(names_from = .metric, values_from = valeur) |>
+  select(Scénario = scenario, Modèle = modele, `Accuracy équilibrée` = bal_accuracy,
+         Sensibilité = sens, Spécificité = spec, AUC = roc_auc) |>
+  knitr::kable(align = "llcccc")
+```
+
+### Comparaison pli par pli
+
+Pour chaque pli, on calcule l'écart d'accuracy équilibrée entre chaque scénario et le scénario de référence (toutes les variables). Un écart négatif veut dire que le scénario fait moins bien. Comparer pli par pli élimine la part de variation due au découpage lui-même. Le scénario 2012-2017 n'est pas comparable pli par pli (ce ne sont pas les mêmes coureurs) : il est seulement comparé en moyenne.
+
+```{r}
+#| label: comparaison-plis
+reference <- scores_plis |>
+  filter(.metric == "bal_accuracy", scenario == "Toutes les variables") |>
+  select(id, modele, reference = .estimate)
+
+ecarts <- scores_plis |>
+  filter(.metric == "bal_accuracy",
+         scenario %in% c("Sans vitesse ni jambe dominante", "Cinématique seule")) |>
+  left_join(reference, by = c("id", "modele")) |>
+  mutate(ecart = .estimate - reference)
+
+ecarts |>
+  group_by(Scénario = scenario, Modèle = modele) |>
+  summarise(`Écart moyen` = round(mean(ecart), 3),
+            `IC 95 % bas` = round(mean(ecart) - 1.96 * sd(ecart) / sqrt(n()), 3),
+            `IC 95 % haut` = round(mean(ecart) + 1.96 * sd(ecart) / sqrt(n()), 3),
+            `Plis moins bons` = sprintf("%d / %d", sum(ecart < 0), n()),
+            .groups = "drop") |>
+  knitr::kable()
+```
+
+L'intervalle de confiance est approximatif : les 25 plis viennent de 5 répétitions sur les mêmes coureurs, ils ne sont donc pas indépendants, et l'intervalle est sans doute un peu trop étroit.
+
+### Figure
+
+```{r}
+#| label: figure
+#| fig-height: 5
+bal <- scores |> filter(.metric == "bal_accuracy")
+bal_lr <- function(sc) bal$moyenne[bal$scenario == sc & bal$modele == "Logistique rééquilibrée"]
+ref_lr  <- bal_lr("Toutes les variables")
+sans_lr <- bal_lr("Sans vitesse ni jambe dominante")
+cine_lr <- bal_lr("Cinématique seule")
+
+# Deux décimales, virgule française
+deux_dec <- function(x) formatC(x, format = "f", digits = 2, decimal.mark = ",")
+
+couleurs_modeles <- c("Logistique rééquilibrée" = mise_en_avant, "Forêt rééquilibrée" = "#A9B0B8")
+
+titre <- if (ref_lr - cine_lr < 0.03) {
+  "Sans la vitesse ni les autres variables de contrôle,\nla foulée reconnaît presque autant de blessés"
+} else {
+  "Sans la vitesse ni les autres variables de contrôle,\nles modèles perdent une partie de leur performance"
+}
+
+p <- ggplot(bal, aes(x = moyenne, y = forcats::fct_rev(scenario), colour = modele)) +
+  geom_vline(xintercept = 0.5, linetype = "dashed", colour = encre_douce) +
+  geom_linerange(aes(xmin = moyenne - ecart_type, xmax = moyenne + ecart_type),
+                 linewidth = 0.8, position = position_dodge(width = 0.5)) +
+  geom_point(size = 3.5, position = position_dodge(width = 0.5)) +
+  scale_colour_manual(values = couleurs_modeles) +
+  scale_x_continuous(limits = c(0.45, 0.75), breaks = seq(0.45, 0.75, by = 0.05),
+                     labels = \(x) format(x, decimal.mark = ",")) +
+  labs(
+    title = titre,
+    subtitle = sprintf(paste("Accuracy équilibrée moyenne sur 25 plis (± un écart-type) ; pointillés : hasard.",
+                             "%s : %s avec toutes les variables, %s avec la cinématique seule.",
+                             "Forêt aléatoire en gris."),
+                       mot("Logistique rééquilibrée", mise_en_avant),
+                       deux_dec(ref_lr),
+                       deux_dec(cine_lr)),
+    x = "Accuracy équilibrée", y = NULL,
+    caption = paste(source_donnees, "Plis communs, 5 répétitions de 5 plis.")
+  ) +
+  theme_projet()
+sauver_figure(p, "B03_sensibilite", dossier = "figures/modeles")
+p
+```
+
+## À retenir
+
+Avec toutes les variables, la régression logistique rééquilibrée atteint une accuracy équilibrée de `r deux_dec(ref_lr)` sur les 25 plis. Sans la vitesse ni la jambe dominante, elle atteint `r deux_dec(sans_lr)` ; avec la cinématique seule, `r deux_dec(cine_lr)`.
+
+*À compléter après exécution :*
+
+- *Si l'écart reste faible : la vitesse et les autres variables de contrôle n'expliquent qu'une petite partie des performances, et la foulée elle-même permet de reconnaître une partie des blessés. C'est un argument pour l'oral.*
+- *Scénario 2012-2017 : si les performances baissent, une partie du signal de l'étape 1 venait de l'époque d'enregistrement. À formuler comme une limite : les modèles ont pu en partie apprendre l'époque plutôt que la blessure.*
