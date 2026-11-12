@@ -10,6 +10,7 @@ format:
     embed-resources: true
     fig-width: 9
     fig-height: 5.5
+    fig-dpi: 300
 execute:
   warning: false
   message: false
@@ -17,7 +18,7 @@ execute:
 
 Ce notebook répond à l'objectif 1 et à l'hypothèse H1 : un modèle classique distingue-t-il les coureurs sains des coureurs blessés au genou (PFPS et ITBS regroupés) à partir des variables résumées de la foulée ?
 
-Deux modèles sont comparés. La **régression logistique** est simple et interprétable : ses odds ratios serviront à l'étape 2. La **forêt aléatoire** capte des interactions et des effets non linéaires sans qu'on ait à les écrire. Les deux sont évalués sur les plis communs de `data/plis.csv`, les mêmes que ceux du MLP de C.
+Deux modèles sont comparés. La **régression logistique** est simple et interprétable : ses odds ratios serviront à l'étape 2. La **forêt aléatoire** capte des interactions et des effets non linéaires sans qu'on ait à les écrire. Les deux sont évalués sur les plis communs de `data/plis.csv`, les mêmes que ceux du perceptron multicouche.
 
 Les blessés sont minoritaires (226 contre 361) : répondre toujours « sain » donne déjà 61,5 % de bonnes réponses. On juge donc les modèles sur l'**accuracy équilibrée** (moyenne de la sensibilité et de la spécificité), comme au TD1, et non sur l'accuracy brute.
 
@@ -88,7 +89,7 @@ plis
 
 Les prétraitements sont appris dans le pli d'apprentissage puis appliqués au pli de test, pour qu'aucune information du test ne serve à préparer les données.
 
-Pour la régression logistique, on retire en plus les variables trop corrélées entre elles (\|r\| \> 0,9). Beaucoup de variables sont presque identiques à gauche et à droite, et la vitesse vaut exactement longueur de foulée × cadence / 60 : sans ce filtre, `glm` donne des coefficients instables, voire non estimables. La forêt aléatoire n'en a pas besoin.
+Pour la régression logistique, on retire en plus les variables trop corrélées entre elles (|r| > 0,9). Beaucoup de variables sont presque identiques à gauche et à droite, et la vitesse vaut exactement longueur de foulée × cadence / 60 : sans ce filtre, `glm` donne des coefficients instables, voire non estimables. La forêt aléatoire n'en a pas besoin.
 
 Chaque modèle est testé sans et avec rééquilibrage (`step_upsample`, comme au TD1) : les blessés sont dupliqués dans le pli d'apprentissage jusqu'à égaler les sains, le pli de test n'est pas touché.
 
@@ -101,7 +102,8 @@ rec_base <- recipe(classe ~ ., data = coureurs) |>
   step_zv(all_predictors()) |>
   step_normalize(all_numeric_predictors())   # coefficients comparables entre variables
 
-rec_base_up <- rec_base |> step_upsample(classe, over_ratio = 1)
+# seed : le tirage des blessés dupliqués est fixé, pour des résultats identiques à chaque rendu
+rec_base_up <- rec_base |> step_upsample(classe, over_ratio = 1, seed = 2026)
 rec_lr      <- rec_base    |> step_corr(all_numeric_predictors(), threshold = 0.9)
 rec_lr_up   <- rec_base_up |> step_corr(all_numeric_predictors(), threshold = 0.9)
 
@@ -176,19 +178,23 @@ conf_mat_resampled(resultats_cv[["Forêt rééquilibrée"]], tidy = FALSE)
 
 ### Figure : le chiffre clé
 
+Les quatre modèles ont des accuracies équilibrées proches, avec des écarts du même ordre que la variation d'un pli à l'autre. On retient pour le message la **régression logistique rééquilibrée** : c'est le modèle le plus simple, et celui qui reconnaît le plus de blessés.
+
 ```{r}
 #| label: figure-cle
-meilleur <- scores |>
-  filter(.metric == "bal_accuracy") |>
-  slice_max(moyenne, n = 1)
-sens_meilleur <- scores |>
-  filter(modele == meilleur$modele, .metric == "sens") |>
-  pull(moyenne)
+modele_cle <- "Logistique rééquilibrée"
+
+score_de <- function(nom_modele, metrique) {
+  scores |> filter(modele == nom_modele, .metric == metrique) |> pull(moyenne)
+}
+sens_cle <- score_de(modele_cle, "sens")
+spec_cle <- score_de(modele_cle, "spec")
+bal_cle  <- score_de(modele_cle, "bal_accuracy")
 
 donnees_fig <- scores_plis |>
   filter(.metric == "bal_accuracy") |>
   mutate(modele = factor(modele, levels = names(workflows_b)),
-         en_avant = modele == meilleur$modele)
+         en_avant = modele == modele_cle)
 moyennes_fig <- donnees_fig |> group_by(modele, en_avant) |>
   summarise(moyenne = mean(.estimate), .groups = "drop")
 
@@ -197,14 +203,14 @@ p <- ggplot(donnees_fig, aes(x = .estimate, y = forcats::fct_rev(modele))) +
   geom_point(aes(colour = en_avant), alpha = 0.5, size = 2.5) +
   geom_point(data = moyennes_fig, aes(x = moyenne, colour = en_avant), size = 5, shape = 18) +
   scale_colour_manual(values = c(`TRUE` = mise_en_avant, `FALSE` = "#A9B0B8")) +
-  scale_x_continuous(limits = c(0.4, 1), labels = \(x) format(x, decimal.mark = ",")) +
+  scale_x_continuous(limits = c(0.45, 0.75), breaks = seq(0.45, 0.75, by = 0.05),
+                     labels = \(x) format(x, decimal.mark = ",")) +
   labs(
-    title = sprintf("Le meilleur modèle reconnaît environ %d coureurs blessés sur 10",
-                    round(10 * sens_meilleur)),
-    subtitle = sprintf("Accuracy équilibrée sur chaque pli de test (points) et en moyenne (losange) ; la ligne pointillée marque le hasard (0,5). Meilleur modèle : **%s**",
-                       meilleur$modele),
+    title = "Les quatre modèles font mieux que le hasard, mais de peu",
+    subtitle = sprintf("Accuracy équilibrée par pli de test (points) et en moyenne (losange) ; pointillés : hasard. La %s reconnaît **%d coureurs blessés sur 10**.",
+                       mot(tolower(modele_cle), mise_en_avant), round(10 * sens_cle)),
     x = "Accuracy équilibrée", y = NULL,
-    caption = paste(source_donnees, "Validation croisée sur les plis communs (data/plis.csv).")
+    caption = paste(source_donnees, "Validation croisée sur les plis communs (data/plis.csv, répétition 1).")
   ) +
   theme_projet()
 sauver_figure(p, "B01_accuracy_equilibree", dossier = "figures/modeles")
@@ -223,8 +229,12 @@ map2_dfr(resultats_cv[c("Logistique rééquilibrée", "Forêt rééquilibrée")]
   autoplot()
 ```
 
-## Conclusion
-Le meilleur modèle est **`r meilleur$modele`**, avec une accuracy équilibrée de `r format(round(meilleur$moyenne, 2), decimal.mark = ",")` (0,5 correspond au hasard). Il reconnaît environ **`r round(10 * sens_meilleur)` blessés sur 10**.
+## À retenir
 
-Les quatre modèles font mieux que le hasard, mais de peu : leur accuracy équilibrée tourne autour de 0,60, et leurs écarts sont plus petits que la variation d’un pli à l’autre. La forêt aléatoire ne fait pas mieux que la régression logistique, ce qui ne suggère pas d’effet non linéaire marqué. Sans rééquilibrage, les modèles favorisent la classe majoritaire : la forêt ne reconnaît que 27 % des blessés. Le rééquilibrage déplace ce compromis : la régression logistique rééquilibrée reconnaît 57 % des blessés, au prix d’une spécificité de 63 %. La foulée résumée par ses pics contient donc une information réelle, mais limitée, sur la blessure du genou.
+Les quatre modèles font mieux que le hasard, mais de peu : leur accuracy équilibrée tourne autour de `r format(round(bal_cle, 2), decimal.mark = ",")`, et leurs écarts sont du même ordre que la variation d'un pli à l'autre. La forêt aléatoire ne fait pas nettement mieux que la régression logistique, ce qui ne suggère pas d'effet non linéaire marqué.
 
+Sans rééquilibrage, les modèles favorisent la classe majoritaire : la forêt aléatoire ne reconnaît que `r pourcent(score_de("Forêt aléatoire", "sens"))` des blessés. Le rééquilibrage déplace ce compromis : la régression logistique rééquilibrée reconnaît `r pourcent(sens_cle)` des blessés, au prix d'une spécificité de `r pourcent(spec_cle)`.
+
+La foulée résumée par ses pics contient donc une information réelle, mais limitée, sur la blessure du genou : **un modèle simple reconnaît environ `r round(10 * sens_cle)` coureurs blessés sur 10**, contre aucun pour un modèle qui répond toujours « sain ».
+
+**Pour l'étape 2 :** odds ratios de la régression logistique, SHAP et LIME sur la forêt aléatoire (cours 8, `fastshap` et `shapviz`). Si on règle `mtry` et `min_n`, il faudra une validation croisée imbriquée pour ne pas surestimer les performances. Deux contrôles à prévoir : relancer sans l'année comme confusion possible (par exemple en ne gardant que 2012-2017), et sans les 3 coureurs `qualite_suspecte`.
