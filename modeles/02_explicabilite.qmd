@@ -16,13 +16,13 @@ execute:
   message: false
 ---
 
-L'étape 1 a montré que la foulée permet de reconnaître une partie des coureurs blessés, avec une accuracy équilibrée autour de 0,6. Ce notebook cherche **sur quelles variables les modèles s'appuient** pour cela. L'objectif est que A puisse confronter ces variables à la physiopathologie du PFPS et de l'ITBS : hanche, bassin, genou.
+L'étape 1 a montré que la foulée permet de reconnaître une partie des coureurs blessés, avec une accuracy équilibrée autour de 0,6. Ce notebook cherche **sur quelles variables les modèles s'appuient** pour cela. L'objectif est de pouvoir confronter ces variables à la physiopathologie du PFPS et de l'ITBS : hanche, bassin, genou.
 
 On utilise trois outils, du plus simple au plus général :
 
 1.  **Les odds ratios de la régression logistique** : le modèle est linéaire, donc ses coefficients se lisent directement.
-2.  **Les valeurs SHAP de la forêt aléatoire** (cours 8) : elles répartissent chaque prédiction entre les variables, selon les valeurs de Shapley de la théorie des jeux. On en tire une importance globale (moyenne des \|SHAP\|) et des explications coureur par coureur.
-3.  **LIME sur la forêt aléatoire** (cours 8) : il explique une prédiction individuelle en approchant le modèle, autour du coureur, par un modèle linéaire simple.
+2.  **Les valeurs SHAP de la forêt aléatoire** : elles répartissent chaque prédiction entre les variables, selon les valeurs de Shapley de la théorie des jeux. On en tire une importance globale (moyenne des \|SHAP\|) et des explications coureur par coureur.
+3.  **LIME sur la forêt aléatoire** : il explique une prédiction individuelle en approchant le modèle, autour du coureur, par un modèle linéaire simple.
 
 Les modèles sont ici réentraînés sur les 587 coureurs : on ne mesure plus des performances (c'est fait à l'étape 1), on cherche à comprendre le modèle que l'on présenterait.
 
@@ -30,18 +30,25 @@ Les modèles sont ici réentraînés sur les 587 coureurs : on ne mesure plus de
 
 ```{r}
 #| label: setup
+# ---- Packages et charte graphique ----
+# tidymodels : recettes, modèles, workflows ; themis : rééquilibrage ; shapviz : graphiques SHAP
 library(tidymodels)
 library(themis)     # rééquilibrage (TD1)
 library(shapviz)    # graphiques SHAP
+
+# Charte graphique commune du groupe (couleurs, police, theme_projet, sauver_figure)
 source("../R/theme_projet.R")
 
+# ---- Données : mêmes fichiers et même préparation qu'au notebook 1 ----
 coureurs_brut <- readr::read_csv("../data/coureurs.csv", show_col_types = FALSE)
 dictionnaire  <- readr::read_csv("../data/dictionnaire_variables.csv", show_col_types = FALSE)
 
+# Prédicteurs autorisés par le dictionnaire : variables cinématiques et de contrôle
 predicteurs <- dictionnaire |>
   filter(role %in% c("cinematique", "controle")) |>
   pull(variable)
 
+# Classe à prédire, avec « blesse » en premier niveau (événement d'intérêt pour yardstick)
 coureurs <- coureurs_brut |>
   mutate(classe = factor(if_else(blesse == 1, "blesse", "sain"), levels = c("blesse", "sain"))) |>
   select(sub_id, classe, all_of(predicteurs)) |>
@@ -51,32 +58,37 @@ coureurs <- coureurs_brut |>
 diagnostic <- coureurs_brut$label
 
 # Noms lisibles pour les figures, tirés de la description du dictionnaire
+# Les noms de colonnes (ex. L_HIP_ADD_PEAK_ANGLE) sont illisibles sur une figure : on construit
+# des étiquettes en français à partir de la colonne « description » du dictionnaire
 etiquettes <- dictionnaire |>
   filter(role %in% c("cinematique", "controle")) |>
   mutate(
+   
+     # Famille d'articulations (hanche, genou...) ; les variables de contrôle n'en ont pas
     famille = coalesce(famille, "contrôle"),
+    
+    # Côté de la mesure, ajouté en abrégé à la fin de l'étiquette
     cote_court = case_when(cote == "gauche" ~ " (G)", cote == "droite" ~ " (D)", TRUE ~ ""),
+    
     # description sans parenthèse ni précision après la virgule, + côté
     etiquette = paste0(trimws(sub(",.*$", "", sub(" \\(.*$", "", description))), cote_court)
   ) |>
   select(variable, famille, etiquette) |>
+  
   # Variables indicatrices créées par step_dummy
   bind_rows(tibble(variable = c("Gender_Male", "DominantLeg_Right"),
                    famille = "contrôle",
                    etiquette = c("Sexe : homme", "Jambe dominante : droite")))
 
+# Fonctions de correspondance nom de colonne -> étiquette lisible / famille
+# (si une variable est absente du dictionnaire, on garde son nom d'origine)
 etiquette_de <- function(v) coalesce(etiquettes$etiquette[match(v, etiquettes$variable)], v)
 famille_de   <- function(v) coalesce(etiquettes$famille[match(v, etiquettes$variable)], "contrôle")
 
-# Une couleur par famille d'articulations, reprise sur toutes les figures
-couleurs_familles <- c(hanche = "#C2410C", bassin = "#BE185D", genou = "#1D4ED8",
-                       cheville = "#0F766E", pied = "#4D7C0F", "foulée" = "#6B21A8",
-                       "contrôle" = "#6B7280")
-
-# La charte masque les légendes : on colore les noms de familles dans le sous-titre
-legende_familles <- function(familles) {
-  paste(vapply(familles, \(f) mot(f, couleurs_familles[[f]]), character(1)), collapse = " · ")
-}
+# Couleurs des groupes de la charte (R/theme_projet.R), avec le même sens :
+# chaud (bordeaux) = mis en avant / vers la blessure, gris-bleu des sains = référence / vers « sain »
+couleur_forte  <- couleurs_groupes[["ITBS"]]   # bordeaux
+couleur_neutre <- couleurs_groupes[["sain"]]   # gris-bleu
 ```
 
 ## 1. Régression logistique : odds ratios
@@ -89,6 +101,9 @@ Les variables étant centrées-réduites, un odds ratio se lit ainsi : **quand l
 
 ```{r}
 #| label: logistique
+# ---- Partie 1 : régression logistique et odds ratios ----
+# Même recette qu'à l'étape 1, mais filtre de corrélation plus strict (0,7) : pour interpréter
+# les coefficients, il faut éviter les variables quasi redondantes (voir le texte ci-dessus)
 rec_lr <- recipe(classe ~ ., data = coureurs) |>
   update_role(sub_id, new_role = "id") |>
   step_impute_median(all_numeric_predictors()) |>
@@ -97,18 +112,24 @@ rec_lr <- recipe(classe ~ ., data = coureurs) |>
   step_normalize(all_numeric_predictors()) |>
   step_corr(all_numeric_predictors(), threshold = 0.7)   # plus strict qu'à l'étape 1 : voir ci-dessus
 
+# Modèle entraîné sur les 587 coureurs : on cherche à le comprendre, pas à mesurer sa performance
+# (déjà fait à l'étape 1). Version non rééquilibrée : dupliquer des coureurs fausserait les IC
 lr_final <- workflow(rec_lr, logistic_reg() |> set_engine("glm")) |>
   fit(data = coureurs)
 
 # Variables retirées par le filtre de corrélation
+# Récupère la recette entraînée pour savoir quelles variables step_corr a retirées
 recette_lr <- extract_recipe(lr_final)
+# Position de l'étape step_corr dans la recette
 num_corr <- which(tidy(recette_lr)$type == "corr")
 retirees <- tidy(recette_lr, number = num_corr)$terms
 etiquette_de(retirees)
 
 # Facteur d'inflation de la variance (VIF) : à quel point chaque variable est
 # redondante avec les autres (au-delà de 10, ses coefficients sont instables)
+# Matrice des variables explicatives du modèle (sans la constante)
 X_lr <- model.matrix(extract_fit_engine(lr_final))[, -1]
+# Le VIF de chaque variable est l'élément diagonal de l'inverse de la matrice de corrélation
 vif <- diag(solve(cor(X_lr)))
 summary(vif)
 ```
@@ -119,23 +140,31 @@ summary(vif)
 #| label: odds-ratios
 # glm modélise la probabilité du second niveau ("sain") : on change le signe des
 # coefficients pour obtenir des odds ratios dans le sens "blessé"
+# Coefficients du modèle glm, avec leur erreur standard et leur p-value
 odds_ratios <- tidy(extract_fit_engine(lr_final)) |>
+  # La constante n'est pas un effet de variable : on la retire
   filter(term != "(Intercept)") |>
   transmute(
     variable = term,
     etiquette = etiquette_de(term),
     famille = famille_de(term),
+    # Odds ratio = exponentielle du coefficient (signe inversé, voir plus haut). Variables centrées-
+    # réduites : effet d'une augmentation d'un écart-type, à valeur égale des autres variables
     odds_ratio = exp(-estimate),
+    # Intervalle de confiance à 95 % de Wald : coefficient ± 1,96 erreur standard, puis exponentielle
     ic_bas = exp(-estimate - 1.96 * std.error),
     ic_haut = exp(-estimate + 1.96 * std.error),
     p_value = p.value,
     p_holm = p.adjust(p.value, method = "holm")   # correction pour tests multiples
   ) |>
+  # Variables triées de la plus nette à la moins nette
   arrange(p_value)
 
 dir.create("../resultats", showWarnings = FALSE)
+# Tableau complet enregistré pour la confrontation à la biologie et pour l'annexe
 readr::write_csv(odds_ratios, "../resultats/B02_odds_ratios.csv")
 
+# Affichage des 15 premières variables
 odds_ratios |>
   slice_head(n = 15) |>
   mutate(across(c(odds_ratio, ic_bas, ic_haut), \(x) round(x, 2)),
@@ -148,21 +177,26 @@ odds_ratios |>
 ```{r}
 #| label: figure-or
 #| fig-height: 6.5
+# ---- Figure des odds ratios : les 12 variables aux plus petites p-values ----
 top_or <- odds_ratios |>
   slice_head(n = 12) |>
-  mutate(etiquette = forcats::fct_reorder(etiquette, odds_ratio))
+  mutate(etiquette = forcats::fct_reorder(etiquette, odds_ratio),
+         # Mise en évidence des variables dont l'intervalle de confiance ne contient pas 1
+         exclut_1 = ic_bas > 1 | ic_haut < 1)
 
-p_or <- ggplot(top_or, aes(x = odds_ratio, y = etiquette, colour = famille)) +
+# Un point par variable (odds ratio) avec son intervalle de confiance ; ligne verticale à 1 (aucun effet)
+p_or <- ggplot(top_or, aes(x = odds_ratio, y = etiquette, colour = exclut_1)) +
   geom_vline(xintercept = 1, linetype = "dashed", colour = encre_douce) +
   geom_linerange(aes(xmin = ic_bas, xmax = ic_haut), linewidth = 0.8) +
   geom_point(size = 3) +
+  # Échelle logarithmique : un odds ratio de 2 et un de 0,5 sont à la même distance de 1
   scale_x_log10(labels = \(x) format(x, decimal.mark = ",")) +
-  scale_colour_manual(values = couleurs_familles, name = NULL) +
+  scale_colour_manual(values = c(`TRUE` = couleur_forte, `FALSE` = couleur_neutre)) +
   labs(
-    title = "Après correction pour tests multiples,\naucune variable ne ressort nettement",
+    title = "Aucune variable ne distingue seule les blessés",
     subtitle = paste("Odds ratio pour +1 écart-type, à valeur égale des autres variables, et IC à 95 %",
-                     "(12 plus petites p-values). À droite des pointillés : plus de risque d'être blessé.<br>",
-                     legende_familles(sort(unique(as.character(top_or$famille))))),
+                     "(12 plus petites p-values). À droite des pointillés : plus de risque d'être blessé.",
+                     mot("Intervalle qui exclut 1", couleur_forte), "avant correction pour tests multiples."),
     x = "Odds ratio (échelle logarithmique)", y = NULL,
     caption = paste(source_donnees, "Régression logistique sur les 587 coureurs.")
   ) +
@@ -180,6 +214,9 @@ On explique la **forêt aléatoire rééquilibrée**, le modèle qui avait la me
 
 ```{r}
 #| label: foret
+# ---- Partie 2 : forêt aléatoire rééquilibrée et valeurs SHAP ----
+# Même recette qu'à l'étape 1, sans centrage-réduction : la forêt n'en a pas besoin, et les
+# graphiques gardent ainsi les vraies unités (degrés, secondes...)
 rec_rf <- recipe(classe ~ ., data = coureurs) |>
   update_role(sub_id, new_role = "id") |>
   step_impute_median(all_numeric_predictors()) |>
@@ -187,12 +224,14 @@ rec_rf <- recipe(classe ~ ., data = coureurs) |>
   step_zv(all_predictors()) |>
   step_upsample(classe, over_ratio = 1, seed = 2026)
 
+# Forêt de 500 arbres, entraînée sur les 587 coureurs (graine fixe)
 rf_final <- workflow(rec_rf,
                      rand_forest(trees = 500) |>
                        set_engine("ranger", seed = 2026) |>
                        set_mode("classification")) |>
   fit(data = coureurs)
 
+# Objet ranger brut : c'est lui que l'on interroge pour SHAP et LIME
 foret <- extract_fit_engine(rf_final)
 
 # Variables explicatives des 587 coureurs, telles que la forêt les voit
@@ -202,6 +241,8 @@ X <- extract_recipe(rf_final) |>
   as.data.frame()
 
 # Fonction de prédiction : probabilité d'être blessé
+# Fonction de prédiction utilisée par SHAP : renvoie, pour chaque coureur, la probabilité
+# d'être blessé estimée par la forêt
 proba_blesse <- function(object, newdata) {
   p <- predict(object, data = newdata)$predictions
   if (is.matrix(p)) p[, "blesse"] else as.numeric(p == "blesse")
@@ -226,12 +267,17 @@ Le calcul prend quelques minutes. Le résultat est enregistré dans `resultats/B
 ```{r}
 #| label: shap-calcul
 # Valeurs de Shapley par Monte-Carlo (Štrumbelj et Kononenko, algorithme de FastSHAP)
+# Entrées : le modèle, les variables X, la fonction de prédiction et le nombre de tirages nsim.
+# Sortie : matrice S (coureurs x variables) ; S[i, j] = contribution de la variable j
+# à la prédiction du coureur i
 shap_monte_carlo <- function(modele, X, pred_fun, nsim = 20) {
   n <- nrow(X)
   p <- ncol(X)
   Xm <- as.matrix(X)
   S <- matrix(0, n, p, dimnames = list(NULL, colnames(X)))
+  # Boucle sur les variables...
   for (j in seq_len(p)) {
+    # ... et sur les tirages de Monte-Carlo
     for (k in seq_len(nsim)) {
       W <- Xm[sample(n, n, replace = TRUE), , drop = FALSE]  # un autre coureur tiré au hasard
       U <- matrix(runif(n * p), n, p)                       # un ordre aléatoire des variables
@@ -240,6 +286,8 @@ shap_monte_carlo <- function(modele, X, pred_fun, nsim = 20) {
       sans_j[avant] <- Xm[avant]                             # variables avant j : celles du coureur
       avec_j <- sans_j
       avec_j[, j] <- Xm[, j]                                 # + la variable j du coureur
+      # Contribution marginale de j pour ce tirage = écart de prédiction entre les deux hybrides,
+      # moyennée sur les nsim tirages
       S[, j] <- S[, j] + (pred_fun(modele, as.data.frame(avec_j)) -
                           pred_fun(modele, as.data.frame(sans_j))) / nsim
     }
@@ -247,6 +295,8 @@ shap_monte_carlo <- function(modele, X, pred_fun, nsim = 20) {
   S
 }
 
+# Le calcul prend quelques minutes : on l'enregistre et on le relit aux rendus suivants
+# (supprimer ce fichier pour forcer un nouveau calcul)
 fichier_shap <- "../resultats/B02_valeurs_shap.csv"
 
 if (file.exists(fichier_shap)) {
@@ -259,7 +309,9 @@ if (file.exists(fichier_shap)) {
 }
 
 # Matrice coureurs x variables, dans le même ordre que X
+# Matrice coureurs x variables, colonnes dans le même ordre que X
 S <- shap_tab |> select(all_of(names(X))) |> as.matrix()
+# Prédiction moyenne sur les 587 coureurs : le point de départ des explications SHAP
 prediction_moyenne <- mean(proba_blesse(foret, X))
 
 # Vérification de l'efficience (cours 8) : pour chaque coureur, la somme de ses valeurs
@@ -268,9 +320,11 @@ ecart_efficience <- rowSums(S) - (proba_blesse(foret, X) - prediction_moyenne)
 summary(ecart_efficience)
 
 # Objet shapviz avec des noms lisibles
+# Copies de S et X avec les étiquettes lisibles, pour les graphiques shapviz
 S_lisible <- S
 colnames(S_lisible) <- etiquette_de(colnames(S))
 X_lisible <- setNames(X, etiquette_de(names(X)))
+# Objet shapviz : regroupe valeurs SHAP, valeurs des variables et prédiction moyenne
 sv <- shapviz(S_lisible, X = X_lisible, baseline = prediction_moyenne)
 ```
 
@@ -282,6 +336,9 @@ L'importance d'une variable est la moyenne, sur les 587 coureurs, de la valeur a
 
 ```{r}
 #| label: importance
+# ---- Importance globale ----
+# Importance d'une variable = moyenne des |valeurs SHAP| sur les coureurs : de combien,
+# en moyenne, elle déplace la probabilité prédite d'être blessé
 importance <- tibble(
   variable = colnames(S),
   etiquette = etiquette_de(colnames(S)),
@@ -293,9 +350,11 @@ importance <- tibble(
   shap_moyen_itbs  = colMeans(S[diagnostic == "ITBS", , drop = FALSE])
 ) |>
   arrange(desc(shap_moyen_abs))
+# Tableau enregistré pour la confrontation à la physiopathologie
 readr::write_csv(importance, "../resultats/B02_shap_importance.csv")
 
 # Part de l'importance totale portée par chaque famille
+# Part de l'importance totale portée par chaque famille d'articulations
 part_familles <- importance |>
   group_by(famille) |>
   summarise(nb_variables = n(),
@@ -312,24 +371,30 @@ Attention en lisant ce tableau : les familles n'ont pas le même nombre de varia
 ```{r}
 #| label: figure-importance
 #| fig-height: 6.5
-de_famille <- c(hanche = "de la hanche", bassin = "du bassin", genou = "du genou",
-                cheville = "de la cheville", pied = "du pied", "foulée" = "de la foulée",
-                "contrôle" = "de contrôle")
+# ---- Figure : les 12 variables les plus importantes ----
+# cinematique = TRUE pour les variables de foulée et d'articulations, FALSE pour le contrôle
 top_imp <- importance |>
   slice_head(n = 12) |>
-  mutate(etiquette = forcats::fct_reorder(etiquette, shap_moyen_abs))
-familles_top <- top_imp |> count(famille, sort = TRUE)
+  mutate(etiquette = forcats::fct_reorder(etiquette, shap_moyen_abs),
+         cinematique = famille != "contrôle")
+# Part de l'importance portée par la foulée et les articulations (utilisée dans le titre)
+part_cinematique <- 1 - part_familles$part[part_familles$famille == "contrôle"]
 
-p_imp <- ggplot(top_imp, aes(x = shap_moyen_abs, y = etiquette, fill = famille)) +
+titre_imp <- sprintf("Foulée et articulations font %s de l'importance", pourcent(part_cinematique))
+
+# Diagramme en barres horizontales, triées par importance
+p_imp <- ggplot(top_imp, aes(x = shap_moyen_abs, y = etiquette, fill = cinematique)) +
   geom_col(width = 0.7) +
-  scale_fill_manual(values = couleurs_familles, name = NULL) +
-  scale_x_continuous(labels = \(x) format(x, decimal.mark = ",")) +
+  # Famille de chaque variable, écrite en bout de barre (annotation plutôt que légende)
+  geom_text(aes(label = famille), hjust = -0.15, family = police, colour = encre_douce, size = 3.6) +
+  scale_fill_manual(values = c(`TRUE` = couleur_forte, `FALSE` = couleur_neutre)) +
+  scale_x_continuous(labels = \(x) format(x, decimal.mark = ","),
+                     expand = expansion(mult = c(0, 0.15))) +
   labs(
-    title = sprintf("Parmi les 12 variables les plus utilisées par la forêt,\n%d sont des variables %s",
-                    familles_top$n[1], de_famille[familles_top$famille[1]]),
-    subtitle = paste("Importance SHAP : de combien la variable déplace en moyenne",
-                     "la probabilité prédite d'être blessé.<br>",
-                     legende_familles(familles_top$famille)),
+    title = titre_imp,
+    subtitle = paste("Importance SHAP : de combien la variable déplace en moyenne la probabilité prédite",
+                     "d'être blessé, pour les variables de", mot("foulée et d'articulations", couleur_forte),
+                     "et les", mot("variables de contrôle", couleur_neutre), "(vitesse, âge), liées à l'époque d'enregistrement."),
     x = "Moyenne des |valeurs SHAP|", y = NULL,
     caption = paste(source_donnees, "Forêt aléatoire rééquilibrée, Shapley par Monte-Carlo (20 tirages).")
   ) +
@@ -341,6 +406,7 @@ p_imp
 
 ```{r}
 #| label: rangs-controle
+# Rang de quelques variables de contrôle dans l'importance (cités dans l'encadré ci-dessous)
 rang_de <- function(v) match(v, importance$variable)
 rang_vitesse <- rang_de("speed_r")
 rang_jambe   <- rang_de("DominantLeg_Right")
@@ -353,11 +419,11 @@ rang_age     <- rang_de("age")
 La **vitesse de course** arrive en position `r rang_vitesse` sur `r nrow(importance)` dans l'importance SHAP. Elle est aussi la variable la plus nette de la régression logistique (odds ratio de `r format(round(odds_ratios$odds_ratio[odds_ratios$variable == "speed_r"], 2), decimal.mark = ",")` : plus un coureur court vite, moins il a de chances d'être blessé). Ce n'est probablement pas un mécanisme de blessure, pour deux raisons :
 
 - les coureurs blessés ont pu choisir une vitesse plus lente à cause de la douleur (adaptation, pas cause) ;
-- la vitesse dépend de l'époque d'enregistrement. L'exploration de A montre qu'avant 2012, presque tous les coureurs couraient à la même vitesse imposée, et 7 sur 10 étaient blessés.
+- la vitesse dépend de l'époque d'enregistrement. Le notebook d'exploration montre qu'avant 2012, presque tous les coureurs couraient à la même vitesse imposée, et 7 sur 10 étaient blessés.
 
-La **jambe dominante** demande la même prudence : A a montré que son codage change avec l'époque. Elle apparaît parmi les plus petites p-values de la régression logistique, mais la forêt l'utilise très peu (position `r rang_jambe`). L'**âge** est en position `r rang_age`.
+La **jambe dominante** demande la même prudence : le notebook d'exploration montre que son codage change avec l'époque. Elle apparaît parmi les plus petites p-values de la régression logistique, mais la forêt l'utilise très peu (position `r rang_jambe`). L'**âge** est en position `r rang_age`.
 
-Pour la discussion biologique avec A, on se concentre donc sur les variables cinématiques (hanche, bassin, genou, cheville, pied, foulée). Une analyse de sensibilité est à prévoir : refaire les modèles sans la vitesse et la jambe dominante, ou seulement sur les coureurs enregistrés à partir de 2012.
+Pour la discussion biologique, on se concentre donc sur les variables cinématiques (hanche, bassin, genou, cheville, pied, foulée). Une analyse de sensibilité est à prévoir : refaire les modèles sans la vitesse et la jambe dominante, ou seulement sur les coureurs enregistrés à partir de 2012.
 :::
 
 ### Sens des effets
@@ -367,13 +433,16 @@ Le graphique en essaim (*beeswarm*) montre, pour chaque variable, la valeur SHAP
 ```{r}
 #| label: beeswarm
 #| fig-height: 7
+# ---- Graphique en essaim : sens des effets ----
+# Chaque point = un coureur ; position = sa valeur SHAP ; couleur = valeur de la variable
+# chez ce coureur (faible -> élevée). Permet de lire dans quel sens chaque variable agit
 p_essaim <- sv_importance(sv, kind = "beeswarm", max_display = 12) +
-  # Mêmes couleurs que shapviz, légende en français
-  scale_colour_viridis_c(option = "inferno", begin = 0.25, end = 0.85,
-                         breaks = c(0, 1), labels = c("faible", "élevée"),
-                         name = "Valeur de\nla variable") +
-  labs(title = "Comment chaque variable pousse la prédiction",
-       subtitle = "Une ligne par variable, un point par coureur ; à droite : vers « blessé ».",
+  # Dégradé entre les couleurs de la charte (gris-bleu -> bordeaux), légende en français
+  scale_colour_gradient(low = "#C5CBD2", high = couleur_forte,
+                        breaks = c(0, 1), labels = c("faible", "élevée"),
+                        name = "Valeur de\nla variable") +
+  labs(title = "Appui long et foulée courte signalent un blessé",
+       subtitle = "Une ligne par variable, un point par coureur ; à droite : vers « blessé ». Couleur : valeur de la variable chez le coureur.",
        x = "Valeur SHAP (effet sur la probabilité d'être blessé)") +
   theme_projet() +
   theme(legend.position = "right")   # légende utile ici : valeur faible ou élevée
@@ -386,8 +455,11 @@ Les graphiques de dépendance détaillent les deux variables les plus importante
 ```{r}
 #| label: dependance
 #| fig-height: 4.5
+# ---- Graphiques de dépendance des deux variables les plus importantes ----
+# Valeur SHAP en fonction de la valeur de la variable : montre à partir de quel niveau
+# la variable pousse vers « blessé »
 for (v in importance$etiquette[1:2]) {
-  print(sv_dependence(sv, v = v, color_var = NULL) +
+  print(sv_dependence(sv, v = v, color_var = NULL, color = couleur_forte, alpha = 0.5) +
           geom_hline(yintercept = 0, linetype = "dashed", colour = encre_douce) +
           labs(title = v, y = "Valeur SHAP") +
           theme_projet())
@@ -401,6 +473,7 @@ Pour amorcer H3 (signatures distinctes), on compare l'effet SHAP moyen des varia
 ```{r}
 #| label: pfps-itbs
 importance |>
+  # Effet SHAP moyen des 10 variables les plus importantes, chez les sains, les PFPS et les ITBS
   slice_head(n = 10) |>
   transmute(Variable = etiquette, Famille = famille,
             Sains = round(shap_moyen_sains, 3),
@@ -415,16 +488,22 @@ On explique trois coureurs que la forêt a bien classés **en validation croisé
 
 ```{r}
 #| label: choix-coureurs
+# ---- Partie 3 : choix de trois coureurs à expliquer ----
+# On part des prédictions hors pli de l'étape 1 (forêt rééquilibrée), pour choisir des coureurs
+# bien classés par un modèle qui ne les avait pas vus à l'apprentissage
 predictions_hors_pli <- readr::read_csv("../resultats/B01_predictions_hors_pli.csv",
                                         show_col_types = FALSE) |>
   filter(modele == "Forêt rééquilibrée") |>
+  # Ajoute le diagnostic détaillé (sain / PFPS / ITBS)
   left_join(select(coureurs_brut, sub_id, label), by = "sub_id")
 
+# Le PFPS et l'ITBS jugés les plus probablement blessés, et le sain jugé le plus probablement sain
 cas <- bind_rows(
   predictions_hors_pli |> filter(label == "PFPS") |> slice_max(.pred_blesse, n = 1, with_ties = FALSE),
   predictions_hors_pli |> filter(label == "ITBS") |> slice_max(.pred_blesse, n = 1, with_ties = FALSE),
   predictions_hors_pli |> filter(label == "sain") |> slice_min(.pred_blesse, n = 1, with_ties = FALSE)
 ) |>
+  # Numéro de ligne de chaque coureur dans X et S
   mutate(ligne = match(sub_id, coureurs$sub_id),
          nom = sprintf("Coureur %s (%s)", sub_id, label))
 
@@ -438,9 +517,16 @@ Le graphique en cascade (*waterfall*) part de la prédiction moyenne, en bas, et
 ```{r}
 #| label: waterfall
 #| fig-height: 5
+# ---- Graphiques en cascade (waterfall) ----
+# Pour chaque coureur : de la prédiction moyenne (en bas) à sa prédiction (en haut),
+# en ajoutant la contribution SHAP de chaque variable
 for (i in seq_len(nrow(cas))) {
-  print(sv_waterfall(sv, row_id = cas$ligne[i], max_display = 10) +
-          labs(title = cas$nom[i]) +
+  print(sv_waterfall(sv, row_id = cas$ligne[i], max_display = 10,
+                     fill_colors = c(couleur_forte, couleur_neutre)) +
+          labs(title = cas$nom[i],
+               subtitle = paste("Chaque variable", mot("pousse vers blessé", couleur_forte), "ou",
+                                mot("pousse vers sain", couleur_neutre), "la prédiction de ce coureur."),
+               x = "Probabilité prédite d'être blessé") +
           theme_projet())
 }
 ```
@@ -455,6 +541,7 @@ Les deux variables 0/1 (sexe et jambe dominante) sont données à LIME comme des
 #| label: lime
 # LIME doit savoir comment interroger une forêt ranger : on lui indique le type de
 # modèle et la façon d'obtenir les probabilités
+# ---- LIME ----
 model_type.ranger <- function(x, ...) "classification"
 predict_model.ranger <- function(x, newdata, type, ...) {
   # Les variables 0/1 données à LIME en catégories redeviennent numériques pour la forêt
@@ -465,17 +552,23 @@ predict_model.ranger <- function(x, newdata, type, ...) {
 }
 
 # Variables 0/1 en catégories pour LIME
+# Repère les variables 0/1 (sexe, jambe dominante) pour les donner à LIME comme catégories
 variables_binaires <- names(X)[vapply(X, \(col) all(col %in% c(0, 1)), logical(1))]
 X_lime <- X |> mutate(across(all_of(variables_binaires), \(col) factor(col, levels = c(0, 1))))
 variables_binaires
 
+# L'explicateur apprend la distribution des variables ; les variables continues sont
+# découpées en 4 classes (quartiles)
 explicateur <- lime::lime(X_lime, foret, bin_continuous = TRUE, n_bins = 4)
 
 set.seed(2026)
+# Pour chaque coureur : 5 000 coureurs artificiels autour de lui, prédits par la forêt, puis un
+# modèle linéaire pondéré par la proximité ; on garde les 8 variables les plus influentes
 explication_lime <- lime::explain(X_lime[cas$ligne, ], explicateur,
                                   labels = "blesse", n_features = 8,
                                   n_permutations = 5000)
 explication_lime <- explication_lime |>
+  # Remet le nom lisible de chaque coureur
   mutate(coureur = cas$nom[match(as.integer(case), cas$ligne)])
 readr::write_csv(select(explication_lime, coureur, feature, feature_desc, feature_weight,
                         model_r2, label_prob),
@@ -485,7 +578,14 @@ readr::write_csv(select(explication_lime, coureur, feature, feature_desc, featur
 ```{r}
 #| label: lime-figure
 #| fig-height: 7
-lime::plot_features(explication_lime, ncol = 1)
+# Une barre par variable : poids dans le modèle linéaire local de LIME
+lime::plot_features(explication_lime, ncol = 1) +
+  scale_fill_manual(values = c(Supports = couleur_forte, Contradicts = couleur_neutre)) +
+  labs(title = "Explications LIME des trois coureurs",
+       subtitle = paste("Chaque variable", mot("pousse vers blessé", couleur_forte), "ou",
+                        mot("pousse vers sain", couleur_neutre), "la prédiction du coureur."),
+       x = NULL, y = "Poids dans le modèle linéaire local") +
+  theme_projet()
 ```
 
 Le R² du modèle linéaire local (`model_r2`) indique à quel point l'approximation de LIME est fidèle à la forêt autour de chaque coureur : `r paste(sprintf("%.2f", unique(explication_lime$model_r2)), collapse = ", ")`. Un R² faible veut dire que l'explication est à prendre avec prudence.
@@ -496,11 +596,13 @@ Comme le souligne le cours, les deux méthodes ne répondent pas exactement à l
 
 ```{r}
 #| label: comparaison
+# ---- Comparaison SHAP / LIME : les 5 variables principales de chaque méthode, par coureur ----
 top5_shap <- map_dfr(seq_len(nrow(cas)), \(i) {
   s <- S[cas$ligne[i], ]
   tibble(coureur = cas$nom[i], rang = 1:5,
          SHAP = etiquette_de(names(sort(abs(s), decreasing = TRUE))[1:5]))
 })
+# Même chose pour LIME, d'après la valeur absolue des poids
 top5_lime <- explication_lime |>
   group_by(coureur) |>
   slice_max(abs(feature_weight), n = 5, with_ties = FALSE) |>
@@ -512,9 +614,13 @@ left_join(top5_shap, top5_lime, by = c("coureur", "rang")) |>
   knitr::kable(col.names = c("Coureur", "Rang", "SHAP", "LIME"))
 ```
 
-## À retenir
+## Conclusion
 
-*À compléter après exécution, avec A : en dehors de la vitesse, quelles familles et quelles variables cinématiques ressortent ? Sont-elles cohérentes avec les mécanismes décrits (adduction et rotation de hanche, chute du bassin, valgus du genou pour le PFPS ; adduction de hanche, rotation du tibia pour l'ITBS) ? Les trois méthodes sont-elles d'accord ?*
+En dehors de la vitesse, la forêt aléatoire s’appuie surtout sur la **foulée** (temps d’appui, longueur de foulée), sur le **pied et la cheville** (angle du pied au contact, vitesse d’éversion) et sur le **bassin** (amplitude et vitesse de chute). Viennent ensuite le genou, avec le pic de flexion. La hanche, pourtant centrale dans la littérature, pèse moins que prévu.
+
+Plusieurs de ces signaux vont dans le sens des mécanismes décrits. Un **temps d’appui plus long** pousse vers « blessé », comme le rapporte l’article de référence pour les deux syndromes. Une **chute du bassin plus marquée** va dans le sens d’une faiblesse du moyen fessier, impliquée dans le PFPS comme dans l’ITBS ; c’est aussi la variable la plus nette de la régression logistique. Une **flexion du genou plus importante** et une **cadence plus basse** correspondent aux facteurs décrits pour le PFPS. D’autres résultats sont plus difficiles à interpréter. Des **foulées plus courtes** chez les blessés reflètent probablement leur vitesse plus faible plutôt qu’un mécanisme de blessure. Une **éversion plus lente** va à l’inverse de l’idée d’une pronation brutale, et demande de vérifier la convention de signe. Enfin, l’**adduction de hanche**, présentée comme un facteur clé des deux syndromes, n’est que légèrement plus élevée chez les coureurs PFPS, et le modèle l’utilise peu.
+
+Les trois méthodes ne disent pas exactement la même chose, mais elles se recoupent. SHAP et LIME s’accordent sur le temps d’appui, la chute du bassin et l’éversion de la cheville. Les explications de LIME restent cependant fragiles, puisque son modèle local n’approche que grossièrement la forêt (R² d’environ 0,1). La régression logistique, elle, ne fait ressortir aucune variable de façon nette après correction pour tests multiples : chaque variable prise isolément n’a qu’un effet faible, et c’est leur combinaison qui permet de reconnaître une partie des blessés. L’analyse de sensibilité (notebook 3) montre que ce signal tient même sans la vitesse.
 
 **Limites à garder en tête :**
 

@@ -18,14 +18,15 @@ execute:
 
 À l'étape 2, la **vitesse de course** est apparue comme la variable la plus utilisée par les modèles, loin devant les autres. Or elle n'est probablement pas un mécanisme de blessure : elle dépend de l'époque d'enregistrement (vitesse imposée avant 2012, période où 7 coureurs sur 10 étaient blessés), et les coureurs blessés ont pu courir moins vite à cause de la douleur. La **jambe dominante** pose un problème proche : son codage change avec l'époque.
 
-Ce notebook vérifie donc si les performances de l'étape 1 tiennent sans ces variables. On compare quatre scénarios, avec les deux modèles rééquilibrés de l'étape 1 :
+Ce notebook vérifie donc si les performances de l'étape 1 tiennent sans ces variables. On compare cinq scénarios, avec les deux modèles rééquilibrés de l'étape 1 :
 
-1. **Toutes les variables** : le modèle de l'étape 1, comme référence.
-2. **Sans vitesse ni jambe dominante** : on retire les deux variables liées à l'époque.
-3. **Cinématique seule** : on retire toutes les variables de contrôle (vitesse, âge, taille, poids, IMC, sexe, jambe dominante). Il ne reste que la foulée et les angles.
-4. **Coureurs enregistrés de 2012 à 2017**, avec toutes les variables : la vitesse y était libre, et l'époque ne peut plus servir de raccourci.
+1.  **Toutes les variables** : le modèle de l'étape 1, comme référence.
+2.  **Sans vitesse ni jambe dominante** : on retire les deux variables liées à l'époque.
+3.  **Cinématique seule** : on retire toutes les variables de contrôle (vitesse, âge, taille, poids, IMC, sexe, jambe dominante). Il ne reste que la foulée et les angles.
+4.  **Angles seuls** : on retire en plus les variables de foulée (cadence, longueur de foulée, temps d'appui et d'oscillation, largeur de pas, oscillation verticale). En effet, la vitesse se recalcule exactement à partir de la longueur de foulée et de la cadence (vitesse = longueur × cadence / 60, d'après le dictionnaire) : dans les scénarios 2 et 3, le modèle peut donc encore retrouver la vitesse. Ici, il ne reste que les angles du bassin, de la hanche, du genou, de la cheville et du pied.
+5.  **Coureurs enregistrés de 2012 à 2017**, avec toutes les variables : la vitesse y était libre, et l'époque ne peut plus servir de raccourci.
 
-Si les performances tiennent dans les scénarios 2 et 3, le modèle s'appuie vraiment sur la façon de courir.
+Si les performances tiennent jusqu'au scénario 4, le modèle s'appuie vraiment sur la façon dont les articulations bougent.
 
 ## Données et plis
 
@@ -33,24 +34,35 @@ On utilise cette fois **les 5 répétitions** de `data/plis.csv`, soit 25 décou
 
 ```{r}
 #| label: setup
+# ---- Packages et charte graphique ----
 library(tidymodels)
 library(themis)   # rééquilibrage des classes (TD1)
+# Charte graphique commune du groupe
 source("../R/theme_projet.R")
 
+# ---- Données : mêmes fichiers qu'aux notebooks 1 et 2 ----
 coureurs_brut <- readr::read_csv("../data/coureurs.csv", show_col_types = FALSE)
 plis_communs  <- readr::read_csv("../data/plis.csv", show_col_types = FALSE)
 dictionnaire  <- readr::read_csv("../data/dictionnaire_variables.csv", show_col_types = FALSE)
 
+# Trois listes de variables, d'après le rôle et la famille indiqués dans le dictionnaire :
+# - predicteurs : cinématique + contrôle (le jeu complet de l'étape 1)
+# - cinematique : sans les variables de contrôle (vitesse, âge, taille, poids, IMC, sexe, jambe dominante)
 predicteurs <- dictionnaire |> filter(role %in% c("cinematique", "controle")) |> pull(variable)
 cinematique <- dictionnaire |> filter(role == "cinematique") |> pull(variable)
+# Angles seuls : cinématique sans les variables de foulée (d'où la vitesse se recalcule)
+angles <- dictionnaire |> filter(role == "cinematique", famille != "foulée") |> pull(variable)
 
+# Tableau de modélisation, préparé comme à l'étape 1
 coureurs <- coureurs_brut |>
   mutate(classe = factor(if_else(blesse == 1, "blesse", "sain"), levels = c("blesse", "sain"))) |>
   select(sub_id, classe, all_of(predicteurs)) |>
   mutate(across(where(is.character), as.factor))
 
+# Vérifie que plis.csv et coureurs.csv listent les coureurs dans le même ordre
 stopifnot(identical(plis_communs$sub_id, coureurs$sub_id))
 
+# Les 5 répétitions de plis.csv (25 découpages) : estimation plus stable qu'avec rep1 seul
 repetitions <- paste0("rep", 1:5)
 
 # Plis communs -> objet rsample (même fonction qu'à l'étape 1)
@@ -59,6 +71,7 @@ construire_plis <- function(donnees, plis, repetitions) {
   ids <- character()
   for (r in repetitions) {
     for (k in sort(unique(plis[[r]]))) {
+      # Pli de test : coureurs dont la répétition r vaut k ; les autres servent à l'apprentissage
       test <- which(plis[[r]] == k)
       app  <- setdiff(seq_len(nrow(donnees)), test)
       splits[[length(splits) + 1]] <- make_splits(list(analysis = app, assessment = test),
@@ -74,19 +87,27 @@ construire_plis <- function(donnees, plis, repetitions) {
 
 ```{r}
 #| label: scenarios
+# ---- Définition des cinq scénarios ----
+# Chaque scénario = une liste de variables + les coureurs à garder (TRUE = gardé)
 tous <- rep(TRUE, nrow(coureurs))
 scenarios <- list(
   "Toutes les variables" =
     list(variables = predicteurs, garder = tous),
   "Sans vitesse ni jambe dominante" =
+    # On retire les deux variables liées à l'époque d'enregistrement
     list(variables = setdiff(predicteurs, c("speed_r", "DominantLeg")), garder = tous),
   "Cinématique seule" =
     list(variables = cinematique, garder = tous),
+  "Angles seuls" =
+    # Sans foulée ni contrôle : aucune variable ne permet plus de recalculer la vitesse
+    list(variables = angles, garder = tous),
   "Coureurs 2012-2017" =
+    # Toutes les variables, mais seulement les coureurs enregistrés à partir de 2012 (vitesse libre)
     list(variables = predicteurs, garder = coureurs_brut$annee >= 2012)
 )
 
 # Effectifs de chaque scénario
+# Tableau récapitulatif : nombre de variables, de coureurs et de blessés par scénario
 imap_dfr(scenarios, \(sc, nom) tibble(
   Scénario = nom,
   `Variables` = length(sc$variables),
@@ -101,21 +122,31 @@ Dans le scénario 2012-2017, il ne reste que 436 coureurs, dont 118 blessés (27
 
 Les recettes et les modèles sont exactement ceux de l'étape 1 : imputation par la médiane, indicatrices, variables centrées-réduites, rééquilibrage par suréchantillonnage, et filtre des variables corrélées à plus de 0,9 pour la logistique.
 
-L'évaluation des 4 scénarios × 2 modèles × 25 plis prend quelques minutes.
+L'évaluation des 5 scénarios × 2 modèles × 25 plis prend quelques minutes.
 
 ```{r}
 #| label: evaluation
+# ---- Évaluation ----
+# Mêmes métriques qu'à l'étape 1
 metriques <- metric_set(bal_accuracy, sens, spec, roc_auc)
 
+# Mêmes modèles qu'à l'étape 1 : régression logistique et forêt aléatoire (graine fixe)
 lr_mod <- logistic_reg() |> set_engine("glm") |> set_mode("classification")
 rf_mod <- rand_forest(trees = 500) |>
   set_engine("ranger", seed = 2026) |>
   set_mode("classification")
 
+# Évalue les deux modèles rééquilibrés pour un scénario donné :
+# 1. garde les coureurs et les variables du scénario ;
+# 2. reconstruit les plis communs restreints à ces coureurs ;
+# 3. applique les mêmes recettes qu'à l'étape 1 ;
+# 4. renvoie le score de chaque modèle sur chacun des 25 plis de test
 evaluer_scenario <- function(variables, garder) {
   donnees <- coureurs |> filter(garder) |> select(sub_id, classe, all_of(variables))
+  # Mêmes plis que les autres scénarios, restreints aux coureurs gardés
   plis <- construire_plis(donnees, plis_communs[garder, ], repetitions)
 
+  # Recette de l'étape 1 : imputation, indicatrices, centrage-réduction, rééquilibrage (graine fixe)
   rec_base_up <- recipe(classe ~ ., data = donnees) |>
     update_role(sub_id, new_role = "id") |>
     step_impute_median(all_numeric_predictors()) |>
@@ -123,8 +154,10 @@ evaluer_scenario <- function(variables, garder) {
     step_zv(all_predictors()) |>
     step_normalize(all_numeric_predictors()) |>
     step_upsample(classe, over_ratio = 1, seed = 2026)
+  # Pour la logistique : retrait des variables corrélées à plus de 0,9, comme à l'étape 1
   rec_lr_up <- rec_base_up |> step_corr(all_numeric_predictors(), threshold = 0.9)
 
+  # Validation croisée des deux workflows, scores conservés pli par pli
   list("Logistique rééquilibrée" = workflow(rec_lr_up, lr_mod),
        "Forêt rééquilibrée"      = workflow(rec_base_up, rf_mod)) |>
     imap_dfr(\(wf, nom_modele)
@@ -133,12 +166,15 @@ evaluer_scenario <- function(variables, garder) {
         mutate(modele = nom_modele))
 }
 
+# Graine fixée pour la reproductibilité
 set.seed(2026)
+# Lance l'évaluation de chaque scénario et rassemble les résultats dans un seul tableau
 scores_plis <- imap_dfr(scenarios, \(sc, nom)
   evaluer_scenario(sc$variables, sc$garder) |> mutate(scenario = nom)) |>
   mutate(scenario = factor(scenario, levels = names(scenarios)))
 
 dir.create("../resultats", showWarnings = FALSE)
+# Scores enregistrés pour l'annexe et pour la comparaison avec le réseau de neurones
 readr::write_csv(scores_plis, "../resultats/B03_scores_sensibilite.csv")
 ```
 
@@ -148,6 +184,7 @@ Moyenne sur les 25 plis (écart-type entre plis entre parenthèses).
 
 ```{r}
 #| label: tableau
+# ---- Tableau : moyenne et écart-type de chaque métrique sur les 25 plis ----
 scores <- scores_plis |>
   group_by(scenario, modele, .metric) |>
   summarise(moyenne = mean(.estimate), ecart_type = sd(.estimate), .groups = "drop")
@@ -167,16 +204,22 @@ Pour chaque pli, on calcule l'écart d'accuracy équilibrée entre chaque scéna
 
 ```{r}
 #| label: comparaison-plis
+# ---- Comparaison pli par pli avec le scénario de référence (toutes les variables) ----
+# Accuracy équilibrée de référence, pour chaque pli et chaque modèle
 reference <- scores_plis |>
   filter(.metric == "bal_accuracy", scenario == "Toutes les variables") |>
   select(id, modele, reference = .estimate)
 
+# Écart de chaque scénario à la référence sur le même pli (négatif = moins bien).
+# Le scénario 2012-2017 est exclu : ce ne sont pas les mêmes coureurs
 ecarts <- scores_plis |>
   filter(.metric == "bal_accuracy",
-         scenario %in% c("Sans vitesse ni jambe dominante", "Cinématique seule")) |>
+         scenario %in% c("Sans vitesse ni jambe dominante", "Cinématique seule", "Angles seuls")) |>
   left_join(reference, by = c("id", "modele")) |>
   mutate(ecart = .estimate - reference)
 
+# Écart moyen, intervalle de confiance approché (moyenne ± 1,96 × écart-type / racine de n)
+# et nombre de plis où le scénario fait moins bien
 ecarts |>
   group_by(Scénario = scenario, Modèle = modele) |>
   summarise(`Écart moyen` = round(mean(ecart), 3),
@@ -194,23 +237,31 @@ L'intervalle de confiance est approximatif : les 25 plis viennent de 5 répétit
 ```{r}
 #| label: figure
 #| fig-height: 5
+# ---- Figure : accuracy équilibrée par scénario et par modèle ----
 bal <- scores |> filter(.metric == "bal_accuracy")
+# Accuracy équilibrée de la logistique dans un scénario (valeurs citées dans le titre et le texte)
 bal_lr <- function(sc) bal$moyenne[bal$scenario == sc & bal$modele == "Logistique rééquilibrée"]
 ref_lr  <- bal_lr("Toutes les variables")
 sans_lr <- bal_lr("Sans vitesse ni jambe dominante")
 cine_lr <- bal_lr("Cinématique seule")
+angles_lr <- bal_lr("Angles seuls")
 
 # Deux décimales, virgule française
 deux_dec <- function(x) formatC(x, format = "f", digits = 2, decimal.mark = ",")
 
-couleurs_modeles <- c("Logistique rééquilibrée" = mise_en_avant, "Forêt rééquilibrée" = "#A9B0B8")
+# Couleurs des groupes de la charte : bordeaux = logistique, ocre = forêt
+couleurs_modeles <- c("Logistique rééquilibrée" = couleurs_groupes[["ITBS"]],
+                      "Forêt rééquilibrée" = couleurs_groupes[["PFPS"]])
 
-titre <- if (ref_lr - cine_lr < 0.03) {
-  "Sans la vitesse ni les autres variables de contrôle,\nla foulée reconnaît presque autant de blessés"
+# Le titre dépend du résultat : perte de moins de 0,03 avec les angles seuls ou non
+titre <- if (ref_lr - angles_lr < 0.03) {
+  "Sans la vitesse, les angles restent informatifs"
 } else {
-  "Sans la vitesse ni les autres variables de contrôle,\nles modèles perdent une partie de leur performance"
+  "Sans la vitesse, les modèles perdent en performance"
 }
 
+# Un point par scénario et par modèle (moyenne), avec un trait de ± un écart-type ;
+# les deux modèles sont décalés verticalement (position_dodge) pour ne pas se superposer
 p <- ggplot(bal, aes(x = moyenne, y = forcats::fct_rev(scenario), colour = modele)) +
   geom_vline(xintercept = 0.5, linetype = "dashed", colour = encre_douce) +
   geom_linerange(aes(xmin = moyenne - ecart_type, xmax = moyenne + ecart_type),
@@ -222,11 +273,12 @@ p <- ggplot(bal, aes(x = moyenne, y = forcats::fct_rev(scenario), colour = model
   labs(
     title = titre,
     subtitle = sprintf(paste("Accuracy équilibrée moyenne sur 25 plis (± un écart-type) ; pointillés : hasard.",
-                             "%s : %s avec toutes les variables, %s avec la cinématique seule.",
-                             "Forêt aléatoire en gris."),
-                       mot("Logistique rééquilibrée", mise_en_avant),
+                             "%s : %s avec toutes les variables, %s avec les angles seuls ;",
+                             "%s pour comparaison."),
+                       mot("Logistique rééquilibrée", couleurs_groupes[["ITBS"]]),
                        deux_dec(ref_lr),
-                       deux_dec(cine_lr)),
+                       deux_dec(angles_lr),
+                       mot("forêt rééquilibrée", couleurs_groupes[["PFPS"]])),
     x = "Accuracy équilibrée", y = NULL,
     caption = paste(source_donnees, "Plis communs, 5 répétitions de 5 plis.")
   ) +
@@ -235,11 +287,10 @@ sauver_figure(p, "B03_sensibilite", dossier = "figures/modeles")
 p
 ```
 
-## À retenir
+## Conclusion
 
-Avec toutes les variables, la régression logistique rééquilibrée atteint une accuracy équilibrée de `r deux_dec(ref_lr)` sur les 25 plis. Sans la vitesse ni la jambe dominante, elle atteint `r deux_dec(sans_lr)` ; avec la cinématique seule, `r deux_dec(cine_lr)`.
+Avec toutes les variables, la régression logistique rééquilibrée atteint une accuracy équilibrée de `r deux_dec(ref_lr)` sur les 25 plis. Retirer la vitesse et la jambe dominante ne change presque rien (`r deux_dec(sans_lr)`), pas plus que retirer toutes les variables de contrôle (`r deux_dec(cine_lr)` avec la cinématique seule). Avec les angles seuls, sans aucune information sur la vitesse, elle atteint encore `r deux_dec(angles_lr)`. La perte reste faible et le score reste nettement au-dessus du hasard : la façon dont bougent le bassin, la hanche, le genou, la cheville et le pied permet à elle seule de reconnaître une partie des coureurs blessés.
 
-*À compléter après exécution :*
+La forêt aléatoire rééquilibrée est plus sensible au retrait de la vitesse : elle passe de `r deux_dec(bal$moyenne[bal$scenario == "Toutes les variables" & bal$modele == "Forêt rééquilibrée"])` avec toutes les variables à `r deux_dec(bal$moyenne[bal$scenario == "Sans vitesse ni jambe dominante" & bal$modele == "Forêt rééquilibrée"])` sans la vitesse ni la jambe dominante. C'est cohérent avec l'importance SHAP de l'étape 2, où la vitesse arrivait loin en tête : la forêt s'appuyait davantage sur cette variable que la régression logistique.
 
-- *Si l'écart reste faible : la vitesse et les autres variables de contrôle n'expliquent qu'une petite partie des performances, et la foulée elle-même permet de reconnaître une partie des blessés. C'est un argument pour l'oral.*
-- *Scénario 2012-2017 : si les performances baissent, une partie du signal de l'étape 1 venait de l'époque d'enregistrement. À formuler comme une limite : les modèles ont pu en partie apprendre l'époque plutôt que la blessure.*
+Sur les seuls coureurs enregistrés de 2012 à 2017, les performances baissent pour les deux modèles (`r deux_dec(bal_lr("Coureurs 2012-2017"))` pour la logistique, `r deux_dec(bal$moyenne[bal$scenario == "Coureurs 2012-2017" & bal$modele == "Forêt rééquilibrée"])` pour la forêt). Une partie du signal observé sur l'ensemble des coureurs venait donc de l'époque d'enregistrement. Avant 2012, la vitesse était imposée et la plupart des coureurs enregistrés étaient blessés : les modèles ont pu apprendre en partie cette différence d'époque plutôt que la blessure elle-même. La baisse tient aussi à un effectif plus petit (436 coureurs, dont 118 blessés). C'est une limite à présenter à l'oral.

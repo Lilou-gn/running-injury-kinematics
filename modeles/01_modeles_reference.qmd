@@ -1,5 +1,5 @@
 ---
-title: "Modèles 1 : régression logistique et forêt aléatoire"
+title: "Modèle 1 : régression logistique et forêt aléatoire"
 subtitle: "Un modèle classique reconnaît-il un coureur blessé au genou à sa foulée ?"
 lang: fr
 format:
@@ -18,7 +18,7 @@ execute:
 
 Ce notebook répond à l'objectif 1 et à l'hypothèse H1 : un modèle classique distingue-t-il les coureurs sains des coureurs blessés au genou (PFPS et ITBS regroupés) à partir des variables résumées de la foulée ?
 
-Deux modèles sont comparés. La **régression logistique** est simple et interprétable : ses odds ratios serviront à l'étape 2. La **forêt aléatoire** capte des interactions et des effets non linéaires sans qu'on ait à les écrire. Les deux sont évalués sur les plis communs de `data/plis.csv`, les mêmes que ceux du perceptron multicouche.
+Deux modèles sont comparés. La **régression logistique** est simple et interprétable : ses odds ratios serviront à l'étape 2. La **forêt aléatoire** capte des interactions et des effets non linéaires sans qu'on ait à les écrire. Les deux sont évalués sur les plis communs de `data/plis.csv`, les mêmes que ceux du MLP.
 
 Les blessés sont minoritaires (226 contre 361) : répondre toujours « sain » donne déjà 61,5 % de bonnes réponses. On juge donc les modèles sur l'**accuracy équilibrée** (moyenne de la sensibilité et de la spécificité), comme au TD1, et non sur l'accuracy brute.
 
@@ -28,22 +28,41 @@ On garde comme prédicteurs les variables de rôle `cinematique` (79 variables `
 
 ```{r}
 #| label: setup
+# ---- Packages et charte graphique ----
+
+# tidymodels : rsample (plis), recipes (prétraitements), parsnip (modèles),
+
+# workflows (recette + modèle), tune (validation croisée), yardstick (métriques)
+
 library(tidymodels)
 library(themis)   # rééquilibrage des classes (TD1)
+
+# Charte graphique commune du groupe : couleurs, police, theme_projet(), sauver_figure()
 source("../R/theme_projet.R")
+
+# ---- Lecture des fichiers communs du projet ----
+
+# coureurs.csv : une ligne par coureur (587), métadonnées + ~80 variables dv_r
+
+# plis.csv : affectation de chaque coureur à un pli, pour 5 répétitions (mêmes plis que le réseau de neurones)
+
+# dictionnaire_variables.csv : rôle de chaque colonne (cinématique, contrôle, confusion...)
 
 coureurs_brut <- readr::read_csv("../data/coureurs.csv", show_col_types = FALSE)
 plis_communs  <- readr::read_csv("../data/plis.csv", show_col_types = FALSE)
 dictionnaire  <- readr::read_csv("../data/dictionnaire_variables.csv", show_col_types = FALSE)
 
 # Prédicteurs autorisés par le dictionnaire
+
+# On ne garde comme prédicteurs que les rôles « cinematique » et « controle » : les colonnes décrivant la blessure (côté, durée) ou l'année d'enregistrement donneraient la réponse au modèle
+
 predicteurs <- dictionnaire |>
   filter(role %in% c("cinematique", "controle")) |>
   pull(variable)
 
+# Tableau de modélisation : identifiant, classe à prédire (sain / blessé) et prédicteurs
+
 coureurs <- coureurs_brut |>
-  # "blesse" en premier niveau : yardstick le prend comme événement d'intérêt,
-  # donc la sensibilité est bien la part de blessés reconnus
   mutate(classe = factor(if_else(blesse == 1, "blesse", "sain"), levels = c("blesse", "sain"))) |>
   select(sub_id, classe, all_of(predicteurs)) |>
   mutate(across(where(is.character), as.factor))
@@ -51,6 +70,7 @@ coureurs <- coureurs_brut |>
 # Les plis sont donnés dans le même ordre de coureurs : on le vérifie
 stopifnot(identical(plis_communs$sub_id, coureurs$sub_id))
 
+# Effectifs des deux classes : 226 blessés (38,5 %) et 361 sains (61,5 %)
 count(coureurs, classe) |> mutate(proportion = pourcent(n / sum(n), 0.1))
 ```
 
@@ -60,24 +80,37 @@ count(coureurs, classe) |> mutate(proportion = pourcent(n / sum(n), 0.1))
 
 On ne recrée pas de plis avec `vfold_cv` : une même graine ne donne pas les mêmes plis en R et en Python. On lit donc ceux de `data/plis.csv` (stratifiés sur sain / PFPS / ITBS) et on les transforme en objet `rsample`. Pour la répétition `r` et le pli `k`, le test est formé des coureurs où `rep r == k`.
 
-L'étape 1 utilise la répétition `rep1`, comme C. Pour une estimation plus stable, il suffit d'ajouter les autres répétitions dans `repetitions`.
+L'étape 1 utilise la répétition `rep1`. Pour une estimation plus stable, il suffit d'ajouter les autres répétitions dans `repetitions`.
 
 ```{r}
 #| label: plis
-repetitions <- c("rep1")   # étape 1 ; plus tard : paste0("rep", 1:5)
+# ---- Plis de validation croisée ----
+
+# On réutilise les plis communs de data/plis.csv au lieu de vfold_cv() : une même graine ne donne pas les mêmes plis en R et en Python, et le réseau de neurones doit être évalué sur les mêmes coureurs
+
+repetitions <- c("rep1")  
+
+# Transforme les colonnes rep1...rep5 de plis.csv en objet rsample utilisable par fit_resamples().
+
+# Pour la répétition r et le pli k : test = coureurs dont rep r vaut k, apprentissage = tous les autres
 
 construire_plis <- function(donnees, plis, repetitions) {
   splits <- list()
   ids <- character()
   for (r in repetitions) {
     for (k in sort(unique(plis[[r]]))) {
+      # Numéros de ligne des coureurs du pli de test
       test <- which(plis[[r]] == k)
+      # Tous les autres coureurs servent à l'apprentissage
       app  <- setdiff(seq_len(nrow(donnees)), test)
+      # make_splits() crée un découpage apprentissage / test au format rsample
       splits[[length(splits) + 1]] <- make_splits(list(analysis = app, assessment = test),
                                                   data = donnees)
+      # Nom du découpage, par exemple « rep1_pli3 »
       ids <- c(ids, sprintf("%s_pli%d", r, k))
     }
   }
+  # Rassemble les découpages en un objet de rééchantillonnage
   manual_rset(splits, ids)
 }
 
@@ -89,33 +122,50 @@ plis
 
 Les prétraitements sont appris dans le pli d'apprentissage puis appliqués au pli de test, pour qu'aucune information du test ne serve à préparer les données.
 
-Pour la régression logistique, on retire en plus les variables trop corrélées entre elles (|r| > 0,9). Beaucoup de variables sont presque identiques à gauche et à droite, et la vitesse vaut exactement longueur de foulée × cadence / 60 : sans ce filtre, `glm` donne des coefficients instables, voire non estimables. La forêt aléatoire n'en a pas besoin.
+Pour la régression logistique, on retire en plus les variables trop corrélées entre elles (\|r\| \> 0,9). Beaucoup de variables sont presque identiques à gauche et à droite, et la vitesse vaut exactement longueur de foulée × cadence / 60 : sans ce filtre, `glm` donne des coefficients instables, voire non estimables. La forêt aléatoire n'en a pas besoin.
 
 Chaque modèle est testé sans et avec rééquilibrage (`step_upsample`, comme au TD1) : les blessés sont dupliqués dans le pli d'apprentissage jusqu'à égaler les sains, le pli de test n'est pas touché.
 
 ```{r}
 #| label: recettes-modeles
-rec_base <- recipe(classe ~ ., data = coureurs) |>
-  update_role(sub_id, new_role = "id") |>
-  step_impute_median(all_numeric_predictors()) |>
-  step_dummy(all_nominal_predictors()) |>
-  step_zv(all_predictors()) |>
-  step_normalize(all_numeric_predictors())   # coefficients comparables entre variables
+# Recettes : prétraitements appris sur le pli d'apprentissage, appliqués au pli de test 
 
-# seed : le tirage des blessés dupliqués est fixé, pour des résultats identiques à chaque rendu
+# Recette de base, commune aux deux modèles
+rec_base <- recipe(classe ~ ., data = coureurs) |>
+  
+  # L'identifiant reste dans les données (pour retrouver les coureurs) mais n'est pas un prédicteur
+  update_role(sub_id, new_role = "id") |>
+  
+  # Valeurs manquantes (oscillation verticale, 4 coureurs) remplacées par la médiane du pli d'apprentissage
+  step_impute_median(all_numeric_predictors()) |>
+  
+  # Variables qualitatives (sexe, jambe dominante) transformées en indicatrices 0/1
+  step_dummy(all_nominal_predictors()) |>
+  
+  # Supprime les variables constantes, qui n'apportent aucune information
+  step_zv(all_predictors()) |>
+  step_normalize(all_numeric_predictors()) # coefficients comparables entre variables
+
+# seed : le tirage des blessés dupliqués est fixé, pour des résultats identiques à chaque rendu, Version rééquilibrée (TD1) : les blessés sont dupliqués au hasard jusqu'à égaler les sains, uniquement dans le pli d'apprentissage (le pli de test garde les vraies proportions)
 rec_base_up <- rec_base |> step_upsample(classe, over_ratio = 1, seed = 2026)
+
+# Pour la logistique : on retire les variables corrélées à plus de 0,9 (souvent la même mesure à gauche et à droite), sinon glm donne des coefficients instables ou non estimables
 rec_lr      <- rec_base    |> step_corr(all_numeric_predictors(), threshold = 0.9)
 rec_lr_up   <- rec_base_up |> step_corr(all_numeric_predictors(), threshold = 0.9)
 
+# ---- Modèles ----
+# Régression logistique classique (moteur glm), sans hyperparamètre à régler
 lr_mod <- logistic_reg() |>
   set_engine("glm") |>
   set_mode("classification")
 
 # 500 arbres, mtry et min_n par défaut pour ce premier résultat
+# Forêt aléatoire (moteur ranger) ; seed fixe pour des résultats reproductibles
 rf_mod <- rand_forest(trees = 500) |>
   set_engine("ranger", importance = "impurity", seed = 2026) |>
   set_mode("classification")
 
+# Un workflow = une recette + un modèle. Quatre combinaisons : chaque modèle, sans et avec rééquilibrage des classes
 workflows_b <- list(
   "Logistique"              = workflow(rec_lr, lr_mod),
   "Logistique rééquilibrée" = workflow(rec_lr_up, lr_mod),
@@ -128,10 +178,21 @@ workflows_b <- list(
 
 ```{r}
 #| label: evaluation
+# ---- Évaluation par validation croisée ----
+# Métriques du TD1. Le premier niveau de la classe (« blesse ») est l'événement d'intérêt :
+
+# sens = part de blessés reconnus, spec = part de sains reconnus,
+
+# bal_accuracy = moyenne des deux (insensible au déséquilibre des classes)
 metriques <- metric_set(bal_accuracy, sens, spec, accuracy, roc_auc)
+
+# On garde les prédictions hors pli : matrices de confusion, courbes ROC, comparaison avec le réseau de neurones
 ctrl <- control_resamples(save_pred = TRUE, save_workflow = TRUE)
 
+# Graine fixée pour que tout le calcul soit reproductible
 set.seed(2026)
+
+# Pour chaque workflow : apprentissage sur 4 plis, prédiction sur le 5e, et ainsi de suite
 resultats_cv <- map(workflows_b, \(wf) fit_resamples(wf, resamples = plis,
                                                       metrics = metriques, control = ctrl))
 ```
@@ -142,14 +203,17 @@ Moyenne sur les plis de test (écart-type entre plis entre parenthèses).
 
 ```{r}
 #| label: tableau
+# Scores de chaque modèle sur chaque pli de test (une ligne par modèle, pli et métrique)
 scores_plis <- imap_dfr(resultats_cv, \(res, nom)
   collect_metrics(res, summarize = FALSE) |> mutate(modele = nom))
 
+# Moyenne et écart-type de chaque métrique sur les plis
 scores <- scores_plis |>
   group_by(modele, .metric) |>
   summarise(moyenne = mean(.estimate), ecart_type = sd(.estimate), .groups = "drop")
 
 scores |>
+  # Mise en forme « moyenne (écart-type) », puis une colonne par métrique
   mutate(valeur = sprintf("%.2f (%.2f)", moyenne, ecart_type)) |>
   select(modele, .metric, valeur) |>
   pivot_wider(names_from = .metric, values_from = valeur) |>
@@ -157,9 +221,13 @@ scores |>
          Spécificité = spec, Accuracy = accuracy, AUC = roc_auc) |>
   knitr::kable(align = "lccccc")
 
-# Sorties pour la comparaison avec le MLP de C
+
+# Sorties enregistrées pour la comparaison avec le réseau de neurones (mêmes plis)
 dir.create("../resultats", showWarnings = FALSE)
 readr::write_csv(scores_plis, "../resultats/B01_scores_par_pli.csv")
+
+
+# Prédictions hors pli de chaque coureur, avec son identifiant (servent aussi au notebook 2)
 imap_dfr(resultats_cv, \(res, nom) collect_predictions(res) |>
            mutate(modele = nom, sub_id = coureurs$sub_id[.row])) |>
   select(modele, pli = id, sub_id, classe, .pred_class, .pred_blesse) |>
@@ -172,18 +240,24 @@ Effectifs moyens par pli de test (environ 117 coureurs), pour les deux modèles 
 
 ```{r}
 #| label: confusion
+# Matrices de confusion moyennes sur les plis, pour les deux modèles rééquilibrés
 conf_mat_resampled(resultats_cv[["Logistique rééquilibrée"]], tidy = FALSE)
 conf_mat_resampled(resultats_cv[["Forêt rééquilibrée"]], tidy = FALSE)
 ```
 
 ### Figure : le chiffre clé
 
-Les quatre modèles ont des accuracies équilibrées proches, avec des écarts du même ordre que la variation d'un pli à l'autre. On retient pour le message la **régression logistique rééquilibrée** : c'est le modèle le plus simple, et celui qui reconnaît le plus de blessés.
+Les quatre modèles ont des accuracies équilibrées proches, avec des écarts du même ordre que la variation d'un pli à l'autre (figure suivante). Ce qui les distingue, c'est leur compromis : certains reconnaissent plus de blessés, d'autres plus de sains. On retient pour le message la **régression logistique rééquilibrée** : c'est le modèle le plus simple, et celui qui reconnaît le plus de blessés.
+
+La figure montre, pour chaque modèle, la part de coureurs blessés reconnus (sensibilité) et la part de coureurs sains reconnus (spécificité). La dernière ligne rappelle le piège à éviter : un modèle qui répond toujours « sain » a 61,5 % de bonnes réponses, mais ne reconnaît aucun blessé.
 
 ```{r}
 #| label: figure-cle
+# ---- Figure clé : blessés et sains reconnus par chaque modèle ----
+# Modèle retenu pour le message : le plus simple, et celui qui reconnaît le plus de blessés
 modele_cle <- "Logistique rééquilibrée"
 
+# Petite fonction pour récupérer la moyenne d'une métrique pour un modèle
 score_de <- function(nom_modele, metrique) {
   scores |> filter(modele == nom_modele, .metric == metrique) |> pull(moyenne)
 }
@@ -191,24 +265,93 @@ sens_cle <- score_de(modele_cle, "sens")
 spec_cle <- score_de(modele_cle, "spec")
 bal_cle  <- score_de(modele_cle, "bal_accuracy")
 
+# Vérifie que le modèle retenu a bien la meilleure sensibilité (utilisé dans le sous-titre)
+cle_reconnait_le_plus <- sens_cle == max(scores$moyenne[scores$.metric == "sens"])
+
+# Sensibilité et spécificité moyennes, + la référence « toujours sain »
+# Référence naïve : un modèle qui répond toujours « sain » reconnaît 100 % des sains et 0 blessé
+reference <- "Toujours « sain »"
+
+# Données de la figure : sensibilité et spécificité de chaque modèle + la référence
+donnees_cle <- scores |>
+  filter(.metric %in% c("sens", "spec")) |>
+  select(modele, .metric, moyenne) |>
+  bind_rows(tibble(modele = reference, .metric = c("sens", "spec"), moyenne = c(0, 1))) |>
+  mutate(modele = factor(modele, levels = c(names(workflows_b), reference)),
+         mesure = if_else(.metric == "sens", "Blessés reconnus", "Sains reconnus"))
+
+# Une ligne par modèle avec les deux valeurs, pour tracer le segment qui les relie
+segments_cle <- donnees_cle |>
+  select(modele, .metric, moyenne) |>
+  pivot_wider(names_from = .metric, values_from = moyenne)
+
+# Couleurs des groupes de la charte : bordeaux = blessés, gris-bleu = sains
+couleurs_mesures <- c("Blessés reconnus" = couleurs_groupes[["ITBS"]],
+                      "Sains reconnus" = couleurs_groupes[["sain"]])
+
+# Graphique en haltères : un point par mesure, un segment gris pour lire l'écart entre les deux
+p_cle <- ggplot(donnees_cle, aes(x = moyenne, y = forcats::fct_rev(modele))) +
+  geom_segment(data = segments_cle,
+               aes(x = sens, xend = spec, y = forcats::fct_rev(modele), yend = forcats::fct_rev(modele)),
+               colour = grille, linewidth = 2.5) +
+  geom_point(aes(fill = mesure), shape = 21, size = 5, colour = fond, stroke = 0.8) +
+  # Valeur écrite au-dessus de chaque point (annotation plutôt que légende, comme dans la charte)
+  geom_text(aes(label = pourcent(moyenne), colour = mesure), vjust = -1.3,
+            family = police, size = 3.8, fontface = "bold") +
+  scale_fill_manual(values = couleurs_mesures) +
+  scale_colour_manual(values = couleurs_mesures) +
+  scale_x_continuous(limits = c(-0.02, 1.02), breaks = seq(0, 1, by = 0.25), labels = pourcent) +
+  labs(
+    title = sprintf("Un modèle simple reconnaît %d blessés sur 10", round(10 * sens_cle)),
+    subtitle = paste0(
+      "Part des ", mot("coureurs blessés", couleurs_groupes[["ITBS"]]),
+      " et des ", mot("coureurs sains", couleurs_groupes[["sain"]]), " bien reconnus, ",
+      "en moyenne sur les plis de test. ",
+      if (cle_reconnait_le_plus) paste0("La ", tolower(modele_cle), " reconnaît le plus de blessés ; ") else "",
+      "répondre toujours *sain* n'en reconnaît aucun."),
+    x = NULL, y = NULL,
+    caption = paste(source_donnees, "Validation croisée sur les plis communs (data/plis.csv, répétition 1).")
+  ) +
+  theme_projet()
+
+# Enregistre la figure en version rapport (figures/modeles) et en version diapo (figures/slides)
+sauver_figure(p_cle, "B01_blesses_reconnus", dossier = "figures/modeles")
+p_cle
+```
+
+### Figure : accuracy équilibrée des quatre modèles
+
+Pour l'annexe : l'accuracy équilibrée de chaque modèle sur chacun des 5 plis de test (points) et en moyenne (losange). Les points des différents modèles se mélangent : les écarts entre modèles sont plus petits que la variation d'un pli à l'autre.
+
+```{r}
+#| label: figure-accuracy
+# ---- Figure annexe : accuracy équilibrée de chaque modèle sur chaque pli ----
 donnees_fig <- scores_plis |>
   filter(.metric == "bal_accuracy") |>
   mutate(modele = factor(modele, levels = names(workflows_b)),
-         en_avant = modele == modele_cle)
-moyennes_fig <- donnees_fig |> group_by(modele, en_avant) |>
+         # Famille de modèle, pour la couleur (même code couleur que les courbes ROC)
+         famille = if_else(grepl("Logistique", modele), "logistique", "foret"))
+# Moyenne par modèle (losanges)
+moyennes_fig <- donnees_fig |> group_by(modele, famille) |>
   summarise(moyenne = mean(.estimate), .groups = "drop")
 
+# Couleurs des groupes de la charte : bordeaux = régressions logistiques, ocre = forêts
+couleurs_familles <- c(logistique = couleurs_groupes[["ITBS"]], foret = couleurs_groupes[["PFPS"]])
+
+# Un point par pli, un losange pour la moyenne, pointillés au niveau du hasard (0,5)
 p <- ggplot(donnees_fig, aes(x = .estimate, y = forcats::fct_rev(modele))) +
   geom_vline(xintercept = 0.5, linetype = "dashed", colour = encre_douce) +
-  geom_point(aes(colour = en_avant), alpha = 0.5, size = 2.5) +
-  geom_point(data = moyennes_fig, aes(x = moyenne, colour = en_avant), size = 5, shape = 18) +
-  scale_colour_manual(values = c(`TRUE` = mise_en_avant, `FALSE` = "#A9B0B8")) +
+  geom_point(aes(colour = famille), alpha = 0.4, size = 2.5) +
+  geom_point(data = moyennes_fig, aes(x = moyenne, colour = famille), size = 5, shape = 18) +
+  scale_colour_manual(values = couleurs_familles) +
   scale_x_continuous(limits = c(0.45, 0.75), breaks = seq(0.45, 0.75, by = 0.05),
                      labels = \(x) format(x, decimal.mark = ",")) +
   labs(
-    title = "Les quatre modèles font mieux que le hasard, mais de peu",
-    subtitle = sprintf("Accuracy équilibrée par pli de test (points) et en moyenne (losange) ; pointillés : hasard. La %s reconnaît **%d coureurs blessés sur 10**.",
-                       mot(tolower(modele_cle), mise_en_avant), round(10 * sens_cle)),
+    title = "Tous les modèles font mieux que le hasard",
+    subtitle = paste("Accuracy équilibrée des", mot("régressions logistiques", couleurs_groupes[["ITBS"]]),
+                     "et des", mot("forêts aléatoires", couleurs_groupes[["PFPS"]]),
+                     "sur chaque pli de test (points) et en moyenne (losange) ; pointillés : hasard (0,5).",
+                     "Les écarts entre modèles sont plus petits que les écarts d'un pli à l'autre : aucun ne se détache."),
     x = "Accuracy équilibrée", y = NULL,
     caption = paste(source_donnees, "Validation croisée sur les plis communs (data/plis.csv, répétition 1).")
   ) +
@@ -221,20 +364,34 @@ p
 
 ```{r}
 #| label: roc
+# ---- Courbes ROC ----
+# Prédictions hors pli des deux modèles rééquilibrés, puis courbe ROC de chacun :
+# pour chaque seuil de décision, sensibilité en fonction de 1 - spécificité
 map2_dfr(resultats_cv[c("Logistique rééquilibrée", "Forêt rééquilibrée")],
          c("Logistique rééquilibrée", "Forêt rééquilibrée"),
          \(res, nom) collect_predictions(res) |> mutate(modele = nom)) |>
   group_by(modele) |>
   roc_curve(classe, .pred_blesse) |>
-  autoplot()
+  ggplot(aes(x = 1 - specificity, y = sensitivity, colour = modele)) +
+  # Diagonale : un modèle qui répondrait au hasard
+  geom_abline(linetype = "dashed", colour = encre_douce) +
+  geom_path(linewidth = 1) +
+  scale_colour_manual(values = c("Logistique rééquilibrée" = couleurs_groupes[["ITBS"]],
+                                 "Forêt rééquilibrée" = couleurs_groupes[["PFPS"]])) +
+  scale_x_continuous(labels = \(x) format(x, decimal.mark = ",")) +
+  scale_y_continuous(labels = \(x) format(x, decimal.mark = ",")) +
+  coord_equal() +
+  labs(title = "Les modèles séparent modestement blessés et sains",
+       subtitle = paste("Courbes ROC hors pli de la", mot("logistique rééquilibrée", couleurs_groupes[["ITBS"]]),
+                        "et de la", mot("forêt rééquilibrée", couleurs_groupes[["PFPS"]]), "; pointillés : hasard."),
+       x = "1 − spécificité", y = "Sensibilité") +
+  theme_projet()
 ```
 
-## À retenir
+## Conclusion
 
 Les quatre modèles font mieux que le hasard, mais de peu : leur accuracy équilibrée tourne autour de `r format(round(bal_cle, 2), decimal.mark = ",")`, et leurs écarts sont du même ordre que la variation d'un pli à l'autre. La forêt aléatoire ne fait pas nettement mieux que la régression logistique, ce qui ne suggère pas d'effet non linéaire marqué.
 
 Sans rééquilibrage, les modèles favorisent la classe majoritaire : la forêt aléatoire ne reconnaît que `r pourcent(score_de("Forêt aléatoire", "sens"))` des blessés. Le rééquilibrage déplace ce compromis : la régression logistique rééquilibrée reconnaît `r pourcent(sens_cle)` des blessés, au prix d'une spécificité de `r pourcent(spec_cle)`.
 
 La foulée résumée par ses pics contient donc une information réelle, mais limitée, sur la blessure du genou : **un modèle simple reconnaît environ `r round(10 * sens_cle)` coureurs blessés sur 10**, contre aucun pour un modèle qui répond toujours « sain ».
-
-**Pour l'étape 2 :** odds ratios de la régression logistique, SHAP et LIME sur la forêt aléatoire (cours 8, `fastshap` et `shapviz`). Si on règle `mtry` et `min_n`, il faudra une validation croisée imbriquée pour ne pas surestimer les performances. Deux contrôles à prévoir : relancer sans l'année comme confusion possible (par exemple en ne gardant que 2012-2017), et sans les 3 coureurs `qualite_suspecte`.
