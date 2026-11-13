@@ -1,0 +1,63 @@
+## [Les modèles regardent-ils là où la biologie l'attend ?] {.etape-bio}
+
+| Ce qu'attend la littérature | Ce que regardent nos modèles |
+|---|---|
+| [PFPS]{.pfps} : adduction de hanche | *à remplir avec Lilou et Charles* |
+| [ITBS]{.itbs} : adduction de hanche + rotation du genou | *à remplir* |
+| les deux : chute du bassin | *à remplir* |
+
+::: notes
+La slide qui ferme la boucle avec le début. Si les variables et les moments mis en avant par les modèles rejoignent la littérature, les modèles ont appris quelque chose de biologiquement cohérent ; sinon, il faut se demander s'ils ont appris l'époque ou un autre biais.
+:::
+
+## Limites et suite {.etape-bio}
+
+:::: {.columns}
+::: {.column width="50%"}
+**Limites**
+
+- coureurs **déjà blessés** : cause ou effet ?
+- **époque** confondue avec le diagnostic
+- **une clinique**, sur tapis
+:::
+::: {.column width="50%"}
+**Demain**
+
+- des **capteurs portables** dans la chaussure
+- repérer une foulée à risque **chez un débutant**, avant la douleur
+:::
+::::
+
+::: {.audrey}
+[A]{.avatar} Demain, un capteur dans la chaussure d'Audrey l'aurait prévenue avant la douleur.
+:::
+
+::: {.encadre}
+Garder les gens en train de courir, c'est garder le bénéfice santé qui les a fait commencer.
+:::
+
+::: notes
+Dire les limites avant que le jury ne les pose. La première est la plus importante : c'est la différence entre détecter et prédire. Pour prédire, il faudrait une étude prospective : mesurer la foulée, puis suivre les coureurs. Les capteurs portables mesurent déjà la foulée hors du laboratoire (Xiang et al., Frontiers in Neurorobotics, 2022).
+:::
+
+## Trois messages à retenir {.etape-bio}
+
+::: {.retenir}
+[1]{.num} La foulée des coureurs blessés [porte / ne porte pas]{.a-trancher} la trace du PFPS et de l'ITBS.
+:::
+::: {.retenir .fragment}
+[2]{.num} Les modèles regardent [la hanche et le bassin / autre chose]{.a-trancher}, comme l'annonçait la biologie.
+:::
+::: {.retenir .fragment}
+[3]{.num} Avant de croire un score, vérifier ce que le modèle a appris : ici, l'époque.
+:::
+
+::: notes
+Une phrase par message, lentement. Les parties entre crochets sont à trancher avec les résultats de Lilou et Charles. Finir en regardant le public, puis passer aux questions.
+:::
+
+## Merci {.merci background-color="#7A1E3A"}
+
+Questions ?
+
+[Code et données : branche du groupe sur le dépôt GitHub de l'école d'automne]{.tres-petit}

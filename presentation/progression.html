@@ -1,0 +1,42 @@
+<!-- Repère de progression en haut à droite : Problème · Données · Modèles · Biologie.
+     L'étape en cours est en rouge, soulignée de jaune. Masqué sur la page de titre,
+     les titres de partie, la slide « Merci » et les annexes. -->
+<style>
+  #progression {
+    position: fixed; top: 16px; right: 32px; z-index: 30;
+    display: flex; gap: 18px; align-items: center;
+    font-family: "Atkinson Hyperlegible", sans-serif; font-size: 15px; color: #9AA3AD;
+  }
+  #progression span { padding-bottom: 2px; border-bottom: 3px solid transparent; }
+  #progression span.actif { color: #7A1E3A; font-weight: 700; border-bottom-color: #C98A1A; }
+  #progression span.fait { color: #6B7580; }
+  #progression.cache { display: none; }
+</style>
+<div id="progression" class="cache" aria-hidden="true">
+  <span>Problème</span><span>Données</span><span>Modèles</span><span>Biologie</span>
+</div>
+<script>
+  (function () {
+    // Titre de partie -> étape du repère
+    var etapes = { "Le problème": 0, "Les données": 1, "Méthodologie": 2, "Illustration": 2 };
+    function majProgression() {
+      var barre = document.getElementById("progression");
+      var slide = Reveal.getCurrentSlide();
+      if (!barre || !slide) return;
+      var pile = slide.parentElement;
+      var h1 = pile ? pile.querySelector("section.level1 h1") : null;
+      var titre = h1 ? h1.textContent.trim() : "";
+      var etape = etapes.hasOwnProperty(titre) ? etapes[titre] : -1;
+      if (slide.classList.contains("etape-bio")) etape = 3;
+      if (slide.classList.contains("level1") || slide.classList.contains("merci") ||
+          slide.classList.contains("quarto-title-block")) etape = -1;
+      barre.classList.toggle("cache", etape < 0);
+      barre.querySelectorAll("span").forEach(function (s, i) {
+        s.classList.toggle("actif", i === etape);
+        s.classList.toggle("fait", i < etape);
+      });
+    }
+    Reveal.on("ready", majProgression);
+    Reveal.on("slidechanged", majProgression);
+  })();
+</script>

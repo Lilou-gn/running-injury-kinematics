@@ -23,7 +23,11 @@ Pendant l'oral : touche **S** pour les notes de l'orateur, **F** pour le plein �
 
 | Fichier | Rôle |
 |---|---|
-| `presentation.qmd` | Les slides. Le déroulé et la durée de chaque partie sont en commentaire en tête du fichier. |
+| `presentation.qmd` | En-tête du diaporama (réglages, déroulé et durée de chaque partie en commentaire), qui assemble les fichiers des parties. |
+| `_01_probleme.qmd`, `_02_donnees.qmd` | Partie de Youri. |
+| `_03_methodologie.qmd` | Partie de Lilou. |
+| `_04_illustration.qmd` | Partie de Charles. |
+| `_05_conclusion.qmd`, `_06_annexes.qmd` | Conclusion et annexes, communes. |
 | `theme.scss` | Couleurs et typographie, reprises de `python/charte_graphique.py` et `R/theme_projet.R`. |
 | `progression.html` | Repère de progression en haut à droite (Problème · Données · Modèles · Biologie). |
 | `polices.html`, `polices/` | Police Atkinson Hyperlegible embarquée (licence OFL), pour que la présentation marche hors ligne. |
@@ -31,6 +35,10 @@ Pendant l'oral : touche **S** pour les notes de l'orateur, **F** pour le plein �
 | `figures/` | Sorties du script ci-dessus. |
 
 Les autres graphes viennent de `figures/slides/` (exploration 1). Les chiffres et les sources du contexte sont dans `../bibliographie.md`.
+
+## Travailler à plusieurs
+
+Chacun modifie uniquement le fichier de sa partie, sur sa branche, puis fusionne dans `main`. Comme les parties sont dans des fichiers séparés, les fusions ne se marchent pas dessus. Si on ajoute une figure, on la met dans `figures/` (ou `../figures/slides/` pour les graphes d'analyse).
 
 ## Ce qui reste à faire
 
