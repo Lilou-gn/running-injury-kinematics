@@ -1,0 +1,51 @@
+# Méthodologie {.partie background-color="#7A1E3A"}
+
+## Peut-on reconnaître un coureur blessé à ses mesures ?
+
+::: {.a-completer}
+**À compléter par Lilou.** Un schéma simple : 587 coureurs → 79 mesures → modèle → « sain » ou « blessé ». Les modèles testés (régression logistique, forêt aléatoire, SVM) et la validation croisée **par coureur**, 5 plis répétés 5 fois, les mêmes que pour le deep learning.
+:::
+
+::: {.audrey}
+[A]{.avatar} Le modèle aurait-il reconnu Audrey parmi les coureurs sains ?
+:::
+
+::: notes
+Introduire chaque méthode par la question qu'elle sert : « on veut savoir si les mesures suffisent, donc on commence par le modèle le plus simple qui puisse répondre ».
+:::
+
+## Le piège : répondre toujours « sain » donne 61 % de bonnes réponses
+
+:::: {.columns}
+::: {.column width="45%"}
+[61,5 %]{.chiffre}
+[de bonnes réponses sans rien regarder : 361 sains sur 587]{.chiffre-legende}
+:::
+::: {.column width="55%"}
+On juge donc chaque modèle sur :
+
+- les **blessés** reconnus (sensibilité)
+- les **sains** reconnus (spécificité)
+- leur moyenne : 50 % = le hasard
+:::
+::::
+
+::: notes
+La moyenne de la sensibilité et de la spécificité s'appelle l'exactitude équilibrée. C'est le chiffre de référence pour tout le reste de la présentation.
+:::
+
+## [Message de Lilou : un seul chiffre clé]
+
+::: {.a-completer}
+**À compléter par Lilou.** Un titre sous forme de phrase, par exemple « Le modèle reconnaît X blessés sur 10 ». Un seul chiffre sur la slide ; le tableau complet des scores, des modèles et des hyperparamètres va en annexe.
+:::
+
+## [Quelles mesures pèsent dans la décision ?]
+
+::: {.a-completer}
+**À compléter par Lilou.** SHAP ou LIME sur la forêt aléatoire : les 5 à 8 variables qui comptent le plus. Les colorer par famille (bassin, hanche, genou…) comme sur la slide « 40 mesures par jambe », pour que le lien avec la biologie se voie.
+:::
+
+::: notes
+Transition vers Charles : « Ces mesures résumées suffisent-elles, ou faut-il lire la courbe entière ? »
+:::

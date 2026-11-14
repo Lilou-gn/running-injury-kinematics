@@ -1,0 +1,50 @@
+---
+# Durée cible : 20 min, 20 slides de contenu (environ 1 min chacune).
+#   Le problème        Youri    ~4 min   5 slides
+#   Les données        Youri    ~3 min   5 slides
+#   Méthodologie       Lilou    ~7 min   4 slides
+#   Illustration       Charles  ~6 min   3 slides + conclusion (3 slides)
+# Animations : la jambe, le parcours diagnostique et l'entonnoir avancent au clic.
+# Règles : un message par slide, écrit en titre ; au plus un chiffre clé par slide ;
+# trois lignes de texte au maximum, le reste dans les notes (touche S) ;
+# le détail des calculs est en annexe, pour les questions.
+# Chaque partie est dans son propre fichier (_01 à _06), inclus en bas de ce fichier :
+# on modifie seulement le fichier de sa partie, pour éviter les conflits entre branches.
+title: "Peut-on reconnaître une blessure du genou à la foulée ?"
+subtitle: "PFPS et ITBS chez le coureur : machine learning et deep learning"
+author: "Youri Michalowski-Skarbek · Lilou Génue · Charles Tricand de La Goutte"
+date: 2026-11-20
+date-format: "D MMMM YYYY"
+institute: "École d'automne « Apprentissage automatique en sciences du vivant » · Institut Agro Rennes-Angers"
+lang: fr
+title-slide-attributes:
+  data-background-color: "#7A1E3A"
+format:
+  revealjs:
+    theme: [default, theme.scss]
+    width: 1600
+    height: 900
+    margin: 0.07
+    slide-number: c/t
+    show-slide-number: all
+    hash-type: number
+    transition: none
+    center: false
+    footer: "Blessures du genou chez le coureur · ML4LifeSciences 2026"
+    preview-links: false
+    embed-resources: false
+    include-in-header: polices.html
+    include-after-body: progression.html
+---
+
+{{< include _01_probleme.qmd >}}
+
+{{< include _02_donnees.qmd >}}
+
+{{< include _03_methodologie.qmd >}}
+
+{{< include _04_illustration.qmd >}}
+
+{{< include _05_conclusion.qmd >}}
+
+{{< include _06_annexes.qmd >}}
