@@ -1,6 +1,5 @@
 # %%
 import json
-from pathlib import Path
 import matplotlib.pyplot as plt
 import pandas as pd
 from adjustText import adjust_text
@@ -13,8 +12,6 @@ select = pd.read_csv("../data/coureurs.csv")
 
 
 #%%
-
-fs = 200  # fréquence d'échantillonnage
 
 def detecter_foulée(serie, fs):
     # Coordonnée Y moyenne des 4 marqueurs du pied
@@ -69,7 +66,7 @@ def process_coureur(idx, graph = False):
 
     foulees = [data_table[:,debut:fin,:] for debut, fin in zip(minima[:-1], minima[1:])]
 
-    foulees_normalisees = np.asarray([normaliser_foulee(f) for f in foulees])
+    foulees_normalisees = [normaliser_foulee(f) for f in foulees]
 
     if graph:
         fig, ax = plt.subplots()
@@ -107,13 +104,51 @@ def process_coureur(idx, graph = False):
 
     return foulees_normalisees
 
+#%%
+
 nb_foulees = 0
 for i in range(587):
     coureur = process_coureur(i)
-    print(f"{i} : {coureur.shape}")
-    nb_foulees += coureur.shape[0]
+    print(f"{i} : {len(coureur)} foulées de {coureur[0].shape}")
+    nb_foulees += len(coureur)
 
-print(f"nombre total d'observations : {nb_foulees}")
+print(f"nombre total de foulées : {nb_foulees}")
+# on a désormais 26361 observations
 
+
+# %%
+
+X = []
+y = []
+groups = []
+
+for i in range(587):
+
+    print(i)
+    coureur = process_coureur(i)
+    classe = select["label"][i]
+
+    for foulee in coureur:
+
+        # (28, 150, 3) -> (84, 150)
+        foulee = np.asarray(foulee, dtype=np.float32)
+        foulee = foulee.transpose(0, 2, 1)
+        foulee = foulee.reshape(84, 150)
+
+        X.append(foulee)
+        y.append(classe)
+        groups.append(i)
+
+X = np.asarray(X, dtype=np.float32)
+y = np.asarray(y)
+groups = np.asarray(groups)
+
+print(X.shape)
+print(y.shape, np.unique(y))
+print(groups.shape)
+
+np.save("../data/features/X.npy", X)
+np.save("../data/features/labels.npy", y)
+np.save("../data/features/coureurs.npy", groups)
 
 # %%
