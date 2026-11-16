@@ -10,6 +10,14 @@ folder_path = "/home/charles/Téléchargements/données/ric_data/reformat_data/"
 
 select = pd.read_csv("../data/coureurs.csv")
 
+canaux = ['pelvis_1', 'pelvis_2', 'pelvis_3', 'pelvis_4', 
+          'L_thigh_1', 'L_thigh_2', 'L_thigh_3', 'L_thigh_4', 
+          'R_thigh_1', 'R_thigh_2', 'R_thigh_3', 'R_thigh_4', 
+          'L_shank_1', 'L_shank_2', 'L_shank_3', 'L_shank_4', 
+          'R_shank_1', 'R_shank_2', 'R_shank_3', 'R_shank_4', 
+          'L_foot_1', 'L_foot_2', 'L_foot_3', 'L_foot_4', 
+          'R_foot_1', 'R_foot_2', 'R_foot_3', 'R_foot_4']
+
 
 #%%
 
@@ -46,9 +54,19 @@ def normaliser_foulee(foulee, n_frames=150):
 
 # %%
 
+def normaliser_par_bassin(foulee):
 
-def process_coureur(idx, graph = False):
+    # Centre du bassin à chaque frame : (150, 3)
+    centre_bassin = np.mean(foulee[:4],axis=0)
 
+    # Soustraction du centre à tous les marqueurs
+    foulee_normalisee = foulee - centre_bassin[None, :, :]
+
+    return foulee_normalisee
+
+#%%
+
+def load_coureur(idx):
     coureur = select["sub_id"][idx]
     filename = select["filename"][idx]
     
@@ -59,6 +77,28 @@ def process_coureur(idx, graph = False):
     list_canaux = list(canaux.values())[:28] # on a vu précédemment que les canaux étaient tous dans le meme ordre et que les 28 premiers étaient tout le temps présent
     data_table = np.asarray(list_canaux)
 
+    return data_table
+
+
+def show_coureur(data_table):
+    x = list(range(data_table.shape[1]))
+    for i in range(28):
+        fig, (ax1, ax2, ax3) = plt.subplots(3,1)
+        fig.suptitle(canaux[i])
+        ax1.plot(x, data_table[i, :, 0])
+        ax1.set_title("coord X (droite/gauche)")
+        ax2.plot(x, data_table[i, :, 1])
+        ax2.set_title("coord Y (haut/bas)")
+        ax3.plot(x, data_table[i, :, 2])
+        ax3.set_title("coord Z (avant/arrière)")
+        fig.tight_layout()
+
+
+#%%
+
+def process_coureur(idx, graph = False):
+
+    data_table = load_coureur(idx)
     # on a bien un tableau de taille 28*4000*3
 
     fs = select["hz_r"][idx]
@@ -66,7 +106,7 @@ def process_coureur(idx, graph = False):
 
     foulees = [data_table[:,debut:fin,:] for debut, fin in zip(minima[:-1], minima[1:])]
 
-    foulees_normalisees = [normaliser_foulee(f) for f in foulees]
+    foulees_normalisees = [normaliser_par_bassin(normaliser_foulee(f)) for f in foulees]
 
     if graph:
         fig, ax = plt.subplots()
@@ -128,16 +168,21 @@ for i in range(587):
     coureur = process_coureur(i)
     classe = select["label"][i]
 
-    for foulee in coureur:
+    if np.max(np.abs(coureur))>1e4: #élimination des coureurs aux valeurs aberantes (problème de récolte des données)
+        print("skip")
+        pass
 
-        # (28, 150, 3) -> (84, 150)
-        foulee = np.asarray(foulee, dtype=np.float32)
-        foulee = foulee.transpose(0, 2, 1)
-        foulee = foulee.reshape(84, 150)
+    else:
+        for foulee in coureur:
 
-        X.append(foulee)
-        y.append(classe)
-        groups.append(i)
+            # (28, 150, 3) -> (84, 150)
+            foulee = np.asarray(foulee, dtype=np.float32)
+            foulee = foulee.transpose(0, 2, 1)
+            foulee = foulee.reshape(84, 150)
+
+            X.append(foulee)
+            y.append(classe)
+            groups.append(i)
 
 X = np.asarray(X, dtype=np.float32)
 y = np.asarray(y)
@@ -147,8 +192,8 @@ print(X.shape)
 print(y.shape, np.unique(y))
 print(groups.shape)
 
-np.save("../data/features/X.npy", X)
-np.save("../data/features/labels.npy", y)
-np.save("../data/features/coureurs.npy", groups)
+np.save("../data/features/foulee.npy", X)
+np.save("../data/features/label_foulee.npy", y)
+np.save("../data/features/coureur_foulee.npy", groups)
 
 # %%
