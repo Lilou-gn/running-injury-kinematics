@@ -2,9 +2,11 @@
 
 | Ce qu'attend la littérature | Ce que regardent nos modèles |
 |---|---|
-| [PFPS]{.pfps} : adduction de hanche | *à remplir avec Lilou et Charles* |
-| [ITBS]{.itbs} : adduction de hanche + rotation du genou | *à remplir* |
-| les deux : chute du bassin | *à remplir* |
+| les deux : chute du bassin | **oui** : parmi les mesures les plus utilisées |
+| les deux : temps d'appui plus long | **oui** : 2^e^ mesure la plus utilisée |
+| [PFPS]{.pfps} : adduction de hanche | **peu** : à peine plus élevée chez les PFPS |
+| [ITBS]{.itbs} : adduction de hanche + rotation du genou | **peu** utilisées par les modèles simples |
+| réseau de neurones (Charles) | *à remplir* |
 
 ::: notes
 La slide qui ferme la boucle avec le début. Si les variables et les moments mis en avant par les modèles rejoignent la littérature, les modèles ont appris quelque chose de biologiquement cohérent ; sinon, il faut se demander s'ils ont appris l'époque ou un autre biais.

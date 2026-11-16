@@ -20,6 +20,28 @@ Pour les questions
 ![](../figures/slides/04_vitesse_par_annee.png)
 :::
 
+## Tous les modèles font mieux que le hasard, de peu {.figure-seule}
+
+::: {.figure-pleine}
+![](../figures/slides/B01_accuracy_equilibree.png)
+:::
+
+## Aucune mesure ne distingue seule les blessés {.figure-seule}
+
+::: {.figure-pleine}
+![](../figures/slides/B02_odds_ratios.png)
+:::
+
+## Sans la vitesse, les angles restent informatifs {.figure-seule}
+
+::: {.figure-pleine}
+![](../figures/slides/B03_sensibilite.png)
+:::
+
+::: notes
+Sur les seuls coureurs de 2012 à 2017, l'exactitude tombe à 0,55 : une partie du signal venait de l'époque d'enregistrement. L'effectif est aussi plus petit (436 coureurs, dont 118 blessés).
+:::
+
 ## Description des trois groupes
 
 ::: {.petit}
