@@ -2,9 +2,11 @@
 
 ## Peut-on reconnaître un coureur blessé à ses mesures ?
 
-::: {.a-completer}
-**À compléter par Lilou.** Un schéma simple : 587 coureurs → 79 mesures → modèle → « sain » ou « blessé ». Les modèles testés (régression logistique, forêt aléatoire, SVM) et la validation croisée **par coureur**, 5 plis répétés 5 fois, les mêmes que pour le deep learning.
-:::
+587 coureurs → 79 mesures de la foulée → modèle → « sain » ou « blessé »
+
+- deux modèles simples : **régression logistique** et **forêt aléatoire**
+- chaque modèle est testé sur des coureurs qu'il n'a **jamais vus** (5 plis, répétés 5 fois)
+- les mêmes plis servent ensuite au deep learning
 
 ::: {.audrey}
 [A]{.avatar} Le modèle aurait-il reconnu Audrey parmi les coureurs sains ?
@@ -34,18 +36,24 @@ On juge donc chaque modèle sur :
 La moyenne de la sensibilité et de la spécificité s'appelle l'exactitude équilibrée. C'est le chiffre de référence pour tout le reste de la présentation.
 :::
 
-## [Message de Lilou : un seul chiffre clé]
+## Un modèle simple reconnaît 6 blessés sur 10 {.figure-seule}
 
-::: {.a-completer}
-**À compléter par Lilou.** Un titre sous forme de phrase, par exemple « Le modèle reconnaît X blessés sur 10 ». Un seul chiffre sur la slide ; le tableau complet des scores, des modèles et des hyperparamètres va en annexe.
-:::
-
-## [Quelles mesures pèsent dans la décision ?]
-
-::: {.a-completer}
-**À compléter par Lilou.** SHAP ou LIME sur la forêt aléatoire : les 5 à 8 variables qui comptent le plus. Les colorer par famille (bassin, hanche, genou…) comme sur la slide « 40 mesures par jambe », pour que le lien avec la biologie se voie.
+::: {.figure-pleine}
+![](../figures/slides/B01_blesses_reconnus.png)
 :::
 
 ::: notes
+La régression logistique rééquilibrée reconnaît 57 % des blessés et 66 % des sains, soit une exactitude équilibrée d'environ 0,60 (0,50 = hasard). Les autres modèles sont du même ordre ; la forêt aléatoire non rééquilibrée penche vers « sain » et ne reconnaît que 27 % des blessés. Le signal est réel mais limité. Scores complets en annexe.
+:::
+
+## Après la vitesse, ce sont la foulée, le pied et le bassin qui pèsent {.figure-seule}
+
+::: {.figure-pleine}
+![](../figures/slides/B02_shap_importance.png)
+:::
+
+::: notes
+La vitesse arrive en tête, mais elle est liée à l'époque d'enregistrement (annexe). Viennent ensuite le temps d'appui, la longueur de foulée, l'angle du pied au contact, la vitesse d'éversion et la chute du bassin. La hanche pèse moins que ce qu'annonce la littérature. Sans la vitesse, la logistique garde la même exactitude (0,60) : les angles portent bien une partie du signal.
+
 Transition vers Charles : « Ces mesures résumées suffisent-elles, ou faut-il lire la courbe entière ? »
 :::
