@@ -5,7 +5,9 @@ import torch.nn as nn
 from torch.utils.data import TensorDataset, DataLoader
 from sklearn.model_selection import GroupShuffleSplit
 from sklearn.utils.class_weight import compute_class_weight
+from sklearn.metrics import confusion_matrix, classification_report
 import matplotlib.pyplot as plt
+from charte_graphique import appliquer_charte, COULEURS_GROUPES, titrer, sauver_figure
 
 #%%
 
@@ -190,6 +192,23 @@ def test_loop(dataloader, model, loss_fn):
     return test_loss, 100 * correct
 
 
+def evaluate_model(dataloader, model):
+    model.eval()
+    y_true = []
+    y_pred = []
+
+    with torch.no_grad():
+        for X, y in dataloader:
+            X = X.to(device)
+            pred = model(X)
+
+            y_true.extend(y.numpy())
+            y_pred.extend(pred.argmax(1).cpu().numpy())
+
+    print(classification_report(y_true,y_pred,target_names=set_labels))
+    print(confusion_matrix(y_true, y_pred))
+
+
 #%%
 
 epochs = 1000
@@ -206,7 +225,7 @@ if 'optimizer' in locals():
 
 model = CNNFoulee(nb_classes=3).to(device)
 loss_fn = nn.CrossEntropyLoss(weight=weights)
-optimizer = torch.optim.Adam(model.parameters(),lr=0.001)
+optimizer = torch.optim.Adam(model.parameters(),lr=0.0001)
 
 for t in range(epochs):
     print(t)
@@ -220,6 +239,8 @@ print("Done!")
 
 
 # %% visualisation de la loss et de l'accuracy
+
+evaluate_model(test_loader, model)
 
 plt.plot(loss_train, label="training")
 plt.plot(loss_test, label="validation")

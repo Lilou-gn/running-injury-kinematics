@@ -5,6 +5,7 @@ import pandas as pd
 from adjustText import adjust_text
 import numpy as np
 from scipy.signal import find_peaks, savgol_filter
+from charte_graphique import appliquer_charte, COULEURS_GROUPES, titrer, sauver_figure
 
 folder_path = "/home/charles/Téléchargements/données/ric_data/reformat_data/"
 
