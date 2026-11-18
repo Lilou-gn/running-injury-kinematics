@@ -26,4 +26,5 @@ Thumbs.db
 # Rendus Quarto (régénérables) et fichiers parasites de R
 exploration/*.html
 exploration/*_files/
-Rplots.pdf
+
+data/features/
