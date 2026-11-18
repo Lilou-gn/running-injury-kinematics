@@ -73,3 +73,5 @@ Sur les seuls coureurs de 2012 à 2017, l'exactitude tombe à 0,55 : une partie 
 :::
 
 [Liens complets : bibliographie.md à la racine de la branche.]{.tres-petit}
+
+{{< include _03_annexes_methodologie.qmd >}}
