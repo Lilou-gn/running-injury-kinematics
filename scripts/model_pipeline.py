@@ -8,6 +8,7 @@ from sklearn.utils.class_weight import compute_class_weight
 from sklearn.metrics import confusion_matrix, classification_report
 import matplotlib.pyplot as plt
 from charte_graphique import appliquer_charte, COULEURS_GROUPES, titrer, sauver_figure
+from pathlib import Path
 
 #%%
 
@@ -17,15 +18,20 @@ print("Appareil utilisé :", device)
 if device.type == "cuda":
     print(torch.cuda.get_device_name(0))
 
+appliquer_charte()
+
 
 #%% récupération des données et analyse:
-X = np.load("../data/features/foulee.npy")
-labels = np.load("../data/features/label_foulee.npy")
-coureurs = np.load("../data/features/coureur_foulee.npy")
+
+BASE_DIR = Path(__file__).resolve().parent
+
+X = np.load(BASE_DIR.parent/"data/features/foulee.npy")
+labels = np.load(BASE_DIR.parent/"data/features/label_foulee.npy")
+coureurs = np.load(BASE_DIR.parent/"data/features/coureur_foulee.npy")
 
 
 # Quelques percentiles pour examiner la distribution
-print(np.percentile(X,[0, 1, 5, 25, 50, 75, 95, 99, 100]))
+print("percentiles des features : ", np.percentile(X,[0, 1, 5, 25, 50, 75, 95, 99, 100]))
 
 
 set_labels, y, counts = np.unique(labels, return_inverse=True, return_counts = True)# on encode les classes
@@ -86,7 +92,6 @@ weights = torch.tensor(weights, dtype=torch.float32).to(device)
 
 print("Poids des classes :", weights)
 
-
 print("Train :", np.unique(y[train_idx], return_counts=True))
 print("Val :", np.unique(y[val_idx], return_counts=True))
 print("Test :", np.unique(y[test_idx], return_counts=True))
@@ -114,7 +119,7 @@ test_loader = DataLoader(test_dataset,batch_size=32, shuffle=False, pin_memory=(
 
 #%% définition du model
 
-class CNNFoulee(nn.Module):
+class CNNFoulee_initial(nn.Module):
 
     def __init__(self, nb_classes):
         super().__init__()
@@ -141,7 +146,44 @@ class CNNFoulee(nn.Module):
             nn.Flatten(),
             nn.Linear(128, 64),
             nn.ReLU(),
-            nn.Dropout(0.3),
+            nn.Dropout(0.4),
+            nn.Linear(64, nb_classes)
+        )
+
+    def forward(self, x):
+        out = self.layers(x)
+        return self.classifier(out)
+
+#%%
+
+class CNNFoulee_compact(nn.Module):
+
+    def __init__(self, nb_classes):
+        super().__init__()
+
+        self.layers = nn.Sequential(
+            nn.Conv1d(84, 32, kernel_size=7, padding=3),
+            nn.BatchNorm1d(32),
+            nn.ReLU(),
+            nn.MaxPool1d(2),
+
+            nn.Conv1d(32, 64, kernel_size=5, padding=2),
+            nn.BatchNorm1d(64),
+            nn.ReLU(),
+            nn.MaxPool1d(2),
+
+            nn.Conv1d(64, 64, kernel_size=3, padding=1),
+            nn.BatchNorm1d(64),
+            nn.ReLU(),
+
+            nn.AdaptiveAvgPool1d(1)
+        )
+
+        self.classifier = nn.Sequential(
+            nn.Flatten(),
+            nn.Linear(64, 64),
+            nn.ReLU(),
+            nn.Dropout(0.4),
             nn.Linear(64, nb_classes)
         )
 
@@ -223,18 +265,48 @@ if 'loss_fn' in locals():
 if 'optimizer' in locals():
     del optimizer
 
-model = CNNFoulee(nb_classes=3).to(device)
+
+model = CNNFoulee_compact(nb_classes=3).to(device)
 loss_fn = nn.CrossEntropyLoss(weight=weights)
-optimizer = torch.optim.Adam(model.parameters(),lr=0.0001)
+optimizer = torch.optim.Adam(
+    model.parameters(),
+    lr=0.0001,
+    weight_decay=1e-4)
+
+
+meilleur_val_loss = float("inf")
+patience = 20
+epochs_sans_amelioration = 0
 
 for t in range(epochs):
-    print(t)
-    loss_train.append(train_loop(train_loader, model, loss_fn, optimizer))
-    _, at = test_loop(train_loader, model, loss_fn)   # accuracy sur l'apprentissage
-    l, a = test_loop(val_loader, model, loss_fn)
+
+    l_train = train_loop(train_loader, model, loss_fn, optimizer)
+    _, at = test_loop(train_loader, model, loss_fn)
+    l_val, a_val = test_loop(val_loader, model, loss_fn)
+
+    loss_train.append(l_train)
+    loss_test.append(l_val)
     acc_train.append(at)
-    loss_test.append(l)
-    acc_test.append(a)
+    acc_test.append(a_val)
+
+    print(
+        f"Epoch {t+1} | "
+        f"Train loss: {l_train:.4f} | "
+        f"Val loss: {l_val:.4f} | "
+        f"Train acc: {at:.2f}% | "
+        f"Val acc: {a_val:.2f}%"
+    )
+
+    if l_val < meilleur_val_loss:
+        meilleur_val_loss = l_val
+        epochs_sans_amelioration = 0
+    else:
+        epochs_sans_amelioration += 1
+
+    if epochs_sans_amelioration >= patience:
+        print("Early stopping !")
+        break
+
 print("Done!")
 
 
@@ -242,20 +314,23 @@ print("Done!")
 
 evaluate_model(test_loader, model)
 
-plt.plot(loss_train, label="training")
-plt.plot(loss_test, label="validation")
-plt.title("évolution de la loss au cours des epochs")
-plt.xlabel("epochs")
-plt.ylabel("loss")
-plt.legend()
-plt.show()
+fig, (ax1, ax2) = plt.subplots(2,1)
+ax1.plot(loss_train, label="training")
+ax1.plot(loss_test, label="validation")
+ax1.set_title("Evolution de la loss au cours des epochs")
+ax1.set_ylabel("loss")
+ax1.legend()
 
-plt.plot(acc_train, label="training")
-plt.plot(acc_test, label="validation")
-plt.title("évolution de l'accuracy au cours des epochs")
-plt.xlabel("epochs"); plt.ylabel("accuracy (%)")
-plt.legend()
+ax2.plot(acc_train, label="training")
+ax2.plot(acc_test, label="validation")
+ax2.set_title("Evolution de l'accuracy au cours des epochs")
+ax2.set_xlabel("epochs")
+ax2.set_ylabel("accuracy (%)")
+ax2.legend()
+
+fig.tight_layout()
 plt.show()
+sauver_figure(fig, "lre-4_compact")
 print(f"la performance à la dernière itération est : {acc_test[-1]:.2f} %")
 
 # %%

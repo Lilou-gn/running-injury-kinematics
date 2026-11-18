@@ -1,10 +1,14 @@
+
+# script pour comprendre la structure des fichiers JSON et les comparer entre chaque observation
+
 # %%
 import json
 import pandas as pd
+from pathlib import Path
 
 folder_path = "/home/charles/Téléchargements/données/ric_data/reformat_data/"
-
-select = pd.read_csv("../data/coureurs.csv")
+BASE_DIR = Path(__file__).resolve().parent
+select = pd.read_csv(BASE_DIR.parent/"data/coureurs.csv")
 
 # %%
 def explore_json(data, level=0, name="root"):

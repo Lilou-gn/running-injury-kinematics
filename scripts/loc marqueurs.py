@@ -3,10 +3,13 @@ import json
 import matplotlib.pyplot as plt
 import pandas as pd
 from adjustText import adjust_text
+from pathlib import Path
+from charte_graphique import appliquer_charte, COULEURS_GROUPES, titrer, sauver_figure
 
-folder_path = "/home/charles/Téléchargements/données/ric_data/reformat_data/"
-
-select = pd.read_csv("../data/coureurs.csv")
+folder_path = "/home/charles/Téléchargements/données/ric_data/reformat_data/" # à modifier selon votre emplacement des données
+BASE_DIR = Path(__file__).resolve().parent
+select = pd.read_csv(BASE_DIR.parent/"data/coureurs.csv")
+appliquer_charte()
 
 
 # %%
@@ -31,26 +34,27 @@ def localisation_marqueurs(idx):
         labels.append(marqueur)
 
 
-    fig, axes = plt.subplots(1, 2, figsize=(7, 7))
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(7, 7))
 
     # Vue de face : X / Y
-    ax = axes[0]
-    ax.plot(x, y, ".")
-    texts = [ax.text(x[i], y[i], label, fontsize=7) for i, label in enumerate(labels)]
-    adjust_text(texts,ax=ax,arrowprops=dict(arrowstyle="->", color="red"))
-    ax.set_title("Vue X / Y")
-    ax.set_aspect("equal")
+    ax1.plot(x, y, ".")
+    texts = [ax1.text(x[i], y[i], label, fontsize=7) for i, label in enumerate(labels)]
+    adjust_text(texts,ax=ax1,arrowprops=dict(arrowstyle="->", color="red"))
+    ax1.set_title("Vue X / Y")
+    ax1.set_aspect("equal")
 
     # Vue de côté : Z / Y
-    ax = axes[1]
-    ax.plot(z, y, ".")
-    texts = [ax.text(z[i], y[i], label, fontsize=7) for i, label in enumerate(labels)]
-    adjust_text(texts,ax=ax,arrowprops=dict(arrowstyle="->", color="red"))
-    ax.set_title("Vue Z / Y")
-    ax.set_aspect("equal")
+    ax2.plot(z, y, ".")
+    texts = [ax2.text(z[i], y[i], label, fontsize=7) for i, label in enumerate(labels)]
+    adjust_text(texts,ax=ax2,arrowprops=dict(arrowstyle="->", color="red"))
+    ax2.set_title("Vue Z / Y")
+    ax2.set_aspect("equal")
 
-    plt.tight_layout()
-    plt.show()
+    titrer(fig, "Position des marqueurs sur l'individu au repos (en mm)", "")
+    sauver_figure(fig, "loc_marqueurs")
 
     return data["neutral"]
+
+localisation_marqueurs(10) #localisation des marqueurs sur le 10e coureur
+
 # %%

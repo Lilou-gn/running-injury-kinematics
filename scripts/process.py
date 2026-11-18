@@ -6,10 +6,12 @@ from adjustText import adjust_text
 import numpy as np
 from scipy.signal import find_peaks, savgol_filter
 from charte_graphique import appliquer_charte, COULEURS_GROUPES, titrer, sauver_figure
+from pathlib import Path
 
 folder_path = "/home/charles/Téléchargements/données/ric_data/reformat_data/"
-
-select = pd.read_csv("../data/coureurs.csv")
+BASE_DIR = Path(__file__).resolve().parent
+select = pd.read_csv(BASE_DIR.parent/"data/coureurs.csv")
+appliquer_charte()
 
 canaux = ['pelvis_1', 'pelvis_2', 'pelvis_3', 'pelvis_4', 
           'L_thigh_1', 'L_thigh_2', 'L_thigh_3', 'L_thigh_4', 
@@ -107,46 +109,84 @@ def process_coureur(idx, graph = False):
 
     foulees = [data_table[:,debut:fin,:] for debut, fin in zip(minima[:-1], minima[1:])]
 
-    foulees_normalisees = [normaliser_par_bassin(normaliser_foulee(f)) for f in foulees]
+    foulees_normalisees = [normaliser_foulee(f) for f in foulees]
+
+    foulees_normalisees_bassin = [normaliser_par_bassin(f) for f in foulees_normalisees]
 
     if graph:
         fig, ax = plt.subplots()
         t = np.arange(len(y)) / fs
 
-        ax.plot(t, y, alpha=0.4, label="Signal brut")
-        ax.plot(t, y_smooth, label="Signal lissé")
-        ax.plot(t[minima], y_smooth[minima], "ro", label="Minima détectés")
+        ax.plot(t, y, alpha=0.4)
+        ax.plot(t, y_smooth)
+        ax.plot(t[minima], y_smooth[minima], "ro", label="Minima\n détectés")
 
         ax.set_xlabel("Temps (secondes)")
         ax.set_ylabel("Coordonnée Y")
-        ax.legend()
+        ax.legend(bbox_to_anchor=(1, 1))
         ax.grid()
-
-        plt.tight_layout()
+        fig.tight_layout()
+        sauver_figure(fig, "serie_complete_pied_Y")
 
         fig, ax = plt.subplots()
         for foulee in foulees:
-            y = foulee[24, : , 1] #24 = canal R_foot_1
-            ax.plot(range(len(y)), y)
-
+            pied = foulee[24, : , 1] #24 = canal R_foot_1
+            ax.plot(range(len(pied)), pied)
         ax.set_xlabel("Temps (secondes)")
         ax.set_ylabel("Coordonnée Y")
         ax.grid()
 
+        fig.tight_layout()
+        sauver_figure(fig, "foulees_decoupes_simple")
 
-        fig, ax = plt.subplots()
+
+        fig, (ax2, ax1) = plt.subplots(2,1)
         for foulee in foulees_normalisees:
-            y = foulee[24, : , 1] #24 = canal R_foot_1
-            ax.plot(range(len(y)), y)
+            pied = foulee[24, : , 1] #24 = canal R_foot_1
+            bassin = np.mean(foulee[:4, :, 1],axis=0)
+            ax1.plot(range(len(bassin)), bassin)
+            ax2.plot(range(len(pied)), pied)
 
-        ax.set_xlabel("Temps (secondes)")
-        ax.set_ylabel("Coordonnée Y")
-        ax.grid()
+        ax1.set_xlabel("Temps (secondes)")
+        ax1.set_ylabel("Coordonnée Y")
+        ax1.set_title("Position du bassin")
+        ax1.grid()
 
-    return foulees_normalisees
+        ax2.set_xlabel("Temps (secondes)")
+        ax2.set_ylabel("Coordonnée Y")
+        ax2.set_title("Position du pied droit")
+        ax2.grid()
+
+        fig.tight_layout()
+        sauver_figure(fig, "foulees_normalisees")
+
+
+        fig, (ax2, ax1) = plt.subplots(2,1)
+        for foulee in foulees_normalisees_bassin:
+            pied = foulee[24, : , 1] #24 = canal R_foot_1
+            bassin = np.mean(foulee[:4, :, 1],axis=0)
+            ax1.plot(range(len(bassin)), bassin)
+            ax2.plot(range(len(pied)), pied)
+
+        ax1.set_xlabel("Temps (secondes)")
+        ax1.set_ylabel("Coordonnée Y")
+        ax1.set_title("Position du bassin (normalisée)")
+        ax1.grid()
+
+        ax2.set_xlabel("Temps (secondes)")
+        ax2.set_ylabel("Coordonnée Y")
+        ax2.set_title("Position du pied droit (normalisée)")
+        ax2.grid()
+
+        fig.tight_layout()
+        sauver_figure(fig, "foulees_normalisees_bassin")
+
+    return foulees_normalisees_bassin
 
 #%%
 
+"""
+# code pour controler la bonne réalisation du pré-processing avant de sauvegarder
 nb_foulees = 0
 for i in range(587):
     coureur = process_coureur(i)
@@ -155,9 +195,12 @@ for i in range(587):
 
 print(f"nombre total de foulées : {nb_foulees}")
 # on a désormais 26361 observations
-
+"""
 
 # %%
+
+process_coureur(105, graph=True)
+
 
 X = []
 y = []

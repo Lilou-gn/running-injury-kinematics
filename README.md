@@ -84,6 +84,7 @@ pip install -r requirements.txt
 python scripts/01_nettoyer_meta.py      # métadonnées -> data/intermediaire/meta_clean.csv
 python scripts/02_extraire_dv_r.py      # dv_r depuis Figshare -> data/intermediaire/dv_r_brut.csv
 python scripts/03_construire_coureurs.py  # -> coureurs.csv, plis.csv, dictionnaire
+
 ```
 
 - `ric_data.zip` pèse 22,7 Go. Le script 02 ne télécharge que les 587 JSON utiles (environ 6 Go) en lisant l'archive à distance, et ne stocke rien d'autre que `dv_r`. S'il s'arrête (réseau), il suffit de le relancer : il reprend où il en était.
@@ -98,6 +99,7 @@ python scripts/03_construire_coureurs.py  # -> coureurs.csv, plis.csv, dictionna
 data/
   brut/run_data_meta.csv         métadonnées Figshare (non modifiées)
   intermediaire/                 sorties des scripts 01 et 02
+  features/                      données numpy pour le deep learning
   coureurs.csv  plis.csv  dictionnaire_variables.csv
 scripts/                         pipeline de préparation (01 -> 03)
 ```
