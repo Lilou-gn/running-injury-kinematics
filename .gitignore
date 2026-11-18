@@ -28,3 +28,12 @@ exploration/*.html
 exploration/*_files/
 
 data/features/
+Rplots.pdf
+
+# Rendus de la présentation (régénérables)
+presentation/presentation.html
+presentation/presentation_files/
+
+# Rendus des notebooks de modèles (régénérables)
+modeles/*.html
+modeles/*_files/

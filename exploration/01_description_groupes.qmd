@@ -1,0 +1,256 @@
+---
+title: "Exploration 1 : description des groupes sain, PFPS et ITBS"
+subtitle: "Qui sont les coureurs, et qu'est-ce qui pourrait fausser la comparaison ?"
+lang: fr
+format:
+  html:
+    toc: true
+    code-fold: true
+    code-summary: "Voir le code"
+    embed-resources: true
+    fig-width: 9
+    fig-height: 5.5
+execute:
+  warning: false
+  message: false
+---
+
+Ce notebook décrit les trois groupes de `data/coureurs.csv` (587 coureurs, une séance chacun) avant toute comparaison cinématique. L'objectif est de repérer les **facteurs de confusion** : des différences entre groupes qui ne viennent pas de la blessure et qui pourraient tromper un modèle.
+
+Chaque graphe porte un seul message, écrit dans son titre. Ils suivent la charte commune définie dans `R/theme_projet.R`.
+
+```{r}
+#| label: setup
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+source("../R/theme_projet.R")
+
+coureurs <- readr::read_csv("../data/coureurs.csv", show_col_types = FALSE) |>
+  mutate(
+    label = factor(label, levels = c("sain", "PFPS", "ITBS")),
+    epoque = if_else(annee < 2012, "2009-2011", "2012-2017")
+  )
+```
+
+## Tableau 1 : les trois groupes
+
+Variables continues : médiane [écart interquartile], comparées par un test de Kruskal-Wallis (3 groupes) et de Wilcoxon-Mann-Whitney (sain contre blessé). Variables qualitatives : test du χ².
+
+```{r}
+#| label: tableau1
+med_iqr <- function(x, dec = 1) {
+  q <- quantile(x, c(0.25, 0.5, 0.75), na.rm = TRUE)
+  sprintf(paste0("%.", dec, "f [%.", dec, "f-%.", dec, "f]"), q[2], q[1], q[3])
+}
+pct <- function(x) sprintf("%d (%.0f %%)", sum(x), 100 * mean(x))
+p_fmt <- function(p) ifelse(p < 0.001, "< 0,001", formatC(p, format = "f", digits = 3, decimal.mark = ","))
+
+continues <- c(age = "Âge (ans)", Height = "Taille (cm)", Weight = "Poids (kg)",
+               IMC = "IMC (kg/m²)", speed_r = "Vitesse (m/s)")
+lignes_cont <- lapply(names(continues), function(v) {
+  x <- coureurs[[v]]
+  dec <- if (v == "speed_r") 2 else 1
+  tibble(
+    Variable = continues[[v]],
+    sain = med_iqr(x[coureurs$label == "sain"], dec),
+    PFPS = med_iqr(x[coureurs$label == "PFPS"], dec),
+    ITBS = med_iqr(x[coureurs$label == "ITBS"], dec),
+    `p (3 groupes)` = p_fmt(kruskal.test(x ~ coureurs$label)$p.value),
+    `p (sain / blessé)` = p_fmt(wilcox.test(x ~ coureurs$blesse)$p.value)
+  )
+})
+
+qualitatives <- list(
+  "Femmes, n (%)" = coureurs$Gender == "Female",
+  "Jambe dominante gauche, n (%)" = coureurs$DominantLeg == "Left",
+  "Enregistrés avant 2012, n (%)" = coureurs$annee < 2012
+)
+lignes_qual <- lapply(names(qualitatives), function(nom) {
+  x <- qualitatives[[nom]]
+  tibble(
+    Variable = nom,
+    sain = pct(x[coureurs$label == "sain"]),
+    PFPS = pct(x[coureurs$label == "PFPS"]),
+    ITBS = pct(x[coureurs$label == "ITBS"]),
+    `p (3 groupes)` = p_fmt(chisq.test(table(x, coureurs$label))$p.value),
+    `p (sain / blessé)` = p_fmt(chisq.test(table(x, coureurs$blesse))$p.value)
+  )
+})
+
+effectifs <- tibble(Variable = "Effectif",
+                    sain = "361", PFPS = "128", ITBS = "98",
+                    `p (3 groupes)` = "", `p (sain / blessé)` = "")
+tableau1 <- bind_rows(effectifs, lignes_cont, lignes_qual)
+dir.create("../resultats", showWarnings = FALSE)
+readr::write_csv(tableau1, "../resultats/tableau1_groupes.csv")
+knitr::kable(tableau1, align = "lccccc")
+```
+
+**À retenir :** l'âge, le gabarit et le sexe ne diffèrent pas entre groupes. La vitesse, la jambe dominante et l'année d'enregistrement diffèrent nettement. Les figures suivantes montrent que ces trois différences ont une même origine : **l'époque d'enregistrement**.
+
+## Figure 1 : l'époque d'enregistrement
+
+*Question : la proportion de blessés est-elle stable au fil des années ?*
+
+```{r}
+#| label: fig-annee
+par_annee <- coureurs |>
+  count(annee, label) |>
+  group_by(annee) |>
+  mutate(n_annee = sum(n), part = n / n_annee) |>
+  ungroup()
+
+blesses <- par_annee |>
+  filter(label != "sain") |>
+  mutate(label = factor(label, levels = c("ITBS", "PFPS")))  # PFPS en bas de la pile
+totaux <- par_annee |>
+  group_by(annee, n_annee) |>
+  summarise(part = sum(part[label != "sain"]), .groups = "drop")  # garde 2017 (0 blessé)
+
+avant <- coureurs |> filter(annee < 2012) |> summarise(mean(blesse)) |> pull()
+apres <- coureurs |> filter(annee >= 2012) |> summarise(mean(blesse)) |> pull()
+
+fig1 <- ggplot(blesses, aes(x = annee, y = part)) +
+  annotate("rect", xmin = 2008.5, xmax = 2011.5, ymin = -Inf, ymax = Inf,
+           fill = grille, alpha = 0.6) +
+  annotate("text", x = 2010, y = 1.02, family = police, colour = encre_texte, size = 4.2,
+           label = sprintf("2009-2011 : %.0f %% de blessés", 100 * avant)) +
+  annotate("text", x = 2014.5, y = 1.02, family = police, colour = encre_texte, size = 4.2,
+           label = sprintf("2012-2017 : %.0f %% de blessés", 100 * apres)) +
+  geom_col(aes(fill = label), width = 0.7, colour = fond, linewidth = 0.6) +
+  geom_text(data = totaux, aes(label = pourcent(part)),
+            vjust = -0.5, family = police, colour = encre_titre, size = 4) +
+  scale_fill_manual(values = couleurs_groupes) +
+  scale_x_continuous(breaks = 2009:2017,
+                     labels = \(a) paste0(a, "\nn = ", totaux$n_annee[match(a, totaux$annee)] %||% "")) +
+  scale_y_continuous(labels = pourcent, limits = c(0, 1.06), breaks = seq(0, 1, 0.25),
+                     expand = expansion(mult = c(0, 0))) +
+  labs(
+    title = "Avant 2012, 7 coureurs sur 10 étaient blessés ;\naprès, moins de 3 sur 10",
+    subtitle = paste0("Part des coureurs enregistrés chaque année qui souffrent d'un ",
+                      groupe_md("PFPS"), " ou d'un ", groupe_md("ITBS"),
+                      ". Le reste sont des coureurs sains."),
+    x = NULL, y = "Coureurs de l'année",
+    caption = paste("n = nombre de coureurs enregistrés dans l'année.", source_donnees)
+  ) +
+  theme_projet() +
+  theme(panel.grid.major.x = element_blank())
+sauver_figure(fig1, "01_blesses_par_annee")
+fig1
+```
+
+Un modèle pourrait apprendre l'époque (matériel, cliniciens, protocole) plutôt que la blessure. L'année ne doit pas être donnée aux modèles, et les résultats devront être vérifiés à l'intérieur de chaque époque.
+
+## Figure 2 : âge et corpulence
+
+*Question : les groupes sont-ils comparables en âge et en corpulence ?*
+
+```{r}
+#| label: fig-age-imc
+long <- coureurs |>
+  select(label, age, IMC) |>
+  pivot_longer(-label, names_to = "variable", values_to = "valeur") |>
+  mutate(variable = factor(variable, levels = c("age", "IMC"),
+                           labels = c("Âge (ans)", "IMC (kg/m²)")))
+resume <- long |>
+  group_by(variable, label) |>
+  summarise(med = median(valeur), q1 = quantile(valeur, 0.25),
+            q3 = quantile(valeur, 0.75), .groups = "drop")
+femmes <- coureurs |> group_by(label) |> summarise(f = mean(Gender == "Female"))
+
+set.seed(1)
+fig2 <- ggplot(long, aes(x = label, y = valeur)) +
+  geom_jitter(aes(fill = label, shape = label), width = 0.22, height = 0, size = 1.8,
+              alpha = 0.45, colour = fond, stroke = 0.3) +
+  geom_linerange(data = resume, aes(y = NULL, ymin = q1, ymax = q3),
+                 colour = encre_titre, linewidth = 0.9) +
+  geom_point(data = resume, aes(y = med), colour = encre_titre, fill = fond,
+             shape = 21, size = 3.2, stroke = 1.2) +
+  facet_wrap(~variable, scales = "free_y") +
+  scale_fill_manual(values = couleurs_groupes) +
+  scale_shape_manual(values = formes_groupes) +
+  labs(
+    title = "Âge et corpulence sont comparables dans les trois groupes",
+    subtitle = sprintf("Il y a aussi autant de femmes : %.0f %% chez les sains, %.0f %% chez les PFPS, %.0f %% chez les ITBS.",
+                       100 * femmes$f[1], 100 * femmes$f[2], 100 * femmes$f[3]),
+    x = NULL, y = NULL,
+    caption = paste("Chaque point est un coureur. Rond blanc : médiane ; trait : écart interquartile.",
+                    source_donnees)
+  ) +
+  theme_projet() +
+  theme(panel.grid.major.x = element_blank())
+sauver_figure(fig2, "02_age_imc")
+fig2
+```
+
+## Figure 3 : la jambe dominante
+
+*Question : la déclaration de la jambe dominante est-elle fiable ?*
+
+```{r}
+#| label: fig-jambe
+gauchers <- coureurs |>
+  group_by(epoque, label) |>
+  summarise(part = mean(DominantLeg == "Left"), n = n(), .groups = "drop")
+
+fig3 <- ggplot(gauchers, aes(x = label, y = part, fill = label)) +
+  geom_col(width = 0.65) +
+  geom_text(aes(label = pourcent(part)), vjust = -0.5,
+            family = police, colour = encre_titre, size = 4.2) +
+  facet_wrap(~epoque) +
+  scale_fill_manual(values = couleurs_groupes) +
+  scale_y_continuous(labels = pourcent, limits = c(0, 0.85),
+                     expand = expansion(mult = c(0, 0))) +
+  labs(
+    title = "Avant 2012, 70 % des coureurs sains sont déclarés\ngauchers, contre 15 % après",
+    subtitle = paste("Un tel écart chez des coureurs sains ne peut pas venir de la blessure :",
+                     "la jambe dominante a sans doute été renseignée différemment selon l'époque.",
+                     "On ne l'utilise pas."),
+    x = NULL, y = "Jambe dominante gauche",
+    caption = paste("Part des coureurs dont la jambe dominante déclarée est la gauche.", source_donnees)
+  ) +
+  theme_projet() +
+  theme(panel.grid.major.x = element_blank())
+sauver_figure(fig3, "03_jambe_dominante_epoque")
+fig3
+```
+
+## Figure 4 : la vitesse de course
+
+*Question : les sains courent-ils vraiment plus vite, ou est-ce l'époque ?*
+
+```{r}
+#| label: fig-vitesse
+v_ancien <- coureurs |> filter(annee < 2012)
+part_27 <- mean(abs(v_ancien$speed_r - 2.7) <= 0.05)
+
+set.seed(2)
+fig4 <- ggplot(coureurs, aes(x = annee, y = speed_r)) +
+  annotate("rect", xmin = 2008.5, xmax = 2011.5, ymin = -Inf, ymax = Inf,
+           fill = grille, alpha = 0.6) +
+  geom_jitter(aes(colour = annee < 2012), width = 0.25, height = 0, size = 1.6, alpha = 0.6) +
+  annotate("text", x = 2010, y = 4.05, family = police, colour = encre_titre, size = 4.2,
+           lineheight = 1.1,
+           label = sprintf("2009-2011 : %.0f %% des coureurs\nentre 2,65 et 2,75 m/s", 100 * part_27)) +
+  scale_colour_manual(values = c(`TRUE` = mise_en_avant, `FALSE` = "#A9AFB6")) +
+  scale_x_continuous(breaks = 2009:2017) +
+  scale_y_continuous(labels = \(x) format(x, decimal.mark = ",")) +
+  labs(
+    title = "Avant 2012, presque tous les coureurs couraient\nà la même vitesse",
+    subtitle = paste("La vitesse semble imposée à 2,7 m/s à cette époque, puis libre ensuite.",
+                     "L'écart de vitesse entre sains et blessés vient donc probablement de l'époque."),
+    x = NULL, y = "Vitesse sur tapis (m/s)",
+    caption = paste("Chaque point est un coureur.", source_donnees)
+  ) +
+  theme_projet() +
+  theme(panel.grid.major.x = element_blank())
+sauver_figure(fig4, "04_vitesse_par_annee")
+fig4
+```
+
+## Bilan
+
+- L'âge, le sexe et la corpulence sont comparables entre les trois groupes.
+- **L'année d'enregistrement est le principal facteur de confusion** : les blessés ont surtout été enregistrés avant 2012, à une époque où la vitesse semble imposée et où la jambe dominante est mal renseignée.
+- Conséquences pour la suite : ne pas donner `annee`, `hz_r` ni `DominantLeg` aux modèles, et vérifier que les différences cinématiques tiennent à l'intérieur de chaque époque (analyses séparées ou ajustées).

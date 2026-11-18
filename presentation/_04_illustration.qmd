@@ -1,0 +1,19 @@
+# Illustration {.partie background-color="#7A1E3A"}
+
+## [Le réseau lit la courbe entière, pas seulement ses pics]
+
+::: {.a-completer}
+**À compléter par Charles.** Une courbe d'angle du genou pendant l'appui (0 à 100 %), avec ce que garde le modèle classique (le pic) et ce que lit le réseau (toute la courbe). Puis le principe d'un réseau convolutif 1D en une image.
+:::
+
+## [Le détail du mouvement aide-t-il ?]
+
+::: {.a-completer}
+**À compléter par Charles.** Comparaison avec les modèles de Lilou, sur les mêmes plis : un seul chiffre ou un graphe simple. Si le deep learning ne fait pas mieux, c'est un résultat : sur 587 coureurs, les mesures résumées suffisent.
+:::
+
+## [Où regarde le réseau dans la foulée ?]
+
+::: {.a-completer}
+**À compléter par Charles.** Carte de saillance sur la courbe : quelle articulation, à quel moment de l'appui. Titre-message du type « Le réseau se concentre sur la hanche en milieu d'appui ».
+:::
