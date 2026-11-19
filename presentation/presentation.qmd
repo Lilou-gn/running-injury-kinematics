@@ -3,7 +3,7 @@
 #   Le problème        Youri    ~3 min     5 slides
 #   Les données        Youri    ~2,5 min   5 slides
 #   Méthodologie       Lilou    ~4 min     4 slides
-#   Illustration       Charles  ~4 min     5 slides
+#   Deep learning       Charles  ~4 min     6 slides
 #   Conclusion         Youri    ~1,5 min   3 slides
 # Dans les notes (touche S) : « À dire » se dit à l'oral, « Si on vous demande » sert aux questions.
 # Animations : la jambe, le parcours diagnostique et l'entonnoir avancent au clic.
@@ -45,7 +45,7 @@ format:
 
 {{< include _03_methodologie.qmd >}}
 
-{{< include _04_illustration.qmd >}}
+{{< include _04_deep_learning.qmd >}}
 
 {{< include _05_conclusion.qmd >}}
 

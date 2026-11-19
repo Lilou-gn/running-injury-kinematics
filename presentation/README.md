@@ -26,7 +26,7 @@ Pendant l'oral : touche **S** pour les notes de l'orateur, **F** pour le plein �
 | `presentation.qmd` | En-tête du diaporama (réglages, déroulé et durée de chaque partie en commentaire), qui assemble les fichiers des parties. |
 | `_01_probleme.qmd`, `_02_donnees.qmd` | Partie de Youri. |
 | `_03_methodologie.qmd` | Partie de Lilou. |
-| `_04_illustration.qmd` | Partie de Charles. |
+| `_04_deep_learning.qmd` | Partie de Charles. |
 | `_05_conclusion.qmd`, `_06_annexes.qmd` | Conclusion et annexes, communes. |
 | `theme.scss` | Couleurs et typographie, reprises de `python/charte_graphique.py` et `R/theme_projet.R`. |
 | `progression.html` | Repère de progression en haut à droite (Problème · Données · Modèles · Biologie). |

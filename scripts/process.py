@@ -249,6 +249,25 @@ ax.set_xlabel("Temps (frames)")
 titrer(fig, "Comparaison des séries de deux coureurs")
 ax.legend()
 fig.tight_layout()
+titrer(fig, "Les séries sont différentes en taille et en valeurs d'un coureur à un autre")
 sauver_figure(fig, "comparaison_series")
 
+# %%
+
+data_table = load_coureur(10)
+x = list(range(data_table.shape[1]))
+
+fig, (ax1, ax2, ax3) = plt.subplots(3,1)
+fig.suptitle(canaux[8])
+ax1.plot(x, data_table[8, :, 0])
+ax1.set_title("coord X (droite/gauche)")
+ax2.plot(x, data_table[8, :, 1])
+ax2.set_title("coord Y (haut/bas)")
+ax3.plot(x, data_table[8, :, 2])
+ax3.set_title("coord Z (avant/arrière)")
+ax3.set_xlabel("Temps (frames)")
+fig.tight_layout()
+
+titrer(fig, "3 séries de coordonnées par canal de marqueur", "(ici la cuisse droite)\n")
+sauver_figure(fig, "representation_series_brut")
 # %%

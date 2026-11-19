@@ -1,20 +1,30 @@
-# Illustration {.partie background-color="#7A1E3A"}
+# Deep learning {.partie background-color="#7A1E3A"}
 
-## Le réseau part des positions brutes des marqueurs
+## On dispose des positions brutes des marqueurs {.positions-brutes}
 
 :::: {.columns}
-::: {.column width="45%"}
-![](figures/c01_loc_marqueurs.png)
+::: {.column width="56%"}
+![](../figures/slides/representation_series_brut.png){alt="Séries temporelles des positions brutes"}
 :::
-::: {.column width="55%"}
-![](figures/c02_deux_series.png)
+::: {.column width="44%"}
+![](../figures/slides/loc_marqueurs.png){alt="Position des marqueurs au repos, vue de face et de profil"}
 :::
 ::::
 
 ::: notes
-**À dire.** Les 40 mesures de Lilou sont des résumés calculés à partir des marqueurs. Moi, je suis reparti avant ce résumé : la position en 3D des 28 marqueurs, à chaque image, soit 84 courbes par coureur. Premier problème, à droite : les enregistrements n'ont pas la même longueur, ici 3 346 et 5 000 images. Or un réseau attend des entrées de taille fixe.
+**À dire.** La capture fournit la position en trois dimensions des 28 marqueurs à chaque image, soit 84 séries temporelles par coureur. À gauche, on voit un exemple de signal brut. À droite, on situe les marqueurs sur le corps.
 
-**Si on vous demande.** Sur l'ensemble des coureurs, de 1 333 à 12 000 images, à 200 images par seconde. Trois coordonnées par marqueur : gauche-droite, haut-bas, avant-arrière.
+**Si on vous demande.** Les trois coordonnées donnent la position gauche-droite, haut-bas et avant-arrière.
+:::
+
+## Un fort besoin de pré-processing
+
+::: {.figure-pleine}
+![](../figures/slides/comparaison_series.png){alt="Comparaison de deux enregistrements de longueurs différentes" height=650px}
+:::
+
+::: notes
+**À dire.** Les deux enregistrements n’ont pas la même durée. Pour obtenir des entrées de taille fixe, on commence par découper les courses en foulées.
 :::
 
 ## Chaque course est découpée en foulées
@@ -43,7 +53,7 @@ lissage → points bas du pied → une foulée entre deux points bas
 ![](../figures/slides/foulees_normalisees.png)
 :::
 ::: {.column width="50%"}
-![](figures/c03_pied_recentre.png)
+![](../figures/slides/foulees_normalisees_bassin.png){alt="Foulées normalisées avec des positions relatives au bassin"}
 :::
 ::::
 
