@@ -12,7 +12,7 @@
 # on modifie seulement le fichier de sa partie, pour éviter les conflits entre branches.
 title: "Peut-on reconnaître une blessure du genou à la foulée ?"
 subtitle: "PFPS et ITBS chez le coureur : machine learning et deep learning"
-author: "Youri Michalowski-Skarbek · Lilou Génue · Charles Tricand de La Goutte"
+author: "Youri Michalowski-Skarbek · Lilou Guénue · Charles Tricand de La Goutte"
 date: 2026-11-20
 date-format: "D MMMM YYYY"
 institute: "École d'automne « Apprentissage automatique en sciences du vivant » · Institut Agro Rennes-Angers"
