@@ -121,7 +121,7 @@ def process_coureur(idx, graph = False):
         ax.plot(t, y_smooth)
         ax.plot(t[minima], y_smooth[minima], "ro", label="Minima\n détectés")
 
-        ax.set_xlabel("Temps (secondes)")
+        ax.set_xlabel("Temps (frames)")
         ax.set_ylabel("Coordonnée Y")
         ax.legend(bbox_to_anchor=(1, 1))
         ax.grid()
@@ -132,7 +132,7 @@ def process_coureur(idx, graph = False):
         for foulee in foulees:
             pied = foulee[24, : , 1] #24 = canal R_foot_1
             ax.plot(range(len(pied)), pied)
-        ax.set_xlabel("Temps (secondes)")
+        ax.set_xlabel("Temps (frames)")
         ax.set_ylabel("Coordonnée Y")
         ax.grid()
 
@@ -147,12 +147,12 @@ def process_coureur(idx, graph = False):
             ax1.plot(range(len(bassin)), bassin)
             ax2.plot(range(len(pied)), pied)
 
-        ax1.set_xlabel("Temps (secondes)")
+        ax1.set_xlabel("Temps (frames)")
         ax1.set_ylabel("Coordonnée Y")
         ax1.set_title("Position du bassin")
         ax1.grid()
 
-        ax2.set_xlabel("Temps (secondes)")
+        ax2.set_xlabel("Temps (frames)")
         ax2.set_ylabel("Coordonnée Y")
         ax2.set_title("Position du pied droit")
         ax2.grid()
@@ -168,12 +168,12 @@ def process_coureur(idx, graph = False):
             ax1.plot(range(len(bassin)), bassin)
             ax2.plot(range(len(pied)), pied)
 
-        ax1.set_xlabel("Temps (secondes)")
+        ax1.set_xlabel("Temps (frames)")
         ax1.set_ylabel("Coordonnée Y")
         ax1.set_title("Position du bassin (normalisée)")
         ax1.grid()
 
-        ax2.set_xlabel("Temps (secondes)")
+        ax2.set_xlabel("Temps (frames)")
         ax2.set_ylabel("Coordonnée Y")
         ax2.set_title("Position du pied droit (normalisée)")
         ax2.grid()
@@ -239,5 +239,16 @@ print(groups.shape)
 np.save("../data/features/foulee.npy", X)
 np.save("../data/features/label_foulee.npy", y)
 np.save("../data/features/coureur_foulee.npy", groups)
+
+# %%
+fig, ax = plt.subplots()
+ax.plot(load_coureur(10)[24,:,1], label = "coureur 1")
+ax.plot(load_coureur(500)[24,:,1], label = "coureur 2")
+ax.set_ylabel("Coordonnée Y du pied droit")
+ax.set_xlabel("Temps (frames)")
+titrer(fig, "Comparaison des séries de deux coureurs")
+ax.legend()
+fig.tight_layout()
+sauver_figure(fig, "comparaison_series")
 
 # %%
