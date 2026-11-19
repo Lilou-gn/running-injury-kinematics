@@ -16,7 +16,7 @@
   <text x="385" y="66" font-size="20" fill="#3F4A57" text-anchor="middle">caméras infrarouges</text>
   <rect x="150" y="470" width="470" height="26" rx="13" fill="#5E6A77"/>
   <circle cx="170" cy="483" r="9" fill="#E3E5E8"/><circle cx="600" cy="483" r="9" fill="#E3E5E8"/>
-  <text x="385" y="530" font-size="20" fill="#3F4A57" text-anchor="middle">tapis de course, vitesse choisie par le coureur</text>
+  <text x="385" y="530" font-size="20" fill="#3F4A57" text-anchor="middle">tapis de course, vitesse libre selon le protocole</text>
   <line x1="385" y1="250" x2="400" y2="140" stroke="#B9BEC5" stroke-width="22" stroke-linecap="round"/>
   <circle cx="405" cy="105" r="26" fill="#B9BEC5"/>
   <line x1="398" y1="160" x2="440" y2="215" stroke="#B9BEC5" stroke-width="12" stroke-linecap="round"/>
@@ -35,14 +35,18 @@
     <rect x="376" y="447" width="18" height="18" rx="4"/>
     <rect x="344" y="290" width="22" height="22" rx="5"/>
     <rect x="285" y="355" width="20" height="20" rx="4"/>
+    <rect x="256" y="391" width="18" height="18" rx="4"/>
   </g>
   <g fill="#7A1E3A">
-    <circle cx="398" cy="298" r="3.5"/><circle cx="412" cy="298" r="3.5"/><circle cx="405" cy="311" r="3.5"/>
-    <circle cx="404" cy="403" r="3.5"/><circle cx="416" cy="403" r="3.5"/><circle cx="410" cy="415" r="3.5"/>
-    <circle cx="381" cy="452" r="3"/><circle cx="389" cy="452" r="3"/><circle cx="385" cy="460" r="3"/>
-    <circle cx="350" cy="296" r="3"/><circle cx="360" cy="296" r="3"/><circle cx="355" cy="306" r="3"/>
-    <circle cx="290" cy="360" r="3"/><circle cx="300" cy="360" r="3"/><circle cx="295" cy="370" r="3"/>
-    <circle cx="372" cy="246" r="3.5"/><circle cx="385" cy="246" r="3.5"/><circle cx="398" cy="246" r="3.5"/>
+    <circle cx="398" cy="298" r="3.5"/><circle cx="412" cy="298" r="3.5"/><circle cx="398" cy="311" r="3.5"/><circle cx="412" cy="311" r="3.5"/>
+    <circle cx="404" cy="403" r="3.5"/><circle cx="416" cy="403" r="3.5"/><circle cx="404" cy="415" r="3.5"/><circle cx="416" cy="415" r="3.5"/>
+    <circle cx="381" cy="452" r="3"/><circle cx="389" cy="452" r="3"/><circle cx="381" cy="460" r="3"/><circle cx="389" cy="460" r="3"/>
+    <circle cx="350" cy="296" r="3"/><circle cx="360" cy="296" r="3"/><circle cx="350" cy="306" r="3"/><circle cx="360" cy="306" r="3"/>
+    <circle cx="290" cy="360" r="3"/><circle cx="300" cy="360" r="3"/><circle cx="290" cy="370" r="3"/><circle cx="300" cy="370" r="3"/>
+    <circle cx="261" cy="396" r="3"/><circle cx="269" cy="396" r="3"/><circle cx="261" cy="404" r="3"/><circle cx="269" cy="404" r="3"/>
+  </g>
+  <g fill="#F8F8F8">
+    <circle cx="372" cy="246" r="3.5"/><circle cx="385" cy="246" r="3.5"/><circle cx="398" cy="246" r="3.5"/><circle cx="385" cy="259" r="3.5"/>
   </g>
   <g font-size="20" fill="#3F4A57">
     <text x="540" y="260">bassin</text><line x1="412" y1="253" x2="530" y2="253" stroke="#3F4A57" stroke-width="1.5"/>
@@ -51,7 +55,7 @@
     <text x="540" y="463">pied</text><line x1="456" y1="456" x2="530" y2="456" stroke="#3F4A57" stroke-width="1.5"/>
   </g>
   <text x="60" y="360" font-size="20" fill="#7A1E3A" font-weight="700">marqueurs</text>
-  <text x="60" y="384" font-size="18" fill="#3F4A57">3-4 par plaque</text>
+  <text x="60" y="384" font-size="18" fill="#3F4A57">4 par segment</text>
   <line x1="172" y1="365" x2="282" y2="365" stroke="#7A1E3A" stroke-width="1.5"/>
 </svg>
 ```
@@ -66,7 +70,7 @@ L'angle de chaque articulation, à chaque instant de la course.
 :::
 
 ::: {.audrey}
-[A]{.avatar} Audrey aurait couru une minute sur ce tapis.
+[A]{.avatar} Audrey aurait couru sur ce tapis, filmée une vingtaine de secondes.
 :::
 :::
 ::::
@@ -76,7 +80,7 @@ Ferber et al., Scientific Data, 2024 · Running Injury Clinic Kinematic Dataset,
 :::
 
 ::: notes
-Running Injury Clinic, Université de Calgary. Environ 60 secondes de course sur tapis à vitesse libre ; caméras infrarouges Vicon, environ 200 images par seconde ; marqueurs sur le bassin, les deux cuisses, les deux jambes et les deux pieds. Le diagnostic de chaque blessé a été posé par la clinique. Données ouvertes publiées en 2024. Détail pour les questions : le fichier complet fait 22,7 Go ; on n'a lu que les morceaux utiles (environ 6 Go), directement sur le serveur.
+Running Injury Clinic, Université de Calgary. Le protocole prévoit environ 60 secondes de course sur tapis à vitesse libre, mais les fichiers gardent de 7 à 60 secondes (25 s en médiane), et avant 2012 la vitesse semble avoir été imposée (annexe) ; caméras infrarouges Vicon, environ 200 images par seconde ; 28 marqueurs, quatre sur le bassin et quatre sur chaque cuisse, jambe et pied (ce sont ceux qu'utilise le réseau de Charles). Le diagnostic de chaque blessé a été posé par la clinique. Données ouvertes publiées en 2024. Détail pour les questions : le fichier complet fait 22,7 Go ; on n'a lu que les morceaux utiles (environ 6 Go), directement sur le serveur.
 :::
 
 ## De 1 798 personnes à 587 coureurs {.figure-seule}
@@ -95,7 +99,7 @@ Running Injury Clinic, Université de Calgary. Environ 60 secondes de course sur
 Une étape par clic, comptée en personnes pour suivre la slide précédente. 1 798 personnes filmées ; 1 402 ont couru (les autres n'ont été filmées qu'en marchant) ; 589 sont saines, PFPS ou ITBS : la grosse perte, 813 coureurs, vient des autres blessures, pas du nettoyage ; 587 après avoir retiré 2 coureurs déclarés sains une fois et blessés une autre. On garde une seule séance par coureur (la première) : sinon le même coureur pourrait se retrouver à la fois dans les données d'entraînement et de test. En séances, pour les questions : 1 832 séances de course, 836 sains/PFPS/ITBS, 832, puis 587. À retenir : 361 sains, 128 PFPS, 98 ITBS.
 :::
 
-## 40 mesures par jambe, du bassin au pied
+## 40 mesures par jambe, calculées à partir des marqueurs
 
 ::: {.cartes}
 ::: {.carte .cle}
@@ -123,7 +127,7 @@ En rouge : là où la littérature attend les différences. 79 variables par cou
 :::
 
 ::: notes
-Pour chaque articulation : pics, amplitudes et vitesses des angles. Chaque mesure est la médiane sur toutes les foulées enregistrées, calculée par la clinique. Gauche + droite, avec la largeur de pas commune aux deux jambes : 79 variables par coureur. Ce sont les entrées du modèle classique ; le deep learning, lui, lira les courbes complètes des angles pendant l'appui.
+À partir des 28 marqueurs, la clinique reconstruit les angles de chaque articulation, puis en tire des pics, des amplitudes et des vitesses. Chaque mesure est la médiane sur toutes les foulées enregistrées. Gauche + droite, avec la largeur de pas commune aux deux jambes : 79 variables par coureur. Ce sont les entrées des modèles de Lilou. Charles, lui, repartira des positions brutes des 28 marqueurs, sans ce résumé.
 :::
 
 ## Dans nos données, la hanche se comporte-t-elle comme prévu ? {.figure-seule}

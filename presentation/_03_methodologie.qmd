@@ -6,7 +6,6 @@
 
 - deux modèles simples : **régression logistique** et **forêt aléatoire**
 - chaque modèle est testé sur des coureurs qu'il n'a **jamais vus** (5 plis, répétés 5 fois)
-- les mêmes plis servent ensuite au deep learning
 
 ::: {.audrey}
 [A]{.avatar} Le modèle aurait-il reconnu Audrey parmi les coureurs sains ?
@@ -55,5 +54,5 @@ La régression logistique rééquilibrée reconnaît 57 % des blessés et 66 % d
 ::: notes
 La vitesse arrive en tête, mais elle est liée à l'époque d'enregistrement (annexe). Viennent ensuite le temps d'appui, la longueur de foulée, l'angle du pied au contact, la vitesse d'éversion et la chute du bassin. La hanche pèse moins que ce qu'annonce la littérature. Sans la vitesse, la logistique garde la même exactitude (0,60) : les angles portent bien une partie du signal.
 
-Transition vers Charles : « Ces mesures résumées suffisent-elles, ou faut-il lire la courbe entière ? »
+Transition vers Charles : « Et si on donnait au réseau les positions brutes des marqueurs, sans les résumer ? »
 :::
