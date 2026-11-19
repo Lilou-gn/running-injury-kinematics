@@ -84,14 +84,51 @@ pip install -r requirements.txt
 python scripts/01_nettoyer_meta.py      # métadonnées -> data/intermediaire/meta_clean.csv
 python scripts/02_extraire_dv_r.py      # dv_r depuis Figshare -> data/intermediaire/dv_r_brut.csv
 python scripts/03_construire_coureurs.py  # -> coureurs.csv, plis.csv, dictionnaire
-
 ```
 
 - `ric_data.zip` pèse 22,7 Go. Le script 02 ne télécharge que les 587 JSON utiles (environ 6 Go) en lisant l'archive à distance, et ne stocke rien d'autre que `dv_r`. S'il s'arrête (réseau), il suffit de le relancer : il reprend où il en était.
 - `--zip CHEMIN` utilise une copie locale de l'archive. `--garder-json DOSSIER` conserve les JSON (environ 13 Go), nécessaires pour recalculer les courbes d'angles complètes.
 - L'archive est compressée en Deflate64, que le module `zipfile` de Python ne sait pas lire, d'où la dépendance `inflate64`.
 
-**Courbes d'angles pour le CNN :** elles ne sont pas stockées dans les JSON. Il faut les recalculer avec le code MATLAB des auteurs (`gait_kinematics.m`, `gait_steps.m`, dans `Supplemental_materials.zip` sur Figshare), ou le porter en Python.
+**Données pour le deep learning :** le réseau utilise les positions 3D des marqueurs stockées dans les JSON. Il faut donc lancer le script 02 avec `--garder-json` (voir la partie Deep learning ci-dessous).
+
+## Modèles de référence (R)
+
+Les notebooks sont dans `modeles/` et se lancent dans l'ordre depuis RStudio (bouton Render) :
+
+1. `01_modeles_reference.qmd` : régression logistique et forêt aléatoire, avec et sans rééquilibrage des classes, sur les 5 plis de `rep1`.
+2. `02_explicabilite.qmd` : odds ratios de la régression logistique, SHAP et LIME sur la forêt aléatoire.
+3. `03_sensibilite.qmd` : le score tient-il sans la vitesse, avec les angles seuls, ou sur les coureurs de 2012 à 2017 ?
+
+Les scores sont enregistrés dans `resultats/` et les figures dans `figures/modeles/` et `figures/slides/`.
+
+Packages : `tidymodels`, `themis`, `ranger`, `shapviz`, `lime`.
+
+Principal résultat : la régression logistique rééquilibrée reconnaît 57 % des blessés et 66 % des sains (accuracy équilibrée 0,61).
+
+## Deep learning (Python)
+
+Deux scripts dans `scripts/` :
+
+1. `process.py` découpe chaque enregistrement en foulées, les ramène à 150 instants et les centre sur le bassin. Il enregistre le résultat dans `data/features/` (non versionné, trop lourd). Avant de le lancer, remplacer `folder_path` par le dossier des JSON.
+2. `model_pipeline.py` entraîne un réseau convolutif 1D sur ces foulées (3 classes : sain, PFPS, ITBS) et trace les courbes d'apprentissage.
+
+```bash
+pip install torch scikit-learn scipy matplotlib adjustText
+cd scripts
+python process.py
+python model_pipeline.py
+```
+
+Principal résultat : le réseau apprend par cœur les foulées d'entraînement (près de 100 %) mais n'en classe que 60 à 70 % en validation. Il sur-apprend.
+
+## Présentation
+
+Le diaporama est dans `presentation/`. On fait le rendu sur `presentation.qmd` uniquement. Pour obtenir un seul fichier HTML à ouvrir sur n'importe quel ordinateur :
+
+```bash
+quarto render presentation/presentation.qmd -M embed-resources:true
+```
 
 ## Charte graphique (commune à tout le groupe)
 
@@ -149,7 +186,11 @@ data/
   intermediaire/                 sorties des scripts 01 et 02
   features/                      données numpy pour le deep learning
   coureurs.csv  plis.csv  dictionnaire_variables.csv
-scripts/                         pipeline de préparation (01 -> 03)
+scripts/                         préparation des données (01 -> 03) et deep learning
+exploration/                     description des groupes
+modeles/                         modèles de référence en R
+resultats/                       scores des modèles R
+presentation/                    diaporama
 R/theme_projet.R                 charte graphique ggplot2
 python/charte_graphique.py       charte graphique matplotlib
 ```
@@ -157,8 +198,8 @@ python/charte_graphique.py       charte graphique matplotlib
 **Branches :** `main` contient le socle commun ci-dessus. Chacun travaille sur sa branche, créée depuis `main` :
 
 - `donnees-biologie` (A) : description des groupes, tests, ancrage biologique ;
-- `modeles-r` (B) : régression logistique, forêt aléatoire, SVM ;
-- `deep-learning` (C) : MLP, puis CNN 1D.
+- `modeles-r` (B) : régression logistique, forêt aléatoire, SHAP et LIME ;
+- `deep-learning` (C) : CNN 1D.
 
 Toute modification de `coureurs.csv` passe par les scripts et par `main`, pour que tout le monde travaille sur la même version.
 
