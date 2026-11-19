@@ -80,7 +80,9 @@ Ferber et al., Scientific Data, 2024 · Running Injury Clinic Kinematic Dataset,
 :::
 
 ::: notes
-Running Injury Clinic, Université de Calgary. Le protocole prévoit environ 60 secondes de course sur tapis à vitesse libre, mais les fichiers gardent de 7 à 60 secondes (25 s en médiane), et avant 2012 la vitesse semble avoir été imposée (annexe) ; caméras infrarouges Vicon, environ 200 images par seconde ; 28 marqueurs, quatre sur le bassin et quatre sur chaque cuisse, jambe et pied (ce sont ceux qu'utilise le réseau de Charles). Le diagnostic de chaque blessé a été posé par la clinique. Données ouvertes publiées en 2024. Détail pour les questions : le fichier complet fait 22,7 Go ; on n'a lu que les morceaux utiles (environ 6 Go), directement sur le serveur.
+**À dire.** Ces données viennent de la Running Injury Clinic de Calgary : près de 1 800 personnes filmées entre 2009 et 2017, publiées en accès libre en 2024. Des caméras infrarouges suivent 28 marqueurs, quatre sur chacun des sept segments, 200 fois par seconde, pendant que la personne court sur tapis.
+
+**Si on vous demande.** Le protocole prévoit environ 60 secondes de course à vitesse libre, mais les fichiers gardent de 7 à 60 secondes (25 s en médiane), et avant 2012 la vitesse semble avoir été imposée (annexe). Caméras Vicon. Le diagnostic de chaque blessé a été posé par la clinique. Le fichier complet fait 22,7 Go ; on n'a lu que les morceaux utiles (environ 6 Go), directement sur le serveur.
 :::
 
 ## De 1 798 personnes à 587 coureurs {.figure-seule}
@@ -96,7 +98,9 @@ Running Injury Clinic, Université de Calgary. Le protocole prévoit environ 60 
 :::
 
 ::: notes
-Une étape par clic, comptée en personnes pour suivre la slide précédente. 1 798 personnes filmées ; 1 402 ont couru (les autres n'ont été filmées qu'en marchant) ; 589 sont saines, PFPS ou ITBS : la grosse perte, 813 coureurs, vient des autres blessures, pas du nettoyage ; 587 après avoir retiré 2 coureurs déclarés sains une fois et blessés une autre. On garde une seule séance par coureur (la première) : sinon le même coureur pourrait se retrouver à la fois dans les données d'entraînement et de test. En séances, pour les questions : 1 832 séances de course, 836 sains/PFPS/ITBS, 832, puis 587. À retenir : 361 sains, 128 PFPS, 98 ITBS.
+**À dire.** Une étape par clic. Sur 1 798 personnes, 1 402 ont couru. La grosse perte vient des autres blessures : il reste 589 coureurs sains, PFPS ou ITBS, puis 587 après avoir retiré deux coureurs aux diagnostics contradictoires. Au final : 361 sains, 128 PFPS, 98 ITBS.
+
+**Si on vous demande.** Les autres n'ont été filmées qu'en marchant. On garde une seule séance par coureur (la première) : sinon le même coureur pourrait se retrouver à la fois en entraînement et en test. En séances : 1 832 séances de course, 836 sains/PFPS/ITBS, 832, puis 587.
 :::
 
 ## 40 mesures par jambe, calculées à partir des marqueurs
@@ -127,7 +131,9 @@ En rouge : là où la littérature attend les différences. 79 variables par cou
 :::
 
 ::: notes
-À partir des 28 marqueurs, la clinique reconstruit les angles de chaque articulation, puis en tire des pics, des amplitudes et des vitesses. Chaque mesure est la médiane sur toutes les foulées enregistrées. Gauche + droite, avec la largeur de pas commune aux deux jambes : 79 variables par coureur. Ce sont les entrées des modèles de Lilou. Charles, lui, repartira des positions brutes des 28 marqueurs, sans ce résumé.
+**À dire.** À partir des marqueurs, la clinique calcule les angles de chaque articulation, puis 40 mesures par jambe : des pics, des amplitudes, des vitesses. En rouge, là où la littérature attend les différences. Ce sont les entrées des modèles de Lilou ; Charles, lui, repartira des marqueurs bruts.
+
+**Si on vous demande.** Chaque mesure est la médiane sur toutes les foulées enregistrées. Gauche + droite, avec la largeur de pas commune : 79 variables par coureur.
 :::
 
 ## Dans nos données, la hanche se comporte-t-elle comme prévu ? {.figure-seule}
@@ -137,7 +143,9 @@ En rouge : là où la littérature attend les différences. 79 variables par cou
 :::
 
 ::: notes
-Notre propre vérification de l'hypothèse H1, avant tout modèle. Résultat : les PFPS ont plus d'adduction de hanche (médiane 9,5° contre 8,6° chez les sains, p = 0,007), comme chez Noehren ; les ITBS non (8,4°). L'écart des PFPS tient sur 2012-2017 seulement (9,7° contre 8,5°), donc ce n'est pas un effet de l'époque. Message : pour le PFPS, une mesure suffit à voir une tendance ; pour l'ITBS, il faut combiner plusieurs mesures, c'est le rôle des modèles. Attention : la différence de groupe ne permet pas de classer un coureur seul, les nuages de points se chevauchent largement.
+**À dire.** Avant tout modèle, on a vérifié l'hypothèse dans nos données. Les PFPS ont bien plus d'adduction de hanche que les sains, même en ne gardant que 2012-2017 ; les ITBS, non. Mais les nuages se chevauchent : une mesure seule ne suffit pas à reconnaître un coureur.
+
+**Si on vous demande.** Médiane 9,5° chez les PFPS contre 8,6° chez les sains (p = 0,007), comme chez Noehren ; ITBS 8,4°. Sur 2012-2017 : 9,7° contre 8,5°, donc pas un effet de l'époque. Pour l'ITBS, il faut combiner plusieurs mesures : c'est le rôle des modèles.
 :::
 
 ## Attention : l'époque se confond avec la blessure {.figure-seule}
@@ -147,5 +155,7 @@ Notre propre vérification de l'hypothèse H1, avant tout modèle. Résultat : l
 :::
 
 ::: notes
-Avant 2012, 7 coureurs sur 10 sont blessés ; après, moins de 3 sur 10. Or le protocole et la façon de remplir les fiches ont changé entre les deux périodes (vitesse imposée avant 2012, jambe dominante renseignée différemment : voir annexes). Un modèle pourrait donc apprendre l'époque au lieu de la blessure. Ce qu'on fait : l'année n'entre jamais dans les modèles, et on vérifie les résultats sur 2012-2017 seulement. L'article de référence ne fait pas cette vérification. Transition vers Lilou : « À l'œil, ces différences sont trop fines. Un modèle peut-il les voir ? »
+**À dire.** Attention : avant 2012, 7 coureurs sur 10 sont blessés ; après, moins de 3 sur 10, et le protocole a changé entre les deux. Un modèle pourrait apprendre l'époque au lieu de la blessure. L'année n'entre donc jamais dans les modèles, et on vérifie les résultats sur 2012-2017. Transition vers Lilou : « À l'œil, ces différences sont trop fines. Un modèle peut-il les voir ? »
+
+**Si on vous demande.** Vitesse imposée avant 2012, jambe dominante renseignée différemment : voir annexes. L'article de référence ne fait pas cette vérification.
 :::

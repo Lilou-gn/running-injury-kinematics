@@ -26,9 +26,9 @@ Observatoire du running, Union Sport & Cycle, 2026 · Chiffres officiels du Mara
 :::
 
 ::: notes
-Audrey est un personnage fictif, construit à partir des chiffres de ces slides (âge moyen des marathoniens, débutante, crise de la décennie). Le dire si on vous le demande. Accroche : « Levez la main si vous avez couru cette année. » 40 % des Français courent au moins de temps en temps (Odoxa, 2023). Une paire de chaussures suffit : ni club, ni terrain, ni horaire, et c'est l'un des moyens les plus simples d'atteindre les 150 minutes d'activité par semaine recommandées par l'OMS.
+**À dire.** Levez la main si vous avez couru cette année. 40 % des Français courent au moins de temps en temps : une paire de chaussures suffit, et c'est l'un des moyens les plus simples d'atteindre les 150 minutes d'activité par semaine recommandées par l'OMS. Beaucoup s'y mettent à l'approche d'une nouvelle décennie, souvent avec un marathon en tête : c'est le cas d'Audrey.
 
-Marathon : âge moyen 38 ans. Les gens de 29, 39 ou 49 ans sont 48 % plus nombreux que prévu parmi les premiers marathoniens : approcher une nouvelle décennie pousse à se lancer un défi, la « crise de la trentaine » mesurée dans les données (Alter et Hershfield, PNAS, 2014). Image à faire passer : un adulte qui court depuis peu et s'inscrit à un marathon.
+**Si on vous demande.** Audrey est un personnage fictif, construit à partir des chiffres de ces slides. 40 % : Odoxa, 2023. Marathon : âge moyen 38 ans ; les gens de 29, 39 ou 49 ans sont 48 % plus nombreux que prévu parmi les premiers marathoniens (Alter et Hershfield, PNAS, 2014).
 :::
 
 ## Mais ceux qui débutent se blessent deux fois plus {.figure-seule}
@@ -38,7 +38,9 @@ Marathon : âge moyen 38 ans. Les gens de 29, 39 ou 49 ans sont 48 % plus nombre
 :::
 
 ::: notes
-Selon les études, entre 1 coureur sur 5 et 4 sur 5 se blesse à la jambe dans l'année (van Gent, 2007). Par heure de course, un débutant se blesse 2,3 fois plus qu'un coureur régulier. Hypothèse admise : le souffle progresse plus vite que les tendons, le cartilage et l'os ; on se sent capable de courir plus avant que le corps soit prêt. Pour le marathon : sur 675 premiers marathoniens à New York, 9,5 % ont eu une blessure grave qui les a empêchés de courir ou de finir.
+**À dire.** Selon les études, entre 1 coureur sur 5 et 4 sur 5 se blesse à la jambe dans l'année. Par heure de course, un débutant se blesse 2,3 fois plus qu'un coureur régulier : le souffle progresse plus vite que les tendons, le cartilage et l'os.
+
+**Si on vous demande.** van Gent, 2007. Sur 675 premiers marathoniens à New York, 9,5 % ont eu une blessure grave qui les a empêchés de courir ou de finir.
 :::
 
 ## Le genou est le premier touché
@@ -73,7 +75,9 @@ Francis et al., J Sports Sci Med, 2019 (36 études, 10 688 blessures) · Taunton
 :::
 
 ::: notes
-Pourquoi 28 % et pas 40 % : 28 % porte sur l'ensemble des coureurs (36 études, 10 688 blessures). Le chiffre de 40 % chez les femmes (31 % chez les hommes) vient d'un sous-ensemble de 8 études seulement : il ne se compare pas directement au 28 %, d'où son absence de la slide. À citer seulement si on parle d'Audrey ou des différences hommes-femmes. Les deux pourcentages des blessures n'ont pas le même dénominateur : 17 % des blessures pour le PFPS (Francis), 1,6 à 12 % des coureurs touchés pour l'ITBS (revue 2024). Classement n° 1 et n° 2 : Taunton, 2002. Anatomie, pour les questions. PFPS : douleur autour ou derrière la rotule, réveillée quand le genou plié porte le poids du corps (course, escaliers, accroupi) ; c'est l'articulation fémoro-patellaire, où la rotule glisse dans la gorge du fémur (la trochlée). Pas de lésion de structure à l'imagerie ; les tissus en cause sont discutés (os sous le cartilage, coussinet graisseux sous la rotule, capsule). ITBS : la bandelette ilio-tibiale est un épaississement du fascia lata, l'enveloppe fibreuse de la cuisse ; ce n'est ni un muscle ni un tendon au sens strict, mais deux muscles de la hanche tirent dessus (tenseur du fascia lata et grand fessier). Elle part de la crête iliaque et s'attache sur le tibia (tubercule de Gerdy). La douleur siège au-dessus de l'épicondyle latéral du fémur. On parlait de friction (la bande qui frotte en glissant d'avant en arrière) ; l'anatomie montre qu'elle est attachée au fémur et ne glisse pas : elle comprime un tissu graisseux très innervé, surtout vers 20 à 30° de flexion, juste après l'impact (Fairclough et al., J Anat, 2006). Lien avec la hanche : plus la cuisse rentre, plus la bandelette est tendue, et plus la rotule est déportée. Ce ne sont pas des gênes passagères : jusqu'à 57 % des adultes avec un PFPS ont encore une évolution défavorable 5 à 8 ans après (IASP, 2023). Vérifié dans nos données : le genou est l'articulation la plus souvent blessée, et PFPS et ITBS sont les deux diagnostics précis les plus fréquents de la clinique.
+**À dire.** Le genou est l'articulation la plus touchée : 28 % des blessures du coureur. Les deux diagnostics les plus fréquents sont le syndrome fémoro-patellaire, une douleur autour de la rotule, et le syndrome de la bandelette ilio-tibiale, une douleur sur le côté externe du genou. Ce ne sont pas des gênes passagères : jusqu'à 57 % des adultes avec un PFPS ont encore une évolution défavorable 5 à 8 ans après.
+
+**Si on vous demande.** 28 % porte sur l'ensemble des coureurs (36 études, 10 688 blessures) ; les 40 % chez les femmes (31 % chez les hommes) viennent de 8 études seulement, d'où leur absence de la slide. 17 % des blessures pour le PFPS (Francis) ; 1,6 à 12 % des coureurs touchés pour l'ITBS (revue 2024) ; classement n° 1 et n° 2 : Taunton, 2002 ; évolution défavorable : IASP, 2023. PFPS : la rotule glisse dans la gorge du fémur (trochlée) ; douleur quand le genou plié porte le poids du corps ; pas de lésion visible à l'imagerie. ITBS : la bandelette est un épaississement du fascia lata, tendu par le tenseur du fascia lata et le grand fessier ; elle va de la crête iliaque au tibia (tubercule de Gerdy). Elle ne frotte pas : attachée au fémur, elle comprime un tissu graisseux très innervé vers 20 à 30° de flexion (Fairclough et al., J Anat, 2006). Vérifié dans nos données : genou le plus touché, PFPS et ITBS diagnostics précis les plus fréquents.
 :::
 
 ## Deux douleurs au genou, une origine à la hanche
@@ -145,7 +149,9 @@ Noehren et al., Clin Biomech, 2007 · Noehren et al., Med Sci Sports Exerc, 2013
 :::
 
 ::: notes
-Trois clics. Au départ, les deux jambes sont alignées de part et d'autre de l'axe du corps. Clic 1 : d'un côté la cuisse rentre (adduction de hanche) ; les deux douleurs apparaissent ; la phrase à retenir. PFPS : 400 coureuses suivies, 15 cas, plus d'adduction de hanche avant la blessure. ITBS : 18 cas, plus d'adduction de hanche et de rotation interne du genou. Les deux partagent un signe, l'ITBS y ajoute une rotation : elles se ressemblent dans la foulée sans être identiques. Mécanisme ITBS actuel : compression d'un coussinet graisseux très innervé quand le genou dépasse environ 30° de flexion, juste après l'impact.
+**À dire.** Trois clics. Quand la cuisse rentre vers l'intérieur, c'est l'adduction de hanche : la rotule est déportée et la bandelette se tend, les deux douleurs apparaissent. Chez des coureuses suivies avant leur blessure, celles qui se sont blessées avaient plus d'adduction de hanche ; pour l'ITBS, s'y ajoute une rotation interne du genou. Les deux syndromes se ressemblent dans la foulée, sans être identiques.
+
+**Si on vous demande.** PFPS : 400 coureuses suivies, 15 cas. ITBS : 18 cas, adduction de hanche et rotation interne du genou. Mécanisme ITBS actuel : compression d'un coussinet graisseux très innervé quand le genou dépasse environ 30° de flexion, juste après l'impact.
 :::
 
 ## Aucun examen ne tranche : la foulée peut-elle aider ?
@@ -198,5 +204,7 @@ Crossley et al., consensus PFPS, Br J Sports Med, 2016 · revue ITBS, Curr Phys 
 :::
 
 ::: notes
-PFPS : pas de test clinique définitif, pas besoin d'imagerie ; on le retient quand on n'a rien trouvé d'autre. ITBS : sensibilité et spécificité des tests jugées « pas satisfaisantes ». Dans notre clinique, le diagnostic le plus fréquent n'est ni l'un ni l'autre mais « douleur » (232 séances sur 1 832). D'où l'idée : lire la foulée elle-même. Deux outils : le machine learning compare des mesures résumées, le deep learning lit la courbe entière.
+**À dire.** Aucun examen ne tranche : le PFPS se diagnostique quand on n'a rien trouvé d'autre, et les tests de l'ITBS sont jugés peu fiables. D'où notre question : la foulée elle-même peut-elle aider ? Deux outils : le machine learning compare des mesures résumées, le deep learning lit les mouvements bruts.
+
+**Si on vous demande.** ITBS : sensibilité et spécificité des tests jugées « pas satisfaisantes ». Dans notre clinique, le diagnostic le plus fréquent n'est ni l'un ni l'autre mais « douleur » (232 séances sur 1 832).
 :::

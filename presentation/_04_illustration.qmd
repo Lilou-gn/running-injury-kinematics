@@ -12,11 +12,9 @@
 ::::
 
 ::: notes
-Les 40 mesures par jambe de Lilou sont calculées à partir des marqueurs qu'a montrés Youri : ce sont des résumés, un pic ou une amplitude par articulation. Moi, je suis reparti avant ce résumé : la position en 3D de chaque marqueur, à chaque image de l'enregistrement.
+**À dire.** Les 40 mesures de Lilou sont des résumés calculés à partir des marqueurs. Moi, je suis reparti avant ce résumé : la position en 3D des 28 marqueurs, à chaque image, soit 84 courbes par coureur. Premier problème, à droite : les enregistrements n'ont pas la même longueur, ici 3 346 et 5 000 images. Or un réseau attend des entrées de taille fixe.
 
-À gauche, les 28 marqueurs que j'utilise : quatre sur le bassin, et quatre sur chaque cuisse, chaque jambe et chaque pied. Chacun donne trois coordonnées (gauche-droite, haut-bas, avant-arrière), soit 84 courbes par coureur.
-
-À droite, le premier problème : les enregistrements n'ont pas tous la même longueur. Ici, 3 346 images pour un coureur et 5 000 pour l'autre, à 200 images par seconde. Sur l'ensemble des coureurs, ça va de 1 333 à 12 000 images. Or un réseau de neurones attend des entrées de taille fixe : je ne peux pas lui donner les séries telles quelles.
+**Si on vous demande.** Sur l'ensemble des coureurs, de 1 333 à 12 000 images, à 200 images par seconde. Trois coordonnées par marqueur : gauche-droite, haut-bas, avant-arrière.
 :::
 
 ## Chaque course est découpée en foulées
@@ -33,13 +31,9 @@ Les 40 mesures par jambe de Lilou sont calculées à partir des marqueurs qu'a m
 lissage → points bas du pied → une foulée entre deux points bas
 
 ::: notes
-Pour obtenir des morceaux comparables, je découpe chaque course en foulées.
+**À dire.** Je découpe donc chaque course en foulées. À gauche, la hauteur du pied droit : après un léger lissage, je repère les points bas, quand le pied touche le sol. Une foulée, c'est ce qui se passe entre deux points bas. À droite, les foulées d'un même coureur : elles se ressemblent beaucoup. On passe de 587 coureurs à environ 26 000 foulées.
 
-À gauche, la hauteur du pied droit pendant toute la course. Je lisse légèrement le signal pour enlever les petites fluctuations, puis je repère ses minimums : ce sont les moments où le pied est au plus bas, au contact du sol. Pour éviter de détecter deux fois le même appui, j'impose au moins 0,6 seconde entre deux minimums.
-
-Une foulée, c'est tout ce qui se passe entre deux minimums successifs. À droite, toutes les foulées d'un même coureur superposées : elles se ressemblent beaucoup, mais elles n'ont pas exactement la même durée.
-
-Au total, on passe de 587 coureurs à environ 26 000 foulées.
+**Si on vous demande.** Lissage de Savitzky-Golay ; au moins 0,6 seconde entre deux points bas, pour ne pas compter deux fois le même appui. En abscisse de la figure de droite, ce sont des images et non des secondes.
 :::
 
 ## Les foulées sont mises au même format
@@ -56,15 +50,9 @@ Au total, on passe de 587 coureurs à environ 26 000 foulées.
 1. 150 instants par foulée &nbsp;·&nbsp; 2. positions relatives au bassin &nbsp;·&nbsp; 3. standardisation de chaque canal
 
 ::: notes
-Trois étapes pour que toutes les foulées soient comparables.
+**À dire.** Trois étapes pour rendre les foulées comparables. Un : chaque foulée est ramenée à 150 instants. Deux : je recentre toutes les positions sur le bassin, sinon le réseau verrait surtout où le coureur se tenait sur le tapis. Trois : avant l'entraînement, je standardise chaque canal, avec des moyennes calculées sur les coureurs d'entraînement seulement.
 
-Un : chaque foulée est ramenée à 150 instants par interpolation, pour avoir la même taille d'entrée pour toutes les foulées. C'est la figure de gauche, en haut pour le pied, en bas pour le bassin.
-
-Deux : je recentre toutes les positions sur le centre du bassin, image par image. Sans ça, le réseau verrait surtout où le coureur se tenait sur le tapis, et pas comment il bouge. À droite, le pied droit après recentrage : c'est sa position par rapport au bassin.
-
-Trois : juste avant l'entraînement, je standardise chacun des 84 canaux (moyenne nulle, écart-type un). Les moyennes et les écarts-types sont calculés sur les coureurs d'entraînement uniquement, pour ne rien laisser fuiter du jeu de test.
-
-J'ai aussi écarté les quelques coureurs dont les positions dépassaient 10 mètres, une erreur d'enregistrement.
+**Si on vous demande.** Coureurs écartés : ceux dont une position dépassait 10 mètres, une erreur d'enregistrement. Sur la figure du bassin recentré, le bassin vaut zéro : c'est normal, il sert de référence.
 :::
 
 ## Un réseau convolutif lit chaque foulée {.figure-seule}
@@ -74,11 +62,9 @@ J'ai aussi écarté les quelques coureurs dont les positions dépassaient 10 mè
 :::
 
 ::: notes
-Le modèle est un réseau convolutif à une dimension, l'outil classique pour les séries temporelles.
+**À dire.** Le modèle est un réseau convolutif à une dimension, l'outil classique pour les séries temporelles. Un petit filtre glisse le long de la foulée et réagit quand il retrouve un motif ; trois couches combinent ces motifs, puis le réseau choisit entre ITBS, PFPS et sain. Point clé : toutes les foulées d'un même coureur restent du même côté, entre apprentissage, validation et test.
 
-L'entrée, c'est une foulée : 84 canaux sur 150 instants. Une convolution, c'est un petit filtre qui glisse le long du temps et qui réagit quand il retrouve un motif, par exemple une montée brutale du pied. J'en enchaîne trois couches : les premières repèrent des motifs courts, les suivantes les combinent en motifs plus longs. Le réseau fait ensuite la moyenne de ce qu'il a trouvé sur toute la foulée, et deux petites couches finales choisissent entre ITBS, PFPS et sain.
-
-Point important pour la validité du résultat : toutes les foulées d'un même coureur restent du même côté. 70 % des coureurs servent à l'apprentissage, 15 % à la validation et 15 % au test. Sans ça, le réseau pourrait reconnaître la personne plutôt que la blessure. Les classes sont aussi pondérées, parce qu'il y a beaucoup plus de foulées saines.
+**Si on vous demande.** 70 % des coureurs en apprentissage, 15 % en validation, 15 % en test. Moyenne sur la foulée après les convolutions, puis deux couches finales. Classes pondérées, parce qu'il y a beaucoup plus de foulées saines. Modèle compact, taux d'apprentissage 0,0001.
 :::
 
 ## Le réseau apprend par cœur et reconnaît mal les blessures
@@ -93,11 +79,7 @@ Point important pour la validité du résultat : toutes les foulées d'un même 
 ::::
 
 ::: notes
-À gauche, l'apprentissage du modèle compact. L'erreur d'apprentissage descend presque à zéro et la précision d'apprentissage atteint 100 % en quelques époques, alors que l'erreur de validation remonte. C'est du surapprentissage : le réseau apprend par cœur les foulées des coureurs qu'il a vus.
+**À dire.** À gauche : l'erreur d'apprentissage tombe à zéro pendant que celle de validation remonte, le réseau apprend par cœur. À droite, sur des coureurs jamais vus : 84 % des foulées saines sont reconnues, mais seulement un quart des ITBS et moins d'un cinquième des PFPS, et les deux blessures sont confondues. 64 % de bonnes réponses au total, mais attention : répondre toujours « sain » ferait 68 % sur ce test. Avec 587 personnes et des foulées très ressemblantes, le réseau reconnaît surtout les coureurs.
 
-À droite, le résultat sur les coureurs de test. 64 % des foulées sont bien classées, mais c'est presque entièrement grâce aux sains : 84 % des foulées saines sont reconnues, contre 25 % des ITBS et 18 % des PFPS. La plupart des foulées de blessés sont classées « sain », et le réseau confond les deux blessures entre elles. Le F1 macro est de 0,43 ; il est de 0,79 pour les sains, mais seulement 0,29 pour l'ITBS et 0,20 pour le PFPS.
-
-Attention à ne pas surinterpréter les 64 % : dans ce jeu de test, 68 % des foulées sont saines, donc répondre toujours « sain » ferait un peu mieux. Le signal existe peut-être, mais ce réseau ne l'isole pas.
-
-Pourquoi ? 26 000 foulées, mais seulement 587 personnes, et les foulées d'un même coureur se ressemblent énormément. Et des positions de marqueurs décrivent la morphologie de la personne autant que son mouvement. En relisant le code, on a aussi vu que l'interpolation coupe la fin des foulées plus longues que 150 images au lieu de les étirer : c'est à corriger. La suite logique serait ensuite de travailler sur des angles articulaires et de donner un seul diagnostic par coureur.
+**Si on vous demande.** F1 macro 0,43 ; F1 sain 0,79, ITBS 0,29, PFPS 0,20. En relisant le code, l'interpolation coupe la fin des foulées de plus de 150 images au lieu de les étirer : à corriger. Suite : travailler sur des angles articulaires, et un seul diagnostic par coureur.
 :::

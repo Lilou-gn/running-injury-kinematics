@@ -9,7 +9,9 @@
 | réseau de neurones | **non** : il reconnaît les foulées saines, mais distingue mal PFPS et ITBS |
 
 ::: notes
-La slide qui ferme la boucle avec le début. Deux signaux décrits dans la littérature ressortent bien : la chute du bassin, signe d'une faiblesse du moyen fessier, et un temps d'appui plus long. En revanche, l'adduction de hanche, présentée comme le facteur clé des deux syndromes, pèse peu dans les modèles. Et le réseau de neurones ne permet pas de conclure : il reconnaît surtout les coureurs sains. Une partie du signal peut aussi venir de l'époque d'enregistrement plutôt que de la blessure.
+**À dire.** On ferme la boucle avec le début. Deux signaux de la littérature ressortent : la chute du bassin, signe d'un moyen fessier faible, et un temps d'appui plus long. En revanche, l'adduction de hanche, présentée comme le facteur clé, pèse peu dans les modèles. Et le réseau ne permet pas de conclure.
+
+**Si on vous demande.** Une partie du signal peut venir de l'époque d'enregistrement plutôt que de la blessure (analyse de sensibilité de Lilou, en annexe).
 :::
 
 ## Limites et suite {.etape-bio}
@@ -40,7 +42,9 @@ Garder les gens en train de courir, c'est garder le bénéfice santé qui les a 
 :::
 
 ::: notes
-Dire les limites avant que le jury ne les pose. La première est la plus importante : c'est la différence entre détecter et prédire. La dernière explique en partie le résultat de Charles : 26 000 foulées, mais seulement 587 personnes, et les foulées d'une même personne se ressemblent beaucoup. Pour prédire, il faudrait une étude prospective : mesurer la foulée, puis suivre les coureurs. Les capteurs portables mesurent déjà la foulée hors du laboratoire (Xiang et al., Frontiers in Neurorobotics, 2022).
+**À dire.** Les limites, avant que vous ne les posiez. La plus importante : les coureurs étaient déjà blessés, donc on détecte, on ne prédit pas. Pour prédire, il faudrait mesurer la foulée puis suivre les coureurs. Demain, des capteurs portables pourraient le faire hors du laboratoire.
+
+**Si on vous demande.** 26 000 foulées mais seulement 587 personnes, d'où les difficultés du réseau. Capteurs portables : Xiang et al., Frontiers in Neurorobotics, 2022.
 :::
 
 ## Trois messages à retenir {.etape-bio}
@@ -56,7 +60,7 @@ Dire les limites avant que le jury ne les pose. La première est la plus importa
 :::
 
 ::: notes
-Une phrase par message, lentement. Le premier répond à la problématique, le deuxième à la question biologique, le troisième est la leçon de méthode : les modèles de Lilou ont pu apprendre en partie l'époque, et le réseau de Charles a appris à reconnaître les coureurs plutôt que leur blessure. Finir en regardant le public, puis passer aux questions.
+**À dire.** Une phrase par message, lentement. Le premier répond à la problématique, le deuxième à la question biologique, le troisième est notre leçon de méthode. Finir en regardant le public, puis passer aux questions.
 :::
 
 ## Merci {.merci background-color="#7A1E3A"}

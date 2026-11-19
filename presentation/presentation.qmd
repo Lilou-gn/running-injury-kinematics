@@ -1,9 +1,11 @@
 ---
-# Durée cible : 20 min, 20 slides de contenu (environ 1 min chacune).
-#   Le problème        Youri    ~4 min   5 slides
-#   Les données        Youri    ~3 min   5 slides
-#   Méthodologie       Lilou    ~7 min   4 slides
-#   Illustration       Charles  ~6 min   3 slides + conclusion (3 slides)
+# Durée : 15 min de présentation, puis 5 min de questions.
+#   Le problème        Youri    ~3 min     5 slides
+#   Les données        Youri    ~2,5 min   5 slides
+#   Méthodologie       Lilou    ~4 min     4 slides
+#   Illustration       Charles  ~4 min     5 slides
+#   Conclusion         Youri    ~1,5 min   3 slides
+# Dans les notes (touche S) : « À dire » se dit à l'oral, « Si on vous demande » sert aux questions.
 # Animations : la jambe, le parcours diagnostique et l'entonnoir avancent au clic.
 # Règles : un message par slide, écrit en titre ; au plus un chiffre clé par slide ;
 # trois lignes de texte au maximum, le reste dans les notes (touche S) ;
