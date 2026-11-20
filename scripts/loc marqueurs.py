@@ -3,6 +3,7 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 import pandas as pd
+from matplotlib.ticker import MaxNLocator
 
 from charte_graphique import appliquer_charte, sauver_figure, titrer
 
@@ -34,9 +35,11 @@ def localisation_marqueurs(idx):
         "foot": "Pied", "toe": "Pied",
     })
 
-    fig, axes = plt.subplots(1, 2, figsize=(9.6, 5.4), sharey=True)
+    fig, axes = plt.subplots(1, 2, figsize=(7.2, 6.8), sharey=True)
     fig.subplots_adjust(left=0.10, right=0.96, top=0.83, bottom=0.23, wspace=0.14)
-    for ax, coordonnee, titre in zip(axes, ("X", "Z"), ("Vue de face", "Vue de profil")):
+    for ax, coordonnee, titre, ancrage in zip(
+        axes, ("X", "Z"), ("Vue de face", "Vue de profil"), ("E", "W")
+    ):
         for zone, (couleur, symbole) in ZONES.items():
             points = segments.loc[zones == zone]
             ax.scatter(
@@ -45,7 +48,9 @@ def localisation_marqueurs(idx):
             )
         ax.set_title(titre, loc="center")
         ax.set_xlabel(f"{coordonnee} (mm)")
-        ax.set_aspect("equal", adjustable="datalim")
+        ax.margins(x=0.12)
+        ax.set_aspect("equal", adjustable="box", anchor=ancrage)
+        ax.xaxis.set_major_locator(MaxNLocator(nbins=3 if coordonnee == "X" else 2))
         ax.grid(axis="x", visible=False)
 
     axes[0].set_ylabel("Hauteur Y (mm)")
@@ -53,7 +58,7 @@ def localisation_marqueurs(idx):
     fig.legend(handles, labels, loc="lower center", ncols=4, bbox_to_anchor=(0.5, 0.035))
     titrer(fig, "Position des marqueurs au repos",
            legende="Source : Running Injury Clinic Kinematic Dataset (Ferber et al., 2024).")
-    sauver_figure(fig, "loc_marqueurs")
+    sauver_figure(fig, "loc_marqueurs", taille_slide=fig.get_size_inches())
     plt.close(fig)
     return positions
 

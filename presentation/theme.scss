@@ -170,16 +170,38 @@ $code-color: $encre-titre;
 .reveal section.positions-brutes {
   .columns {
     align-items: center;
+    max-width: 1160px;
+    margin-inline: auto;
   }
 
   img {
     display: block;
     object-fit: contain;
     margin: 0 auto;
-    max-height: 520px;
+    width: 100%;
+    height: auto;
   }
 
   .columns p {
+    margin: 0;
+  }
+}
+
+.reveal section.resultats-cnn {
+  .columns img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .rappels-cnn {
+    text-align: center;
+    font-size: 0.74em;
+    line-height: 1.35;
+  }
+
+  .rappels-cnn p {
     margin: 0;
   }
 }

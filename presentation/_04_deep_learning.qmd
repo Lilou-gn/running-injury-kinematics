@@ -3,10 +3,10 @@
 ## On dispose des positions brutes des marqueurs {.positions-brutes}
 
 :::: {.columns}
-::: {.column width="56%"}
+::: {.column width="50%"}
 ![](../figures/slides/representation_series_brut.png){alt="Séries temporelles des positions brutes"}
 :::
-::: {.column width="44%"}
+::: {.column width="50%"}
 ![](../figures/slides/loc_marqueurs.png){alt="Position des marqueurs au repos, vue de face et de profil"}
 :::
 ::::
@@ -77,16 +77,22 @@ lissage → points bas du pied → une foulée entre deux points bas
 **Si on vous demande.** 70 % des coureurs en apprentissage, 15 % en validation, 15 % en test. Moyenne sur la foulée après les convolutions, puis deux couches finales. Classes pondérées, parce qu'il y a beaucoup plus de foulées saines. Modèle compact, taux d'apprentissage 0,0001.
 :::
 
-## Le réseau apprend par cœur et reconnaît mal les blessures
+## Le réseau apprend par cœur et reconnaît mal les blessures {.resultats-cnn}
 
-:::: {.columns}
-::: {.column width="48%"}
+::::: {.columns}
+:::: {.column width="50%"}
 ![](../figures/slides/lre-4_compact.png)
-:::
-::: {.column width="52%"}
-![](figures/c05_matrice_confusion.png)
-:::
 ::::
+:::: {.column width="50%"}
+![](figures/c05_matrice_confusion.png)
+
+::: {.rappels-cnn}
+**Rappel sur les foulées de test**\
+ITBS **25 %** · PFPS **18 %** · Sain **84 %**
+:::
+
+::::
+:::::
 
 ::: notes
 **À dire.** À gauche : l'erreur d'apprentissage tombe à zéro pendant que celle de validation remonte, le réseau apprend par cœur. À droite, sur des coureurs jamais vus : 84 % des foulées saines sont reconnues, mais seulement un quart des ITBS et moins d'un cinquième des PFPS, et les deux blessures sont confondues. 64 % de bonnes réponses au total, mais attention : répondre toujours « sain » ferait 68 % sur ce test. Avec 587 personnes et des foulées très ressemblantes, le réseau reconnaît surtout les coureurs.

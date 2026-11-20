@@ -96,12 +96,12 @@ def titrer(fig, titre, sous_titre=None, legende=None):
              fontsize=taille * 0.8, color=ENCRE_DOUCE, wrap=True)
 
 
-def sauver_figure(fig, nom, dossier="figures/exploration"):
-    """Enregistre la version notebook et la version slide (16:9) du graphe."""
+def sauver_figure(fig, nom, dossier="figures/exploration", *, taille_slide=(9.6, 5.4)):
+    """Enregistre la version notebook et la version slide du graphe."""
     racine = next(p for p in [Path.cwd(), *Path.cwd().parents] if (p / "data" / "coureurs.csv").exists())
-    for sous_dossier, taille in ((dossier, None), ("figures/slides", (9.6, 5.4))):
+    for sous_dossier, taille in ((dossier, None), ("figures/slides", taille_slide)):
         sortie = racine / sous_dossier
         sortie.mkdir(parents=True, exist_ok=True)
-        if taille:
+        if taille is not None:
             fig.set_size_inches(*taille)
         fig.savefig(sortie / f"{nom}.png", dpi=300, bbox_inches="tight")
